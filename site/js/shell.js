@@ -126,11 +126,21 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
+  /* Short publisher names for citations. Full names live in sources.json and on the Sources page. */
+  var SHORT = {
+    "src-01": "AIM Research", "src-02": "IDC and Solace", "src-03": "McKinsey", "src-04": "Deloitte",
+    "src-05": "BCG", "src-06": "MIT NANDA", "src-07": "Menlo Ventures", "src-08": "a16z",
+    "src-09": "KPMG US", "src-10": "Microsoft", "src-11": "Stanford HAI", "src-12": "IDC FutureScape"
+  };
+  function shortName(id, s) {
+    return SHORT[id] || (s ? s.publisher : id);
+  }
+
   /* Format a ref list as "Publisher, year, p. 5, 6" with links to the Sources page. */
   function formatRefs(refs, sourcesById) {
     return (refs || []).map(function (r) {
       var s = sourcesById[r.source];
-      var label = s ? (s.publisher + ", " + String(s.date).slice(0, 4)) : r.source;
+      var label = shortName(r.source, s) + (s ? ", " + String(s.date).slice(0, 4) : "");
       var pages = r.pages && r.pages.length ? ", p. " + r.pages.join(", ") : "";
       return '<a href="sources.html#' + escapeHTML(r.source) + '">' + escapeHTML(label) + "</a>" + escapeHTML(pages);
     }).join("; ");
@@ -142,6 +152,7 @@
     loadJSON: loadJSON,
     escapeHTML: escapeHTML,
     formatRefs: formatRefs,
+    shortName: shortName,
     currentTheme: currentTheme
   };
 
