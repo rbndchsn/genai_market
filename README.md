@@ -1,6 +1,6 @@
 # GenAI Market
 
-A meta-analysis of the state of enterprise AI across twelve sources, published as a static website. We read twelve analyst reports, surveys and industry publications from 2025 and 2026, reconcile what they say, and present our own findings with a reference for every stat, insight and vendor fact.
+A Meta-Analysis of the State of Enterprise AI, published as a static website. We read twelve analyst reports, surveys and industry publications from 2025 and 2026, reconcile what they say, and present our own findings with a reference for every stat, insight and vendor fact.
 
 **Live site: https://rbndchsn.github.io/genai_market/**
 

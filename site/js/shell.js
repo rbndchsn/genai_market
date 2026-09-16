@@ -4,7 +4,7 @@
   "use strict";
 
   var SITE_NAME = "GenAI Market";
-  var TAGLINE = "A meta-analysis of the state of enterprise AI across twelve sources";
+  var TAGLINE = "A Meta-Analysis of the State of Enterprise AI";
   var REPO_URL = "https://github.com/rbndchsn/genai_market";
 
   var NAV = [
@@ -84,7 +84,7 @@
     return el(
       '<footer class="site-footer">' +
         '<div class="container">' +
-          "<p><strong>" + SITE_NAME + "</strong>: " + TAGLINE.charAt(0).toLowerCase() + TAGLINE.slice(1) + ". Findings are written in our own words and every statistic, insight and vendor fact carries a reference.</p>" +
+          "<p><strong>" + SITE_NAME + "</strong> is a meta-analysis of the state of enterprise AI. Findings are written in our own words and every statistic, insight and vendor fact carries a reference.</p>" +
           '<nav aria-label="Footer">' +
             '<a href="sources.html">Sources and method</a>' +
             '<a href="' + REPO_URL + '" rel="noopener">Repository</a>' +
