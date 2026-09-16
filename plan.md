@@ -9,10 +9,12 @@ and updates it as work lands. See `CLAUDE.md` for the rules.
 
 | Field | Value |
 |---|---|
-| Last updated | 2026-09-15 |
+| Last updated | 2026-09-16 |
 | Current phase | Phase 5 — Website build (Phase 4 complete). Phase 6 (chat) is paused. |
-| Next step | 5.0 Repository setup: `git init`, `.gitignore` that excludes `sourcedoc/` and `content/raw/`, first commit, push to https://github.com/rbndchsn/genai_market. Then 5.1 site shell. Load `dataviz` before 5.5. |
-| Blockers | None for 5.0 to 5.9. Q4 (site name) is worth settling before 5.1 because it appears in the shell. Q6 (whether `content/synth/` goes into the public repo) before 5.0's first push. Phase 6 paused (user decision); Q3 only matters if it resumes. |
+| Next step | 5.2 `index.html` dashboard: headline numbers (from `stats.json`), top insights (from `insights.json`), links into each section. Use `GM.loadJSON` from `js/shell.js`. Load `dataviz` before any chart or stat tile. |
+| Blockers | None. Q4 (site name) is worth settling before 5.1 because it appears in the shell; working name GenAI Market is used until then. Phase 6 paused (user decision); Q3 only matters if it resumes. |
+
+Repository: https://github.com/rbndchsn/genai_market (public, `main`). Commit only when the user asks. `content/synth/`, `content/raw/` and `sourcedoc/` are git-ignored; the synth notes exist only on the local machine, so do not delete them.
 
 Hosting: GitHub Pages from the repo above (Q2 resolved). No Cloudflare in the MVP. The site is static files in `site/` with no build step, so Pages can serve it either from a `docs/` folder or through the GitHub Actions static-site workflow pointed at `site/`; decide at 5.10. The licensed AIM PDF (`sourcedoc/`) and every extraction of it (`content/raw/`) must never be committed; the repo is public.
 
@@ -208,8 +210,8 @@ Phase 4 working rule: one step at a time, with a user checkpoint after 4.1. Many
 
 ### Phase 5 — Website build
 Target: MVP deployed on GitHub Pages from https://github.com/rbndchsn/genai_market (public repo). No chat in the MVP; Phase 6 is paused.
-- [ ] 5.0 Repository setup — `git init` in `GenAI_Market/`, `.gitignore` excluding `sourcedoc/`, `content/raw/`, `__pycache__/`, `.venv*/` and OS files (and `content/synth/` if Q6 says so), `README.md` stub, first commit on `main`, add remote and push. Verify with `git ls-files` that no PDF, no `pages/*.png` and no `text.md` from `content/raw/` is tracked before pushing.
-- [ ] 5.1 Site shell — shared layout, navigation (no chat entry in the MVP), CSS tokens, dark mode, responsive at phone width, favicon. Paths must be relative so the site works under the Pages sub-path `/genai_market/`.
+- [x] 5.0 Repository setup — 2026-09-15, `git init -b main`; `.gitignore` excludes `sourcedoc/`, `content/raw/`, `content/synth/` (Q6: keep local for now), `content/originality-check-*.md` (quotes source runs), Python and OS files; `.gitattributes` normalises line endings; `README.md` stub. Verified with `git ls-files` that no PDF, render or extraction is tracked (19 files: plan, CLAUDE.md, README, schemas, web-candidates, 5 scripts, 7 data files, git config). First commit a4d555c pushed to https://github.com/rbndchsn/genai_market on `main`.
+- [x] 5.1 Site shell — 2026-09-16. `site/css/site.css` (colour, spacing, radius and font tokens on `:root`; dark theme under `prefers-color-scheme` guarded by `:root:not([data-theme="light"])` and again under `:root[data-theme="dark"]`; sticky header; nav that scrolls horizontally on phones; card, pill, notice, table and form primitives). `site/js/shell.js` renders the skip link, header, nav (active item from `<body data-page>`), footer and a theme toggle stored in localStorage, and exposes `window.GM` with `loadJSON`, `escapeHTML` and `formatRefs` for later pages. `site/assets/favicon.svg`. Seven pages generated with a shared head and placeholder bodies: index, insights, vendors, stats, glossary, sources, 404. All paths relative. Verified with headless Chrome: desktop, dark, light (stored preference) and a 390px iframe harness (desktop Chrome cannot shrink below about 500px, so phone width is tested through an iframe); no horizontal overflow. Fixed three defects found in review: card links inheriting underlines, card spacing rule firing inside the grid, toggle icon crushed by generic button padding.
 - [ ] 5.2 `index.html` dashboard — headline numbers, top insights, links into each section
 - [ ] 5.3 `insights.html` — filter by theme and source, expandable cards with citations
 - [ ] 5.4 `vendors.html` — sortable and filterable table, interactive quadrant chart, profile drawer
@@ -273,7 +275,7 @@ Paused so the MVP does not depend on a Cloudflare Worker or an API key. Resume a
 - ~~**Q1.** AIM report licensing for public use.~~ Resolved 2026-09-15: meta-analysis framing, no verbatim text, no reused images. See Decisions Log.
 - ~~**Q2.** Hosting: Cloudflare Pages (proposed) or Vercel / GitHub Pages? Custom domain?~~ Resolved 2026-09-15: GitHub Pages from https://github.com/rbndchsn/genai_market. Custom domain still open.
 - **Q3.** Is an Anthropic API key available for the chat Worker, and is there a monthly budget cap? (Only relevant if Phase 6 resumes.)
-- **Q6.** Should `content/synth/` (the paraphrased synthesis notes) be committed to the public repo, or kept local until the 7.1 originality review has cleared them? `sourcedoc/` and `content/raw/` are excluded regardless.
+- ~~**Q6.** Should `content/synth/` be committed to the public repo?~~ Resolved 2026-09-15: keep local for now (git-ignored). Revisit after 7.1.
 - **Q4.** Site name and branding (working name: GenAI Market).
 - **Q5.** Should vendor profiles cover all vendors in the AIM report or only the top quadrant?
 
@@ -301,3 +303,5 @@ Paused so the MVP does not depend on a Cloudflare Worker or an API key. Resume a
 | 2026-09-15 | Step 4.2: a16z (src-08) synthesised. Next source is Microsoft Work Trend Index (src-10). |
 | 2026-09-15 | User asked for the rest of Phase 4 in one run. Steps 4.2 (src-10, src-11, src-03, src-06 via forked agents; src-12 by the main agent), 4.3 and 4.4 completed. Phase 4 done. Current Status moved to Phase 5 with a reading guide for the data files. Decisions logged on VC vendor-share conflicts, leading-group range and web-source charts. Added `scripts/originality_check.py` and a first overlap report as a head start for 7.1 (not a Phase 4 step; recorded there, not acted on). |
 | 2026-09-15 | User decisions recorded: Phase 6 paused; hosting is GitHub Pages from rbndchsn/genai_market. Added steps 5.0 (repo setup with exclusions) and 5.10 (Pages deploy), reworded 5.1 and 7.4, closed Q2, added Q6. Repo checked: exists, public, empty; local folder not yet a git repo. |
+| 2026-09-15 | Step 5.0 done: repo initialised, exclusions in place, first commit pushed. Q6 resolved (synth notes stay local). Next step 5.1. |
+| 2026-09-16 | Step 5.1 done: site shell (CSS tokens, dark mode, shell script, favicon, seven placeholder pages), reviewed with headless Chrome screenshots. Next step 5.2. Uncommitted. |
