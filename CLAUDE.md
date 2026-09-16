@@ -62,7 +62,17 @@ This site is a meta-analysis. We publish our own research findings with referenc
 - Never try to bypass a sign-in or paywall. Mark the source as gated in the candidate list and let the user download the PDF into `sourcedoc/`.
 - Run Phase 4 one step at a time and report after each. The user reviews candidate lists before anything is extracted.
 
+## Phase 5 rules (website build)
+
+- Follow the "Phase 5 build and review routine" section in `plan.md` exactly: page skeleton, `GM` shell helpers, CSS tokens and components, data-driven values only, stable id anchors, query-string filters.
+- Load the `dataviz` skill before writing any chart, stat tile or KPI row, and validate any new palette with its checker.
+- Review every page with `python scripts/review_shots.py <page>` (desktop and 390px phone view) and read both screenshots before marking a step done. Fix what you find first.
+- Commit only when the user asks. Before every commit, confirm nothing from `sourcedoc/`, `content/raw/`, `content/synth/` or `content/originality-check-*.md` is staged; the repo is public and the AIM report is licensed.
+- Phase 6 (chat) is paused by user decision. Do not add a chat entry, a Worker or any Cloudflare dependency. Hosting is GitHub Pages from https://github.com/rbndchsn/genai_market.
+
 ## Procedures
 
 - Synthesising a source (Phase 4, step 4.2): follow `content/synth/README.md`. Read the full extraction, verify charts against page renders, write notes in the fixed structure, update `plan.md`, report.
 - Data changes (Phase 3 output onward): edit `site/data/*.json` per `content/schemas.md`, then run `scripts/validate_data.py` and `scripts/build_chunks.py`. Never hand-edit `chunks.json`.
+- Site pages (Phase 5): build per the routine in `plan.md`, review with `scripts/review_shots.py`, record the step in `plan.md`.
+- Originality (Phase 7.1): `python scripts/originality_check.py` writes `content/originality-check-<date>.md` (local only). Every SRC-01 hit must be rewritten.
