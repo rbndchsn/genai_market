@@ -1,0 +1,24 @@
+# Licensed source material and every extraction of it. Never commit (public repo).
+sourcedoc/
+content/raw/
+
+# Working notes kept local until the originality review (plan.md step 7.1) clears them.
+content/synth/
+content/originality-check-*.md
+
+# Python
+__pycache__/
+*.pyc
+.venv*/
+venv/
+ENV/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local environment
+.env
