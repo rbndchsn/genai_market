@@ -13,7 +13,8 @@
     { key: "vendors", href: "vendors.html", label: "Vendors" },
     { key: "stats", href: "stats.html", label: "Statistics" },
     { key: "glossary", href: "glossary.html", label: "Glossary" },
-    { key: "sources", href: "sources.html", label: "Sources" }
+    { key: "sources", href: "sources.html", label: "Sources" },
+    { key: "search", href: "search.html", label: "Search" }
   ];
 
   var MARK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" fill="currentColor" opacity="0.15"/><path d="M6 15.5l4-6 3 4 2.5-3L18 15.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -66,6 +67,11 @@
         '<div class="container">' +
           '<a class="brand" href="index.html">' + MARK + '<span class="brand-name">' + SITE_NAME + "</span></a>" +
           '<nav class="site-nav" aria-label="Site"><ul>' + items + "</ul></nav>" +
+          (page === "search" ? "" :
+            '<form class="header-search" role="search" action="search.html" method="get">' +
+              '<label for="header-q" class="visually-hidden">Search the site</label>' +
+              '<input id="header-q" name="q" type="search" placeholder="Search" autocomplete="off">' +
+            "</form>") +
           '<button class="theme-toggle" type="button"></button>' +
         "</div>" +
       "</header>"

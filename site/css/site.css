@@ -564,3 +564,19 @@ table.compact { font-size: 0.9rem; }
   .source-fields { grid-template-columns: 1fr; gap: var(--space-1); }
   .source-fields dd { margin-bottom: var(--space-2); }
 }
+
+/* ---------- Search ---------- */
+.header-search { flex: none; }
+.header-search input { min-height: 36px; width: 150px; padding: 4px 10px; font-size: 0.9rem; }
+@media (max-width: 900px) { .header-search { display: none; } }
+.search-form { display: flex; gap: var(--space-2); margin: 0 0 var(--space-4); }
+.search-form input { flex: 1 1 auto; min-width: 0; font-size: 1.05rem; min-height: 46px; }
+.search-form button { min-height: 46px; }
+.type-filter { margin-bottom: var(--space-3); }
+.result h3 { margin-top: var(--space-2); font-size: 1.05rem; }
+.result h3 a { color: var(--link); text-decoration: none; }
+.result h3 a:hover { text-decoration: underline; }
+.result .pill-id { font-family: var(--font-mono); font-weight: 500; }
+.result-snippet { margin-bottom: var(--space-2); font-size: 0.95rem; }
+.result .ref { margin: 0; }
+mark { background: color-mix(in srgb, var(--focus) 35%, transparent); color: inherit; border-radius: 2px; padding: 0 1px; }

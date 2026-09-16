@@ -73,6 +73,6 @@ This site is a meta-analysis. We publish our own research findings with referenc
 ## Procedures
 
 - Synthesising a source (Phase 4, step 4.2): follow `content/synth/README.md`. Read the full extraction, verify charts against page renders, write notes in the fixed structure, update `plan.md`, report.
-- Data changes (Phase 3 output onward): edit `site/data/*.json` per `content/schemas.md`, then run `scripts/validate_data.py` and `scripts/build_chunks.py`. Never hand-edit `chunks.json`.
+- Data changes (Phase 3 output onward): edit `site/data/*.json` per `content/schemas.md`, then run `scripts/validate_data.py`, `scripts/build_chunks.py` and `scripts/build_search_index.py`. Never hand-edit `chunks.json` or `search-index.json`.
 - Site pages (Phase 5): build per the routine in `plan.md`, review with `scripts/review_shots.py`, record the step in `plan.md`.
 - Originality (Phase 7.1): `python scripts/originality_check.py` writes `content/originality-check-<date>.md` (local only). Every SRC-01 hit must be rewritten.
