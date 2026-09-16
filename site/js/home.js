@@ -6,7 +6,7 @@
   /* Headline numbers. Each entry names a stat id and how to present it. The value is read
      from stats.json so the tile can never drift from the recorded data. */
   var HERO = { stat: "s7-02", pick: "2025", format: function (v) { return "$" + v + "B"; },
-               label: "spent by enterprises on generative AI in 2025",
+               label: "Spent by enterprises on generative AI in 2025",
                context: "3.2 times the prior year, split almost evenly between infrastructure and applications" };
 
   var TILES = [

@@ -301,6 +301,7 @@ input[type="search"], input[type="text"], select {
 }
 .hero-figure { font-size: clamp(3rem, 6vw + 1rem, 5.5rem); font-weight: 700; line-height: 1; letter-spacing: -0.03em; margin: 0 0 var(--space-2); }
 .hero-label { font-size: 1.2rem; font-weight: 600; margin: 0 0 var(--space-1); }
+.hero-label::first-letter, .stat-label::first-letter { text-transform: uppercase; }
 .hero-context { margin: 0 0 var(--space-2); max-width: 40ch; }
 @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } }
 
