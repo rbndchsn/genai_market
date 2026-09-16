@@ -103,7 +103,7 @@ def shoot(browser: str, url: str, out: Path, width: int, height: int, dark: bool
 
 def dom_size(browser: str, url: str) -> int:
     r = subprocess.run([browser, "--headless=new", "--disable-gpu", "--disk-cache-size=1", "--virtual-time-budget=6000", "--dump-dom", url],
-                       capture_output=True, text=True, timeout=90)
+                       capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=90)
     return len(r.stdout)
 
 

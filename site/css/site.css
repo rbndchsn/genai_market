@@ -464,3 +464,59 @@ table.compact { font-size: 0.9rem; }
   .drawer { padding: var(--space-4) var(--gutter) var(--space-7); }
   .axes { grid-template-columns: 1fr; }
 }
+
+/* ---------- Statistics page ---------- */
+.viz-tooltip-fixed { position: fixed; }
+.stats-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); align-items: start; margin-bottom: var(--space-5); }
+.stat h3 { margin-top: var(--space-3); font-size: 1.02rem; }
+.stat .pill-id { font-family: var(--font-mono); font-weight: 500; text-decoration: none; }
+.stat.is-target { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+.stat .chart { margin: var(--space-3) 0; }
+.stat-value-lg { font-size: 2.4rem; font-weight: 650; line-height: 1.1; letter-spacing: -0.02em; margin: 0; }
+.stat-text { margin: 0; font-size: 1.05rem; }
+.stat-foot { border-top: 1px solid var(--border); padding-top: var(--space-3); margin-top: var(--space-3); font-size: 0.9rem; }
+.stat-foot p { margin: 0 0 var(--space-2); }
+.stat-foot p:last-child { margin-bottom: 0; }
+.stat-note, .stat-sample { font-size: 0.88rem; line-height: 1.45; }
+.chart-note { font-size: 0.82rem; margin: var(--space-2) 0 0; }
+
+/* Horizontal bars: thin marks, rounded data-end, square baseline, values in text tokens. */
+.bars, .ranges { display: flex; flex-direction: column; gap: 6px; }
+.bar-row { display: grid; grid-template-columns: minmax(96px, 36%) 1fr auto; gap: 0 var(--space-3); align-items: center; font-size: 0.86rem; }
+.bar-label { line-height: 1.3; color: var(--text); }
+.bar-track { position: relative; display: block; height: 18px; background: transparent; }
+.bar-track::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--viz-axis); }
+.bar { display: block; height: 100%; background: var(--series-1); border-radius: 0 4px 4px 0; min-width: 2px; outline-offset: 2px; transition: filter 120ms ease; }
+.bar:hover, .bar:focus-visible { filter: brightness(1.12); }
+.bar-value { font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; line-height: 1; }
+.bars-more { margin-top: 2px; }
+.bars-more summary { cursor: pointer; color: var(--link); font-size: 0.86rem; font-weight: 600; margin-bottom: 6px; }
+.bars-more[open] summary { margin-bottom: 8px; }
+.bars-more > .bar-row + .bar-row { margin-top: 6px; }
+.bar-row-grouped { grid-template-columns: minmax(96px, 36%) 1fr; align-items: center; }
+.bar-group { display: flex; flex-direction: column; gap: 2px; }
+.bar-group .bar-track { height: 12px; display: flex; align-items: center; }
+.bar-group .bar { height: 12px; }
+.bar-inline-value { margin-left: 6px; font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.legend { list-style: none; margin: 0 0 var(--space-3); padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); font-size: 0.85rem; color: var(--text); }
+.legend li { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.legend-stack { flex-direction: column; gap: var(--space-1); margin: 0; }
+.legend-stack li { display: grid; grid-template-columns: auto 1fr auto; gap: 0 var(--space-2); align-items: center; width: 100%; }
+.legend-value { font-variant-numeric: tabular-nums; color: var(--muted); }
+.donut-wrap { display: flex; align-items: center; gap: var(--space-5); flex-wrap: wrap; }
+.donut { flex: none; }
+.donut .arc { outline: none; transition: stroke-width 120ms ease; }
+.donut .arc:hover, .donut .arc:focus-visible { stroke-width: 26; }
+.range-track { background: var(--surface-2); border-radius: 4px; }
+.range-track::before { display: none; }
+.range-fill { position: absolute; top: 0; bottom: 0; background: var(--series-1); border-radius: 4px; outline-offset: 2px; }
+.data-table summary { cursor: pointer; color: var(--link); font-weight: 600; font-size: 0.9rem; }
+.data-table .table-wrap { margin-top: var(--space-2); }
+.data-table td.num, .data-table th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 480px) {
+  .bar-row, .bar-row-grouped { grid-template-columns: 1fr auto; }
+  .bar-label { grid-column: 1 / -1; }
+  .bar-row-grouped .bar-label { grid-column: 1 / -1; }
+  .bar-group { grid-column: 1 / -1; }
+}
