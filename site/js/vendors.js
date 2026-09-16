@@ -174,7 +174,7 @@
       var x0 = q.pe === "high" ? sx(thr) : sx(0), x1 = q.pe === "high" ? sx(1) : sx(thr);
       var y0 = q.ma === "high" ? sy(1) : sy(thr), y1 = q.ma === "high" ? sy(thr) : sy(0);
       var active = !state.quadrant || state.quadrant === id;
-      svg.appendChild(svgEl("rect", { x: x0, y: y0, width: x1 - x0, height: y1 - y0, class: "quad-bg" + (active ? "" : " is-off") }));
+      svg.appendChild(svgEl("rect", { x: x0, y: y0, width: x1 - x0, height: y1 - y0, class: "quad-bg quad-bg-" + id + (active ? "" : " is-off") }));
       var count = shown.filter(function (v) { return v.quadrant === id; }).length;
       // High-maturity captions sit above the frame so they never collide with top-scoring points.
       var lab = svgEl("text", { x: q.pe === "high" ? x1 - 4 : x0 + 4, y: q.ma === "high" ? y0 - 8 : y1 - 8,
@@ -285,7 +285,7 @@
     var legend = QUAD_ORDER.map(function (id) {
       var n = data.vendors.vendors.filter(function (v) { return v.quadrant === id; }).length;
       var p = new URLSearchParams(location.search); p.set("quadrant", id);
-      var cls = "pill" + (state.quadrant === id ? " pill-accent" : "");
+      var cls = "pill pill-quad pill-quad-" + id + (state.quadrant === id ? " is-active" : "");
       return '<a class="' + cls + '" href="?' + p.toString() + '" data-quadrant="' + id + '">' + GM.escapeHTML(quadLabel(id)) + " " + n + "</a>";
     }).join(" ");
     var meanings = QUAD_ORDER.map(function (id) { var q = quads[id]; return "<strong>" + GM.escapeHTML(q.label) + ":</strong> " + GM.escapeHTML(q.meaning); }).join(" ");
@@ -328,7 +328,7 @@
     var rows = sorted(shown).map(function (v) {
       return '<tr id="' + GM.escapeHTML(v.id) + '" data-id="' + GM.escapeHTML(v.id) + '">' +
         '<th scope="row"><button type="button" class="link-btn vendor-open" data-id="' + GM.escapeHTML(v.id) + '">' + GM.escapeHTML(v.name) + "</button></th>" +
-        "<td>" + GM.escapeHTML(quadLabel(v.quadrant)) + "</td>" +
+        '<td><span class="pill pill-quad pill-quad-' + v.quadrant + '">' + GM.escapeHTML(quadLabel(v.quadrant)) + "</span></td>" +
         '<td class="num">' + fmtScore(v.pe_score) + "</td>" +
         '<td class="num">' + v.pe_rank + "</td>" +
         '<td class="num">' + fmtScore(v.ma_score) + "</td>" +
@@ -358,7 +358,7 @@
     var html =
       '<div class="drawer-head">' +
         '<div class="pills">' +
-          '<a class="pill pill-accent" href="?quadrant=' + v.quadrant + '" data-quadrant="' + v.quadrant + '">' + GM.escapeHTML(quadLabel(v.quadrant)) + "</a>" +
+          '<a class="pill pill-quad pill-quad-' + v.quadrant + '" href="?quadrant=' + v.quadrant + '" data-quadrant="' + v.quadrant + '">' + GM.escapeHTML(quadLabel(v.quadrant)) + "</a>" +
           '<span class="pill">Pe ' + fmtScore(v.pe_score) + " (rank " + v.pe_rank + ")</span>" +
           '<span class="pill">Ma ' + fmtScore(v.ma_score) + " (rank " + v.ma_rank + ")</span>" +
         "</div>" +

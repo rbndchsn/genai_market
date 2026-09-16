@@ -71,10 +71,10 @@
     var stats = chips(i.related_stats || [], ctx.statById, "stats.html", "label");
     var terms = chips(i.related_terms || [], ctx.termById, "glossary.html", "term");
     var vendors = chips(i.related_vendors || [], ctx.vendorById, "vendors.html", "name");
-    return '<article class="card insight" id="' + i.id + '">' +
+    return '<article class="card insight themed" id="' + i.id + '"' + GM.themeStyle(i.theme) + '>' +
       '<div class="pills">' +
-        '<a class="pill pill-accent" href="?theme=' + i.theme + '">' + GM.escapeHTML(themes[i.theme] || i.theme) + "</a>" +
-        '<span class="pill">' + (EVIDENCE[i.evidence] || i.evidence) + "</span>" +
+        '<a class="pill pill-theme" href="?theme=' + i.theme + '">' + GM.escapeHTML(themes[i.theme] || i.theme) + "</a>" +
+        '<span class="pill ' + GM.evidenceClass(i.evidence) + '">' + (EVIDENCE[i.evidence] || i.evidence) + "</span>" +
         '<span class="pill">' + (KIND[i.kind] || i.kind) + "</span>" +
         '<a class="pill pill-id" href="#' + i.id + '" title="Link to this insight">' + i.id + "</a>" +
       "</div>" +
@@ -105,7 +105,7 @@
       Object.keys(themes).forEach(function (k) {
         var items = shown.filter(function (i) { return i.theme === k; });
         if (!items.length) return;
-        html += '<h2 class="theme-head" id="theme-' + k + '">' + GM.escapeHTML(themes[k]) + ' <span class="muted count">' + items.length + "</span></h2>";
+        html += '<h2 class="theme-head themed" id="theme-' + k + '"' + GM.themeStyle(k) + '><span class="theme-dot" aria-hidden="true"></span>' + GM.escapeHTML(themes[k]) + ' <span class="muted count">' + items.length + "</span></h2>";
         html += '<div class="stack">' + items.map(function (i) { return card(i, ctx); }).join("") + "</div>";
       });
     } else {

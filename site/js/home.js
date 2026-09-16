@@ -59,7 +59,7 @@
       var s = statById[t.stat];
       if (!s) return "";
       var v = statValue(s, t.pick);
-      return '<article class="stat-tile">' +
+      return '<article class="stat-tile themed"' + GM.themeStyle(s.theme) + '>' +
         '<a class="stat-link" href="stats.html#' + t.stat + '">' +
         '<span class="stat-value">' + GM.escapeHTML(String(v)) + GM.escapeHTML(t.suffix || "") + "</span>" +
         '<span class="stat-label">' + GM.escapeHTML(t.label) + "</span>" +
@@ -81,8 +81,8 @@
       var i = insById[id];
       if (!i) return "";
       var ev = { "multi-source": "Multi-source", "single-source": "Single source", "agent-analysis": "Our analysis" }[i.evidence] || i.evidence;
-      return '<article class="card insight-card">' +
-        '<div class="pills"><span class="pill pill-accent">' + GM.escapeHTML(themes[i.theme] || i.theme) + '</span><span class="pill">' + ev + "</span></div>" +
+      return '<article class="card insight-card themed"' + GM.themeStyle(i.theme) + '>' +
+        '<div class="pills"><a class="pill pill-theme" href="insights.html?theme=' + i.theme + '">' + GM.escapeHTML(themes[i.theme] || i.theme) + '</a><span class="pill ' + GM.evidenceClass(i.evidence) + '">' + ev + "</span></div>" +
         '<h3><a href="insights.html#' + i.id + '">' + GM.escapeHTML(i.title) + "</a></h3>" +
         "<p>" + GM.escapeHTML(i.summary) + "</p>" +
         refLine(i.refs, srcById) +

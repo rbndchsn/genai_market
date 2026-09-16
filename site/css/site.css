@@ -584,3 +584,57 @@ table.compact { font-size: 0.9rem; }
 .result-snippet { margin-bottom: var(--space-2); font-size: 0.95rem; }
 .result .ref { margin: 0; }
 mark { background: color-mix(in srgb, var(--focus) 35%, transparent); color: inherit; border-radius: 2px; padding: 0 1px; }
+
+
+/* ---------- Colour with a job: themes, evidence, quadrants, hero band ---------- */
+/* Themed elements carry --tc (set inline from the theme map in shell.js). Text stays in text tokens. */
+.card.themed { border-left: 4px solid var(--tc, var(--border)); }
+.stat-tile.themed { border-top: 4px solid var(--tc, var(--border)); }
+.stat-tile .stat-value { color: var(--accent-strong); }
+.pill-theme {
+  background: color-mix(in srgb, var(--tc, var(--muted)) 16%, var(--surface));
+  border-color: color-mix(in srgb, var(--tc, var(--muted)) 45%, transparent);
+  color: var(--text); padding-left: 8px;
+}
+.pill-theme::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--tc, var(--muted)); margin-right: 6px; vertical-align: 1px; }
+a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
+.theme-head.themed { border-bottom-color: color-mix(in srgb, var(--tc) 45%, var(--border)); }
+.theme-dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--tc, var(--muted)); margin-right: var(--space-2); vertical-align: -1px; }
+
+/* Evidence levels: green (converging sources), amber (one source), violet (our analysis). */
+.pill-ev-multi { background: color-mix(in srgb, var(--ok) 16%, var(--surface)); border-color: color-mix(in srgb, var(--ok) 45%, transparent); color: var(--text); }
+.pill-ev-single { background: color-mix(in srgb, var(--focus) 18%, var(--surface)); border-color: color-mix(in srgb, var(--focus) 50%, transparent); color: var(--text); }
+.pill-ev-agent { background: color-mix(in srgb, var(--series-7) 16%, var(--surface)); border-color: color-mix(in srgb, var(--series-7) 45%, transparent); color: var(--text); }
+
+/* Quadrant tints: Leaders teal, Seasoned violet, Growth amber, Challengers neutral. Points stay one hue. */
+:root { --quad-leaders: var(--accent); --quad-seasoned: var(--series-7); --quad-growth: var(--series-4); --quad-challengers: var(--viz-muted); }
+.quad-bg { opacity: 1; }
+.quad-bg-leaders { fill: color-mix(in srgb, var(--quad-leaders) 12%, var(--surface)); }
+.quad-bg-seasoned { fill: color-mix(in srgb, var(--quad-seasoned) 10%, var(--surface)); }
+.quad-bg-growth { fill: color-mix(in srgb, var(--quad-growth) 12%, var(--surface)); }
+.quad-bg-challengers { fill: color-mix(in srgb, var(--quad-challengers) 9%, var(--surface)); }
+.quad-bg.is-off { opacity: 0.35; }
+.pill-quad { color: var(--text); }
+.pill-quad-leaders { background: color-mix(in srgb, var(--quad-leaders) 16%, var(--surface)); border-color: color-mix(in srgb, var(--quad-leaders) 50%, transparent); }
+.pill-quad-seasoned { background: color-mix(in srgb, var(--quad-seasoned) 16%, var(--surface)); border-color: color-mix(in srgb, var(--quad-seasoned) 50%, transparent); }
+.pill-quad-growth { background: color-mix(in srgb, var(--quad-growth) 18%, var(--surface)); border-color: color-mix(in srgb, var(--quad-growth) 55%, transparent); }
+.pill-quad-challengers { background: color-mix(in srgb, var(--quad-challengers) 14%, var(--surface)); border-color: color-mix(in srgb, var(--quad-challengers) 45%, transparent); }
+.pill-quad.is-active { outline: 2px solid var(--accent); outline-offset: 1px; }
+.vendor-table td .pill-quad { font-size: 0.78rem; white-space: nowrap; }
+
+/* Home hero band */
+.hero {
+  background: linear-gradient(135deg, #1d6b6b 0%, #1f5f7a 55%, #1b3f5e 100%);
+  color: #f3f6f5; border-radius: var(--radius-lg); padding: var(--space-6) var(--space-6) var(--space-5);
+  box-shadow: var(--shadow);
+}
+.hero h1 { color: #ffffff; }
+.hero .lead { color: #d3e3e3; }
+.hero .hero-figure { color: #ffffff; }
+.hero .hero-label { color: #f3f6f5; }
+.hero .hero-context, .hero .muted { color: #c2d6d6; }
+.hero .ref, .hero .ref a, .hero a { color: #dcebea; }
+.hero a:hover { color: #ffffff; }
+:root[data-theme="dark"] .hero { background: linear-gradient(135deg, #14504f 0%, #163f52 55%, #122b40 100%); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { background: linear-gradient(135deg, #14504f 0%, #163f52 55%, #122b40 100%); } }
+@media (max-width: 760px) { .hero { padding: var(--space-5) var(--space-4); } }

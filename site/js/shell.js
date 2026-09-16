@@ -142,6 +142,19 @@
     return SHORT[id] || (s ? s.publisher : id);
   }
 
+  /* Theme colours: the eight large themes take fixed chart-palette slots (never cycled); the four small
+     ones share a neutral. Elements set --tc through themeStyle() and the CSS reads var(--tc). */
+  var THEME_COLOR = {
+    market: "var(--series-1)", adoption: "var(--series-3)", agentic: "var(--series-2)", data: "var(--series-6)",
+    governance: "var(--series-7)", talent: "var(--series-5)", vendors: "var(--series-4)", outlook: "var(--accent)",
+    cost: "var(--viz-muted)", operations: "var(--viz-muted)", commercial: "var(--viz-muted)", method: "var(--viz-muted)"
+  };
+  function themeStyle(theme) {
+    return ' style="--tc:' + (THEME_COLOR[theme] || "var(--viz-muted)") + '"';
+  }
+  var EVIDENCE_CLASS = { "multi-source": "pill-ev-multi", "single-source": "pill-ev-single", "agent-analysis": "pill-ev-agent" };
+  function evidenceClass(ev) { return EVIDENCE_CLASS[ev] || ""; }
+
   /* Format a ref list as "Publisher, year, p. 5, 6" with links to the Sources page. */
   function formatRefs(refs, sourcesById) {
     return (refs || []).map(function (r) {
@@ -159,6 +172,8 @@
     escapeHTML: escapeHTML,
     formatRefs: formatRefs,
     shortName: shortName,
+    themeStyle: themeStyle,
+    evidenceClass: evidenceClass,
     currentTheme: currentTheme
   };
 
