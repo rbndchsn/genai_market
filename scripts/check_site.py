@@ -94,7 +94,8 @@ def main() -> None:
             doms[page] = dom
             for e in errors:
                 problems.append(f"{page}: console: {e}")
-            hrefs = re.findall(r'href="([^"]*)"', dom)
+            markup = re.sub(r"<script[ >].*?</script>", "", dom, flags=re.S)  # ignore href strings inside scripts
+            hrefs = re.findall(r'href="([^"]*)"', markup)
             checked = 0
             for href in set(hrefs):
                 if not href or href.startswith(("mailto:", "javascript:")):
