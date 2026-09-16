@@ -4,7 +4,7 @@
   var GM = window.GM;
   var TYPE = { report: "Report", survey: "Survey", web: "Web article" };
   var FILES = [
-    { name: "sources", what: "the twelve sources with method, sample, licence and bias notes" },
+    { name: "sources", what: "every source with its method, sample, licence and bias notes" },
     { name: "insights", what: "findings by theme with evidence level, references and cross-links" },
     { name: "stats", what: "every statistic with its series, unit, sample note, caveats and references" },
     { name: "vendors", what: "28 service providers with scores, quadrant, focus, platforms and claimed metrics" },
