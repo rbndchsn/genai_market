@@ -15,9 +15,37 @@
 <body data-page="vendors">
 <main id="main" class="container">
 <h1>Vendors</h1>
-<p class="lead">Twenty-eight generative AI service providers, their penetration and maturity scores, and what each one is known for.</p>
-<div class="placeholder">Sortable table, interactive quadrant and profile drawer arrive in step 5.4.</div>
+<p class="lead">Twenty-eight generative AI service providers, their penetration and maturity scores, and what each one is known for. Filter the landscape, sort the table, and open a vendor for its profile.</p>
+<div id="method" class="card method-card"></div>
+<div id="filters" class="filters" role="search" aria-label="Filter vendors"></div>
+<p id="count" class="muted count-line" aria-live="polite"></p>
+
+<section class="card chart-card" aria-labelledby="quad-heading">
+  <div class="section-head">
+    <h2 id="quad-heading">PeMa quadrant</h2>
+    <p class="muted chart-hint">Hover or focus a point for its scores. Select one to open the profile.</p>
+  </div>
+  <div id="quadrant" class="quadrant-wrap"></div>
+  <p id="quad-legend" class="quad-legend"></p>
+  <p id="quad-ref" class="ref"></p>
+</section>
+
+<section aria-labelledby="table-heading">
+  <div class="section-head">
+    <h2 id="table-heading">All vendors</h2>
+    <p class="muted">Select a column heading to sort. Select a vendor to open its profile.</p>
+  </div>
+  <div class="table-wrap">
+    <table id="vtable" class="vendor-table">
+      <thead id="vthead"></thead>
+      <tbody id="vtbody"></tbody>
+    </table>
+  </div>
+</section>
+
+<dialog id="drawer" class="drawer" aria-labelledby="drawer-title"></dialog>
 </main>
 <script src="js/shell.js"></script>
+<script src="js/vendors.js"></script>
 </body>
 </html>
