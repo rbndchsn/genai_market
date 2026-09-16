@@ -2,7 +2,9 @@
 
 A meta-analysis of the state of enterprise AI adoption and the generative AI services market, published as a static website. We read twelve analyst reports, surveys and industry publications from 2025 and 2026, reconcile what they say, and present our own findings with a reference for every stat, insight and vendor fact.
 
-Status: data pipeline complete (Phase 4). Website build (Phase 5) in progress: shell, overview and insights pages done; vendors, statistics, glossary and sources pages next, then deployment to GitHub Pages. The ask-the-report chat (Phase 6) is paused so the first release has no backend. See `plan.md` for the full plan, decisions and current status.
+**Live site: https://rbndchsn.github.io/genai_market/**
+
+Status: the MVP is live (Phase 5 complete). Every push to `main` republishes `site/` through `.github/workflows/pages.yml`. Next is the QA phase (originality review, accuracy pass, technical QA). The ask-the-report chat (Phase 6) is paused so the release has no backend. See `plan.md` for the full plan, decisions and current status.
 
 ## Layout
 
@@ -31,9 +33,10 @@ Then open http://localhost:8000.
 ```
 python scripts/validate_data.py
 python scripts/build_chunks.py
+python scripts/build_search_index.py
 ```
 
-`chunks.json` is generated; edit the other data files and rebuild.
+`chunks.json` and `search-index.json` are generated; edit the other data files and rebuild.
 
 ## Review a page
 
@@ -42,7 +45,13 @@ python scripts/review_shots.py index.html
 python scripts/review_shots.py "insights.html?theme=agentic#ins-045" --dark
 ```
 
-Starts a local server and writes desktop (1280px) and phone (390px, via an iframe harness) screenshots with headless Chrome or Edge. Every page is reviewed this way before its step is marked done.
+Starts a local server and writes desktop (1280px) and phone (390px, via an iframe harness) screenshots with headless Chrome or Edge. `--theme light|dark` forces the site theme; `--iframe` renders the desktop view in an iframe too (needed when a modal dialog is open). Every page is reviewed this way before its step is marked done.
+
+```
+python scripts/check_site.py
+```
+
+Renders every page headlessly and checks console errors, internal links, hash anchors and absolute paths.
 
 ## Working with the plan
 
