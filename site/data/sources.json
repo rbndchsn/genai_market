@@ -47,7 +47,7 @@
       "sponsor": null,
       "method": "Annual online global survey fielded 4 May to 8 June 2026, with 1,719 participants across 97 countries, industries, company sizes and functions.",
       "sample": "1,719 respondents",
-      "license_note": "Public report downloaded by the user from McKinsey's site. Cited and restated in our own words; no text, charts or images reproduced.",
+      "license_note": "Public report downloaded by the authors from McKinsey's site. Cited and restated in our own words; no text, charts or images reproduced.",
       "bias_note": "Self-reported survey of executives; McKinsey also sells AI consulting services. Weighting and respondent mix are as described in the report.",
       "how_we_use_it": "Global adoption and scaling rates, agent deployment by function, EBIT impact, high-performer traits, and year-over-year trend."
     },
@@ -98,7 +98,7 @@
       "sponsor": null,
       "method": "Multi-method study, January to June 2025: systematic review of more than 300 publicly disclosed AI initiatives, 52 structured interviews, and 153 survey responses from senior leaders gathered at four conferences.",
       "sample": "300+ deployments, 52 interviews, 153 survey responses",
-      "license_note": "Official copy obtained by the user from MIT NANDA. Cited and restated in our own words; no text, charts or images reproduced.",
+      "license_note": "Official copy obtained by the authors from MIT NANDA. Cited and restated in our own words; no text, charts or images reproduced.",
       "bias_note": "Small and convenience-based survey sample; the headline 95 percent figure has been widely quoted and debated. Preliminary version (v0.1) of the report. Predates the 2026 sources by a year.",
       "how_we_use_it": "The pilot-to-production 'divide', reasons pilots stall (lack of learning and context), buy-versus-build outcomes, and shadow AI usage."
     },

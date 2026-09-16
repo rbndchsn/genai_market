@@ -538,3 +538,29 @@ table.compact { font-size: 0.9rem; }
 .term .related { margin: 0 0 var(--space-2); }
 .term .ref { margin: 0; }
 .term.is-target { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+
+/* ---------- Sources page ---------- */
+.toc { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0 0 var(--space-5); }
+.toc a { display: inline-block; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.toc a:hover { border-color: var(--accent); }
+.source h3 { margin-top: var(--space-3); font-size: 1.1rem; }
+.source .pill-id { font-family: var(--font-mono); font-weight: 500; text-decoration: none; }
+.source-line { color: var(--muted); font-size: 0.92rem; margin-bottom: var(--space-3); overflow-wrap: anywhere; }
+.source-fields { display: grid; grid-template-columns: max-content 1fr; gap: var(--space-2) var(--space-4); margin: 0 0 var(--space-3); font-size: 0.95rem; }
+.source-fields div { display: contents; }
+.source-fields dt { font-weight: 600; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; padding-top: 2px; }
+.source-fields dd { margin: 0; }
+.source-usage { margin: 0; padding-top: var(--space-3); border-top: 1px solid var(--border); font-size: 0.92rem; }
+.source.is-target { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+.prose h3 { margin-top: var(--space-5); }
+.prose ol, .prose ul { padding-left: 1.3em; }
+.prose li { margin-bottom: var(--space-2); }
+.prose p:last-child { margin-bottom: 0; }
+.prose pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--surface-2); padding: var(--space-3) var(--space-4); border-radius: var(--radius); font-size: 0.85rem; }
+.data-files { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
+.data-files li { padding: var(--space-3) var(--space-4); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.data-files code { font-weight: 600; }
+@media (max-width: 640px) {
+  .source-fields { grid-template-columns: 1fr; gap: var(--space-1); }
+  .source-fields dd { margin-bottom: var(--space-2); }
+}

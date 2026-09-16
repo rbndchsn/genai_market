@@ -16,8 +16,78 @@
 <main id="main" class="container">
 <h1>Sources and method</h1>
 <p class="lead">What we read, how we read it, and how every finding on this site is attributed.</p>
-<div class="placeholder">Bibliography, methodology and attribution statement arrive in step 5.7.</div>
+<nav class="toc" aria-label="On this page">
+  <a href="#bibliography">Bibliography</a>
+  <a href="#method">Method</a>
+  <a href="#evidence">Evidence levels</a>
+  <a href="#licensing">Licensing and attribution</a>
+  <a href="#cite">How to cite</a>
+  <a href="#data">Data files</a>
+</nav>
+
+<section aria-labelledby="bib-heading">
+  <div class="section-head">
+    <h2 id="bib-heading"><span id="bibliography"></span>Bibliography</h2>
+    <p id="bib-count" class="muted"></p>
+  </div>
+  <p>Ordered by publication date. Each entry records what the source is, how it gathered its evidence, who paid for it, what we may do with it, and how much of this site rests on it. Counts are computed from the data files.</p>
+  <div id="bibliography-list" class="stack"></div>
+</section>
+
+<section id="method" aria-labelledby="method-heading">
+  <h2 id="method-heading">Method</h2>
+  <div class="card prose">
+    <p><strong>This site is a meta-analysis.</strong> We read each source in full, wrote structured notes with page references in our own words, merged the notes into one set of findings, and published those findings with a reference for every claim. No source is republished. The relationship to the sources is the same as a literature review's relationship to the papers it cites.</p>
+    <h3>Pipeline</h3>
+    <ol>
+      <li><strong>Selection.</strong> Two analyst reports were the starting point. We then searched for recent, reputable surveys and studies of enterprise AI adoption, listed the candidates with their access conditions, and added those we could read in full. Gated reports were obtained by the authors through their own accounts; nothing was scraped from behind a sign-in.</li>
+      <li><strong>Extraction.</strong> Each PDF was converted to page-delimited text plus a rendering of every page, so that tables and charts could be read from the page image when the text layer scrambled them. Web articles were saved and converted to plain text. Chart images were read only to recover the numbers they show.</li>
+      <li><strong>Synthesis.</strong> For every source we wrote a fixed-structure set of notes: document facts and method, findings with page numbers, every chart's values, sponsor or framing caveats, and observations that connect it to the other sources. Charts were checked against the page renders before any value was recorded.</li>
+      <li><strong>Reconciliation.</strong> The notes were merged into six data files: insights, statistics, vendors, glossary, taxonomy and sources. Where sources agree, the insight cites all of them. Where they differ, the insight states the difference and the definitions or samples behind it, rather than choosing a winner.</li>
+      <li><strong>Publication.</strong> The site reads those data files at run time. Every number on every page comes from the statistics file; no figure is typed into a page. Charts are drawn from our data with our own styling, and every chart has a data table behind it.</li>
+      <li><strong>Originality check.</strong> Site text is scanned for eight-word runs that also appear in any source extraction. Matches against the licensed report are rewritten; the remainder are checked by hand.</li>
+    </ol>
+    <h3>What we did not do</h3>
+    <p>We did not re-run any survey, audit any vendor's claims, or weight sources by a formal quality score. Vendor-claimed figures are labelled as such wherever they appear. The site reports what the body of evidence says and how well supported each finding is; it does not resolve disagreements the sources themselves leave open.</p>
+  </div>
+</section>
+
+<section id="evidence" aria-labelledby="evidence-heading">
+  <h2 id="evidence-heading">Evidence levels</h2>
+  <div class="grid">
+    <div class="card"><h3>Multi-source</h3><p>Two or more independent sources converge on the finding. Each is cited. Sources that draw on the same underlying survey are not counted as independent.</p><p id="ev-multi" class="muted"></p></div>
+    <div class="card"><h3>Single source</h3><p>One source says it. The finding is stated as that source's result, with its sample and any sponsorship or framing caveat.</p><p id="ev-single" class="muted"></p></div>
+    <div class="card"><h3>Our analysis</h3><p>A cross-source or cross-vendor observation of our own, still cited to the pages it draws on. These are labelled so that readers can weigh them differently from reported results.</p><p id="ev-agent" class="muted"></p></div>
+  </div>
+</section>
+
+<section id="licensing" aria-labelledby="licensing-heading">
+  <h2 id="licensing-heading">Licensing and attribution</h2>
+  <div class="card prose">
+    <p><strong>Source material.</strong> One of the analyst reports we read is a licensed document. We use it as a cited input only: no sentence, phrase, table, chart or image from it appears on this site, and its findings are restated in our own words with page references. The remaining sources are public reports, sponsored briefs released for distribution, and public web articles; we cite them and restate their findings in the same way. No chart or image from any source is reproduced. Every chart here is drawn from our own data file.</p>
+    <p><strong>Vendor information.</strong> Named products, platforms and partners are recorded as facts reported by the vendors to the analyst. Performance figures a vendor disclosed are shown with a "vendor-claimed, unaudited" label and are not endorsed.</p>
+    <p><strong>Trademarks.</strong> Company and product names belong to their owners and are used only to identify the organisations and products the sources discuss.</p>
+    <p><strong>Our text and data.</strong> The insights, definitions, vendor descriptions, statistics file and taxonomy on this site are original work by Sustainable IQ. You may quote them with attribution and a link.</p>
+    <p><strong>Corrections.</strong> If you find a figure that does not match its cited page, or a passage that follows a source too closely, please open an issue in the repository linked in the footer. We correct the data file and republish.</p>
+  </div>
+</section>
+
+<section id="cite" aria-labelledby="cite-heading">
+  <h2 id="cite-heading">How to cite</h2>
+  <div class="card prose">
+    <p>Cite a specific record by its stable link, for example an insight, a statistic, a vendor profile or a glossary term. Each has an id that will not change or be reused.</p>
+    <pre id="cite-example"></pre>
+    <p class="muted">The site as a whole: Sustainable IQ, <em>GenAI Market: the state of enterprise AI, read across twelve sources</em>, <span id="cite-year"></span>, <span id="cite-url"></span>.</p>
+  </div>
+</section>
+
+<section id="data" aria-labelledby="data-heading">
+  <h2 id="data-heading">Data files</h2>
+  <p>The site is static; everything it shows is in these JSON files, which you may inspect or download. Record shapes are documented in the repository.</p>
+  <ul id="data-files" class="data-files"></ul>
+</section>
 </main>
 <script src="js/shell.js"></script>
+<script src="js/sources.js"></script>
 </body>
 </html>
