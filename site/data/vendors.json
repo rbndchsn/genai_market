@@ -8,42 +8,2612 @@
     },
     "quadrant_threshold": 0.5,
     "quadrants": {
-      "leaders": { "label": "Leaders", "pe": "high", "ma": "high", "meaning": "Broad market reach plus deep, current technical capability and a long multi-sector track record." },
-      "seasoned": { "label": "Seasoned Vendors", "pe": "low", "ma": "high", "meaning": "Strong technical capability and consulting experience; market reach still trails the Leaders." },
-      "growth": { "label": "Growth Vendors", "pe": "high", "ma": "low", "meaning": "Notable revenue expansion; delivery maturity still catching up with the Leaders." },
-      "challengers": { "label": "Challengers", "pe": "low", "ma": "low", "meaning": "Smaller size and scope; a narrower focus that AIM frames as enabling strong training and delivery capability." }
+      "leaders": {
+        "label": "Leaders",
+        "pe": "high",
+        "ma": "high",
+        "meaning": "Broad market reach plus deep, current technical capability and a long multi-sector track record."
+      },
+      "seasoned": {
+        "label": "Seasoned Vendors",
+        "pe": "low",
+        "ma": "high",
+        "meaning": "Strong technical capability and consulting experience; market reach still trails the Leaders."
+      },
+      "growth": {
+        "label": "Growth Vendors",
+        "pe": "high",
+        "ma": "low",
+        "meaning": "Notable revenue expansion; delivery maturity still catching up with the Leaders."
+      },
+      "challengers": {
+        "label": "Challengers",
+        "pe": "low",
+        "ma": "low",
+        "meaning": "Smaller size and scope; a narrower focus that AIM frames as enabling strong training and delivery capability."
+      }
     },
     "note": "Scores are AIM Research's normalised indices. Quadrant boundary inferred at 0.5 on each axis from the published scores and chart. Vendor-claimed metrics are unaudited. Named platforms are recorded as facts; all descriptions are our own words.",
-    "refs": [{ "source": "src-01", "pages": [5, 26, 27, 28, 29] }]
+    "refs": [
+      {
+        "source": "src-01",
+        "pages": [
+          5,
+          26,
+          27,
+          28,
+          29
+        ]
+      }
+    ]
   },
   "vendors": [
-    { "id": "aays", "name": "Aays", "founded": 2018, "hq": { "city": "Singapore", "country": "Singapore" }, "pe_score": 0.47, "pe_rank": 14, "ma_score": 0.67, "ma_rank": 10, "quadrant": "seasoned", "focus": "Decision intelligence embedded in supply chain, finance and operations workflows, delivered through prebuilt agent frameworks and command-centre style control towers.", "industries": ["FMCG and consumer goods", "Automotive and manufacturing", "Retail and e-commerce", "BFSI and fintech"], "markets": ["United States", "Europe", "Asia Pacific and Japan"], "platforms": [{ "name": "AaDi", "what": "Agentic decision intelligence over structured data" }, { "name": "AutoDBX", "what": "ETL and data migration accelerator" }, { "name": "CFO Intelligence", "what": "Finance copilot" }, { "name": "Agent Factory", "what": "Multi-agent orchestration" }, { "name": "GenAI Risk Monitor + Digital Twin", "what": "Risk and scenario simulation" }, { "name": "Control Towers", "what": "Domain command centres" }], "differentiators": ["GenAI wired into planning and execution rather than an assistive layer", "Marketplace of reusable agents and data modules", "Rapid maturity gain from 2024 to 2026 with a shift to production-led work", "Digital twin and simulation for scenario evaluation", "Multi-business-unit and multi-geography expansions"], "claimed_metrics": [{ "metric": "POC-to-production conversion", "value": "High (no figure)" }, { "metric": "Repeat-client share", "value": "Strong (no figure)" }], "partners": ["Microsoft Azure", "Databricks", "Google Cloud", "Dremio"], "service_categories": ["t1", "t2", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [31, 32] }] },
-    { "id": "acuity-analytics", "name": "Acuity Analytics", "founded": 2002, "hq": { "city": "London", "country": "United Kingdom" }, "pe_score": 0.55, "pe_rank": 10, "ma_score": 0.65, "ma_rank": 11, "quadrant": "leaders", "focus": "Financial services specialist pairing a very large analyst workforce with AI agents in a human-in-the-loop operating model for banking, asset management, private markets and insurance.", "industries": ["Banking", "Asset management", "Private markets", "Insurance", "Professional services and legal", "Industrials"], "markets": ["United States", "United Kingdom", "Europe", "UAE", "India"], "platforms": [{ "name": "Agent Fleet", "what": "Model-agnostic agentic platform with 50+ prebuilt financial workflows" }, { "name": "RFP Pulse", "what": "Bid and RFP response automation" }, { "name": "IntelliGRID", "what": "Due diligence with premium financial data sources" }, { "name": "Guidelines Compliance Manager", "what": "Investment compliance automation" }, { "name": "Financial Modeling Excel-native agents", "what": "Chat-driven spreadsheet generation" }], "differentiators": ["Two decades of front and middle-office financial services delivery", "Agents and analysts co-execute with maker-checker controls and full source traceability", "Critic, validator and governance agents at each decision point", "Natural entry for existing managed-services clients; platform priced as an uplift on analyst fees", "Two acquisitions in 18 months to deepen engineering and AI capability"], "claimed_metrics": [{ "metric": "Domain analysts", "value": "6,000+" }, { "metric": "Clients", "value": "700+" }, { "metric": "Accuracy on complex financial queries", "value": "95%+" }, { "metric": "Revenue invested in AI and technology", "value": "about 15%" }], "partners": ["Microsoft Azure", "AWS", "Databricks", "Snowflake", "LangChain"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [33, 34] }] },
-    { "id": "agilisium", "name": "Agilisium", "founded": 2014, "hq": { "city": "Los Angeles", "country": "United States" }, "pe_score": 0.66, "pe_rank": 5, "ma_score": 0.56, "ma_rank": 15, "quadrant": "leaders", "focus": "Life sciences specialist embedding GenAI across R&D, clinical, regulatory, medical and commercial operations with compliance-first architectures.", "industries": ["Life sciences and pharmaceuticals", "Media and entertainment", "Manufacturing", "CPG"], "markets": ["North America", "Europe", "Asia Pacific"], "platforms": [{ "name": "GenInsights Platform", "what": "Unified GenAI platform for querying, document intelligence and insight" }, { "name": "Doc Sonar", "what": "Clinical and regulatory document intelligence" }, { "name": "Pharma Rep Co-Pilot", "what": "Sales enablement with next-best-action" }, { "name": "Sales Forecast AI (Data Detective)", "what": "Agentic commercial forecasting" }, { "name": "Omnichannel Observability", "what": "Cross-channel customer journey analytics" }], "differentiators": ["Domain-trained embeddings and SME-led model development", "Agentic workflows in regulated processes such as MLR review and biomarker analysis", "Alignment to FDA, EMA, HIPAA and 21 CFR Part 11", "25+ prebuilt solutions across the pharma value chain", "Innovation Labs and co-innovation model"], "claimed_metrics": [{ "metric": "POC to production", "value": "Often within weeks" }, { "metric": "Prebuilt GenAI solutions", "value": "25+" }], "partners": ["AWS", "Microsoft Azure", "Databricks", "Snowflake", "Salesforce"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [35, 36] }] },
-    { "id": "akaike-technologies", "name": "Akaike Technologies", "founded": 2018, "hq": { "city": "Bengaluru", "country": "India" }, "pe_score": 0.15, "pe_rank": 27, "ma_score": 0.25, "ma_rank": 26, "quadrant": "challengers", "focus": "Pharma and life sciences regulated workflows such as dossier authoring and competitive intelligence, plus multimodal content across voice, video and text.", "industries": ["Pharma and life sciences", "Retail and CPG", "Media and entertainment", "Manufacturing", "BFSI"], "markets": ["United States", "India"], "platforms": [{ "name": "Regulatory Content Automation Platform", "what": "Compliant dossier authoring at scale" }, { "name": "Competitive Intelligence Engine", "what": "Real-time monitoring of regulatory, payer and competitor data" }, { "name": "AI Video Studio", "what": "Script-to-video generation" }, { "name": "Multimodal Ingestion Engine", "what": "High-throughput text, image and audio pipelines" }, { "name": "Semantic Context Layer", "what": "Knowledge graph and schema layer" }, { "name": "Agent ML", "what": "Automated ML lifecycle" }], "differentiators": ["Multimodal depth including voice cloning and AI video", "Hybrid retrieval with adaptive chunking", "Semantic layer to reduce hallucination", "Evaluation stack with RAG metrics, LLM-as-judge and adversarial testing", "GxP and GDPR alignment on AWS-native infrastructure"], "claimed_metrics": [], "partners": ["AWS", "Google Cloud", "Microsoft Azure"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [37, 38] }] },
-    { "id": "aspire-systems", "name": "Aspire Systems", "founded": 1996, "hq": { "city": "Chennai", "country": "India" }, "pe_score": 0.53, "pe_rank": 11, "ma_score": 0.44, "ma_rank": 21, "quadrant": "growth", "focus": "Horizontal knowledge assistants, document intelligence and customer-support automation with domain depth in education and retail, delivered through a lifecycle platform.", "industries": ["Education", "Engineering and construction", "Manufacturing", "Retail"], "markets": ["United States", "Asia Pacific", "EMEA"], "platforms": [{ "name": "Pragma", "what": "Dev, Data and Ops lifecycle platform for agents" }, { "name": "Reusable RAG Framework", "what": "Ingestion, embedding, retrieval and evaluation pipelines" }, { "name": "Prompt and Evaluation Accelerator", "what": "Prompt libraries with testing and benchmarking" }, { "name": "Agent Orchestration Framework", "what": "Modular agent architecture with workflow engine" }, { "name": "Domain Starter Kits", "what": "Edtech and retail templates" }, { "name": "LLMOps Monitoring Dashboard", "what": "Performance, cost, safety and usage observability" }], "differentiators": ["Unified lifecycle platform from development to operations", "Evaluation, monitoring and governance treated as core components", "Measured expansion from assistive into agentic work", "Upstream strategy and ROI modelling paired with downstream engineering"], "claimed_metrics": [{ "metric": "GenAI revenue from repeat clients", "value": "Majority" }, { "metric": "Multi-year contracts", "value": "Meaningful share" }], "partners": ["AWS", "Microsoft Azure", "Salesforce", "Databricks", "Automation Anywhere", "UiPath"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [39, 40] }] },
-    { "id": "aventra-group", "name": "Aventra Group", "founded": 2021, "hq": { "city": "Kuala Lumpur", "country": "Malaysia" }, "pe_score": 0.18, "pe_rank": 26, "ma_score": 0.54, "ma_rank": 18, "quadrant": "seasoned", "focus": "Document-intensive, compliance-driven workflows in public sector, financial services, maritime and logistics, combining LLM reasoning with deterministic validation.", "industries": ["Public sector", "BFSI", "Maritime and logistics", "Oil and gas", "Healthcare", "Manufacturing"], "markets": ["Malaysia", "Singapore", "UAE", "Southeast Asia", "Middle East", "Europe"], "platforms": [{ "name": "IDP Accelerator Framework", "what": "Document extraction, validation and comparison pipeline" }, { "name": "Intelligent Compliance Assurance Engine", "what": "Rules plus LLM reasoning with audit workflows" }, { "name": "Domain-Specific Analytical Platform", "what": "Financial analysis and multi-step reasoning" }, { "name": "Reusable GenAI Blueprints", "what": "Templates for document, compliance and agent workflows" }, { "name": "LLMOps and Prompt Management Toolkit", "what": "Prompt versioning, evaluation, monitoring and cost" }], "differentiators": ["Validation-first design: deterministic rules, confidence scoring and source traceability alongside LLM reasoning", "Cloud-agnostic including on-premise for data residency", "High share of pilots reaching enterprise scale via outcome-driven MVPs", "Concentration in industries where unstructured data and compliance are core problems"], "claimed_metrics": [{ "metric": "Pilots progressing to enterprise scale", "value": "High share (no figure)" }], "partners": ["Microsoft Azure", "AWS", "Google Cloud", "Salesforce", "SAP", "Databricks", "Snowflake", "Odela"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [41, 42] }] },
-    { "id": "blend360", "name": "Blend360", "founded": 2016, "hq": { "city": "Columbia, Maryland", "country": "United States" }, "pe_score": 0.85, "pe_rank": 2, "ma_score": 0.95, "ma_rank": 1, "quadrant": "leaders", "focus": "Value-first, MVP-led GenAI delivery for Fortune 1000 clients with a framework aimed at the non-technical barriers to production, backed by an agentic platform and outcome-linked pricing.", "industries": ["BFSI", "Technology, media and telecom", "Healthcare and life sciences", "Travel and hospitality", "Retail and CPG", "Energy", "Government", "Manufacturing", "Private equity"], "markets": ["North America", "Latin America", "EMEA"], "platforms": [{ "name": "BlendX Multi-Agent Foundry", "what": "Agentic platform with orchestration runtime, memory, model selection, MCP hosting and governance" }, { "name": "Houndoc", "what": "Document-centric AI workflow with business rules engine" }, { "name": "Synth Studios", "what": "Synthetic persona simulation for product, pricing and UX validation" }, { "name": "Vyper Engine", "what": "ML ensemble modelling" }, { "name": "GenBI", "what": "Conversational BI" }, { "name": "Critical 7 Framework", "what": "Method targeting trust, talent, data readiness and change barriers" }], "differentiators": ["Value realisation run as a formal discipline with KPI dashboards and executive reviews", "Outcome-linked 'base plus shared plus value' pricing", "Top-tier hyperscaler and data-platform partnerships with early access to new agentic services", "Repeatable agentic process automation in regulated industries", "Reusable production-tested platforms rather than services-only delivery"], "claimed_metrics": [{ "metric": "POC-to-production conversion", "value": "80%+" }, { "metric": "Scaled enterprise deployments", "value": "Largest share in the study" }, { "metric": "Synth Studios correlation to real behaviour", "value": "95%+" }, { "metric": "Domain agents deployment speed-up", "value": "55 to 70% faster" }], "partners": ["AWS", "Snowflake", "Databricks", "Pega", "Microsoft Azure", "Google Cloud"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [43, 44] }] },
-    { "id": "c5i", "name": "C5i", "founded": 2000, "hq": { "city": "Mumbai", "country": "India" }, "pe_score": 0.65, "pe_rank": 6, "ma_score": 0.82, "ma_rank": 4, "quadrant": "leaders", "focus": "Marketing, customer experience and enterprise decisioning, organised around four pillars (creativity, knowledge, synthetic generation, autonomy) with strong retail and CPG depth.", "industries": ["Retail", "CPG", "Manufacturing", "Technology", "Healthcare", "Life sciences", "Banking"], "markets": ["North America", "United Kingdom", "Middle East", "Western Europe", "Latin America"], "platforms": [{ "name": "Agent5i", "what": "Multi-agent orchestration, no/low-code, agents exportable as JSON, Microsoft-funded" }, { "name": "Synthetic Audiences", "what": "Simulated customer cohorts for concept and message testing" }, { "name": "Discovery", "what": "Decision intelligence" }, { "name": "Incivus", "what": "Creative and ad-testing intelligence" }, { "name": "ForeSight", "what": "Agentic market and competitive intelligence" }], "differentiators": ["Synthetic audience simulation before real-market testing", "Agent-led operational use cases in supply chain, call centre and competitive intelligence", "Patent-pending process planner that redesigns workflows for agentic automation", "Academic R&D partnerships and a taught AI impact model", "Central CoE for enterprise rollout"], "claimed_metrics": [{ "metric": "GenAI delivery team", "value": "100+" }, { "metric": "Product launch cycle in one case", "value": "9 months to 2 to 3 months" }], "partners": ["Microsoft", "AWS", "Google Cloud", "Meta", "Intel", "Databricks"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [45, 46] }] },
-    { "id": "chetu", "name": "Chetu", "founded": 2000, "hq": { "city": "Sunrise, Florida", "country": "United States" }, "pe_score": 0.52, "pe_rank": 13, "ma_score": 0.24, "ma_rank": 27, "quadrant": "growth", "focus": "Custom-built GenAI layered on modernised data systems for fintech, healthcare, retail and supply chain, for buyers who prefer bespoke builds to platforms.", "industries": ["Fintech", "Healthcare", "Retail and supply chain"], "markets": ["North America", "United Kingdom and Europe", "Latin America"], "platforms": [{ "name": "Track2AI Framework", "what": "Adoption lifecycle from use-case prioritisation to scale" }], "differentiators": ["Data-modernisation-led adoption", "RAG decision support integrated with BI, ERP and operational systems", "Private AI environments for regulated clients", "Flexibility across client technology stacks"], "claimed_metrics": [{ "metric": "Industries served with custom AI", "value": "40+" }], "partners": ["AWS", "Microsoft Azure", "Google Cloud", "Databricks", "Snowflake"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6"], "refs": [{ "source": "src-01", "pages": [47, 48] }] },
-    { "id": "evalueserve", "name": "Evalueserve", "founded": 2000, "hq": { "city": "Zug", "country": "Switzerland" }, "pe_score": 0.64, "pe_rank": 7, "ma_score": 0.60, "ma_rank": 13, "quadrant": "leaders", "focus": "Domain SMEs paired with AI tooling in financial services, life sciences and manufacturing workflows, with an agentic studio and disciplined cost engineering.", "industries": ["Financial services", "Life sciences and healthcare", "Manufacturing and logistics", "Professional services", "Technology and telecom", "CPG and retail"], "markets": ["United States", "Middle East", "Europe"], "platforms": [{ "name": "Genie", "what": "Agentic studio on LangGraph and CrewAI, 60+ production agents" }, { "name": "AIRA", "what": "Modular AI platform of composable microservices" }, { "name": "Spreadsmart", "what": "Financial spreading and credit memo automation" }, { "name": "DocufAI", "what": "Agentic document intelligence" }, { "name": "Insightsfirst", "what": "Competitive intelligence SaaS" }, { "name": "Suppl.AI", "what": "Supply chain planning with multi-agent orchestration" }], "differentiators": ["Decades of embedded managed-services delivery in domain workflows", "Cost engineering: small models, tiered routing, context caching, prompt compression", "Two Centres of Excellence (Google Cloud; internal AI productivity)", "Governance with human oversight, automated evaluators and bias metrics; SOC 2 Type II and HIPAA", "AI compute costs blended transparently into rate cards"], "claimed_metrics": [{ "metric": "Forecast error in one supply-chain case", "value": "69% to 30%" }, { "metric": "Credit memo effort reduction", "value": "70 to 80%" }, { "metric": "Efficiency gain from internal agents", "value": "30 to 40%" }, { "metric": "GenAI clients on multi-year contracts", "value": "Majority" }], "partners": ["Google Cloud", "Microsoft Azure", "OpenAI", "Google Gemini", "Databricks", "Snowflake", "ParallelAI", "AssemblyAI"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [49, 50] }] },
-    { "id": "exponentia-ai", "name": "Exponentia.ai", "founded": 2014, "hq": { "city": "Mumbai", "country": "India" }, "pe_score": 0.34, "pe_rank": 18, "ma_score": 0.59, "ma_rank": 14, "quadrant": "seasoned", "focus": "Platform-led enterprise AI products on a shared data and agentic architecture, with last-mile integration into sales, logistics and contract workflows.", "industries": ["Manufacturing", "Insurance", "Healthcare", "NBFC and banking", "CPG and retail"], "markets": ["United States", "United Kingdom", "UAE", "India", "Singapore"], "platforms": [{ "name": "AIXponent", "what": "Agentic platform with orchestration, RAG, LLMOps and governance" }, { "name": "Document Intelligence Suite", "what": "Extraction, summarisation, validation and compliance" }, { "name": "LakehouseXponent", "what": "Raw data to enterprise lakehouse accelerator" }, { "name": "OneTap", "what": "Agentic workflows for sales and collections" }, { "name": "GenTrust", "what": "Governance and compliance framework" }, { "name": "MigrationXponent", "what": "Legacy data and analytics migration" }], "differentiators": ["Deep Databricks alignment with MLflow-based lifecycle management", "Governance embedded across delivery", "Compact full-stack team with a GenAI CoE", "Reusable building blocks across orchestration, documents, governance and migration"], "claimed_metrics": [{ "metric": "POCs reaching production or scale", "value": "60%+" }], "partners": ["Databricks", "Microsoft", "Microsoft Azure", "AWS", "Qlik"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [51, 52] }] },
-    { "id": "fractal-analytics", "name": "Fractal Analytics", "founded": 2000, "hq": { "city": "New York", "country": "United States" }, "pe_score": 0.76, "pe_rank": 4, "ma_score": 0.90, "ma_rank": 2, "quadrant": "leaders", "focus": "Behavioural science, design and domain expertise combined with AI engineering to drive adoption, backed by in-house model research and a full agentic platform.", "industries": ["CPG", "Retail", "BFSI", "Technology, media and telecom", "Healthcare and life sciences", "Pharma", "Industrial"], "markets": ["United States", "United Kingdom", "India", "Australia", "UAE", "Singapore"], "platforms": [{ "name": "Cogentiq", "what": "Agentic platform: orchestration, registry, marketplace, MCP gateway, AgentOps, red teaming, evaluation, RBAC" }, { "name": "LLM Gateway", "what": "Model routing, cost control and token observability" }, { "name": "LLM Studio", "what": "Fine-tuning and model lifecycle" }, { "name": "PromptTwin", "what": "Prompt management and versioning" }, { "name": "Fathom-R1", "what": "Open-sourced reasoning model" }, { "name": "Vaidya AI", "what": "Multimodal medical model" }, { "name": "Kalaido.ai", "what": "Text-to-image model" }, { "name": "PiEvolve", "what": "Automated ML" }], "differentiators": ["Behavioural-science-led adoption design", "Proprietary models including a reasoning model and a medical multimodal model", "Selected for India's national AI mission to build a medical language reasoning model", "Platform with 20 to 25 prebuilt apps deployable across three clouds", "Sustained R&D investment and patent portfolio"], "claimed_metrics": [{ "metric": "Adoption uplift from behavioural redesign (insurance case)", "value": "70 to 80%" }, { "metric": "ROI in a healthcare claims transformation", "value": "about 80 million USD" }, { "metric": "Build-test-deploy time reduction for agentic solutions", "value": "80%" }, { "metric": "Component adoption vs full platform", "value": "70 to 80% vs 10 to 15% of engagements" }, { "metric": "AI R&D share of revenue", "value": "5.8 to 7%" }, { "metric": "Patents and applications", "value": "65+" }], "partners": ["Google Cloud", "AWS", "Microsoft Azure"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [53, 54] }] },
-    { "id": "hoonartek", "name": "Hoonartek", "founded": 2010, "hq": { "city": "Union, New Jersey", "country": "United States" }, "pe_score": 0.26, "pe_rank": 23, "ma_score": 0.41, "ma_rank": 22, "quadrant": "challengers", "focus": "Data-first engineering extending into applied, governed AI for financial services, manufacturing and telecom.", "industries": ["BFSI", "Manufacturing", "Telecom"], "markets": ["United States", "Asia Pacific"], "platforms": [{ "name": "Clearview BlueFoundry", "what": "Reusable enterprise AI foundation" }, { "name": "Realize AI Framework and Lab", "what": "POC-to-production lifecycle" }, { "name": "RAG Accelerators", "what": "Ingestion, retrieval and grounded generation pipelines" }, { "name": "Governance and Cost Dashboards", "what": "Performance, cost and policy monitoring" }], "differentiators": ["Stateful, policy-aware multi-agent systems combining deterministic logic with probabilistic reasoning", "AgentOps-based governance", "Long-standing data quality, metadata and lineage capability", "Data-platform partner co-innovation and joint go-to-market"], "claimed_metrics": [], "partners": ["AWS", "Microsoft Azure", "Google Cloud", "Snowflake", "Databricks", "Ab Initio"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [55, 56] }] },
-    { "id": "indus-net-technologies", "name": "Indus Net Technologies", "founded": 1997, "hq": { "city": "Kolkata", "country": "India" }, "pe_score": 0.53, "pe_rank": 12, "ma_score": 0.38, "ma_rank": 23, "quadrant": "growth", "focus": "RAG-driven enterprise knowledge systems, document intelligence and workflow augmentation with specialisation in financial services and healthcare.", "industries": ["BFSI", "Healthcare and life sciences", "Retail and FMCG", "Manufacturing", "Technology"], "markets": ["North America", "India", "Europe"], "platforms": [{ "name": "Reusable RAG Frameworks", "what": "Knowledge systems with vector search" }, { "name": "Structured Prompt Libraries", "what": "Domain prompt assets" }, { "name": "Evaluation and Monitoring Toolkits", "what": "Testing, bias auditing and performance tracking" }, { "name": "Secure LLM Deployment Frameworks", "what": "Governed deployment environments" }, { "name": "Domain Starter Kits", "what": "BFSI, healthcare and retail templates" }], "differentiators": ["LLMOps practices as standard delivery components", "Bias audits, red-teaming and human-in-the-loop validation", "Repeat-client, multi-year programmes", "Shift from horizontal capability toward domain-aligned solutions"], "claimed_metrics": [{ "metric": "GenAI revenue from repeat clients", "value": "Significant portion" }], "partners": ["Microsoft Azure", "AWS", "Google Cloud", "Databricks", "Snowflake"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [57, 58] }] },
-    { "id": "infocepts", "name": "Infocepts", "founded": 2004, "hq": { "city": "Washington, DC", "country": "United States" }, "pe_score": 0.38, "pe_rank": 16, "ma_score": 0.54, "ma_rank": 17, "quadrant": "seasoned", "focus": "Analytics-led GenAI inside enterprise data and decisioning environments, with a large accelerator set and a move toward platform fees plus outcome-informed pricing.", "industries": ["Media and entertainment", "Pharma", "Manufacturing", "Retail", "BFSI"], "markets": ["United States", "United Kingdom", "France"], "platforms": [{ "name": "DiscoverYai", "what": "AI lifecycle and pilot-to-production platform" }, { "name": "Decision360", "what": "Conversational analytics" }, { "name": "HyperCare", "what": "Data and AI operations platform" }, { "name": "Knowledge Nest", "what": "RAG enterprise knowledge search" }, { "name": "Cloud Cost Monitor", "what": "FinOps accelerator" }, { "name": "Fabric Migration Accelerator / Fabric Nexus", "what": "Data platform migration" }, { "name": "Realtime Data Streamer", "what": "Streaming for near real-time decisioning" }], "differentiators": ["Verticalised business units with domain leadership", "Recurring platform fees combined with outcome-informed application pricing", "Accelerators shown to shorten configuration and deal conversion", "High POC-to-production conversion claimed"], "claimed_metrics": [{ "metric": "POC-to-production conversion", "value": "High (no figure)" }], "partners": ["AWS", "Microsoft Azure", "Databricks", "Dataiku"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [59, 60] }] },
-    { "id": "jk-tech", "name": "JK Tech", "founded": 1994, "hq": { "city": "Noida", "country": "India" }, "pe_score": 0.37, "pe_rank": 17, "ma_score": 0.64, "ma_rank": 12, "quadrant": "seasoned", "focus": "Knowledge-grounded, workflow-embedded agentic AI using knowledge graphs and ontology layers, aimed at moving from insight to action in retail, insurance, financial services and CPG.", "industries": ["Retail", "Insurance and financial services", "CPG", "Manufacturing"], "markets": ["United States", "United Kingdom"], "platforms": [{ "name": "JIVA GenAI Orchestrator", "what": "Knowledge grounding, multi-agent workflows, governance and lifecycle" }, { "name": "Templatized Agent Frameworks", "what": "Reusable agents for documents, search, copilots and decisions" }, { "name": "Industry Accelerators", "what": "Domain solutions with embedded KPIs and decision logic" }, { "name": "Reusable GenAI Components", "what": "RAG pipelines, evaluation, monitoring, connectors" }], "differentiators": ["Knowledge graphs plus native agent orchestration for explainable, execution-oriented systems", "Balanced full-stack capability from data to user layer", "Reusable platforms with domain adaptation across geographies"], "claimed_metrics": [], "partners": ["Google Cloud", "OpenAI", "Neo4j", "LangChain", "Databricks", "Snowflake", "AWS", "Microsoft Azure", "PostgreSQL"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [61, 62] }] },
-    { "id": "konverge-ai", "name": "Konverge AI", "founded": 2018, "hq": { "city": "Wilmington, Delaware", "country": "United States" }, "pe_score": 0.23, "pe_rank": 25, "ma_score": 0.30, "ma_rank": 25, "quadrant": "challengers", "focus": "Diagnostics and ROI-led progression from paid pilots to production, with more than half of GenAI revenue from manufacturing.", "industries": ["Manufacturing", "Retail and CPG", "Life sciences", "Construction", "BFSI"], "markets": ["North America", "United Kingdom", "Asia Pacific", "Middle East"], "platforms": [{ "name": "DataLens", "what": "POC-to-production accelerator with standard pipelines" }, { "name": "GenAI Accelerator Library", "what": "17+ components across RAG, copilots, agents, evaluation" }, { "name": "Evaluation and Testing Frameworks", "what": "Automated benchmarking" }, { "name": "Reference Architecture Frameworks", "what": "Standard deployment patterns" }], "differentiators": ["Early-stage diagnostics and ROI workshops", "Evaluation-first, cost-aware delivery", "Unified team spanning data, ML, MLOps, application and UX", "Growing multi-year and repeat base"], "claimed_metrics": [{ "metric": "POC-to-production conversion", "value": "Above industry average (no figure)" }, { "metric": "GenAI revenue from manufacturing", "value": "More than half" }], "partners": ["Microsoft Azure", "AWS", "Databricks", "Dataiku", "Palantir"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t7"], "refs": [{ "source": "src-01", "pages": [63, 64] }] },
-    { "id": "latentview-analytics", "name": "LatentView Analytics", "founded": 2006, "hq": { "city": "Chennai", "country": "India" }, "pe_score": 0.58, "pe_rank": 8, "ma_score": 0.69, "ma_rank": 8, "quadrant": "leaders", "focus": "Fortune 500 delivery structured by a named methodology and a three-phase maturity path from assistive copilots to an orchestrated digital workforce, with agents acting directly on enterprise platforms.", "industries": ["Technology", "Retail", "CPG", "Financial services", "Automotive"], "markets": ["United States", "Europe"], "platforms": [{ "name": "RAISE Framework", "what": "Retrieve, Analyze, Implement, Sync and Execute methodology" }, { "name": "LASER", "what": "RAG search and extraction across enterprise data" }, { "name": "InsightsBridge AI", "what": "Full-stack integration layer" }, { "name": "BeagleGPT", "what": "Conversational analytics" }, { "name": "Markee", "what": "Agentic marketing campaign operations" }, { "name": "Pragya AI", "what": "Domain LLM built on Gemini" }, { "name": "ConnectedView", "what": "Supply chain control tower" }, { "name": "Chat Your Data", "what": "Natural language to SQL" }], "differentiators": ["Agents that operate on Salesforce, SAP and HubSpot with ReAct loops and multi-framework orchestration", "Milestone-based methodology and explicit maturity phases for clients", "Broad multi-platform partnership strategy with gold-tier data-platform status", "Wide accelerator surface across marketing, sales, supply chain and analytics"], "claimed_metrics": [{ "metric": "GenAI revenue from repeat clients", "value": "100%" }, { "metric": "Multi-year accounts", "value": "Several" }], "partners": ["Databricks", "AWS", "Google Cloud", "Microsoft Azure", "Microsoft Fabric", "Snowflake", "NVIDIA"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [65, 66] }] },
-    { "id": "minfy-technologies", "name": "Minfy Technologies", "founded": 2016, "hq": { "city": "Hyderabad", "country": "India" }, "pe_score": 0.28, "pe_rank": 22, "ma_score": 0.56, "ma_rank": 16, "quadrant": "seasoned", "focus": "Cloud-native engineering with cloud, data and GenAI in one delivery stack, guided by an agentic reference architecture and a readiness framework.", "industries": ["Healthcare and life sciences", "Financial services", "Manufacturing", "Retail and CPG", "Travel and logistics"], "markets": ["India", "Asia Pacific", "Australia and New Zealand", "North America", "United Kingdom", "Europe"], "platforms": [{ "name": "Swayam AI", "what": "Modular GenAI platform of reusable building blocks" }, { "name": "Swayam Agentic Studio", "what": "Low-code agentic workflow design including voice and chat" }, { "name": "DataTalk", "what": "Natural language querying with text-to-SQL agents" }, { "name": "Enterprise Twin Simulator", "what": "Pre-production simulation of agent behaviour" }, { "name": "EGIRA", "what": "Reference architecture for agentic systems" }, { "name": "AIQ", "what": "Enterprise AI readiness framework" }], "differentiators": ["Depth in inference optimisation and pipeline scalability", "Vertical integration from infrastructure to agents, uncommon at its scale", "Internal 'digital workforce' operating model offloading undifferentiated work to AI", "Rising revenue per head from AI services"], "claimed_metrics": [{ "metric": "GenAI share of revenue", "value": "Meaningful (no figure)" }], "partners": ["AWS", "Microsoft Azure", "Google Cloud", "Snowflake", "Databricks"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [67, 68] }] },
-    { "id": "neoware-technology-solutions", "name": "Neoware Technology Solutions", "founded": 2020, "hq": { "city": "Piscataway, New Jersey", "country": "United States" }, "pe_score": 0.29, "pe_rank": 21, "ma_score": 0.68, "ma_rank": 9, "quadrant": "seasoned", "focus": "Co-creation delivery in two-month value increments under a GenAI-native development method, sold only on fixed-scope or outcome-based terms.", "industries": ["Financial services", "Healthcare", "Retail", "Utilities", "Energy", "Public sector and development finance"], "markets": ["United States", "United Kingdom", "Middle East"], "platforms": [{ "name": "DGCUT", "what": "Design, Generate, Customise, Unit Test delivery method" }, { "name": "AskNeo", "what": "Conversational BI across Power BI, Tableau and warehouses" }, { "name": "Integration Studio", "what": "Low-code connectivity across ERP, CRM and HR" }, { "name": "CodeX", "what": "AI code generation for data engineering" }, { "name": "Document Intelligence", "what": "Rule and knowledge extraction with cited answers" }, { "name": "DVRC", "what": "Data validation and reconciliation" }], "differentiators": ["Exclusively fixed-scope or outcome-based commercial models", "Membership of a select hyperscaler data programme of about 30 partners globally", "CoE use-case repository shortens strategy engagements", "Wins against larger vendors on proposal speed and depth"], "claimed_metrics": [{ "metric": "Manual coding reduction with CodeX", "value": "40 to 90%" }, { "metric": "Strategy engagement duration", "value": "6 to 8 weeks cut to 3 to 4" }], "partners": ["AWS", "Mage Data.ai", "Databricks", "Snowflake", "Microsoft Azure", "Google Cloud"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [69, 70] }] },
-    { "id": "polestar-analytics", "name": "Polestar Analytics", "founded": 2012, "hq": { "city": "Plano, Texas", "country": "United States" }, "pe_score": 0.57, "pe_rank": 9, "ma_score": 0.78, "ma_rank": 5, "quadrant": "leaders", "focus": "GenAI as an extension of the data-science stack, fusing language models with traditional ML for explainable decisioning in CPG, retail, life sciences and financial services.", "industries": ["CPG", "Retail", "Life sciences and healthcare", "BFSI"], "markets": ["North America", "United Kingdom", "Europe"], "platforms": [{ "name": "ML Orion", "what": "LLMs as a reasoning layer over statistical models, with small language models" }, { "name": "P.AI", "what": "Conversational analytics" }, { "name": "Agenthood AI", "what": "Multi-agent orchestration with stepwise execution" }, { "name": "Enterprise Knowledge Hub", "what": "Secure RAG platform" }, { "name": "RAG and Prompt Engineering Accelerators", "what": "Chunking, embeddings, retrieval and prompt templates" }], "differentiators": ["Fusion of classical ML and LLMs for adaptable, explainable decisions", "Pricing and promotion decision agents, text-to-SQL agents, claims workflows", "Citation-backed RAG for regulated environments", "Governance-first with bias detection, hallucination monitoring and audit"], "claimed_metrics": [], "partners": ["Microsoft", "AWS", "Databricks", "Snowflake", "Anaplan"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [71, 72] }] },
-    { "id": "simform", "name": "Simform", "founded": 2010, "hq": { "city": "Orlando, Florida", "country": "United States" }, "pe_score": 0.32, "pe_rank": 19, "ma_score": 0.51, "ma_rank": 19, "quadrant": "seasoned", "focus": "Industrialising GenAI adoption for mid-market and digital-native firms through production-shaped pilots, reusable platforms and governed deployment patterns.", "industries": ["ISVs and hi-tech", "Discrete manufacturing", "Professional services", "Healthcare", "Retail"], "markets": ["United States", "United Kingdom", "Canada"], "platforms": [{ "name": "ThoughtMesh", "what": "Agent orchestration and low-code development with governance" }, { "name": "TrueMorph", "what": "AI-assisted data integration and migration" }, { "name": "Data360", "what": "Customer data platform" }, { "name": "MedNoteDX", "what": "Clinical documentation assistant" }, { "name": "CodeTools / PEX.AI / NeuVantage", "what": "Developer productivity and adoption accelerators" }], "differentiators": ["Identity, access, audit and monitoring embedded from the first deployment", "Standardised deployment patterns across clients", "Integrated stack from data readiness to LLMOps", "Speed of deployment for digital-native buyers"], "claimed_metrics": [], "partners": ["Microsoft", "Databricks", "Datadog"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [73, 74] }] },
-    { "id": "straive", "name": "Straive", "founded": 1980, "hq": { "city": "Singapore", "country": "Singapore" }, "pe_score": 0.78, "pe_rank": 3, "ma_score": 0.74, "ma_rank": 6, "quadrant": "leaders", "focus": "Document-heavy, accuracy-critical workflows in regulated industries, delivered by thousands of embedded domain experts, a fast prototyping platform and a data-to-knowledge backbone.", "industries": ["Life sciences", "Healthcare", "Education", "Financial services", "Supply chain and logistics", "Publishing and content"], "markets": ["United States", "Europe", "Middle East", "Asia Pacific"], "platforms": [{ "name": "LLM Foundry", "what": "Multi-model prototyping enabling 7-day POCs" }, { "name": "Spark.AI", "what": "Unstructured-to-structured knowledge engineering" }, { "name": "Kadal AI", "what": "Education content platform" }, { "name": "Aikira", "what": "Publishing workflow automation" }, { "name": "AInonymization / HypoForge", "what": "PII and PHI anonymisation" }, { "name": "DocChat, DataChat, DocExplore", "what": "Natural language interaction with documents and data" }], "differentiators": ["6,000+ SMEs including PhDs embedded in fine-tuning, validation and QA", "7 to 14 day POC and 8 to 10 week deployment model", "Knowledge backbone that compounds across a client's later use cases", "Multi-agent validation for reasoning-heavy workflows such as pharmacovigilance", "296 internal accelerators"], "claimed_metrics": [{ "metric": "Active clients on multi-year contracts", "value": "60 to 70%" }, { "metric": "Additional use cases within 12 months", "value": "About three" }, { "metric": "Document classification accuracy in cases", "value": "90%+" }, { "metric": "Internal accelerators", "value": "296" }], "partners": ["Microsoft Azure", "AWS", "Google Cloud", "Databricks", "Snowflake", "UiPath"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [75, 76] }] },
-    { "id": "stratlytics", "name": "StratLytics", "founded": 2015, "hq": { "city": "Bhubaneswar", "country": "India" }, "pe_score": 0.10, "pe_rank": 28, "ma_score": 0.18, "ma_rank": 28, "quadrant": "challengers", "focus": "Governance-first GenAI for model risk, compliance documentation and underwriting in financial services, plus energy analytics.", "industries": ["BFSI and fintech", "Manufacturing and industrial", "Energy and utilities", "Real estate"], "markets": ["United States", "Europe"], "platforms": [{ "name": "SLERA", "what": "Credit lifecycle platform from acquisition to governance" }, { "name": "SLIQ", "what": "Energy analytics with GenAI" }, { "name": "Enterprise RAG Framework", "what": "Secure grounded generation with traceability" }, { "name": "Agentic Workflow Scaffolding", "what": "Multi-step orchestration templates with human validation" }], "differentiators": ["Source attribution, structured outputs and audit logging throughout", "Cautious, human-supervised agentic adoption in high-risk workflows", "Regulated-environment focus"], "claimed_metrics": [], "partners": ["Databricks"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t7"], "refs": [{ "source": "src-01", "pages": [77, 78] }] },
-    { "id": "think360-ai", "name": "Think360.ai", "founded": 2014, "hq": { "city": "Mumbai", "country": "India" }, "pe_score": 0.32, "pe_rank": 20, "ma_score": 0.35, "ma_rank": 24, "quadrant": "challengers", "focus": "Grounded, production-ready GenAI on an analytics and decision-intelligence heritage, with hybrid model strategies and on-premise options for regulated clients.", "industries": ["BFSI", "Healthcare and life sciences", "Marketing and SaaS platforms"], "markets": ["United States", "India", "Europe"], "platforms": [{ "name": "Self-Serve GenAI Platform", "what": "Rapid application development with governance" }, { "name": "Enterprise RAG and Agentic Framework", "what": "Grounded retrieval and multi-step orchestration" }, { "name": "LLMOps Control Tower", "what": "Prompt, retrieval, drift and agent monitoring" }, { "name": "Intelligent Serving and Cost Optimizer", "what": "Routing, token and latency optimisation" }, { "name": "GenAI CI/CD Accelerator", "what": "Deployment pipelines for prompts, models and agents" }], "differentiators": ["Compliance automation, financial analysis and communication monitoring use cases", "Mix of commercial and open-source models with on-premise and hybrid deployment", "GenAI embedded in CRM and analytics systems", "Repeat-client programmes"], "claimed_metrics": [], "partners": ["AWS", "Microsoft Azure", "Google Cloud", "Databricks", "Snowflake"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [79, 80] }] },
-    { "id": "tiger-analytics", "name": "Tiger Analytics", "founded": 2011, "hq": { "city": "Santa Clara, California", "country": "United States" }, "pe_score": 0.90, "pe_rank": 1, "ma_score": 0.86, "ma_rank": 3, "quadrant": "leaders", "focus": "Data and analytics heritage brought into experience-led enterprise transformation, with heavy discovery before build, fifteen named accelerators and the broadest geographic reach in the study.", "industries": ["Retail and CPG", "Healthcare and pharmaceuticals", "Banking and financial services", "Manufacturing", "Quick-service restaurants", "Technology"], "markets": ["North America", "Europe", "United Kingdom", "Middle East", "Asia Pacific", "Africa", "South America"], "platforms": [{ "name": "Deep Thought Framework", "what": "Lifecycle from strategy to managed operations" }, { "name": "Agent Flow", "what": "Low-code multi-agent platform with copilot" }, { "name": "RAG Studio", "what": "Domain-aware retrieval" }, { "name": "Insights Pro", "what": "Agent-led analytics" }, { "name": "Data AgentX", "what": "Data engineering and quality agents" }, { "name": "Think.AI", "what": "Maps business value to AI and data needs" }, { "name": "Tiger Forge", "what": "Agent development and governance" }, { "name": "BI Next", "what": "Conversational BI" }], "differentiators": ["Moves between data modernisation and GenAI application work in one engagement", "Deep discovery: domain experts, persona mapping and prototyping before code", "Process diagnostic tool scores agentic fit from SOPs in hours", "Accelerators arrive 60 to 80 percent complete; domain solutions with perpetual IP transfer to clients", "Monthly executive AI Day workshops reaching hundreds of client staff"], "claimed_metrics": [{ "metric": "Data modelling acceleration", "value": "50%" }, { "metric": "Data quality setup", "value": "Weeks to minutes" }, { "metric": "Named accelerators and platforms", "value": "15" }], "partners": ["Microsoft Azure", "AWS", "Google Cloud", "Databricks", "Snowflake", "NVIDIA"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [81, 82] }] },
-    { "id": "useready", "name": "USEReady", "founded": 2011, "hq": { "city": "New York", "country": "United States" }, "pe_score": 0.41, "pe_rank": 15, "ma_score": 0.74, "ma_rank": 7, "quadrant": "seasoned", "focus": "Complex agentic systems with contextual memory, human oversight and protocol-based integration, anchored by a suite of prebuilt cognitive agents and a fixed-price micro POC model.", "industries": ["Manufacturing and industrial", "Supply chain", "Energy and utilities", "Financial services", "Healthcare and life sciences", "Pharma", "Construction", "Travel and hospitality"], "markets": ["United States", "Canada", "Singapore and Asia Pacific", "Europe", "India"], "platforms": [{ "name": "AlphaGenie", "what": "About 30 prebuilt cognitive agents and 60+ use cases; 13 on the AWS marketplace" }, { "name": "Ready Agentic Platform Framework", "what": "Open-source, platform-independent agent framework" }, { "name": "Semabridge", "what": "Unified semantic layer for agent-ready retrieval" }, { "name": "ART Framework", "what": "Accuracy, Responsibility, Trustworthiness quality standard" }, { "name": "Aixcelerate Program", "what": "Adoption programme and demand channel" }, { "name": "Finomenal", "what": "FinOps for hybrid platforms" }], "differentiators": ["Production accuracy target of 95 percent or more applied across engagements", "2 to 4 week fixed-price Micro POC", "Industry advisor ecosystem embedded in solution design", "Community-based demand generation through domain microsites"], "claimed_metrics": [{ "metric": "POC-to-production conversion", "value": "70%" }, { "metric": "Repeat business rate", "value": "70%" }, { "metric": "Invoice processing effort reduction (energy case)", "value": "70%" }, { "metric": "Entity extraction accuracy (chemicals case)", "value": "95%+" }], "partners": ["AWS", "Snowflake", "Salesforce", "Tableau", "Databricks", "Microsoft Azure", "Elementum", "iceDQ", "Cognite"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [83, 84] }] },
-    { "id": "valiance-analytics", "name": "Valiance Analytics", "founded": 2018, "hq": { "city": "Noida", "country": "India" }, "pe_score": 0.26, "pe_rank": 24, "ma_score": 0.46, "ma_rank": 20, "quadrant": "challengers", "focus": "Engineering-led, evaluation-driven GenAI for high-volume, compliance-sensitive document intelligence and citizen services in energy, public sector and environment.", "industries": ["Energy and utilities", "Government and public sector", "Environment and forestry"], "markets": ["India", "Asia Pacific"], "platforms": [{ "name": "Document Intelligence Accelerator", "what": "Schema-driven extraction with validation and human review" }, { "name": "GenAI Orchestration Framework", "what": "Multi-model routing, retry, failover, cost-aware inference" }, { "name": "Prompt and Evaluation Studio", "what": "Versioning, regression testing and benchmarking" }, { "name": "LLMOps Control Plane", "what": "Monitoring, cost tracking, drift, lifecycle" }, { "name": "Governance and Compliance Toolkit", "what": "PII, policy, audit and region-locked deployment" }], "differentiators": ["Token-efficient, cost-aware pipelines", "Multi-year enterprise-scale programmes", "GenAI CoE with research publications and patents", "Structured evaluation and governance at the centre of delivery"], "claimed_metrics": [], "partners": ["Google Cloud"], "service_categories": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"], "refs": [{ "source": "src-01", "pages": [85, 86] }] }
+    {
+      "id": "aays",
+      "name": "Aays",
+      "founded": 2018,
+      "hq": {
+        "city": "Singapore",
+        "country": "Singapore"
+      },
+      "pe_score": 0.47,
+      "pe_rank": 14,
+      "ma_score": 0.67,
+      "ma_rank": 10,
+      "quadrant": "seasoned",
+      "focus": "Decision intelligence embedded in supply chain, finance and operations workflows, delivered through prebuilt agent frameworks and command-centre style control towers.",
+      "industries": [
+        "FMCG and consumer goods",
+        "Automotive and manufacturing",
+        "Retail and e-commerce",
+        "BFSI and fintech"
+      ],
+      "markets": [
+        "United States",
+        "Europe",
+        "Asia Pacific and Japan"
+      ],
+      "platforms": [
+        {
+          "name": "AaDi",
+          "what": "Agentic decision intelligence over structured data"
+        },
+        {
+          "name": "AutoDBX",
+          "what": "ETL and data migration accelerator"
+        },
+        {
+          "name": "CFO Intelligence",
+          "what": "Finance copilot"
+        },
+        {
+          "name": "Agent Factory",
+          "what": "Multi-agent orchestration"
+        },
+        {
+          "name": "GenAI Risk Monitor + Digital Twin",
+          "what": "Simulates risk scenarios against a digital twin"
+        },
+        {
+          "name": "Control Towers",
+          "what": "Domain command centres"
+        }
+      ],
+      "differentiators": [
+        "GenAI wired into planning and execution rather than an assistive layer",
+        "Marketplace of reusable agents and data modules",
+        "Rapid maturity gain from 2024 to 2026 with a shift to production-led work",
+        "Digital twin and simulation for scenario evaluation",
+        "Multi-business-unit and multi-geography expansions"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "POC-to-production conversion",
+          "value": "High (no figure)"
+        },
+        {
+          "metric": "Repeat-client share",
+          "value": "Strong (no figure)"
+        }
+      ],
+      "partners": [
+        "Microsoft Azure",
+        "Databricks",
+        "Google Cloud",
+        "Dremio"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            31,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acuity-analytics",
+      "name": "Acuity Analytics",
+      "founded": 2002,
+      "hq": {
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      "pe_score": 0.55,
+      "pe_rank": 10,
+      "ma_score": 0.65,
+      "ma_rank": 11,
+      "quadrant": "leaders",
+      "focus": "Financial services specialist pairing a very large analyst workforce with AI agents in a human-in-the-loop operating model for banking, asset management, private markets and insurance.",
+      "industries": [
+        "Banking",
+        "Asset management",
+        "Private markets",
+        "Insurance",
+        "Professional services and legal",
+        "Industrials"
+      ],
+      "markets": [
+        "United States",
+        "United Kingdom",
+        "Europe",
+        "UAE",
+        "India"
+      ],
+      "platforms": [
+        {
+          "name": "Agent Fleet",
+          "what": "Model-agnostic agentic platform with 50+ prebuilt financial workflows"
+        },
+        {
+          "name": "RFP Pulse",
+          "what": "Bid and RFP response automation"
+        },
+        {
+          "name": "IntelliGRID",
+          "what": "Due diligence with premium financial data sources"
+        },
+        {
+          "name": "Guidelines Compliance Manager",
+          "what": "Investment compliance automation"
+        },
+        {
+          "name": "Financial Modeling Excel-native agents",
+          "what": "Chat-driven spreadsheet generation"
+        }
+      ],
+      "differentiators": [
+        "Two decades of front and middle-office financial services delivery",
+        "Agents and analysts co-execute with maker-checker controls and full source traceability",
+        "Critic, validator and governance agents at each decision point",
+        "Natural entry for existing managed-services clients; platform priced as an uplift on analyst fees",
+        "Two acquisitions in 18 months to deepen engineering and AI capability"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Domain analysts",
+          "value": "6,000+"
+        },
+        {
+          "metric": "Clients",
+          "value": "700+"
+        },
+        {
+          "metric": "Accuracy on complex financial queries",
+          "value": "95%+"
+        },
+        {
+          "metric": "Revenue invested in AI and technology",
+          "value": "about 15%"
+        }
+      ],
+      "partners": [
+        "Microsoft Azure",
+        "AWS",
+        "Databricks",
+        "Snowflake",
+        "LangChain"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            33,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agilisium",
+      "name": "Agilisium",
+      "founded": 2014,
+      "hq": {
+        "city": "Los Angeles",
+        "country": "United States"
+      },
+      "pe_score": 0.66,
+      "pe_rank": 5,
+      "ma_score": 0.56,
+      "ma_rank": 15,
+      "quadrant": "leaders",
+      "focus": "Life sciences specialist embedding GenAI across R&D, clinical, regulatory, medical and commercial operations with compliance-first architectures.",
+      "industries": [
+        "Life sciences and pharmaceuticals",
+        "Media and entertainment",
+        "Manufacturing",
+        "CPG"
+      ],
+      "markets": [
+        "North America",
+        "Europe",
+        "Asia Pacific"
+      ],
+      "platforms": [
+        {
+          "name": "GenInsights Platform",
+          "what": "Unified GenAI platform for querying, document intelligence and insight"
+        },
+        {
+          "name": "Doc Sonar",
+          "what": "Clinical and regulatory document intelligence"
+        },
+        {
+          "name": "Pharma Rep Co-Pilot",
+          "what": "Sales enablement with next-best-action"
+        },
+        {
+          "name": "Sales Forecast AI (Data Detective)",
+          "what": "Agentic commercial forecasting"
+        },
+        {
+          "name": "Omnichannel Observability",
+          "what": "Cross-channel customer journey analytics"
+        }
+      ],
+      "differentiators": [
+        "Domain-trained embeddings and SME-led model development",
+        "Agentic workflows in regulated processes such as MLR review and biomarker analysis",
+        "Built for FDA, EMA and HIPAA rules and the 21 CFR Part 11 electronic-records requirement",
+        "25+ prebuilt solutions across the pharma value chain",
+        "Innovation Labs and co-innovation model"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "POC to production",
+          "value": "Often within weeks"
+        },
+        {
+          "metric": "Prebuilt GenAI solutions",
+          "value": "25+"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Microsoft Azure",
+        "Databricks",
+        "Snowflake",
+        "Salesforce"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            35,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "akaike-technologies",
+      "name": "Akaike Technologies",
+      "founded": 2018,
+      "hq": {
+        "city": "Bengaluru",
+        "country": "India"
+      },
+      "pe_score": 0.15,
+      "pe_rank": 27,
+      "ma_score": 0.25,
+      "ma_rank": 26,
+      "quadrant": "challengers",
+      "focus": "Pharma and life sciences regulated workflows such as dossier authoring and competitive intelligence, plus multimodal content across voice, video and text.",
+      "industries": [
+        "Pharma and life sciences",
+        "Retail and CPG",
+        "Media and entertainment",
+        "Manufacturing",
+        "BFSI"
+      ],
+      "markets": [
+        "United States",
+        "India"
+      ],
+      "platforms": [
+        {
+          "name": "Regulatory Content Automation Platform",
+          "what": "Compliant dossier authoring at scale"
+        },
+        {
+          "name": "Competitive Intelligence Engine",
+          "what": "Real-time monitoring of regulatory, payer and competitor data"
+        },
+        {
+          "name": "AI Video Studio",
+          "what": "Script-to-video generation"
+        },
+        {
+          "name": "Multimodal Ingestion Engine",
+          "what": "High-throughput text, image and audio pipelines"
+        },
+        {
+          "name": "Semantic Context Layer",
+          "what": "Knowledge-graph and schema foundation for grounding"
+        },
+        {
+          "name": "Agent ML",
+          "what": "Automated ML lifecycle"
+        }
+      ],
+      "differentiators": [
+        "Multimodal depth including voice cloning and AI video",
+        "Hybrid retrieval with adaptive chunking",
+        "Semantic layer to reduce hallucination",
+        "Evaluation stack with RAG metrics, LLM-as-judge and adversarial testing",
+        "GxP and GDPR alignment on AWS-native infrastructure"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "AWS",
+        "Google Cloud",
+        "Microsoft Azure"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            37,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aspire-systems",
+      "name": "Aspire Systems",
+      "founded": 1996,
+      "hq": {
+        "city": "Chennai",
+        "country": "India"
+      },
+      "pe_score": 0.53,
+      "pe_rank": 11,
+      "ma_score": 0.44,
+      "ma_rank": 21,
+      "quadrant": "growth",
+      "focus": "Knowledge assistants for any function, document intelligence and automated customer support, with particular depth in education and retail, delivered through a lifecycle platform.",
+      "industries": [
+        "Education",
+        "Engineering and construction",
+        "Manufacturing",
+        "Retail"
+      ],
+      "markets": [
+        "United States",
+        "Asia Pacific",
+        "EMEA"
+      ],
+      "platforms": [
+        {
+          "name": "Pragma",
+          "what": "Dev, Data and Ops lifecycle platform for agents"
+        },
+        {
+          "name": "Reusable RAG Framework",
+          "what": "Ingestion, embedding, retrieval and evaluation pipelines"
+        },
+        {
+          "name": "Prompt and Evaluation Accelerator",
+          "what": "Prompt libraries with testing and benchmarking"
+        },
+        {
+          "name": "Agent Orchestration Framework",
+          "what": "Modular agents driven by a workflow engine"
+        },
+        {
+          "name": "Domain Starter Kits",
+          "what": "Edtech and retail templates"
+        },
+        {
+          "name": "LLMOps Monitoring Dashboard",
+          "what": "Performance, cost, safety and usage observability"
+        }
+      ],
+      "differentiators": [
+        "Unified lifecycle platform from development to operations",
+        "Evaluation, monitoring and governance treated as core components",
+        "Measured expansion from assistive into agentic work",
+        "Upstream strategy and ROI modelling paired with downstream engineering"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "GenAI revenue from repeat clients",
+          "value": "Majority"
+        },
+        {
+          "metric": "Multi-year contracts",
+          "value": "Meaningful share"
+        }
+      ],
+      "partners": [
+        "Automation Anywhere",
+        "AWS",
+        "Databricks",
+        "Microsoft Azure",
+        "Salesforce",
+        "UiPath"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            39,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aventra-group",
+      "name": "Aventra Group",
+      "founded": 2021,
+      "hq": {
+        "city": "Kuala Lumpur",
+        "country": "Malaysia"
+      },
+      "pe_score": 0.18,
+      "pe_rank": 26,
+      "ma_score": 0.54,
+      "ma_rank": 18,
+      "quadrant": "seasoned",
+      "focus": "Document-intensive, compliance-driven workflows in public sector, financial services, maritime and logistics, combining LLM reasoning with deterministic validation.",
+      "industries": [
+        "BFSI",
+        "Healthcare",
+        "Manufacturing",
+        "Maritime and logistics",
+        "Oil and gas",
+        "Public sector"
+      ],
+      "markets": [
+        "Europe",
+        "Malaysia",
+        "Middle East",
+        "Singapore",
+        "Southeast Asia",
+        "UAE"
+      ],
+      "platforms": [
+        {
+          "name": "IDP Accelerator Framework",
+          "what": "Document extraction, validation and comparison pipeline"
+        },
+        {
+          "name": "Intelligent Compliance Assurance Engine",
+          "what": "Rules plus LLM reasoning with audit workflows"
+        },
+        {
+          "name": "Domain-Specific Analytical Platform",
+          "what": "Financial analysis and multi-step reasoning"
+        },
+        {
+          "name": "Reusable GenAI Blueprints",
+          "what": "Templates for document, compliance and agent workflows"
+        },
+        {
+          "name": "LLMOps and Prompt Management Toolkit",
+          "what": "Prompt versioning, evaluation, monitoring and cost"
+        }
+      ],
+      "differentiators": [
+        "Validation-first design: deterministic rules, confidence scoring and source traceability alongside LLM reasoning",
+        "Cloud-agnostic including on-premise for data residency",
+        "High share of pilots reaching enterprise scale via outcome-driven MVPs",
+        "Concentration in industries where unstructured data and compliance are core problems"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Pilots progressing to enterprise scale",
+          "value": "High share (no figure)"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Databricks",
+        "Google Cloud",
+        "Microsoft Azure",
+        "Odela",
+        "Salesforce",
+        "SAP",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            41,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blend360",
+      "name": "Blend360",
+      "founded": 2016,
+      "hq": {
+        "city": "Columbia, Maryland",
+        "country": "United States"
+      },
+      "pe_score": 0.85,
+      "pe_rank": 2,
+      "ma_score": 0.95,
+      "ma_rank": 1,
+      "quadrant": "leaders",
+      "focus": "Value-first, MVP-led GenAI delivery for Fortune 1000 clients with a framework aimed at the non-technical barriers to production, backed by an agentic platform and outcome-linked pricing.",
+      "industries": [
+        "BFSI",
+        "Energy",
+        "Government",
+        "Healthcare and life sciences",
+        "Manufacturing",
+        "Private equity",
+        "Retail and CPG",
+        "Technology, media and telecom",
+        "Travel and hospitality"
+      ],
+      "markets": [
+        "North America",
+        "Latin America",
+        "EMEA"
+      ],
+      "platforms": [
+        {
+          "name": "BlendX Multi-Agent Foundry",
+          "what": "Agentic platform with orchestration runtime, memory, model selection, MCP hosting and governance"
+        },
+        {
+          "name": "Houndoc",
+          "what": "Document workflows with a rules engine"
+        },
+        {
+          "name": "Synth Studios",
+          "what": "Simulated personas for testing products, pricing and UX"
+        },
+        {
+          "name": "Vyper Engine",
+          "what": "ML ensemble modelling"
+        },
+        {
+          "name": "GenBI",
+          "what": "Conversational BI"
+        },
+        {
+          "name": "Critical 7 Framework",
+          "what": "Method targeting trust, talent, data readiness and change barriers"
+        }
+      ],
+      "differentiators": [
+        "Value realisation run as a formal discipline with KPI dashboards and executive reviews",
+        "Outcome-linked 'base plus shared plus value' pricing",
+        "Top-tier hyperscaler and data-platform partnerships with early access to new agentic services",
+        "Repeatable agentic process automation in regulated industries",
+        "Reusable production-tested platforms rather than services-only delivery"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "POC-to-production conversion",
+          "value": "80%+"
+        },
+        {
+          "metric": "Scaled enterprise deployments",
+          "value": "Largest share in the study"
+        },
+        {
+          "metric": "Synth Studios correlation to real behaviour",
+          "value": "95%+"
+        },
+        {
+          "metric": "Domain agents deployment speed-up",
+          "value": "55 to 70% faster"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Snowflake",
+        "Databricks",
+        "Pega",
+        "Microsoft Azure",
+        "Google Cloud"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            43,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5i",
+      "name": "C5i",
+      "founded": 2000,
+      "hq": {
+        "city": "Mumbai",
+        "country": "India"
+      },
+      "pe_score": 0.65,
+      "pe_rank": 6,
+      "ma_score": 0.82,
+      "ma_rank": 4,
+      "quadrant": "leaders",
+      "focus": "Marketing, customer experience and enterprise decisioning, organised around four pillars (creativity, knowledge, synthetic generation, autonomy) with strong retail and CPG depth.",
+      "industries": [
+        "Retail",
+        "CPG",
+        "Manufacturing",
+        "Technology",
+        "Healthcare",
+        "Life sciences",
+        "Banking"
+      ],
+      "markets": [
+        "Latin America",
+        "Middle East",
+        "North America",
+        "United Kingdom",
+        "Western Europe"
+      ],
+      "platforms": [
+        {
+          "name": "Agent5i",
+          "what": "Multi-agent orchestration, no/low-code, agents exportable as JSON, Microsoft-funded"
+        },
+        {
+          "name": "Synthetic Audiences",
+          "what": "Simulated customer cohorts for concept and message testing"
+        },
+        {
+          "name": "Discovery",
+          "what": "Decision intelligence"
+        },
+        {
+          "name": "Incivus",
+          "what": "Creative and ad-testing intelligence"
+        },
+        {
+          "name": "ForeSight",
+          "what": "Agentic market and competitive intelligence"
+        }
+      ],
+      "differentiators": [
+        "Synthetic audience simulation before real-market testing",
+        "Agent-led operational use cases in supply chain, call centre and competitive intelligence",
+        "Patent-pending process planner that redesigns workflows for agentic automation",
+        "Academic R&D partnerships and a taught AI impact model",
+        "Central CoE for enterprise rollout"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "GenAI delivery team",
+          "value": "100+"
+        },
+        {
+          "metric": "Product launch cycle in one case",
+          "value": "9 months to 2 to 3 months"
+        }
+      ],
+      "partners": [
+        "Microsoft",
+        "AWS",
+        "Google Cloud",
+        "Meta",
+        "Intel",
+        "Databricks"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            45,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chetu",
+      "name": "Chetu",
+      "founded": 2000,
+      "hq": {
+        "city": "Sunrise, Florida",
+        "country": "United States"
+      },
+      "pe_score": 0.52,
+      "pe_rank": 13,
+      "ma_score": 0.24,
+      "ma_rank": 27,
+      "quadrant": "growth",
+      "focus": "Custom-built GenAI layered on modernised data systems for fintech, healthcare, retail and supply chain, for buyers who prefer bespoke builds to platforms.",
+      "industries": [
+        "Fintech",
+        "Healthcare",
+        "Retail and supply chain"
+      ],
+      "markets": [
+        "North America",
+        "United Kingdom and Europe",
+        "Latin America"
+      ],
+      "platforms": [
+        {
+          "name": "Track2AI Framework",
+          "what": "Adoption lifecycle from use-case prioritisation to scale"
+        }
+      ],
+      "differentiators": [
+        "Data-modernisation-led adoption",
+        "RAG decision support integrated with BI, ERP and operational systems",
+        "Private AI environments for regulated clients",
+        "Flexibility across client technology stacks"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Industries served with custom AI",
+          "value": "40+"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Microsoft Azure",
+        "Google Cloud",
+        "Databricks",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            47,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evalueserve",
+      "name": "Evalueserve",
+      "founded": 2000,
+      "hq": {
+        "city": "Zug",
+        "country": "Switzerland"
+      },
+      "pe_score": 0.64,
+      "pe_rank": 7,
+      "ma_score": 0.6,
+      "ma_rank": 13,
+      "quadrant": "leaders",
+      "focus": "Domain SMEs paired with AI tooling in financial services, life sciences and manufacturing workflows, with an agentic studio and disciplined cost engineering.",
+      "industries": [
+        "Financial services",
+        "Life sciences and healthcare",
+        "Manufacturing and logistics",
+        "Professional services",
+        "Technology and telecom",
+        "CPG and retail"
+      ],
+      "markets": [
+        "United States",
+        "Middle East",
+        "Europe"
+      ],
+      "platforms": [
+        {
+          "name": "Genie",
+          "what": "Agentic studio on LangGraph and CrewAI, 60+ production agents"
+        },
+        {
+          "name": "AIRA",
+          "what": "Modular AI platform of composable microservices"
+        },
+        {
+          "name": "Spreadsmart",
+          "what": "Financial spreading and credit memo automation"
+        },
+        {
+          "name": "DocufAI",
+          "what": "Agentic document intelligence"
+        },
+        {
+          "name": "Insightsfirst",
+          "what": "Competitive intelligence SaaS"
+        },
+        {
+          "name": "Suppl.AI",
+          "what": "Supply chain planning with multi-agent orchestration"
+        }
+      ],
+      "differentiators": [
+        "Decades of embedded managed-services delivery in domain workflows",
+        "Cost engineering: small models, tiered routing, context caching, prompt compression",
+        "Two Centres of Excellence (Google Cloud; internal AI productivity)",
+        "Governance with human oversight, automated evaluators and bias metrics; SOC 2 Type II and HIPAA",
+        "AI compute costs blended transparently into rate cards"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Forecast error in one supply-chain case",
+          "value": "69% to 30%"
+        },
+        {
+          "metric": "Credit memo effort reduction",
+          "value": "70 to 80%"
+        },
+        {
+          "metric": "Efficiency gain from internal agents",
+          "value": "30 to 40%"
+        },
+        {
+          "metric": "GenAI clients on multi-year contracts",
+          "value": "Majority"
+        }
+      ],
+      "partners": [
+        "AssemblyAI",
+        "Databricks",
+        "Google Cloud",
+        "Google Gemini",
+        "Microsoft Azure",
+        "OpenAI",
+        "ParallelAI",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            49,
+            50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exponentia-ai",
+      "name": "Exponentia.ai",
+      "founded": 2014,
+      "hq": {
+        "city": "Mumbai",
+        "country": "India"
+      },
+      "pe_score": 0.34,
+      "pe_rank": 18,
+      "ma_score": 0.59,
+      "ma_rank": 14,
+      "quadrant": "seasoned",
+      "focus": "Platform-led enterprise AI products on a shared data and agentic architecture, with last-mile integration into sales, logistics and contract workflows.",
+      "industries": [
+        "Manufacturing",
+        "Insurance",
+        "Healthcare",
+        "NBFC and banking",
+        "CPG and retail"
+      ],
+      "markets": [
+        "United States",
+        "United Kingdom",
+        "UAE",
+        "India",
+        "Singapore"
+      ],
+      "platforms": [
+        {
+          "name": "AIXponent",
+          "what": "Agentic platform with orchestration, RAG, LLMOps and governance"
+        },
+        {
+          "name": "Document Intelligence Suite",
+          "what": "Extraction, summarisation, validation and compliance"
+        },
+        {
+          "name": "LakehouseXponent",
+          "what": "Raw data to enterprise lakehouse accelerator"
+        },
+        {
+          "name": "OneTap",
+          "what": "Agentic workflows for sales and collections"
+        },
+        {
+          "name": "GenTrust",
+          "what": "Governance and compliance framework"
+        },
+        {
+          "name": "MigrationXponent",
+          "what": "Legacy data and analytics migration"
+        }
+      ],
+      "differentiators": [
+        "Deep Databricks alignment with MLflow-based lifecycle management",
+        "Governance embedded across delivery",
+        "Compact full-stack team with a GenAI CoE",
+        "Reusable building blocks across orchestration, documents, governance and migration"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "POCs reaching production or scale",
+          "value": "60%+"
+        }
+      ],
+      "partners": [
+        "Databricks",
+        "Microsoft",
+        "Microsoft Azure",
+        "AWS",
+        "Qlik"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            51,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fractal-analytics",
+      "name": "Fractal Analytics",
+      "founded": 2000,
+      "hq": {
+        "city": "New York",
+        "country": "United States"
+      },
+      "pe_score": 0.76,
+      "pe_rank": 4,
+      "ma_score": 0.9,
+      "ma_rank": 2,
+      "quadrant": "leaders",
+      "focus": "Behavioural science, design and domain expertise combined with AI engineering to drive adoption, backed by in-house model research and a full agentic platform.",
+      "industries": [
+        "CPG",
+        "Retail",
+        "BFSI",
+        "Technology, media and telecom",
+        "Healthcare and life sciences",
+        "Pharma",
+        "Industrial"
+      ],
+      "markets": [
+        "United States",
+        "United Kingdom",
+        "India",
+        "Australia",
+        "UAE",
+        "Singapore"
+      ],
+      "platforms": [
+        {
+          "name": "Cogentiq",
+          "what": "Agentic platform covering agent registry and marketplace, orchestration, an MCP gateway, operations tooling, adversarial testing, evaluation and role-based access"
+        },
+        {
+          "name": "LLM Gateway",
+          "what": "Model routing, cost control and token observability"
+        },
+        {
+          "name": "LLM Studio",
+          "what": "Fine-tuning and model lifecycle"
+        },
+        {
+          "name": "PromptTwin",
+          "what": "Prompt management and versioning"
+        },
+        {
+          "name": "Fathom-R1",
+          "what": "Open-sourced reasoning model"
+        },
+        {
+          "name": "Vaidya AI",
+          "what": "Multimodal medical model"
+        },
+        {
+          "name": "Kalaido.ai",
+          "what": "Text-to-image model"
+        },
+        {
+          "name": "PiEvolve",
+          "what": "Automated ML"
+        }
+      ],
+      "differentiators": [
+        "Behavioural-science-led adoption design",
+        "Proprietary models including a reasoning model and a medical multimodal model",
+        "Selected for India's national AI mission to build a medical language reasoning model",
+        "Platform with 20 to 25 prebuilt apps deployable across three clouds",
+        "Sustained R&D investment and patent portfolio"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Adoption uplift from behavioural redesign (insurance case)",
+          "value": "70 to 80%"
+        },
+        {
+          "metric": "ROI in a healthcare claims transformation",
+          "value": "about 80 million USD"
+        },
+        {
+          "metric": "Build-test-deploy time reduction for agentic solutions",
+          "value": "80%"
+        },
+        {
+          "metric": "Component adoption vs full platform",
+          "value": "70 to 80% vs 10 to 15% of engagements"
+        },
+        {
+          "metric": "AI R&D share of revenue",
+          "value": "5.8 to 7%"
+        },
+        {
+          "metric": "Patents and applications",
+          "value": "65+"
+        }
+      ],
+      "partners": [
+        "Google Cloud",
+        "AWS",
+        "Microsoft Azure"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            53,
+            54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoonartek",
+      "name": "Hoonartek",
+      "founded": 2010,
+      "hq": {
+        "city": "Union, New Jersey",
+        "country": "United States"
+      },
+      "pe_score": 0.26,
+      "pe_rank": 23,
+      "ma_score": 0.41,
+      "ma_rank": 22,
+      "quadrant": "challengers",
+      "focus": "Data-first engineering extending into applied, governed AI for financial services, manufacturing and telecom.",
+      "industries": [
+        "BFSI",
+        "Manufacturing",
+        "Telecom"
+      ],
+      "markets": [
+        "United States",
+        "Asia Pacific"
+      ],
+      "platforms": [
+        {
+          "name": "Clearview BlueFoundry",
+          "what": "Reusable enterprise AI foundation"
+        },
+        {
+          "name": "Realize AI Framework and Lab",
+          "what": "POC-to-production lifecycle"
+        },
+        {
+          "name": "RAG Accelerators",
+          "what": "Ingestion, retrieval and grounded generation pipelines"
+        },
+        {
+          "name": "Governance and Cost Dashboards",
+          "what": "Performance, cost and policy monitoring"
+        }
+      ],
+      "differentiators": [
+        "Stateful, policy-aware multi-agent systems combining deterministic logic with probabilistic reasoning",
+        "AgentOps-based governance",
+        "Long-standing data quality, metadata and lineage capability",
+        "Data-platform partner co-innovation and joint go-to-market"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "Ab Initio",
+        "AWS",
+        "Databricks",
+        "Google Cloud",
+        "Microsoft Azure",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            55,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indus-net-technologies",
+      "name": "Indus Net Technologies",
+      "founded": 1997,
+      "hq": {
+        "city": "Kolkata",
+        "country": "India"
+      },
+      "pe_score": 0.53,
+      "pe_rank": 12,
+      "ma_score": 0.38,
+      "ma_rank": 23,
+      "quadrant": "growth",
+      "focus": "Enterprise knowledge systems built on RAG, plus document intelligence and workflow augmentation, with a focus on financial services and healthcare.",
+      "industries": [
+        "BFSI",
+        "Healthcare and life sciences",
+        "Retail and FMCG",
+        "Manufacturing",
+        "Technology"
+      ],
+      "markets": [
+        "North America",
+        "India",
+        "Europe"
+      ],
+      "platforms": [
+        {
+          "name": "Reusable RAG Frameworks",
+          "what": "Knowledge systems with vector search"
+        },
+        {
+          "name": "Structured Prompt Libraries",
+          "what": "Domain prompt assets"
+        },
+        {
+          "name": "Evaluation and Monitoring Toolkits",
+          "what": "Testing, bias auditing and performance tracking"
+        },
+        {
+          "name": "Secure LLM Deployment Frameworks",
+          "what": "Governed deployment environments"
+        },
+        {
+          "name": "Domain Starter Kits",
+          "what": "BFSI, healthcare and retail templates"
+        }
+      ],
+      "differentiators": [
+        "LLMOps practices as standard delivery components",
+        "Bias audits, adversarial testing and human review of outputs",
+        "Repeat-client, multi-year programmes",
+        "Shift from horizontal capability toward domain-aligned solutions"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "GenAI revenue from repeat clients",
+          "value": "Significant portion"
+        }
+      ],
+      "partners": [
+        "Microsoft Azure",
+        "AWS",
+        "Google Cloud",
+        "Databricks",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            57,
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infocepts",
+      "name": "Infocepts",
+      "founded": 2004,
+      "hq": {
+        "city": "Washington, DC",
+        "country": "United States"
+      },
+      "pe_score": 0.38,
+      "pe_rank": 16,
+      "ma_score": 0.54,
+      "ma_rank": 17,
+      "quadrant": "seasoned",
+      "focus": "Analytics-led GenAI inside enterprise data and decisioning environments, with a large accelerator set and a move toward platform fees plus outcome-informed pricing.",
+      "industries": [
+        "Media and entertainment",
+        "Pharma",
+        "Manufacturing",
+        "Retail",
+        "BFSI"
+      ],
+      "markets": [
+        "United States",
+        "United Kingdom",
+        "France"
+      ],
+      "platforms": [
+        {
+          "name": "DiscoverYai",
+          "what": "AI lifecycle and pilot-to-production platform"
+        },
+        {
+          "name": "Decision360",
+          "what": "Conversational analytics"
+        },
+        {
+          "name": "HyperCare",
+          "what": "Data and AI operations platform"
+        },
+        {
+          "name": "Knowledge Nest",
+          "what": "RAG enterprise knowledge search"
+        },
+        {
+          "name": "Cloud Cost Monitor",
+          "what": "FinOps accelerator"
+        },
+        {
+          "name": "Fabric Migration Accelerator / Fabric Nexus",
+          "what": "Data platform migration"
+        },
+        {
+          "name": "Realtime Data Streamer",
+          "what": "Streaming for near real-time decisioning"
+        }
+      ],
+      "differentiators": [
+        "Verticalised business units with domain leadership",
+        "Recurring platform fees combined with outcome-informed application pricing",
+        "Accelerators shown to shorten configuration and deal conversion",
+        "High POC-to-production conversion claimed"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "POC-to-production conversion",
+          "value": "High (no figure)"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Microsoft Azure",
+        "Databricks",
+        "Dataiku"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            59,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jk-tech",
+      "name": "JK Tech",
+      "founded": 1994,
+      "hq": {
+        "city": "Noida",
+        "country": "India"
+      },
+      "pe_score": 0.37,
+      "pe_rank": 17,
+      "ma_score": 0.64,
+      "ma_rank": 12,
+      "quadrant": "seasoned",
+      "focus": "Knowledge-grounded, workflow-embedded agentic AI using knowledge graphs and ontology layers, aimed at moving from insight to action in retail, insurance, financial services and CPG.",
+      "industries": [
+        "Retail",
+        "Insurance and financial services",
+        "CPG",
+        "Manufacturing"
+      ],
+      "markets": [
+        "United States",
+        "United Kingdom"
+      ],
+      "platforms": [
+        {
+          "name": "JIVA GenAI Orchestrator",
+          "what": "Grounded knowledge, multi-agent workflows, plus governance and lifecycle control"
+        },
+        {
+          "name": "Templatized Agent Frameworks",
+          "what": "Reusable agents for documents, search, copilots and decisions"
+        },
+        {
+          "name": "Industry Accelerators",
+          "what": "Domain solutions with embedded KPIs and decision logic"
+        },
+        {
+          "name": "Reusable GenAI Components",
+          "what": "RAG pipelines, evaluation, monitoring, connectors"
+        }
+      ],
+      "differentiators": [
+        "Knowledge graphs plus native agent orchestration for explainable, execution-oriented systems",
+        "Balanced full-stack capability from data to user layer",
+        "Reusable platforms with domain adaptation across geographies"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "AWS",
+        "Databricks",
+        "Google Cloud",
+        "LangChain",
+        "Microsoft Azure",
+        "Neo4j",
+        "OpenAI",
+        "PostgreSQL",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konverge-ai",
+      "name": "Konverge AI",
+      "founded": 2018,
+      "hq": {
+        "city": "Wilmington, Delaware",
+        "country": "United States"
+      },
+      "pe_score": 0.23,
+      "pe_rank": 25,
+      "ma_score": 0.3,
+      "ma_rank": 25,
+      "quadrant": "challengers",
+      "focus": "Diagnostics and ROI-led progression from paid pilots to production, with more than half of GenAI revenue from manufacturing.",
+      "industries": [
+        "Manufacturing",
+        "Retail and CPG",
+        "Life sciences",
+        "Construction",
+        "BFSI"
+      ],
+      "markets": [
+        "North America",
+        "United Kingdom",
+        "Asia Pacific",
+        "Middle East"
+      ],
+      "platforms": [
+        {
+          "name": "DataLens",
+          "what": "POC-to-production accelerator with standard pipelines"
+        },
+        {
+          "name": "GenAI Accelerator Library",
+          "what": "17+ components across RAG, copilots, agents, evaluation"
+        },
+        {
+          "name": "Evaluation and Testing Frameworks",
+          "what": "Automated benchmarking"
+        },
+        {
+          "name": "Reference Architecture Frameworks",
+          "what": "Standard deployment patterns"
+        }
+      ],
+      "differentiators": [
+        "Early-stage diagnostics and ROI workshops",
+        "Evaluation-first, cost-aware delivery",
+        "Unified team spanning data, ML, MLOps, application and UX",
+        "Growing multi-year and repeat base"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "POC-to-production conversion",
+          "value": "Above industry average (no figure)"
+        },
+        {
+          "metric": "GenAI revenue from manufacturing",
+          "value": "More than half"
+        }
+      ],
+      "partners": [
+        "Microsoft Azure",
+        "AWS",
+        "Databricks",
+        "Dataiku",
+        "Palantir"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            63,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "latentview-analytics",
+      "name": "LatentView Analytics",
+      "founded": 2006,
+      "hq": {
+        "city": "Chennai",
+        "country": "India"
+      },
+      "pe_score": 0.58,
+      "pe_rank": 8,
+      "ma_score": 0.69,
+      "ma_rank": 8,
+      "quadrant": "leaders",
+      "focus": "Fortune 500 delivery structured by a named methodology and a three-phase maturity path from assistive copilots to an orchestrated digital workforce, with agents acting directly on enterprise platforms.",
+      "industries": [
+        "Technology",
+        "Retail",
+        "CPG",
+        "Financial services",
+        "Automotive"
+      ],
+      "markets": [
+        "United States",
+        "Europe"
+      ],
+      "platforms": [
+        {
+          "name": "RAISE Framework",
+          "what": "Retrieve, Analyze, Implement, Sync and Execute methodology"
+        },
+        {
+          "name": "LASER",
+          "what": "RAG search and extraction across enterprise data"
+        },
+        {
+          "name": "InsightsBridge AI",
+          "what": "Full-stack integration layer"
+        },
+        {
+          "name": "BeagleGPT",
+          "what": "Conversational analytics"
+        },
+        {
+          "name": "Markee",
+          "what": "Agentic marketing campaign operations"
+        },
+        {
+          "name": "Pragya AI",
+          "what": "Domain LLM built on Gemini"
+        },
+        {
+          "name": "ConnectedView",
+          "what": "Supply chain control tower"
+        },
+        {
+          "name": "Chat Your Data",
+          "what": "Natural language to SQL"
+        }
+      ],
+      "differentiators": [
+        "Agents that operate on Salesforce, SAP and HubSpot with ReAct loops and multi-framework orchestration",
+        "Milestone-based methodology and explicit maturity phases for clients",
+        "Broad multi-platform partnership strategy with gold-tier data-platform status",
+        "Accelerators spanning analytics, marketing, sales and supply chain"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "GenAI revenue from repeat clients",
+          "value": "100%"
+        },
+        {
+          "metric": "Multi-year accounts",
+          "value": "Several"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Databricks",
+        "Google Cloud",
+        "Microsoft Azure",
+        "Microsoft Fabric",
+        "NVIDIA",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            65,
+            66
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minfy-technologies",
+      "name": "Minfy Technologies",
+      "founded": 2016,
+      "hq": {
+        "city": "Hyderabad",
+        "country": "India"
+      },
+      "pe_score": 0.28,
+      "pe_rank": 22,
+      "ma_score": 0.56,
+      "ma_rank": 16,
+      "quadrant": "seasoned",
+      "focus": "Cloud-native engineering with cloud, data and GenAI in one delivery stack, guided by an agentic reference architecture and a readiness framework.",
+      "industries": [
+        "Financial services",
+        "Healthcare and life sciences",
+        "Manufacturing",
+        "Retail and CPG",
+        "Travel and logistics"
+      ],
+      "markets": [
+        "India",
+        "Asia Pacific",
+        "Australia and New Zealand",
+        "North America",
+        "United Kingdom",
+        "Europe"
+      ],
+      "platforms": [
+        {
+          "name": "Swayam AI",
+          "what": "Modular GenAI platform of reusable building blocks"
+        },
+        {
+          "name": "Swayam Agentic Studio",
+          "what": "Low-code agentic workflow design including voice and chat"
+        },
+        {
+          "name": "DataTalk",
+          "what": "Natural language querying with text-to-SQL agents"
+        },
+        {
+          "name": "Enterprise Twin Simulator",
+          "what": "Pre-production simulation of agent behaviour"
+        },
+        {
+          "name": "EGIRA",
+          "what": "Reference architecture for agentic systems"
+        },
+        {
+          "name": "AIQ",
+          "what": "Enterprise AI readiness framework"
+        }
+      ],
+      "differentiators": [
+        "Depth in inference optimisation and pipeline scalability",
+        "Vertical integration from infrastructure to agents, uncommon at its scale",
+        "Internal 'digital workforce' operating model offloading undifferentiated work to AI",
+        "Rising revenue per head from AI services"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "GenAI share of revenue",
+          "value": "Meaningful (no figure)"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Microsoft Azure",
+        "Google Cloud",
+        "Snowflake",
+        "Databricks"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            67,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neoware-technology-solutions",
+      "name": "Neoware Technology Solutions",
+      "founded": 2020,
+      "hq": {
+        "city": "Piscataway, New Jersey",
+        "country": "United States"
+      },
+      "pe_score": 0.29,
+      "pe_rank": 21,
+      "ma_score": 0.68,
+      "ma_rank": 9,
+      "quadrant": "seasoned",
+      "focus": "Co-creation delivery in two-month value increments under a GenAI-native development method, sold only on fixed-scope or outcome-based terms.",
+      "industries": [
+        "Financial services",
+        "Healthcare",
+        "Retail",
+        "Utilities",
+        "Energy",
+        "Public sector and development finance"
+      ],
+      "markets": [
+        "United States",
+        "United Kingdom",
+        "Middle East"
+      ],
+      "platforms": [
+        {
+          "name": "DGCUT",
+          "what": "Design, Generate, Customise, Unit Test delivery method"
+        },
+        {
+          "name": "AskNeo",
+          "what": "Conversational BI across Power BI, Tableau and warehouses"
+        },
+        {
+          "name": "Integration Studio",
+          "what": "Low-code connectivity across ERP, CRM and HR"
+        },
+        {
+          "name": "CodeX",
+          "what": "AI code generation for data engineering"
+        },
+        {
+          "name": "Document Intelligence",
+          "what": "Rule and knowledge extraction with cited answers"
+        },
+        {
+          "name": "DVRC",
+          "what": "Data validation and reconciliation"
+        }
+      ],
+      "differentiators": [
+        "Exclusively fixed-scope or outcome-based commercial models",
+        "Membership of a select hyperscaler data programme of about 30 partners globally",
+        "CoE use-case repository shortens strategy engagements",
+        "Wins against larger vendors on proposal speed and depth"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Manual coding reduction with CodeX",
+          "value": "40 to 90%"
+        },
+        {
+          "metric": "Strategy engagement duration",
+          "value": "6 to 8 weeks cut to 3 to 4"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Mage Data.ai",
+        "Databricks",
+        "Snowflake",
+        "Microsoft Azure",
+        "Google Cloud"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            69,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "id": "polestar-analytics",
+      "name": "Polestar Analytics",
+      "founded": 2012,
+      "hq": {
+        "city": "Plano, Texas",
+        "country": "United States"
+      },
+      "pe_score": 0.57,
+      "pe_rank": 9,
+      "ma_score": 0.78,
+      "ma_rank": 5,
+      "quadrant": "leaders",
+      "focus": "GenAI as an extension of the data-science stack, fusing language models with traditional ML for explainable decisioning in CPG, retail, life sciences and financial services.",
+      "industries": [
+        "CPG",
+        "Retail",
+        "Life sciences and healthcare",
+        "BFSI"
+      ],
+      "markets": [
+        "North America",
+        "United Kingdom",
+        "Europe"
+      ],
+      "platforms": [
+        {
+          "name": "ML Orion",
+          "what": "LLMs as a reasoning layer over statistical models, with small language models"
+        },
+        {
+          "name": "P.AI",
+          "what": "Conversational analytics"
+        },
+        {
+          "name": "Agenthood AI",
+          "what": "Multi-agent orchestration with stepwise execution"
+        },
+        {
+          "name": "Enterprise Knowledge Hub",
+          "what": "Secure RAG platform"
+        },
+        {
+          "name": "RAG and Prompt Engineering Accelerators",
+          "what": "Chunking, embeddings, retrieval and prompt templates"
+        }
+      ],
+      "differentiators": [
+        "Fusion of classical ML and LLMs for adaptable, explainable decisions",
+        "Decision agents for pricing and promotions, natural-language-to-SQL agents, claims workflows",
+        "Citation-backed RAG for regulated environments",
+        "Governance-first with bias detection, hallucination monitoring and audit"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "Microsoft",
+        "AWS",
+        "Databricks",
+        "Snowflake",
+        "Anaplan"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            71,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simform",
+      "name": "Simform",
+      "founded": 2010,
+      "hq": {
+        "city": "Orlando, Florida",
+        "country": "United States"
+      },
+      "pe_score": 0.32,
+      "pe_rank": 19,
+      "ma_score": 0.51,
+      "ma_rank": 19,
+      "quadrant": "seasoned",
+      "focus": "Industrialising GenAI adoption for mid-market and digital-native firms through production-shaped pilots, reusable platforms and governed deployment patterns.",
+      "industries": [
+        "ISVs and hi-tech",
+        "Discrete manufacturing",
+        "Professional services",
+        "Healthcare",
+        "Retail"
+      ],
+      "markets": [
+        "United States",
+        "United Kingdom",
+        "Canada"
+      ],
+      "platforms": [
+        {
+          "name": "ThoughtMesh",
+          "what": "Agent orchestration and low-code development with governance"
+        },
+        {
+          "name": "TrueMorph",
+          "what": "AI-assisted data integration and migration"
+        },
+        {
+          "name": "Data360",
+          "what": "Customer data platform"
+        },
+        {
+          "name": "MedNoteDX",
+          "what": "Clinical documentation assistant"
+        },
+        {
+          "name": "CodeTools / PEX.AI / NeuVantage",
+          "what": "Developer productivity and adoption accelerators"
+        }
+      ],
+      "differentiators": [
+        "Identity, access, audit and monitoring embedded from the first deployment",
+        "Standardised deployment patterns across clients",
+        "Integrated stack from data readiness to LLMOps",
+        "Speed of deployment for digital-native buyers"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "Microsoft",
+        "Databricks",
+        "Datadog"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            73,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "id": "straive",
+      "name": "Straive",
+      "founded": 1980,
+      "hq": {
+        "city": "Singapore",
+        "country": "Singapore"
+      },
+      "pe_score": 0.78,
+      "pe_rank": 3,
+      "ma_score": 0.74,
+      "ma_rank": 6,
+      "quadrant": "leaders",
+      "focus": "Document-heavy, accuracy-critical workflows in regulated industries, delivered by thousands of embedded domain experts, a fast prototyping platform and a data-to-knowledge backbone.",
+      "industries": [
+        "Education",
+        "Financial services",
+        "Healthcare",
+        "Life sciences",
+        "Publishing and content",
+        "Supply chain and logistics"
+      ],
+      "markets": [
+        "United States",
+        "Europe",
+        "Middle East",
+        "Asia Pacific"
+      ],
+      "platforms": [
+        {
+          "name": "LLM Foundry",
+          "what": "Multi-model prototyping enabling 7-day POCs"
+        },
+        {
+          "name": "Spark.AI",
+          "what": "Turns unstructured content into structured knowledge"
+        },
+        {
+          "name": "Kadal AI",
+          "what": "Content platform for education"
+        },
+        {
+          "name": "Aikira",
+          "what": "Publishing workflow automation"
+        },
+        {
+          "name": "AInonymization / HypoForge",
+          "what": "PII and PHI anonymisation"
+        },
+        {
+          "name": "DocChat, DataChat, DocExplore",
+          "what": "Natural language interaction with documents and data"
+        }
+      ],
+      "differentiators": [
+        "6,000+ SMEs including PhDs embedded in fine-tuning, validation and QA",
+        "7 to 14 day POC and 8 to 10 week deployment model",
+        "Knowledge backbone that compounds across a client's later use cases",
+        "Multi-agent validation for reasoning-heavy workflows such as pharmacovigilance",
+        "296 internal accelerators"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Active clients on multi-year contracts",
+          "value": "60 to 70%"
+        },
+        {
+          "metric": "Additional use cases within 12 months",
+          "value": "About three"
+        },
+        {
+          "metric": "Document classification accuracy in cases",
+          "value": "90%+"
+        },
+        {
+          "metric": "Internal accelerators",
+          "value": "296"
+        }
+      ],
+      "partners": [
+        "Microsoft Azure",
+        "AWS",
+        "Google Cloud",
+        "Databricks",
+        "Snowflake",
+        "UiPath"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            75,
+            76
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stratlytics",
+      "name": "StratLytics",
+      "founded": 2015,
+      "hq": {
+        "city": "Bhubaneswar",
+        "country": "India"
+      },
+      "pe_score": 0.1,
+      "pe_rank": 28,
+      "ma_score": 0.18,
+      "ma_rank": 28,
+      "quadrant": "challengers",
+      "focus": "Governance-first GenAI for model risk, compliance documentation and underwriting in financial services, plus energy analytics.",
+      "industries": [
+        "BFSI and fintech",
+        "Manufacturing and industrial",
+        "Energy and utilities",
+        "Real estate"
+      ],
+      "markets": [
+        "United States",
+        "Europe"
+      ],
+      "platforms": [
+        {
+          "name": "SLERA",
+          "what": "Credit lifecycle platform from acquisition to governance"
+        },
+        {
+          "name": "SLIQ",
+          "what": "Energy analytics with GenAI"
+        },
+        {
+          "name": "Enterprise RAG Framework",
+          "what": "Secure grounded generation with traceability"
+        },
+        {
+          "name": "Agentic Workflow Scaffolding",
+          "what": "Multi-step orchestration templates with human validation"
+        }
+      ],
+      "differentiators": [
+        "Source attribution, structured outputs and audit logging throughout",
+        "Cautious, human-supervised agentic adoption in high-risk workflows",
+        "Regulated-environment focus"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "Databricks"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            77,
+            78
+          ]
+        }
+      ]
+    },
+    {
+      "id": "think360-ai",
+      "name": "Think360.ai",
+      "founded": 2014,
+      "hq": {
+        "city": "Mumbai",
+        "country": "India"
+      },
+      "pe_score": 0.32,
+      "pe_rank": 20,
+      "ma_score": 0.35,
+      "ma_rank": 24,
+      "quadrant": "challengers",
+      "focus": "Grounded, production-ready GenAI on an analytics and decision-intelligence heritage, with hybrid model strategies and on-premise options for regulated clients.",
+      "industries": [
+        "BFSI",
+        "Healthcare and life sciences",
+        "Marketing and SaaS platforms"
+      ],
+      "markets": [
+        "United States",
+        "India",
+        "Europe"
+      ],
+      "platforms": [
+        {
+          "name": "Self-Serve GenAI Platform",
+          "what": "Rapid application development with governance"
+        },
+        {
+          "name": "Enterprise RAG and Agentic Framework",
+          "what": "Grounded retrieval and multi-step orchestration"
+        },
+        {
+          "name": "LLMOps Control Tower",
+          "what": "Prompt, retrieval, drift and agent monitoring"
+        },
+        {
+          "name": "Intelligent Serving and Cost Optimizer",
+          "what": "Routing, token and latency optimisation"
+        },
+        {
+          "name": "GenAI CI/CD Accelerator",
+          "what": "Deployment pipelines for prompts, models and agents"
+        }
+      ],
+      "differentiators": [
+        "Compliance automation, financial analysis and communication monitoring use cases",
+        "Mix of commercial and open-source models with on-premise and hybrid deployment",
+        "GenAI embedded in CRM and analytics systems",
+        "Repeat-client programmes"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "AWS",
+        "Microsoft Azure",
+        "Google Cloud",
+        "Databricks",
+        "Snowflake"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            79,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiger-analytics",
+      "name": "Tiger Analytics",
+      "founded": 2011,
+      "hq": {
+        "city": "Santa Clara, California",
+        "country": "United States"
+      },
+      "pe_score": 0.9,
+      "pe_rank": 1,
+      "ma_score": 0.86,
+      "ma_rank": 3,
+      "quadrant": "leaders",
+      "focus": "Data and analytics heritage brought into experience-led enterprise transformation, with heavy discovery before build, fifteen named accelerators and the broadest geographic reach in the study.",
+      "industries": [
+        "Banking and financial services",
+        "Healthcare and pharmaceuticals",
+        "Manufacturing",
+        "Quick-service restaurants",
+        "Retail and CPG",
+        "Technology"
+      ],
+      "markets": [
+        "North America",
+        "Europe",
+        "United Kingdom",
+        "Middle East",
+        "Asia Pacific",
+        "Africa",
+        "South America"
+      ],
+      "platforms": [
+        {
+          "name": "Deep Thought Framework",
+          "what": "Lifecycle from strategy to managed operations"
+        },
+        {
+          "name": "Agent Flow",
+          "what": "Low-code multi-agent platform with copilot"
+        },
+        {
+          "name": "RAG Studio",
+          "what": "Domain-aware retrieval"
+        },
+        {
+          "name": "Insights Pro",
+          "what": "Agent-led analytics"
+        },
+        {
+          "name": "Data AgentX",
+          "what": "Data engineering and quality agents"
+        },
+        {
+          "name": "Think.AI",
+          "what": "Links business value to the AI and data work needed to deliver it"
+        },
+        {
+          "name": "Tiger Forge",
+          "what": "Agent development and governance"
+        },
+        {
+          "name": "BI Next",
+          "what": "Conversational BI"
+        }
+      ],
+      "differentiators": [
+        "Moves between data modernisation and GenAI application work in one engagement",
+        "Deep discovery: domain experts, persona mapping and prototyping before code",
+        "Process diagnostic tool scores agentic fit from SOPs in hours",
+        "Accelerators arrive 60 to 80 percent complete; domain solutions with perpetual IP transfer to clients",
+        "Monthly executive AI Day workshops reaching hundreds of client staff"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "Data modelling acceleration",
+          "value": "50%"
+        },
+        {
+          "metric": "Data quality setup",
+          "value": "Weeks to minutes"
+        },
+        {
+          "metric": "Named accelerators and platforms",
+          "value": "15"
+        }
+      ],
+      "partners": [
+        "Microsoft Azure",
+        "AWS",
+        "Google Cloud",
+        "Databricks",
+        "Snowflake",
+        "NVIDIA"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            81,
+            82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "useready",
+      "name": "USEReady",
+      "founded": 2011,
+      "hq": {
+        "city": "New York",
+        "country": "United States"
+      },
+      "pe_score": 0.41,
+      "pe_rank": 15,
+      "ma_score": 0.74,
+      "ma_rank": 7,
+      "quadrant": "seasoned",
+      "focus": "Complex agentic systems with contextual memory, human oversight and protocol-based integration, anchored by a suite of prebuilt cognitive agents and a fixed-price micro POC model.",
+      "industries": [
+        "Travel and hospitality",
+        "Supply chain",
+        "Pharma",
+        "Manufacturing and industrial",
+        "Healthcare and life sciences",
+        "Financial services",
+        "Energy and utilities",
+        "Construction"
+      ],
+      "markets": [
+        "Canada",
+        "Europe",
+        "India",
+        "Singapore and Asia Pacific",
+        "United States"
+      ],
+      "platforms": [
+        {
+          "name": "AlphaGenie",
+          "what": "About 30 prebuilt cognitive agents and 60+ use cases; 13 on the AWS marketplace"
+        },
+        {
+          "name": "Ready Agentic Platform Framework",
+          "what": "Open-source agent framework that runs on any platform"
+        },
+        {
+          "name": "Semabridge",
+          "what": "Unified semantic layer for agent-ready retrieval"
+        },
+        {
+          "name": "ART Framework",
+          "what": "Accuracy, Responsibility, Trustworthiness quality standard"
+        },
+        {
+          "name": "Aixcelerate Program",
+          "what": "Adoption programme and demand channel"
+        },
+        {
+          "name": "Finomenal",
+          "what": "FinOps for hybrid platforms"
+        }
+      ],
+      "differentiators": [
+        "Production accuracy target of 95 percent or more applied across engagements",
+        "2 to 4 week fixed-price Micro POC",
+        "Industry advisor ecosystem embedded in solution design",
+        "Community-based demand generation through domain microsites"
+      ],
+      "claimed_metrics": [
+        {
+          "metric": "POC-to-production conversion",
+          "value": "70%"
+        },
+        {
+          "metric": "Repeat business rate",
+          "value": "70%"
+        },
+        {
+          "metric": "Invoice processing effort reduction (energy case)",
+          "value": "70%"
+        },
+        {
+          "metric": "Entity extraction accuracy (chemicals case)",
+          "value": "95%+"
+        }
+      ],
+      "partners": [
+        "AWS",
+        "Cognite",
+        "Databricks",
+        "Elementum",
+        "iceDQ",
+        "Microsoft Azure",
+        "Salesforce",
+        "Snowflake",
+        "Tableau"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            83,
+            84
+          ]
+        }
+      ]
+    },
+    {
+      "id": "valiance-analytics",
+      "name": "Valiance Analytics",
+      "founded": 2018,
+      "hq": {
+        "city": "Noida",
+        "country": "India"
+      },
+      "pe_score": 0.26,
+      "pe_rank": 24,
+      "ma_score": 0.46,
+      "ma_rank": 20,
+      "quadrant": "challengers",
+      "focus": "Engineering-led, evaluation-driven GenAI for high-volume, compliance-sensitive document intelligence and citizen services in energy, public sector and environment.",
+      "industries": [
+        "Energy and utilities",
+        "Government and public sector",
+        "Environment and forestry"
+      ],
+      "markets": [
+        "India",
+        "Asia Pacific"
+      ],
+      "platforms": [
+        {
+          "name": "Document Intelligence Accelerator",
+          "what": "Schema-driven extraction with validation and human review"
+        },
+        {
+          "name": "GenAI Orchestration Framework",
+          "what": "Multi-model routing, retry, failover, cost-aware inference"
+        },
+        {
+          "name": "Prompt and Evaluation Studio",
+          "what": "Versioning, regression testing and benchmarking"
+        },
+        {
+          "name": "LLMOps Control Plane",
+          "what": "Monitoring, cost tracking, drift, lifecycle"
+        },
+        {
+          "name": "Governance and Compliance Toolkit",
+          "what": "PII, policy, audit and region-locked deployment"
+        }
+      ],
+      "differentiators": [
+        "Token-efficient, cost-aware pipelines",
+        "Multi-year enterprise-scale programmes",
+        "GenAI CoE with research publications and patents",
+        "Structured evaluation and governance at the centre of delivery"
+      ],
+      "claimed_metrics": [],
+      "partners": [
+        "Google Cloud"
+      ],
+      "service_categories": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "refs": [
+        {
+          "source": "src-01",
+          "pages": [
+            85,
+            86
+          ]
+        }
+      ]
+    }
   ]
 }
