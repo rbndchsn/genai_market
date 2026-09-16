@@ -289,6 +289,7 @@ Paused so the MVP does not depend on a Cloudflare Worker or an API key. Resume a
 | 2026-09-15 | Host on GitHub Pages from the public repo https://github.com/rbndchsn/genai_market; the project folder becomes a git repo. `sourcedoc/` and `content/raw/` are never committed. | User decision on hosting (closes Q2). The exclusions follow from the AIM licence and the repo being public. |
 | 2026-09-15 | After src-08, the user asked for the rest of Phase 4 (remaining 4.2 sources, 4.3 merge, 4.4 outlook) to be completed in one run without per-source checkpoints. The four remaining PDF syntheses run in parallel as forked agents that write only their `content/synth/src-NN.md`; the main agent does src-12, updates `plan.md`, then does 4.3 and 4.4. | User decision, to finish Phase 4 without further interruptions. |
 | 2026-09-16 | The user asked for the whole of Phase 5 to be finished in one run ("continue the plan.md and finish all phase 5"). Steps 5.4 to 5.10 run without per-step checkpoints; each step is committed and pushed when its review passes, because 5.10 (GitHub Pages) publishes from `main`. Open questions are settled with the recorded recommendations (Q5: all 28 vendors; Q4: working name GenAI Market). | User decision, to reach the MVP launch without further interruptions. |
+| 2026-09-16 | Site headline is "A meta-analysis of the state of enterprise AI across twelve sources" (home heading, footer, citation line, README, home `<title>`). The user proposed "A Meta-Analysis of the State of Agentic AI Across Multiple Domains" and asked the agent to decide. Kept "meta-analysis" (accurate framing), kept "enterprise AI" rather than "agentic AI" because agentic AI is one of twelve themes (7 of 95 insights, 30 of 259 stats) and a narrower title would misdescribe most of the content, kept "twelve sources" over "multiple domains" because it is concrete and is the credibility signal of a meta-analysis. Agentic AI is named in the home page lead instead. The word "twelve" is typed in the heading, so it must be updated if sources are added. | User delegated the wording decision; accuracy of the headline against the content. |
 
 ---
 
@@ -298,7 +299,7 @@ Paused so the MVP does not depend on a Cloudflare Worker or an API key. Resume a
 - ~~**Q2.** Hosting: Cloudflare Pages (proposed) or Vercel / GitHub Pages? Custom domain?~~ Resolved 2026-09-15: GitHub Pages from https://github.com/rbndchsn/genai_market. Custom domain still open.
 - **Q3.** Is an Anthropic API key available for the chat Worker, and is there a monthly budget cap? (Only relevant if Phase 6 resumes.)
 - ~~**Q6.** Should `content/synth/` be committed to the public repo?~~ Resolved 2026-09-15: keep local for now (git-ignored). Revisit after 7.1.
-- **Q4.** Site name and branding (working name: GenAI Market).
+- **Q4.** Site name and branding (working name: GenAI Market). Headline settled 2026-09-16 (see Decisions Log); the name itself is still the working name.
 - ~~**Q5.** Should vendor profiles cover all vendors in the AIM report or only the top quadrant?~~ Resolved 2026-09-16: all 28 vendors appear in the quadrant, the table and the profile drawer. The filters let a reader narrow to Leaders.
 
 ---
@@ -338,3 +339,4 @@ Paused so the MVP does not depend on a Cloudflare Worker or an API key. Resume a
 | 2026-09-16 | Step 5.9 done: link, anchor and console check (`scripts/check_site.py`) plus a full screenshot sweep. Next step 5.10. |
 | 2026-09-16 | Step 5.10 done: Pages workflow, Pages enabled, live at https://rbndchsn.github.io/genai_market/. Phase 5 complete. Current Status moved to Phase 7 (next 7.1 originality review); hosting note and layout note updated. |
 | 2026-09-16 | Step 7.0 added and done: warm colour palette across the site, chart tokens re-validated on the new surfaces. Next step remains 7.1. |
+| 2026-09-16 | Headline changed to "A meta-analysis of the state of enterprise AI across twelve sources" in the home heading, footer, citation line and README; agentic AI named in the home lead. Decision logged. |
