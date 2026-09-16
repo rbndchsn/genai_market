@@ -15,9 +15,13 @@
 <body data-page="glossary">
 <main id="main" class="container">
 <h1>Glossary</h1>
-<p class="lead">Terms used across the sources, defined in plain language and linked to the insights where they matter.</p>
-<div class="placeholder">Searchable, alphabetical glossary arrives in step 5.6.</div>
+<p class="lead">Terms used across the sources, defined in plain language and linked to the insights where they matter. Definitions are our own; the references show where each term is used or defined.</p>
+<div id="filters" class="filters" role="search" aria-label="Filter glossary"></div>
+<nav id="letters" class="letter-nav" aria-label="Jump to letter"></nav>
+<p id="count" class="muted count-line" aria-live="polite"></p>
+<div id="results"></div>
 </main>
 <script src="js/shell.js"></script>
+<script src="js/glossary.js"></script>
 </body>
 </html>

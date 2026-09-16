@@ -520,3 +520,21 @@ table.compact { font-size: 0.9rem; }
   .bar-row-grouped .bar-label { grid-column: 1 / -1; }
   .bar-group { grid-column: 1 / -1; }
 }
+
+/* ---------- Glossary page ---------- */
+.letter-nav { display: flex; flex-wrap: wrap; gap: 2px; margin: 0 0 var(--space-3); }
+.letter-nav a, .letter-nav span { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; border-radius: var(--radius); font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.letter-nav a { color: var(--link); background: var(--surface); border: 1px solid var(--border); }
+.letter-nav a:hover { border-color: var(--accent); }
+.letter-nav span { color: var(--viz-deemph); }
+.term { padding: var(--space-4) var(--space-5); }
+.term-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-3); }
+.term h3 { margin: 0; font-size: 1.05rem; }
+.term h3 a { color: inherit; text-decoration: none; }
+.term h3 a:hover { color: var(--link); text-decoration: underline; }
+.term-expansion { font-size: 0.9rem; }
+.term-def { margin: var(--space-2) 0 var(--space-3); }
+.term .pills { margin-bottom: var(--space-2); }
+.term .related { margin: 0 0 var(--space-2); }
+.term .ref { margin: 0; }
+.term.is-target { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
