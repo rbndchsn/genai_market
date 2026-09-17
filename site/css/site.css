@@ -652,6 +652,10 @@ a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
 .takeaway p { margin: 0; }
 .prose .phases li { margin-bottom: var(--space-3); }
 .prose .kpi-row { margin-top: var(--space-4); }
+.prose h4 { margin: var(--space-4) 0 var(--space-2); font-size: 1rem; }
+.q-table { margin-top: var(--space-4); }
+.q-table summary { cursor: pointer; color: var(--link); font-weight: 600; font-size: 0.9rem; }
+.q-table[open] summary { margin-bottom: var(--space-3); }
 
 /* Home hero band */
 .hero {

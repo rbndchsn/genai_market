@@ -23,6 +23,7 @@
   <a href="#steps">The steps</a>
   <a href="#rhythm">The working rhythm</a>
   <a href="#rules">Rules that kept it honest</a>
+  <a href="#quality">Validation and evaluation</a>
   <a href="#engineering">Engineering choices</a>
   <a href="#debugging">Three bugs, and what they teach</a>
   <a href="#takeaways">Takeaways</a>
@@ -69,7 +70,7 @@
       <li><strong>Web research.</strong> The agent listed candidate sources with their access conditions: open, gated behind a sign-in, or summary only. The human downloaded the gated ones. The agent never attempted to bypass a sign-in. Each new source then went through the same ingestion and synthesis, and the findings were merged into the data files with the evidence level of each insight raised where a second independent source agreed.</li>
       <li><strong>Website.</strong> A static site with no build step, one page per section, every number read from JSON at run time. Each page was built, screenshotted at desktop and phone width in both themes, corrected, and only then ticked. Deployment is a small GitHub Actions workflow that publishes the site folder on every push.</li>
       <li><strong>Chat.</strong> An ask-the-report chat was planned and deliberately paused, so that the launch would not depend on a server or an API key. The search on this site is deliberately keyword-based, and says so.</li>
-      <li><strong>Quality and launch.</strong> A colour pass, an originality check of all site text against every source extraction, and an accuracy pass in which a sample of statistics and insights is re-checked against the cited pages. Maintenance steps for adding sources later are already in the plan.</li>
+      <li><strong>Quality and launch.</strong> A colour pass, an originality check of all site text against every source extraction, and an accuracy evaluation in which a random sample of statistics and insights is re-checked against the cited pages, with the results published below. Maintenance steps for adding sources later are already in the plan.</li>
     </ol>
   </div>
 </section>
@@ -100,6 +101,29 @@
       <li><strong>Nothing licensed in the repository.</strong> The source PDFs, the extractions and the working notes are excluded from version control, and a check runs before every commit to confirm none of them is staged. The repository is public, so this was treated as a hard rule from the first commit.</li>
       <li><strong>Where sources disagree, say so.</strong> Two venture firms rank different model vendors first, and each is an investor in the vendor it ranks first. The site presents both, with their samples and their conflicts of interest, and never declares a winner.</li>
     </ul>
+  </div>
+</section>
+
+<section id="quality" aria-labelledby="quality-heading">
+  <h2 id="quality-heading">Validation and evaluation</h2>
+  <div class="card prose">
+    <p>Three layers of checking, with different names because they answer different questions. The numbers are read from the quality file in the site's data folder, which is updated each time a check runs.</p>
+    <h3>Validation: is the data well formed?</h3>
+    <p>Automated, run on every data change. A validator parses the six curated files and refuses duplicate ids, references that do not resolve to a registered source and page range, cross-links to records that do not exist, quadrant positions that disagree with their scores, multi-source insights that cite fewer than two sources, and unknown units or chart types. A site checker then renders every page in a headless browser and reports console errors, internal links that do not resolve and anchors that no page renders.</p>
+    <div class="kpi-row" id="q-validation"></div>
+    <h3>Originality check: is the text ours?</h3>
+    <p>Automated scan, human-reviewed. Every insight, definition, statistic note and vendor description is split into eight-word runs and compared with every source extraction. A hit means eight consecutive words also appear in a source. Every hit against the licensed report was rewritten. Hits against public sources were reviewed; the remainder are chart labels and survey question wording, which are facts rather than prose.</p>
+    <div class="kpi-row" id="q-originality"></div>
+    <h3>Accuracy evaluation: are the figures right?</h3>
+    <p id="q-accuracy-method"></p>
+    <h4>What the evaluation found</h4>
+    <div id="q-accuracy-findings"></div>
+    <div class="kpi-row" id="q-accuracy"></div>
+    <details class="q-table">
+      <summary>Record-by-record results</summary>
+      <div class="table-wrap" id="q-accuracy-table"></div>
+    </details>
+    <p class="muted" id="q-accuracy-note"></p>
   </div>
 </section>
 

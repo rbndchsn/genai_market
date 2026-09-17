@@ -1,0 +1,278 @@
+{
+  "validation": {
+    "last_run": "2026-09-16",
+    "pages": 9,
+    "links_checked": 1370,
+    "console_errors": 0,
+    "data_errors": 0,
+    "data_warnings": 0
+  },
+  "originality": {
+    "last_run": "2026-09-16",
+    "records_scanned": 546,
+    "licensed_hits_before": 110,
+    "licensed_hits_after": 0,
+    "public_hits_remaining": 72,
+    "note": "The remaining public-source hits are chart labels and survey question wording, which are facts rather than prose, and were left as they are after review."
+  },
+  "accuracy": {
+    "date": "2026-09-16",
+    "seed": 20260916,
+    "method": "Twenty records were drawn at random with a fixed seed: twelve statistics from the statistics file and eight insights from the multi-source and single-source insights. For each record the agent opened every cited page, both the page render and the extracted text, or the saved article for web sources, and compared every figure, label, sample size and attribution. A record matches when everything is supported as stated; minor means the substance holds but a wording, attribution or page reference needed tightening; wrong means a figure or claim was contradicted by the cited page. Every minor and wrong record was corrected in the data before this page was published, and the corrections are listed here.",
+    "note": "Three of the a16z figures in ins-083 (the 76% Google share and the exact 81% and 36% to 30% splits) were read from the article's charts when the source was first synthesised and could not be re-read now because the chart images are not kept; the surrounding prose supports the rounded versions. The next evaluation should draw a fresh sample with a new seed.",
+    "sample": {
+      "stats": 12,
+      "insights": 8
+    },
+    "results": [
+      {
+        "id": "s2-11",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-02 p.10",
+          "src-02 p.24"
+        ],
+        "note": "All five maturity scores, five AI-success rates and band sizes match the chart and the appendix table.",
+        "fixed": false
+      },
+      {
+        "id": "s6-25",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-06 p.2",
+          "src-06 p.21"
+        ],
+        "note": "The over-80% figure for technology and media executives and the note about sectors expecting no cuts are both on the cited page.",
+        "fixed": false
+      },
+      {
+        "id": "s4-18",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-04 p.5",
+          "src-04 p.14",
+          "src-04 p.16"
+        ],
+        "note": "77% appears on both cited pages; the sample of 3,235 across 24 countries is confirmed in the methodology.",
+        "fixed": false
+      },
+      {
+        "id": "s5-19",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-05 p.18"
+        ],
+        "note": "All six now-versus-three-years values and the sample of 2,102 match the chart.",
+        "fixed": false
+      },
+      {
+        "id": "s6-15",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-06 p.2",
+          "src-06 p.14"
+        ],
+        "note": "66% and 63% and their labels match the text.",
+        "fixed": false
+      },
+      {
+        "id": "s11-57",
+        "type": "stat",
+        "verdict": "minor",
+        "pages_checked": [
+          "src-11 p.381",
+          "src-11 p.382",
+          "src-11 p.383",
+          "src-11 p.384"
+        ],
+        "note": "All values match. The note said every state shows the pattern; the chart covers 39 states and the source itself says nearly every state. Note now says every state with reported data.",
+        "fixed": true
+      },
+      {
+        "id": "s7-15",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-07 url"
+        ],
+        "note": "Both shares and the survey description are in the article text.",
+        "fixed": false
+      },
+      {
+        "id": "s11-01",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-11 p.178"
+        ],
+        "note": "All three yearly totals match the chart; the 2025 split and growth rate match the text.",
+        "fixed": false
+      },
+      {
+        "id": "s11-54",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-11 p.380"
+        ],
+        "note": "All twelve country values match the chart.",
+        "fixed": false
+      },
+      {
+        "id": "s7-16",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-07 url (chart image re-fetched)"
+        ],
+        "note": "All eight layer shares match the article's chart, which was re-fetched for the check.",
+        "fixed": false
+      },
+      {
+        "id": "s7-19",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-07 url (chart image re-fetched)"
+        ],
+        "note": "All ten segment values and the unit match the article's chart, which was re-fetched for the check.",
+        "fixed": false
+      },
+      {
+        "id": "s4-26",
+        "type": "stat",
+        "verdict": "match",
+        "pages_checked": [
+          "src-04 p.21"
+        ],
+        "note": "All six values and the sample of 3,199 match the figure; label wording differs only trivially.",
+        "fixed": false
+      },
+      {
+        "id": "ins-067",
+        "type": "insight",
+        "verdict": "minor",
+        "pages_checked": [
+          "src-05 p.8",
+          "src-05 p.9",
+          "src-04 p.21",
+          "src-09 p.3",
+          "src-03 p.23",
+          "src-02 p.6"
+        ],
+        "note": "Every figure matches. Two attributions were loose: the BCG figure comes from the full executive sample rather than CEOs only, and McKinsey's page measures risks mitigated rather than concerns. Both reworded.",
+        "fixed": true
+      },
+      {
+        "id": "ins-041",
+        "type": "insight",
+        "verdict": "mismatch",
+        "pages_checked": [
+          "src-07 url",
+          "src-08 url",
+          "src-11 p.178",
+          "src-11 p.179"
+        ],
+        "note": "Menlo and Stanford figures match. The a16z sentence gave application spend as $5.8 billion per firm; the source gives about $5.8 million average per firm. Sentence rewritten with the correct figures and the forecast-versus-actual baseline made explicit.",
+        "fixed": true
+      },
+      {
+        "id": "ins-083",
+        "type": "insight",
+        "verdict": "minor",
+        "pages_checked": [
+          "src-08 url",
+          "src-07 url"
+        ],
+        "note": "All prose-anchored figures match. Three figures were read from a16z charts at synthesis time and cannot be re-read because the chart images are not kept; the prose supports the rounded versions. Left as they are and disclosed here.",
+        "fixed": false
+      },
+      {
+        "id": "ins-070",
+        "type": "insight",
+        "verdict": "match",
+        "pages_checked": [
+          "src-05 p.11",
+          "src-05 p.12",
+          "src-09 p.4",
+          "src-03 p.19",
+          "src-01 p.8"
+        ],
+        "note": "All figures and attributions match across four sources.",
+        "fixed": false
+      },
+      {
+        "id": "ins-064",
+        "type": "insight",
+        "verdict": "minor",
+        "pages_checked": [
+          "src-09 p.6",
+          "src-02 p.12",
+          "src-02 p.13",
+          "src-02 p.15",
+          "src-01 p.9",
+          "src-06 p.12",
+          "src-06 p.13",
+          "src-06 p.14"
+        ],
+        "note": "Every figure matches. IDC's 40% is a tie for first rather than a clear lead, the AIM sample is providers rather than buyers, and one remark needed an extra page reference. All three corrected.",
+        "fixed": true
+      },
+      {
+        "id": "ins-065",
+        "type": "insight",
+        "verdict": "minor",
+        "pages_checked": [
+          "src-03 p.15",
+          "src-03 p.16",
+          "src-03 p.17",
+          "src-03 p.22",
+          "src-09 p.5",
+          "src-09 p.6",
+          "src-01 p.10",
+          "src-07 url"
+        ],
+        "note": "Every figure matches. Only Menlo names Jevons' paradox; McKinsey describes the same effect without naming it. Reworded.",
+        "fixed": true
+      },
+      {
+        "id": "ins-080",
+        "type": "insight",
+        "verdict": "minor",
+        "pages_checked": [
+          "src-11 p.219",
+          "src-11 p.220",
+          "src-11 p.221"
+        ],
+        "note": "Every study figure matches. The J-curve is an explanation the Index relays rather than its own framing, a later failed replication of the 19% slowdown was omitted, and the national evidence is early rather than small. All three reworded.",
+        "fixed": true
+      },
+      {
+        "id": "ins-063",
+        "type": "insight",
+        "verdict": "mismatch",
+        "pages_checked": [
+          "src-11 p.204",
+          "src-11 p.205",
+          "src-11 p.207",
+          "src-11 p.208",
+          "src-01 p.5",
+          "src-01 p.10",
+          "src-09 p.6"
+        ],
+        "note": "The agentic posting figures match. The title and summary said demand for chat-tool skills fell; the source shows their share of AI postings fell while absolute counts rose. Retitled and reworded, a decade-versus-year growth distinction added, a page reference corrected, and the evidence level lowered to single-source because the posting figures come from Stanford alone.",
+        "fixed": true
+      }
+    ],
+    "findings": [
+      "We checked twenty records and found problems in eight of them. Twelve were exactly right. Six were right in substance but loose in a detail: a figure attributed to CEOs that came from a wider executive sample, a first place that was really a tie, a named theory that only one of two cited sources actually names. Two were wrong. One gave a per-company spending figure in billions where the source says millions, a slip of three orders of magnitude. The other said demand for chat-tool skills had fallen when the source shows only their share of job postings fell while the actual counts still rose.",
+      "The pattern is worth knowing. Every number that had been read from a chart or a table was correct. The failures were in the prose the agent wrote around the numbers: units, attributions and the difference between a share falling and a count falling. That is where a reader should be most careful with any AI-written synthesis, and it is why we publish the record-level results rather than a pass rate.",
+      "All eight were corrected in the data before this page went live, and one insight was downgraded from multi-source to single-source because its central figures come from one report. One record keeps three figures that were read from charts we no longer have; we say so rather than quietly leave them."
+    ]
+  }
+}

@@ -10899,7 +10899,7 @@
       "series_label": "View",
       "chart": "donut",
       "n": "CHIP50 survey of 50 US states; Compiled by the Stanford AI Index 2026",
-      "note": "Every state shows more 'not far enough' than 'too far'. Ages 65+ 51% not far enough; college graduates 46% vs 34% with high school or less.",
+      "note": "Every state with reported data (39 of 50) shows more 'not far enough' than 'too far'. Ages 65+ 51% not far enough; college graduates 46% vs 34% with high school or less.",
       "theme": "governance",
       "refs": [
         {
