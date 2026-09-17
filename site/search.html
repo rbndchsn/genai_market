@@ -16,6 +16,23 @@
 <main id="main" class="container">
 <h1>Search</h1>
 <p class="lead">Search every insight, statistic, vendor profile, glossary term, taxonomy entry and source on the site. Results link straight to the record.</p>
+<p class="search-note muted">This is a plain keyword search, not an AI assistant. It matches the words you type against an index of the site's own text, entirely in your browser. Nothing is sent to a server and no model interprets your question or writes an answer.</p>
+<details class="search-about">
+  <summary>How this search works, and how it differs from AI search</summary>
+  <div class="card prose">
+    <h3>What it does</h3>
+    <p>When the site is published, every record is split into words and stored in a small index. When you search, your words are normalised the same way, and each one must appear in a record for it to be listed. A word also matches longer words that start with it, so "agent" finds "agentic". Results are ranked by how rare each matched word is across the site, with a boost when it appears in the record's title, and a small preference for findings and definitions over raw statistics. Every result is an existing record; nothing is generated.</p>
+    <h3>What it does not do</h3>
+    <p>It does not understand meaning. A synonym the record never uses returns nothing, there is no spelling correction, and a question typed as a sentence will match only its individual words. Use the vocabulary you expect to see in the text, and use the Glossary to find that vocabulary.</p>
+    <h3>Alternatives you may have met elsewhere</h3>
+    <ul>
+      <li><strong>Semantic search</strong> turns text and query into numeric vectors with an embedding model and returns the closest matches by meaning, so different wording still finds the record. It needs a model at indexing and query time and usually a server.</li>
+      <li><strong>Retrieval-augmented generation (RAG)</strong> retrieves passages by keyword or meaning and then has a language model write an answer from them, ideally with citations. The answer is generated, so it can be wrong or incomplete even when the passages it drew on were right.</li>
+      <li><strong>A chat assistant</strong> is RAG with a conversation on top: follow-up questions, clarifications and summaries across records.</li>
+    </ul>
+    <p>This site uses keyword search on purpose. Every result is a real record you can open and check against its references, results are the same for everyone, and no text leaves your browser.</p>
+  </div>
+</details>
 <form id="search-form" class="search-form" role="search" action="search.html" method="get">
   <label for="q" class="visually-hidden">Search the site</label>
   <input id="q" name="q" type="search" placeholder="Try: agent governance, token costs, POC to production" autocomplete="off" autofocus>

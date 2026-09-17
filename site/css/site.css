@@ -231,6 +231,12 @@ a.pill-accent:hover { background: var(--accent-strong); color: var(--accent-cont
   border-radius: var(--radius); padding: var(--space-3) var(--space-4); margin: var(--space-4) 0;
 }
 
+.search-note { margin-top: calc(-1 * var(--space-2)); }
+.search-about { margin: 0 0 var(--space-5); }
+.search-about summary { cursor: pointer; color: var(--link); font-weight: 600; font-size: 0.9rem; }
+.search-about[open] summary { margin-bottom: var(--space-3); }
+.search-about .card h3:first-child { margin-top: 0; }
+
 .placeholder {
   border: 1px dashed var(--border); border-radius: var(--radius-lg);
   padding: var(--space-6); color: var(--muted); text-align: center; margin-top: var(--space-5);
