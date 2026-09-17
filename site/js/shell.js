@@ -13,6 +13,7 @@
     { key: "stats", href: "stats.html", label: "Statistics" },
     { key: "glossary", href: "glossary.html", label: "Glossary" },
     { key: "sources", href: "sources.html", label: "Sources" },
+    { key: "method", href: "method.html", label: "How it was built" },
     { key: "search", href: "search.html", label: "Search" }
   ];
 
@@ -59,7 +60,7 @@
   function renderHeader(page) {
     var items = NAV.map(function (n) {
       var cur = n.key === page ? ' aria-current="page"' : "";
-      return '<li><a href="' + n.href + '"' + cur + ">" + n.label + "</a></li>";
+      return '<li><a href="' + n.href + '" data-key="' + n.key + '"' + cur + ">" + n.label + "</a></li>";
     }).join("");
     var header = el(
       '<header class="site-header">' +
@@ -85,6 +86,8 @@
           "<p><strong>" + SITE_NAME + "</strong> is a meta-analysis of the state of enterprise AI. Findings are written in our own words and every statistic, insight and vendor fact carries a reference.</p>" +
           '<nav aria-label="Footer">' +
             '<a href="sources.html">Sources and method</a>' +
+            '<a href="method.html">How it was built</a>' +
+            '<a href="https://github.com/rbndchsn/genai_market" rel="noopener">Repository</a>' +
           "</nav>" +
           '<p>This online tool was created by: <a href="https://www.linkedin.com/in/robin-duchesneau" rel="noopener">https://www.linkedin.com/in/robin-duchesneau</a></p>' +
         "</div>" +

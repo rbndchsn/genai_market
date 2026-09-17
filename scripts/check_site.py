@@ -28,7 +28,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
-PAGES = ["index.html", "insights.html", "vendors.html", "stats.html", "glossary.html", "sources.html", "search.html", "404.html"]
+PAGES = ["index.html", "insights.html", "vendors.html", "stats.html", "glossary.html", "sources.html", "search.html", "method.html", "404.html"]
 BROWSERS = [
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
     r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",

@@ -576,6 +576,8 @@ table.compact { font-size: 0.9rem; }
 .header-search { flex: none; }
 .header-search input { min-height: 36px; width: 150px; padding: 4px 10px; font-size: 0.9rem; }
 @media (max-width: 900px) { .header-search { display: none; } }
+/* Above 900px the header search box is present, so the Search nav item is redundant except on the Search page itself. */
+@media (min-width: 901px) { body:not([data-page="search"]) .site-nav a[data-key="search"] { display: none; } }
 .search-form { display: flex; gap: var(--space-2); margin: 0 0 var(--space-4); }
 .search-form input { flex: 1 1 auto; min-width: 0; font-size: 1.05rem; min-height: 46px; }
 .search-form button { min-height: 46px; }
@@ -642,6 +644,14 @@ a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
 .tag-sphere .tag:hover { opacity: 1 !important; z-index: 200 !important; background: rgba(255, 255, 255, 0.16); text-decoration: underline; }
 .tag-sphere .tag:focus-visible { opacity: 1 !important; z-index: 200 !important; outline: 3px solid var(--focus); outline-offset: 1px; }
 @media (max-width: 560px) { .tag-sphere { height: 380px; } }
+
+/* How it was built */
+.takeaways { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); margin-top: var(--space-4); }
+.takeaway { background: var(--surface-2); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: var(--space-3) var(--space-4); }
+.takeaway h4 { margin: 0 0 var(--space-1); font-size: 0.95rem; }
+.takeaway p { margin: 0; }
+.prose .phases li { margin-bottom: var(--space-3); }
+.prose .kpi-row { margin-top: var(--space-4); }
 
 /* Home hero band */
 .hero {

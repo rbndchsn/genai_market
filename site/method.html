@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it was built — GenAI Market</title>
+<meta name="description" content="How a two-person team, one human and one AI coding agent, built the GenAI Market meta-analysis: the plan file that ran the project, the pipeline from PDF to website, and what worked.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+<script>
+/* Apply a stored theme before first paint to avoid a flash. */
+(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+</head>
+<body data-page="method">
+<main id="main" class="container">
+<h1>How it was built</h1>
+<p class="lead">This site was made by one person directing one AI coding agent over about two days. This page explains how, so that you can do the same, whether you are writing your first script or running an engineering team.</p>
+
+<nav class="toc" aria-label="On this page">
+  <a href="#setup">The setup</a>
+  <a href="#plan">Start with a plan, not a prompt</a>
+  <a href="#steps">The steps</a>
+  <a href="#rhythm">The working rhythm</a>
+  <a href="#rules">Rules that kept it honest</a>
+  <a href="#engineering">Engineering choices</a>
+  <a href="#debugging">Three bugs, and what they teach</a>
+  <a href="#takeaways">Takeaways</a>
+  <a href="#repo">See for yourself</a>
+</nav>
+
+<section id="setup" aria-labelledby="setup-heading">
+  <h2 id="setup-heading">The setup</h2>
+  <div class="card prose">
+    <p><strong>Tools.</strong> Visual Studio Code as the editor, with Claude Code running in its terminal. Claude Code is Anthropic's command-line agent: it reads and writes files in the project folder, runs commands, opens a headless browser, and reports back. The model behind it was Claude Fable 5.1 for almost every session. Python 3.11 for the extraction and check scripts, plain HTML, CSS and JavaScript for the site, Git and GitHub Pages for publishing.</p>
+    <p><strong>Division of labour.</strong> The agent did the research reading, the synthesis, the code, the debugging and the visual review. The human set the goal, chose the sources, downloaded the reports that sit behind a sign-in, made the judgement calls, looked at the live site, and said yes or no before each commit. Neither could have produced this alone in the time. The agent has no memory between sessions and no taste of its own. The human does not have two days to read twelve reports end to end.</p>
+    <p><strong>Scale.</strong> The numbers below are read from the site's own data files at the moment you load this page.</p>
+    <div class="kpi-row" id="method-kpis" aria-label="What the pipeline produced"></div>
+  </div>
+</section>
+
+<section id="plan" aria-labelledby="plan-heading">
+  <h2 id="plan-heading">Start with a plan, not a prompt</h2>
+  <div class="card prose">
+    <p>The single most important decision was made before any code: the project would be run from a plan file, and the agent would read it first in every session. Two Markdown files did all the coordination.</p>
+    <h3>The instructions file</h3>
+    <p>A short file that every session of the agent reads automatically. It says, in order: read the plan in full before doing anything; find the first unfinished step; work only on that step; when it is done, tick it in the plan with a date and a note; record decisions and open questions in the plan, never only in chat; update the status block before finishing. It also carries the non-negotiable content rules and the project's few technical facts, such as which Python to use and where the sources live.</p>
+    <h3>The plan file</h3>
+    <p>A living document with a fixed shape: a status block at the top (last updated, current phase, next step, blockers), the project overview and goals, the source inventory, the architecture, the implementation steps grouped into phases with a checkbox each, a decisions log, a list of open questions, and a change history. Steps are never deleted or rewritten. A finished step keeps its note about what was done, what was verified and what was fixed, so a later session can see the reasoning without re-deriving it.</p>
+    <h3>Why this works</h3>
+    <p>An AI agent starts every session with an empty memory. Without a plan, each session begins by guessing what the last one did, and the guesses drift. With a plan, the session reads a status block and continues from the exact step, in the same style, under the same rules. The plan also turned out to be the best place to think. Writing a step down before doing it exposed vague steps, and the decisions log kept the same question from being reopened three times.</p>
+    <p>The plan was also where scope was defended. When the agent noticed something that should be done later, the rule was to add it to the plan as a new step, not to do it now. That one rule prevented most of the sprawl that makes agent projects hard to review.</p>
+    <div class="takeaways">
+      <div class="takeaway"><h4>If you are starting out</h4><p>Make two files before your first prompt: one that tells the agent how to work, one that lists the steps. Ask for one step at a time. Look at the result before asking for the next.</p></div>
+      <div class="takeaway"><h4>If you run teams</h4><p>Treat the plan as the state machine and the agent as a stateless worker. Everything a human reviewer needs, including the reason for each decision, has to be in the file, because the chat is gone tomorrow.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="steps" aria-labelledby="steps-heading">
+  <h2 id="steps-heading">The steps</h2>
+  <div class="card prose">
+    <p>Eight phases, in the order they ran. Each phase was a group of numbered steps in the plan, and each step was done, reviewed and ticked before the next began.</p>
+    <ol class="phases">
+      <li><strong>Scaffolding.</strong> Write the instructions file and the plan skeleton. Nothing else. This took minutes and paid for itself the same day.</li>
+      <li><strong>Scope.</strong> A short conversation to settle the goal, the audience, the stack and the feature list. The answers went into the plan's overview and goals sections, and into a set of non-goals that were consulted repeatedly.</li>
+      <li><strong>Ingestion.</strong> A Python script turns each PDF into page-delimited text, detected tables, a page map from the document's bookmarks, and a rendered image of every page. The renders matter: text extraction scrambles multi-column tables and charts, and an agent can read a page image accurately when the text layer fails.</li>
+      <li><strong>Synthesis.</strong> The agent read every source end to end (for the 425-page Stanford index, the three chapters in scope) and wrote a fixed-structure set of notes per source: document facts and method, findings with page numbers, every chart's values, sponsor or framing caveats, and observations connecting it to the other sources. A written procedure for this step meant a fresh session could take the next source without prior context. For the larger reports, four sources were synthesised in parallel by forked sessions that each wrote only their own file.</li>
+      <li><strong>Web research.</strong> The agent listed candidate sources with their access conditions: open, gated behind a sign-in, or summary only. The human downloaded the gated ones. The agent never attempted to bypass a sign-in. Each new source then went through the same ingestion and synthesis, and the findings were merged into the data files with the evidence level of each insight raised where a second independent source agreed.</li>
+      <li><strong>Website.</strong> A static site with no build step, one page per section, every number read from JSON at run time. Each page was built, screenshotted at desktop and phone width in both themes, corrected, and only then ticked. Deployment is a small GitHub Actions workflow that publishes the site folder on every push.</li>
+      <li><strong>Chat.</strong> An ask-the-report chat was planned and deliberately paused, so that the launch would not depend on a server or an API key. The search on this site is deliberately keyword-based, and says so.</li>
+      <li><strong>Quality and launch.</strong> A colour pass, an originality check of all site text against every source extraction, and an accuracy pass in which a sample of statistics and insights is re-checked against the cited pages. Maintenance steps for adding sources later are already in the plan.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="rhythm" aria-labelledby="rhythm-heading">
+  <h2 id="rhythm-heading">The working rhythm</h2>
+  <div class="card prose">
+    <p>A typical step went like this. The human names the step or simply says "continue the plan". The agent reads the plan, restates the step, does the work, runs the checks, takes screenshots and reads them, fixes what it finds, records the step in the plan and reports in a few lines. The human looks, sometimes at the live site, and says "push", or asks for a change. Nothing was committed without that yes.</p>
+    <p>Two things were changed on purpose partway through. For the research phase, the rule was one source at a time with a report after each, because the human needed to see the note quality before trusting the process. Once it was trusted, the remaining sources and the whole website phase were run without checkpoints, each step committed as it landed. Knowing when to remove the checkpoints was a human call, made on evidence.</p>
+    <p>The agent also kept a review harness for its own use: a script that starts a local server, renders a page in a headless browser, saves a desktop screenshot and a phone-width screenshot, and prints the size of the rendered page so that an empty page is caught immediately. A second script checks every internal link and anchor on every page and reports console errors. Both were written by the agent for the agent, and both ran before every tick.</p>
+    <div class="takeaways">
+      <div class="takeaway"><h4>If you are starting out</h4><p>Ask the agent to show you what it built, not to tell you. A screenshot it has read itself is worth more than a paragraph saying the page works.</p></div>
+      <div class="takeaway"><h4>If you run teams</h4><p>Give the agent a deterministic review harness early and make it part of the definition of done. Checkpoints are a dial: tighten them while trust is low, loosen them when the output has earned it, and write the change down.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="rules" aria-labelledby="rules-heading">
+  <h2 id="rules-heading">Rules that kept it honest</h2>
+  <div class="card prose">
+    <ul>
+      <li><strong>Our own words.</strong> Every sentence on the site is written by us. One source is a licensed report, and the rule for it is absolute: no verbatim text, not even a short quote, no images, no reproduced charts. The other sources are restated the same way.</li>
+      <li><strong>A reference on everything.</strong> Every insight, statistic and vendor fact carries a source id and a page number or URL. A validator refuses data whose references do not resolve to a registered source and page range.</li>
+      <li><strong>Evidence levels.</strong> Each insight is labelled multi-source, single source or our analysis, so a reader can weigh it. The validator checks that a multi-source insight really cites two sources.</li>
+      <li><strong>Numbers live in data, never in pages.</strong> Not one statistic is typed into HTML. Pages read the JSON files and render what they find, so a corrected figure changes everywhere at once.</li>
+      <li><strong>Generated files are never edited by hand.</strong> The search units and the search index are built from the curated files by scripts and rebuilt on every data change.</li>
+      <li><strong>An originality check.</strong> A script scans every piece of site text for eight-word runs that also appear in any source extraction and writes a report. Every match against the licensed source was rewritten; the rest were reviewed.</li>
+      <li><strong>Nothing licensed in the repository.</strong> The source PDFs, the extractions and the working notes are excluded from version control, and a check runs before every commit to confirm none of them is staged. The repository is public, so this was treated as a hard rule from the first commit.</li>
+      <li><strong>Where sources disagree, say so.</strong> Two venture firms rank different model vendors first, and each is an investor in the vendor it ranks first. The site presents both, with their samples and their conflicts of interest, and never declares a winner.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="engineering" aria-labelledby="engineering-heading">
+  <h2 id="engineering-heading">Engineering choices</h2>
+  <div class="card prose">
+    <p><strong>Static, no build step, no framework.</strong> Plain HTML, one stylesheet, a small shell script that renders the header, navigation and footer on every page, and one script per page. A newcomer can read all of it, and an agent can edit it without a toolchain. It costs nothing to host and will still work in ten years.</p>
+    <p><strong>Data as JSON with a written schema.</strong> Six curated files: sources, insights, statistics, vendors, glossary, taxonomy. A schema document describes each record shape and the id conventions, so every session produces the same structure. Ids are stable and used as anchors, so a link to a specific insight or statistic will keep working.</p>
+    <p><strong>Design tokens, two themes.</strong> Colours, spacing and radii are variables on the root element. The dark theme redefines the variables, once for the system preference and once for the reader's stored choice. Chart colours were validated for contrast against both backgrounds before any chart was drawn.</p>
+    <p><strong>Charts from data, rebuilt not copied.</strong> Every chart is drawn from the statistics file with our own styling and has a data table behind it. No source image appears anywhere.</p>
+    <p><strong>Search in the browser.</strong> An inverted index is built from the search units at publish time. The page matches word prefixes, requires every word to match, and ranks by word rarity with a boost for title matches. It is not semantic search and not retrieval-augmented generation, and the search page explains the difference, because readers should know what kind of tool they are using.</p>
+    <p><strong>Accessibility as a default.</strong> Skip link, keyboard-operable everything, focus rings, a native dialog for vendor profiles, reduced-motion support on the one animated element, and text in text colours rather than chart colours.</p>
+  </div>
+</section>
+
+<section id="debugging" aria-labelledby="debugging-heading">
+  <h2 id="debugging-heading">Three bugs, and what they teach</h2>
+  <div class="card prose">
+    <p><strong>The blank screenshot.</strong> The vendors page opens a profile in a native modal dialog. Screenshots of that state came back blank. The agent worked out that the headless browser paints a top-level page blank while a modal is open, and fixed the harness rather than the page: the screenshot is now taken through a same-origin frame. Lesson: when a test fails, first ask whether the test is right.</p>
+    <p><strong>The nested links.</strong> Stat tiles on the home page were links, and each contained reference links. Browsers refuse to nest one link inside another and silently eject the inner one, which moved the references outside their tiles. The container became a plain element with the link elsewhere. Lesson: some HTML rules are enforced by silently rewriting your document, and only a screenshot shows it.</p>
+    <p><strong>The sphere that was not a sphere.</strong> The search page's tag globe first shipped spinning only about a vertical axis on a stretched ellipse. Live, it read as tags sliding along six rows. The human said so in one sentence. The agent explained the geometry, changed the projection to a circle with perspective, tilted the axis so the globe tumbles, and smoothed the hover pause that had been stuttering. Lesson: the agent's own screenshots were true but insufficient, because a still image cannot show motion. Some review has to be done by a person on the live site.</p>
+  </div>
+</section>
+
+<section id="takeaways" aria-labelledby="takeaways-heading">
+  <h2 id="takeaways-heading">Takeaways</h2>
+  <div class="grid">
+    <div class="card prose">
+      <h3>For people starting out</h3>
+      <ul>
+        <li>Write a plan file and an instructions file before the first prompt. Make the agent read the plan every session.</li>
+        <li>Ask for one step at a time. Look at each result. Say yes before anything is committed.</li>
+        <li>Ask the agent to screenshot its own work and read the screenshot. Ask it to write a checker for anything it will do more than twice.</li>
+        <li>Keep secrets, licensed material and raw downloads out of version control from day one. Ask the agent to add the exclusion before the first commit.</li>
+        <li>When something looks wrong, say what you see in plain words. The agent can usually find the cause from a good description.</li>
+        <li>Read what the agent writes into the plan. That is where you learn what it actually did.</li>
+      </ul>
+    </div>
+    <div class="card prose">
+      <h3>For seasoned developers and leads</h3>
+      <ul>
+        <li>The plan is the state, the agent is stateless. Design the plan's sections for a reader who was not there: status block, ticked steps with verification notes, decisions with reasons, open questions.</li>
+        <li>Scope discipline is a written rule, not a hope. Future work goes into the plan as a step, never into the current diff.</li>
+        <li>Separate curated data from generated artifacts, validate the curated data, and regenerate the rest. Never let an agent hand-edit a generated file.</li>
+        <li>Build the review harness before the pages. Headless screenshots at two widths and two themes, a link and anchor checker, a console-error check, and a pre-commit grep for anything that must never be published.</li>
+        <li>Parallelise where the work is separable and the outputs do not overlap, for example one forked session per source, each writing only its own file. Merge sequentially.</li>
+        <li>Checkpoints are a dial tied to evidence. Record in the decisions log when you loosened them and why.</li>
+        <li>Give the agent taste through examples, not adjectives: one finished page or one finished note becomes the model for the rest.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="repo" aria-labelledby="repo-heading">
+  <h2 id="repo-heading">See for yourself</h2>
+  <div class="card prose">
+    <p>The repository is public and contains the plan file, the agent instructions, the scripts, the data schema and every commit. The plan is a working document, not a polished write-up. Its decisions log and change history are the most honest record of how the project actually went, including the steps that were reworked.</p>
+    <p><a href="https://github.com/rbndchsn/genai_market" rel="noopener">github.com/rbndchsn/genai_market</a> · <a href="https://github.com/rbndchsn/genai_market/blob/main/plan.md" rel="noopener">the plan file</a> · <a href="https://github.com/rbndchsn/genai_market/blob/main/CLAUDE.md" rel="noopener">the agent instructions</a></p>
+    <p class="muted">This page was drafted by the agent from the plan's own record and edited by the author. Credit where due: Claude Fable 5.1 did the reading, the code and most of the debugging. The direction, the source choices, the taste and the responsibility for what is published are the author's.</p>
+  </div>
+</section>
+</main>
+<script src="js/shell.js"></script>
+<script src="js/method.js"></script>
+</body>
+</html>

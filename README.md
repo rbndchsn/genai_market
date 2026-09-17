@@ -60,3 +60,5 @@ Work happens one step at a time against `plan.md`: find the first unticked step,
 ## Licence and attribution
 
 Site text and data are original work by the authors. Findings cite their sources by source id and page or URL; the full bibliography and methodology are on the site's Sources page.
+
+The working method (plan file, agent instructions, pipeline, review routine) is described for readers at https://rbndchsn.github.io/genai_market/method.html.
