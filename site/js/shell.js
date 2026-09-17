@@ -87,6 +87,7 @@
           '<nav aria-label="Footer">' +
             '<a href="sources.html">Sources and method</a>' +
             '<a href="method.html">How it was built</a>' +
+            '<a href="sources.html#licensing">Licence and reuse</a>' +
             '<a href="https://github.com/rbndchsn/genai_market" rel="noopener">Repository</a>' +
           "</nav>" +
           '<p>This online tool was created by: <a href="https://www.linkedin.com/in/robin-duchesneau" rel="noopener">https://www.linkedin.com/in/robin-duchesneau</a></p>' +
