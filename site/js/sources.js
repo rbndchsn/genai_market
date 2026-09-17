@@ -1,4 +1,4 @@
-/* GenAI Market — sources page: bibliography with usage counts, evidence-level counts, citation example. */
+/* GenAI Market — sources page: bibliography with usage counts, evidence-level counts. */
 (function () {
   "use strict";
   var GM = window.GM;
@@ -66,13 +66,6 @@
     document.getElementById("ev-multi").textContent = n("multi-source") + " of " + ins.length + " insights";
     document.getElementById("ev-single").textContent = n("single-source") + " of " + ins.length + " insights";
     document.getElementById("ev-agent").textContent = n("agent-analysis") + " of " + ins.length + " insights";
-
-    var base = location.href.replace(/[^/]*$/, "");
-    var example = ins[0];
-    document.getElementById("cite-example").textContent =
-      "Sustainable IQ (" + new Date().getFullYear() + "). \"" + example.title + "\" (" + example.id + "). GenAI Market. " + base + "insights.html#" + example.id;
-    document.getElementById("cite-year").textContent = new Date().getFullYear();
-    document.getElementById("cite-url").textContent = base;
   }
 
   function openHash() {
