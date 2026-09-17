@@ -292,7 +292,7 @@
       "differentiators": [
         "Domain-trained embeddings and SME-led model development",
         "Agentic workflows in regulated processes such as MLR review and biomarker analysis",
-        "Built for FDA, EMA and HIPAA rules and the 21 CFR Part 11 electronic-records requirement",
+        "Controls built in for 21 CFR Part 11, HIPAA, FDA and EMA obligations",
         "25+ prebuilt solutions across the pharma value chain",
         "Innovation Labs and co-innovation model"
       ],
@@ -432,8 +432,7 @@
       "industries": [
         "Education",
         "Engineering and construction",
-        "Manufacturing",
-        "Retail"
+        "Manufacturing"
       ],
       "markets": [
         "United States",
@@ -615,7 +614,7 @@
       "ma_score": 0.95,
       "ma_rank": 1,
       "quadrant": "leaders",
-      "focus": "Value-first, MVP-led GenAI delivery for Fortune 1000 clients with a framework aimed at the non-technical barriers to production, backed by an agentic platform and outcome-linked pricing.",
+      "focus": "Value-first, MVP-led GenAI delivery for Fortune 1000 clients with a framework aimed at the organisational readiness gaps (trust, talent, data foundations and change) that keep pilots from production, backed by an agentic platform and outcome-linked pricing.",
       "industries": [
         "BFSI",
         "Energy",
@@ -660,8 +659,8 @@
       ],
       "differentiators": [
         "Value realisation run as a formal discipline with KPI dashboards and executive reviews",
-        "Outcome-linked 'base plus shared plus value' pricing",
-        "Top-tier hyperscaler and data-platform partnerships with early access to new agentic services",
+        "Emerging outcome-linked pricing that combines a base fee with shared and value-based components",
+        "AWS Premier Tier partner with close Snowflake and Databricks ties and early access to AI platforms such as Bedrock, Cortex and Mosaic AI",
         "Repeatable agentic process automation in regulated industries",
         "Reusable production-tested platforms rather than services-only delivery"
       ],
@@ -811,7 +810,7 @@
       "name": "Chetu",
       "founded": 2000,
       "hq": {
-        "city": "Sunrise, Florida",
+        "city": "Sunrise",
         "country": "United States"
       },
       "pe_score": 0.52,
@@ -918,6 +917,14 @@
           "what": "Agentic document intelligence"
         },
         {
+          "name": "IntelliLens.AI",
+          "what": "B2B marketing intelligence using agent orchestration"
+        },
+        {
+          "name": "HybridX",
+          "what": "Agentic deep research and automated report writing"
+        },
+        {
           "name": "Insightsfirst",
           "what": "Competitive intelligence SaaS"
         },
@@ -943,7 +950,7 @@
           "value": "70 to 80%"
         },
         {
-          "metric": "Efficiency gain from internal agents",
+          "metric": "Efficiency gain from production agents used in managed services delivery",
           "value": "30 to 40%"
         },
         {
@@ -1093,7 +1100,7 @@
         "Technology, media and telecom",
         "Healthcare and life sciences",
         "Pharma",
-        "Industrial"
+        "Industrial engineering and technology"
       ],
       "markets": [
         "United States",
@@ -1414,7 +1421,7 @@
       "differentiators": [
         "Verticalised business units with domain leadership",
         "Recurring platform fees combined with outcome-informed application pricing",
-        "Accelerators shown to shorten configuration and deal conversion",
+        "Accelerators that cut time-to-value through quick configuration and early validation, which helps win deals",
         "High POC-to-production conversion claimed"
       ],
       "claimed_metrics": [
@@ -1680,7 +1687,7 @@
       "claimed_metrics": [
         {
           "metric": "GenAI revenue from repeat clients",
-          "value": "100%"
+          "value": "All (stated in words, no percentage given)"
         },
         {
           "metric": "Multi-year accounts",
@@ -1838,7 +1845,7 @@
       "platforms": [
         {
           "name": "DGCUT",
-          "what": "Design, Generate, Customise, Unit Test delivery method"
+          "what": "Design, Generate, Customise or Configure, Unit Test delivery method"
         },
         {
           "name": "AskNeo",
@@ -1874,7 +1881,7 @@
         },
         {
           "metric": "Strategy engagement duration",
-          "value": "6 to 8 weeks cut to 3 to 4"
+          "value": "Roughly halved, from six to eight weeks down to three or four, in industries the firm already knows"
         }
       ],
       "partners": [
@@ -1997,13 +2004,11 @@
       "ma_score": 0.51,
       "ma_rank": 19,
       "quadrant": "seasoned",
-      "focus": "Industrialising GenAI adoption for mid-market and digital-native firms through production-shaped pilots, reusable platforms and governed deployment patterns.",
+      "focus": "Industrialising GenAI adoption for mid-market and digital-native firms through production-shaped pilots, reusable platforms and governed deployment patterns, with some domain solutions in healthcare and retail.",
       "industries": [
-        "ISVs and hi-tech",
+        "ISVs, hi-tech and digital natives",
         "Discrete manufacturing",
-        "Professional services",
-        "Healthcare",
-        "Retail"
+        "Professional services"
       ],
       "markets": [
         "United States",
@@ -2130,8 +2135,8 @@
           "value": "60 to 70%"
         },
         {
-          "metric": "Additional use cases within 12 months",
-          "value": "About three"
+          "metric": "Average additional use cases per client within 12 months of the first engagement",
+          "value": "3"
         },
         {
           "metric": "Document classification accuracy in cases",
@@ -2330,7 +2335,7 @@
       "ma_score": 0.86,
       "ma_rank": 3,
       "quadrant": "leaders",
-      "focus": "Data and analytics heritage brought into experience-led enterprise transformation, with heavy discovery before build, fifteen named accelerators and the broadest geographic reach in the study.",
+      "focus": "Data and analytics heritage brought into experience-led enterprise transformation, with heavy discovery before build, fifteen named accelerators and the longest list of markets served (seven regions) among the profiled vendors, by our count.",
       "industries": [
         "Banking and financial services",
         "Healthcare and pharmaceuticals",
@@ -2387,7 +2392,7 @@
         "Deep discovery: domain experts, persona mapping and prototyping before code",
         "Process diagnostic tool scores agentic fit from SOPs in hours",
         "Accelerators arrive 60 to 80 percent complete; domain solutions with perpetual IP transfer to clients",
-        "Monthly executive AI Day workshops reaching hundreds of client staff"
+        "Monthly full-day AI Day workshops at client sites, with 500 to 1,000 client staff attending in total, senior leaders among them"
       ],
       "claimed_metrics": [
         {
@@ -2464,7 +2469,7 @@
       "platforms": [
         {
           "name": "AlphaGenie",
-          "what": "About 30 prebuilt cognitive agents and 60+ use cases; 13 on the AWS marketplace"
+          "what": "About 30 prebuilt cognitive agents and 60+ documented use cases; 13 solutions listed on AWS Marketplace"
         },
         {
           "name": "Ready Agentic Platform Framework",

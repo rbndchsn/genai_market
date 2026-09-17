@@ -1060,6 +1060,7 @@
         {
           "source": "src-01",
           "pages": [
+            13,
             23
           ]
         }
@@ -1413,7 +1414,7 @@
       "id": "digital-twin",
       "term": "Digital twin",
       "expansion": null,
-      "definition": "A simulation model of a business process or network used to run what-if scenarios. Some providers pair it with agents for risk and operations planning.",
+      "definition": "A virtual replica of a physical asset, site, process or network, used to simulate and test what-if scenarios. Some providers pair it with agents for risk and operations planning.",
       "tags": [
         "architecture"
       ],
@@ -1425,7 +1426,7 @@
           "source": "src-01",
           "pages": [
             31,
-            67
+            32
           ]
         },
         {
@@ -1633,7 +1634,7 @@
       "id": "micro-poc",
       "term": "Micro POC",
       "expansion": null,
-      "definition": "A short, fixed-price proof of concept (two to four weeks) designed to validate value before a scale commitment.",
+      "definition": "USEReady's name for a short proof of concept (two to four weeks), offered alongside fixed-price terms, that tests value before a client commits to scale.",
       "tags": [
         "commercial"
       ],
@@ -2168,7 +2169,7 @@
       "id": "financial-spreading",
       "term": "Financial spreading",
       "expansion": null,
-      "definition": "Extracting figures from financial statements into a standard format for credit analysis. A common production GenAI use case in banking.",
+      "definition": "Extracting figures from financial statements into a standard format for credit analysis. Several providers report production deployments of it for banks.",
       "tags": [
         "market"
       ],
@@ -2180,7 +2181,9 @@
           "source": "src-01",
           "pages": [
             16,
-            49
+            34,
+            49,
+            50
           ]
         }
       ]
@@ -2389,7 +2392,7 @@
       "id": "sovereign-ai",
       "term": "Sovereign AI",
       "expansion": null,
-      "definition": "Designing, training and running AI under a country's own laws, on infrastructure it controls, with locally governed data, so that critical capability does not depend on foreign vendors. In 2025 most large companies treated data residency and a vendor's country of origin as planning inputs.",
+      "definition": "Designing, training and running AI under a country's own laws, on infrastructure it controls, with locally governed data, so that critical capability does not depend on foreign vendors. In Deloitte's late-2025 survey of 3,235 leaders at AI-adopting organisations, 83% rated data residency and in-country compute at least moderately important to strategic planning, and 77% weighed an AI vendor's country of origin when choosing solutions.",
       "tags": [
         "governance",
         "market"
@@ -3861,7 +3864,7 @@
       "id": "productivity-j-curve",
       "term": "Productivity J-curve",
       "expansion": null,
-      "definition": "The pattern in which a general-purpose technology depresses measured productivity while firms invest in complements (skills, processes, data) and then raises it later. Used in the AI Index to reconcile strong micro-level gains with small aggregate effects so far.",
+      "definition": "The pattern in which a general-purpose technology depresses measured productivity while firms invest in complements (skills, processes, data) and then raises it later. The AI Index cites Brynjolfsson (2026), who reads 2025 US productivity data this way: firms bear adoption costs before the larger gains show, while the macro evidence is still early and mixed.",
       "tags": [
         "market",
         "method"

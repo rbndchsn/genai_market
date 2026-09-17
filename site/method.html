@@ -23,9 +23,10 @@
   <a href="#steps">The steps</a>
   <a href="#rhythm">The working rhythm</a>
   <a href="#rules">Rules that kept it honest</a>
+  <a href="#eval">Evaluating AI-written research</a>
   <a href="#quality">Validation and evaluation</a>
   <a href="#engineering">Engineering choices</a>
-  <a href="#debugging">Three bugs, and what they teach</a>
+  <a href="#debugging">Four bugs, and what they teach</a>
   <a href="#takeaways">Takeaways</a>
   <a href="#repo">See for yourself</a>
 </nav>
@@ -33,7 +34,7 @@
 <section id="setup" aria-labelledby="setup-heading">
   <h2 id="setup-heading">The setup</h2>
   <div class="card prose">
-    <p><strong>Tools.</strong> Visual Studio Code as the editor, with Claude Code running in its terminal. Claude Code is Anthropic's command-line agent: it reads and writes files in the project folder, runs commands, opens a headless browser, and reports back. The model behind it was Claude Fable 5.1 for almost every session. Python 3.11 for the extraction and check scripts, plain HTML, CSS and JavaScript for the site, Git and GitHub Pages for publishing.</p>
+    <p><strong>Tools.</strong> Visual Studio Code as the editor, with Claude Code running in its terminal. Claude Code is Anthropic's command-line agent: it reads and writes files in the project folder, runs commands, opens a headless browser, and reports back. The model behind it was Claude Fable 5.1 for the research, the code and the debugging, and Claude Opus 5 for the full accuracy evaluation, so that a different model checked the work. Python 3.11 for the extraction and check scripts, plain HTML, CSS and JavaScript for the site, Git and GitHub Pages for publishing.</p>
     <p><strong>Division of labour.</strong> The agent did the research reading, the synthesis, the code, the debugging and the visual review. The human set the goal, chose the sources, downloaded the reports that sit behind a sign-in, made the judgement calls, looked at the live site, and said yes or no before each commit. Neither could have produced this alone in the time. The agent has no memory between sessions and no taste of its own. The human does not have two days to read twelve reports end to end.</p>
     <p><strong>Scale.</strong> The numbers below are read from the site's own data files at the moment you load this page.</p>
     <div class="kpi-row" id="method-kpis" aria-label="What the pipeline produced"></div>
@@ -70,7 +71,7 @@
       <li><strong>Web research.</strong> The agent listed candidate sources with their access conditions: open, gated behind a sign-in, or summary only. The human downloaded the gated ones. The agent never attempted to bypass a sign-in. Each new source then went through the same ingestion and synthesis, and the findings were merged into the data files with the evidence level of each insight raised where a second independent source agreed.</li>
       <li><strong>Website.</strong> A static site with no build step, one page per section, every number read from JSON at run time. Each page was built, screenshotted at desktop and phone width in both themes, corrected, and only then ticked. Deployment is a small GitHub Actions workflow that publishes the site folder on every push.</li>
       <li><strong>Chat.</strong> An ask-the-report chat was planned and deliberately paused, so that the launch would not depend on a server or an API key. The search on this site is deliberately keyword-based, and says so.</li>
-      <li><strong>Quality and launch.</strong> A colour pass, an originality check of all site text against every source extraction, and an accuracy evaluation in which a random sample of statistics and insights is re-checked against the cited pages, with the results published below. Maintenance steps for adding sources later are already in the plan.</li>
+      <li><strong>Quality and launch.</strong> A colour pass, an originality check of all site text against every source extraction, and an accuracy evaluation: a random sample first, then, because the sample found too many problems, a full check of every insight, vendor profile and statistic against the pages they cite, described in <a href="#eval">Evaluating AI-written research</a>. Maintenance steps for adding sources later are already in the plan.</li>
     </ol>
   </div>
 </section>
@@ -104,6 +105,39 @@
   </div>
 </section>
 
+<section id="eval" aria-labelledby="eval-heading">
+  <h2 id="eval-heading">Evaluating AI-written research</h2>
+  <div class="card prose">
+    <p>The most important work on this site happened after it launched. An AI agent can write fluent, well-referenced prose at a speed no person can match, and every number it writes looks plausible. That is exactly why the output has to be evaluated: fluency is not accuracy, and a validator that checks structure cannot tell whether a sentence says what its source says. The only way to know is to go back to the page and compare, record by record.</p>
+    <h3>Why a sample was not enough</h3>
+    <p>We started with the usual shortcut: twenty records drawn at random and checked against their pages. Eight needed a fix and two were plainly wrong. With a sample that small, the honest estimate of how many insights were wrong ran anywhere from about one in fourteen to more than half. A range that wide cannot be published as reassurance, so we checked everything that carries evidence: every insight, vendor profile and statistic, plus a sample of glossary terms.</p>
+    <h3>The procedure in a nutshell</h3>
+    <ol class="phases">
+      <li><strong>Define the verdicts before checking.</strong> Match, minor fix or wrong, with a written rubric for each kind of record: what counts as a wrong population, a wrong unit, an unsupported attribution, a page reference that points to the wrong page.</li>
+      <li><strong>Use a different model as the checker.</strong> The content was written by Claude Fable 5.1; the checkers ran on Claude Opus 5. A second model is less likely to share the first one's blind spots.</li>
+      <li><strong>Calibrate the checker on known errors.</strong> Before the full run, the checkers were given the eight records whose errors we already knew. They found every one, and three more that the first round had missed. Only then was the full run trusted.</li>
+      <li><strong>Fan out, with structured answers.</strong> Records were split into batches of seven to ten, one checker per batch, each returning a fixed-format verdict with the page it read, what the page shows and a proposed fix. Checkers opened the page image for every chart and table, not just the extracted text.</li>
+      <li><strong>Read the prose twice.</strong> Every insight and vendor profile went to a second checker told to look for what a careful first reader misses: units, populations, forecasts written as actuals, shares written as counts.</li>
+      <li><strong>Escalate on failure.</strong> Statistics started as a sample of forty. One wrong value was enough to trigger a check of all the rest.</li>
+      <li><strong>Check the checkers.</strong> No verdict of wrong changed the data until the main agent had confirmed it against the page. Two were downgraded, and one correction stood for a different reason than the checker gave.</li>
+      <li><strong>Fix, then review every change.</strong> Precise corrections were applied by script. Wider prose fixes were drafted by agents from the checkers' evidence, and every change was read before it was accepted.</li>
+      <li><strong>Re-run the automated checks.</strong> Schema validation, the search rebuild, the site checker and the originality scan, which caught three new passages that the corrections themselves had brought too close to the licensed source.</li>
+      <li><strong>Publish the results.</strong> Coverage by layer, what was found, and a plain note for every corrected record, in the next section.</li>
+    </ol>
+    <h3>The run in numbers</h3>
+    <div class="kpi-row" id="eval-run"></div>
+    <h3>What it taught us</h3>
+    <ul>
+      <li><strong>Errors cluster where the agent synthesises.</strong> Statistics copied from one page were mostly right. Insights written across several sources were mostly not, and the typical slip was a true number put in the wrong place rather than an invented one.</li>
+      <li><strong>A second read is worth its cost.</strong> It found problems in about one record in eight that the first read had passed.</li>
+      <li><strong>Checkers need checking.</strong> A verdict is a claim like any other. Confirming it against the source prevented wrong corrections.</li>
+      <li><strong>Charts need calibration.</strong> Values read by eye from unlabelled marks drift. Where a chart prints a few values, use them to test every value you read from it.</li>
+      <li><strong>Fixes create new risks.</strong> Corrected text is new text. It has to go back through every automated check, including originality.</li>
+      <li><strong>Publish record-level results.</strong> A pass rate would have hidden where the problems were. A list of corrections shows readers exactly what changed and lets them judge the rest.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="quality" aria-labelledby="quality-heading">
   <h2 id="quality-heading">Validation and evaluation</h2>
   <div class="card prose">
@@ -119,8 +153,10 @@
     <h4>What the evaluation found</h4>
     <div id="q-accuracy-findings"></div>
     <div class="kpi-row" id="q-accuracy"></div>
+    <div class="table-wrap q-layers" id="q-accuracy-layers"></div>
     <details class="q-table">
-      <summary>Record-by-record results</summary>
+      <summary>Every correction, record by record</summary>
+      <p class="muted" id="q-accuracy-count"></p>
       <div class="table-wrap" id="q-accuracy-table"></div>
     </details>
     <p class="muted" id="q-accuracy-note"></p>
@@ -140,11 +176,12 @@
 </section>
 
 <section id="debugging" aria-labelledby="debugging-heading">
-  <h2 id="debugging-heading">Three bugs, and what they teach</h2>
+  <h2 id="debugging-heading">Four bugs, and what they teach</h2>
   <div class="card prose">
     <p><strong>The blank screenshot.</strong> The vendors page opens a profile in a native modal dialog. Screenshots of that state came back blank. The agent worked out that the headless browser paints a top-level page blank while a modal is open, and fixed the harness rather than the page: the screenshot is now taken through a same-origin frame. Lesson: when a test fails, first ask whether the test is right.</p>
     <p><strong>The nested links.</strong> Stat tiles on the home page were links, and each contained reference links. Browsers refuse to nest one link inside another and silently eject the inner one, which moved the references outside their tiles. The container became a plain element with the link elsewhere. Lesson: some HTML rules are enforced by silently rewriting your document, and only a screenshot shows it.</p>
     <p><strong>The sphere that was not a sphere.</strong> The search page's tag globe first shipped spinning only about a vertical axis on a stretched ellipse. Live, it read as tags sliding along six rows. The human said so in one sentence. The agent explained the geometry, changed the projection to a circle with perspective, tilted the axis so the globe tumbles, and smoothed the hover pause that had been stuttering. Lesson: the agent's own screenshots were true but insufficient, because a still image cannot show motion. Some review has to be done by a person on the live site.</p>
+    <p><strong>The chart whose axis was out of line.</strong> One web source's bar chart prints its axis labels a little above the gridlines they belong to. Every value read against those labels came out low, by up to six points, and the error survived the first synthesis because the readings looked plausible. The full evaluation caught it because the two values the article states in its text did not match the chart as read; measured from the baseline instead, every bar agreed with the text. Lesson: when a chart has a few printed values, use them to calibrate every value you read by eye, and record chart readings as approximate.</p>
   </div>
 </section>
 
@@ -160,7 +197,7 @@
         <li>Keep secrets, licensed material and raw downloads out of version control from day one. Ask the agent to add the exclusion before the first commit.</li>
         <li>When something looks wrong, say what you see in plain words. The agent can usually find the cause from a good description.</li>
         <li>Read what the agent writes into the plan. That is where you learn what it actually did.</li>
-        <li>Ask the agent to check its own work against the source, not against its memory. Pick a handful of numbers at random, have it open the cited page and compare. Ours got every chart number right and slipped in the sentences around them.</li>
+        <li>Ask the agent to check its work against the source, not against its memory: have it open the cited page and compare, one record at a time. Our checks found the most errors in the sentences around the numbers, and the wrong numbers mostly came from reading unlabelled charts by eye.</li>
       </ul>
     </div>
     <div class="card prose">
@@ -173,7 +210,7 @@
         <li>Parallelise where the work is separable and the outputs do not overlap, for example one forked session per source, each writing only its own file. Merge sequentially.</li>
         <li>Checkpoints are a dial tied to evidence. Record in the decisions log when you loosened them and why.</li>
         <li>Give the agent taste through examples, not adjectives: one finished page or one finished note becomes the model for the rest.</li>
-        <li>Separate validation from evaluation and budget for both. Validation is automated and cheap: schemas, references that resolve, links, console errors, run on every change. Evaluation is sampled and judged: draw records with a fixed seed, check each against its cited page with a fresh agent, record the verdict, correct the data, publish the results. A pass rate hides where the failures cluster; a record-level table shows it. Re-run with a new seed after every content change.</li>
+        <li>Separate validation from evaluation and budget for both. Validation is automated and cheap: schemas, references that resolve, links, console errors, run on every change. Evaluation is sampled and judged: draw records with a fixed seed, check each against its cited page with a fresh agent, record the verdict, correct the data, publish the results. A pass rate hides where the failures cluster; a record-level table shows it. Treat a bad sample as a reason to check everything, use a different model as the checker, and confirm every verdict of wrong against the source before changing data. Re-run with a new seed after every content change.</li>
       </ul>
     </div>
   </div>

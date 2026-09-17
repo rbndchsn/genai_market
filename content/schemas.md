@@ -123,15 +123,20 @@ the pages it draws on.
 Results of the three checking layers, shown on `method.html`. Updated by hand after each run.
 
 ```
-{ "validation":  { "last_run": "YYYY-MM-DD", "pages": 9, "links_checked": 1500, "console_errors": 0, "data_errors": 0, "data_warnings": 0 },
-  "originality": { "last_run": "YYYY-MM-DD", "records_scanned": 546, "licensed_hits_before": 110, "licensed_hits_after": 0, "public_hits_remaining": 72, "note": "..." },
-  "accuracy":    { "date": "YYYY-MM-DD", "seed": 20260916, "method": "...", "note": "...", "findings": ["one paragraph each, the high-level story of what was found and fixed"],
-                   "sample": { "stats": 12, "insights": 8 },
-                   "results": [ { "id": "s4-18", "type": "stat|insight", "verdict": "match|minor|mismatch|unverifiable",
-                                  "pages_checked": ["src-04 p.16"], "note": "in our words, no source quotes", "fixed": true } ] } }
+{ "validation":  { "last_run": "YYYY-MM-DD", "pages": 9, "links_checked": 1370, "console_errors": 0, "data_errors": 0, "data_warnings": 0 },
+  "originality": { "last_run": "YYYY-MM-DD", "records_scanned": 546, "licensed_hits_before": 110, "licensed_hits_after": 0, "public_hits_remaining": 87, "note": "..." },
+  "accuracy":    { "date": "YYYY-MM-DD", "method": "...", "note": "...",
+                   "findings": ["one paragraph each: what was found and fixed, in plain words"],
+                   "rounds":   [ { "name": "First round", "summary": "..." } ],
+                   "run":      { "checker_model": "...", "author_model": "...", "checker_agents": 59, "checker_tool_calls": 1695,
+                                 "checking_minutes": 47, "fixer_agents": 14, "note_agents": 14, "agents_total": 87, "tokens_millions": 6.9 },
+                   "layers":   [ { "layer": "Statistics", "total": 259, "checked": 259, "how": "every record",
+                                   "match": 199, "minor": 52, "mismatch": 8, "unverifiable": 0 } ],
+                   "results":  [ { "id": "s4-18", "type": "stat|insight|vendor|glossary", "layer": "Statistics",
+                                   "verdict": "minor|mismatch", "note": "what was wrong and how it was corrected" } ] } }
 ```
 
-`accuracy.results` carries one row per sampled record; verdict counts are computed by the page. Notes are written in our words and never quote a source. Not read by `validate_data.py`.
+`layers` carries the counts the page totals. `results` lists only records that needed a correction; exact matches are counted in `layers`. Notes are written in our words and never quote a source (nothing at all from src-01). Not read by `validate_data.py`.
 
 ## search-tags.json
 

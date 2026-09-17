@@ -2,7 +2,7 @@
   "validation": {
     "last_run": "2026-09-16",
     "pages": 9,
-    "links_checked": 1370,
+    "links_checked": 1516,
     "console_errors": 0,
     "data_errors": 0,
     "data_warnings": 0
@@ -12,267 +12,1255 @@
     "records_scanned": 546,
     "licensed_hits_before": 110,
     "licensed_hits_after": 0,
-    "public_hits_remaining": 72,
-    "note": "The remaining public-source hits are chart labels and survey question wording, which are facts rather than prose, and were left as they are after review."
+    "public_hits_remaining": 87,
+    "note": "The remaining 87 public-source runs, across 34 records, are mostly chart labels and survey question wording, which are facts rather than prose; they were reviewed and left as they are."
   },
   "accuracy": {
     "date": "2026-09-16",
-    "seed": 20260916,
-    "method": "Twenty records were drawn at random with a fixed seed: twelve statistics from the statistics file and eight insights from the multi-source and single-source insights. For each record the agent opened every cited page, both the page render and the extracted text, or the saved article for web sources, and compared every figure, label, sample size and attribution. A record matches when everything is supported as stated; minor means the substance holds but a wording, attribution or page reference needed tightening; wrong means a figure or claim was contradicted by the cited page. Every minor and wrong record was corrected in the data before this page was published, and the corrections are listed here.",
-    "note": "Three of the a16z figures in ins-083 (the 76% Google share and the exact 81% and 36% to 30% splits) were read from the article's charts when the source was first synthesised and could not be re-read now because the chart images are not kept; the surrounding prose supports the rounded versions. The next evaluation should draw a fresh sample with a new seed.",
-    "sample": {
-      "stats": 12,
-      "insights": 8
-    },
+    "method": "Each checker opened every page a record cites: the page image for any chart or table, the extracted text for prose, and the saved article for web sources, re-downloading a web chart when a value lived only in the image. It compared every figure, unit, label, sample, attribution and page reference. The checkers ran on Claude Opus 5, a different model from Claude Fable 5.1, which wrote the content, and they were first tested on eight records whose errors were already known. Every insight and vendor profile was read twice, the second time by a checker told to look for what a careful first reader misses. No verdict of wrong changed the data until it had been confirmed against the page. A match means everything is supported as stated; a minor fix means the substance holds but a wording, attribution, population, rounding or page reference needed tightening; wrong means a figure or claim was contradicted by the cited source, credited to the wrong source, or supported by none.",
+    "findings": [
+      "Our first check drew twenty records at random and found problems in eight. A sample that small cannot say how many of the site's records are wrong, so we checked the rest of the evidence layer in full: every insight, every vendor profile and every statistic, plus a random sample of twenty glossary terms. That is 402 records. 236 were exactly right, 133 needed a minor fix and 33 were wrong. All 166 were corrected before this page was published.",
+      "The errors were not evenly spread. Statistics, each a figure taken from one page, were exactly right in more than three cases out of four, and most of the eight wrong ones were chart readings: values measured by eye from unlabelled bars and dots, a pair of swapped labels, and one chart whose axis labels sit out of line with its gridlines, which had shifted every reading taken from it. Insights, which the agent wrote across several sources, fared worst: only 8 of 95 were exactly right and 25 were wrong. The typical slip was not an invented number but a true number put in the wrong place: credited to the wrong survey, applied to the wrong population, a share described as a count, a forecast described as an actual, a tie described as a lead, or two sources said to agree when only one of them says it. Vendor profiles had no errors of fact, only loose details such as an industry the profile does not list.",
+      "Reading twice paid off. In 15 of the 123 records read by two checkers, the second found a problem the first had passed, and in 3 more it showed that a minor issue was an outright error. Checking the checkers paid off too: two verdicts of wrong turned out to be minor issues, and one correction stood for a different reason than the checker gave. Eight insights once labelled as backed by several sources now say single source, because their central figures come from one report.",
+      "What remains: 144 glossary terms were not checked, and figures read from unlabelled chart marks are approximate to about a point; those records say so. Every corrected passage was written afresh and scanned again for text shared with the sources, with no matches against the licensed report."
+    ],
+    "rounds": [
+      {
+        "name": "First round",
+        "summary": "20 records drawn at random (seed 20260916): 12 matched, 6 needed a minor fix, 2 were wrong."
+      },
+      {
+        "name": "Full evaluation",
+        "summary": "402 records checked on 16 September 2026: all 95 insights, all 28 vendor profiles, all 259 statistics (a sample of 40 drawn with seed 20260917 found a wrong value, so the rest were checked too) and 20 glossary terms drawn with the same seed."
+      }
+    ],
+    "note": "The per-record table lists every correction; the twelve statistics from the first round are included in the totals with their first-round results.",
+    "layers": [
+      {
+        "layer": "Insights, sourced",
+        "total": 79,
+        "checked": 79,
+        "how": "every record, read twice",
+        "match": 7,
+        "minor": 54,
+        "mismatch": 18,
+        "unverifiable": 0
+      },
+      {
+        "layer": "Insights, our analysis",
+        "total": 16,
+        "checked": 16,
+        "how": "every record, read twice; our own counts recomputed",
+        "match": 1,
+        "minor": 8,
+        "mismatch": 7,
+        "unverifiable": 0
+      },
+      {
+        "layer": "Vendor profiles",
+        "total": 28,
+        "checked": 28,
+        "how": "every record, read twice",
+        "match": 15,
+        "minor": 13,
+        "mismatch": 0,
+        "unverifiable": 0
+      },
+      {
+        "layer": "Statistics",
+        "total": 259,
+        "checked": 259,
+        "how": "every record",
+        "match": 199,
+        "minor": 52,
+        "mismatch": 8,
+        "unverifiable": 0
+      },
+      {
+        "layer": "Glossary terms",
+        "total": 164,
+        "checked": 20,
+        "how": "random sample",
+        "match": 14,
+        "minor": 6,
+        "mismatch": 0,
+        "unverifiable": 0
+      }
+    ],
     "results": [
       {
-        "id": "s2-11",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-02 p.10",
-          "src-02 p.24"
-        ],
-        "note": "All five maturity scores, five AI-success rates and band sizes match the chart and the appendix table.",
-        "fixed": false
-      },
-      {
-        "id": "s6-25",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-06 p.2",
-          "src-06 p.21"
-        ],
-        "note": "The over-80% figure for technology and media executives and the note about sectors expecting no cuts are both on the cited page.",
-        "fixed": false
-      },
-      {
-        "id": "s4-18",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-04 p.5",
-          "src-04 p.14",
-          "src-04 p.16"
-        ],
-        "note": "77% appears on both cited pages; the sample of 3,235 across 24 countries is confirmed in the methodology.",
-        "fixed": false
-      },
-      {
-        "id": "s5-19",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-05 p.18"
-        ],
-        "note": "All six now-versus-three-years values and the sample of 2,102 match the chart.",
-        "fixed": false
-      },
-      {
-        "id": "s6-15",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-06 p.2",
-          "src-06 p.14"
-        ],
-        "note": "66% and 63% and their labels match the text.",
-        "fixed": false
-      },
-      {
-        "id": "s11-57",
-        "type": "stat",
-        "verdict": "minor",
-        "pages_checked": [
-          "src-11 p.381",
-          "src-11 p.382",
-          "src-11 p.383",
-          "src-11 p.384"
-        ],
-        "note": "All values match. The note said every state shows the pattern; the chart covers 39 states and the source itself says nearly every state. Note now says every state with reported data.",
-        "fixed": true
-      },
-      {
-        "id": "s7-15",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-07 url"
-        ],
-        "note": "Both shares and the survey description are in the article text.",
-        "fixed": false
-      },
-      {
-        "id": "s11-01",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-11 p.178"
-        ],
-        "note": "All three yearly totals match the chart; the 2025 split and growth rate match the text.",
-        "fixed": false
-      },
-      {
-        "id": "s11-54",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-11 p.380"
-        ],
-        "note": "All twelve country values match the chart.",
-        "fixed": false
-      },
-      {
-        "id": "s7-16",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-07 url (chart image re-fetched)"
-        ],
-        "note": "All eight layer shares match the article's chart, which was re-fetched for the check.",
-        "fixed": false
-      },
-      {
-        "id": "s7-19",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-07 url (chart image re-fetched)"
-        ],
-        "note": "All ten segment values and the unit match the article's chart, which was re-fetched for the check.",
-        "fixed": false
-      },
-      {
-        "id": "s4-26",
-        "type": "stat",
-        "verdict": "match",
-        "pages_checked": [
-          "src-04 p.21"
-        ],
-        "note": "All six values and the sample of 3,199 match the figure; label wording differs only trivially.",
-        "fixed": false
-      },
-      {
-        "id": "ins-067",
+        "id": "ins-001",
         "type": "insight",
+        "layer": "Insights, sourced",
         "verdict": "minor",
-        "pages_checked": [
-          "src-05 p.8",
-          "src-05 p.9",
-          "src-04 p.21",
-          "src-09 p.3",
-          "src-03 p.23",
-          "src-02 p.6"
-        ],
-        "note": "Every figure matches. Two attributions were loose: the BCG figure comes from the full executive sample rather than CEOs only, and McKinsey's page measures risks mitigated rather than concerns. Both reworded.",
-        "fixed": true
+        "note": "The text said pilots rarely fail because of the model, without crediting AIM, and implied Deloitte agreed. Deloitte points to the added effort production requires and warns models can fall short at scale; the text and page reference were corrected."
+      },
+      {
+        "id": "ins-002",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said Deloitte expected agent use to triple, called older sources later, and merged Menlo's and a16z's different measures. It now gives Deloitte's 23% to 74% rise, separates Menlo's 16% from a16z's 13%, and completes a page reference."
+      },
+      {
+        "id": "ins-003",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The page reference for the sponsor note pointed only to a page showing the sponsor's name. It was completed with the page that carries the sponsor's own description of its platform."
+      },
+      {
+        "id": "ins-005",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said the providers sharing three traits beat the typical conversion range, which the source did not claim; they were redescribed as providers that reorganised delivery around the gap. A page reference for the six-month window was added."
+      },
+      {
+        "id": "ins-006",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text treated MIT NANDA's findings as the same data-readiness problem, but NANDA ranked tools that do not learn above data; it was recast as a contrasting view. The IDC figure was narrowed to real-time data initiatives."
+      },
+      {
+        "id": "ins-008",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text misread IDC's agent-teamwork barrier as team coordination; the IDC sentence now says running agents worried firms more than building them. Microsoft's 67% vs 32% result was restated as an association, and the finding was rated single-source."
+      },
+      {
+        "id": "ins-009",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said several vendors added critic agents and rule layers, but the cited pages showed only one; the wording was softened to some vendors and the page references were extended to the vendor profiles."
+      },
+      {
+        "id": "ins-010",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text called the Deloitte, BCG and Microsoft reports later than the AIM report, but only Microsoft's was published afterwards; they are now described as three other 2026 sources."
+      },
+      {
+        "id": "ins-011",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text credited design-time cost control to vendors in general rather than the most mature ones, and applied McKinsey's 20% to all organisations instead of respondents at AI-using firms. Missing page references were added."
+      },
+      {
+        "id": "ins-012",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said several providers combined language models with forecasting or optimisation models, but the cited page showed one provider using statistical models; the sentence now says at least one provider does this."
+      },
+      {
+        "id": "ins-013",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said all vendors offered RAG and the strongest implementations tracked retrieval quality continuously, claims the source did not make. The Menlo figures were reframed as showing how widespread basic RAG is, and page references were added."
+      },
+      {
+        "id": "ins-014",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The title said content generation was shrinking, but the source reported only a smaller portion of overall workload going to it; the title now says its share is falling."
+      },
+      {
+        "id": "ins-016",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said every vendor disclosed five to ten accelerators, only the usual range, and tied low platform adoption to the strongest vendors. It was revised to cite one Leader at 10 to 15 percent, with a page reference added."
+      },
+      {
+        "id": "ins-017",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said half of KPMG's firms relied on output checks; the 52% figure describes a planned approach for the next 6 to 12 months. The title and one sentence about AIM were also rewritten in plainer terms."
+      },
+      {
+        "id": "ins-018",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text said all three IDC belief statements scored 75% or more in every tier, but one fell to 69%, and implied McKinsey and Microsoft compared beliefs. Both points were corrected, and the finding was rated single-source."
+      },
+      {
+        "id": "ins-019",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary said only a third of Leaders reported fully integrated technology; the source gives 36 percent, so it now says about a third. The text also followed a source caption too closely and was reworded."
+      },
+      {
+        "id": "ins-020",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The title said Leaders deliver outcomes on more than three times as many AI projects. The source compares shares of organisations, 89 percent against 26 percent, so the title was corrected. The page reference was completed."
+      },
+      {
+        "id": "ins-021",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text wrongly implied retail trailed on both measures; it has the lowest maturity score, 48, but ties two other sectors at 47 percent on AI success. A supply-side sentence was reworded, and the finding was relabelled as single-source."
+      },
+      {
+        "id": "ins-022",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The title spoke of AI and data talent, but the source chart covers real-time data talent only. The summary also claimed providers were adding expert roles; the source lists them as existing roles, with no trend."
+      },
+      {
+        "id": "ins-023",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said vendors most often report inflated stakeholder expectations; the source lists them among other challenges without ranking. It also missed nervousness rising to 52 percent and attributed all executives' views to CEOs. A page reference was added."
+      },
+      {
+        "id": "ins-025",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary presented the objectives as general and GenAI support alone in second; the source covers real-time data, with GenAI support tied for second. The text now cites the 46 percent data quality barrier, and its page reference was completed."
+      },
+      {
+        "id": "ins-026",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text claimed the price ranges were services fees excluding platform and token costs, which the source never states. It now says the report does not specify whether licences or model usage are included."
+      },
+      {
+        "id": "ins-027",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text said a couple of vendors work only on fixed-scope or outcome-based terms, but only one vendor profile does. The summary now says a few vendors tie part, not all, of their fees to outcomes."
+      },
+      {
+        "id": "ins-028",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text named model and application engineers as the biggest group. In the source, data scientists and machine learning and language model engineers make up that group, while application engineers are counted separately."
+      },
+      {
+        "id": "ins-029",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The text said regulated industries had the longest agentic use-case lists and gave compliance review as an example. In the source, financial services, with eight entries, and life sciences and healthcare lead; the example now names a pharma review workflow."
+      },
+      {
+        "id": "ins-030",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "mismatch",
+        "note": "The summary said all three vendors ran thousands of analysts under maker-checker controls; only two give bench sizes of at least 6,000, and only one describes those controls. The text wrongly said one vendor pairs experts with AI in every workflow."
+      },
+      {
+        "id": "ins-031",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "mismatch",
+        "note": "The title and text treated the five platforms as near universal. Our count shows Databricks in 25 of 28 profiles, AWS and Azure in 23, Google Cloud in 18 and Snowflake in 17, with 12 vendors listing all five."
+      },
+      {
+        "id": "ins-032",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The text said a vendor's persona platform correlated above 95 percent with real behaviour. The source gives the figure as at least 95 percent, so the wording was corrected."
+      },
+      {
+        "id": "ins-033",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The text gave one vendor's pilot-to-production rate as 60 percent or more; the source says above 60 percent. The text now says at least five other vendors give no figure, and five page references were added."
+      },
+      {
+        "id": "ins-034",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The page reference was completed. The cited pages did not support the statement that survey participation was voluntary, so the page from the report's methodology that does support it was added."
+      },
+      {
+        "id": "ins-036",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The title echoed the framing of two buyer questions in the licensed report and was rewritten in our own words. The page reference was also completed with the page that supports the point."
+      },
+      {
+        "id": "ins-037",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The title's central claim, that the next phase favours proven operation at scale, came only from the AIM report, while the other cited source backs different points. The title was reworded around rising spending and operational limits."
+      },
+      {
+        "id": "ins-039",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text mirrored the structure of a page in the licensed report and mentioned dashboards that page does not. The summary and the text were rewritten in our own words."
+      },
+      {
+        "id": "ins-040",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text claimed governance controls appeared in almost every vendor profile, called BCG's mixed executive sample CEOs and implied a trend BCG never measured. These were corrected with BCG's actual figures, and a page reference was added."
       },
       {
         "id": "ins-041",
         "type": "insight",
+        "layer": "Insights, sourced",
         "verdict": "mismatch",
-        "pages_checked": [
-          "src-07 url",
-          "src-08 url",
-          "src-11 p.178",
-          "src-11 p.179"
-        ],
-        "note": "Menlo and Stanford figures match. The a16z sentence gave application spend as $5.8 billion per firm; the source gives about $5.8 million average per firm. Sentence rewritten with the correct figures and the forecast-versus-actual baseline made explicit.",
-        "fixed": true
+        "note": "An earlier round fixed application spend given as $5.8B per firm; the source says about $5.8M. This round named horizontal AI ($8.4B), not copilots, as the largest segment and noted the central figures come from one source."
       },
       {
-        "id": "ins-083",
+        "id": "ins-042",
         "type": "insight",
+        "layer": "Insights, sourced",
         "verdict": "minor",
-        "pages_checked": [
-          "src-08 url",
-          "src-07 url"
-        ],
-        "note": "All prose-anchored figures match. Three figures were read from a16z charts at synthesis time and cannot be re-read because the chart images are not kept; the prose supports the rounded versions. Left as they are and disclosed here.",
-        "fixed": false
+        "note": "The summary said early surveys expected spending to double, but only BCG did; a16z projected about 65%. The text wrongly called BCG's respondents CEOs, McKinsey's 61% became the stated 60%, and KPMG's figures were made exact at $202M."
       },
       {
-        "id": "ins-070",
+        "id": "ins-043",
         "type": "insight",
-        "verdict": "match",
-        "pages_checked": [
-          "src-05 p.11",
-          "src-05 p.12",
-          "src-09 p.4",
-          "src-03 p.19",
-          "src-01 p.8"
-        ],
-        "note": "All figures and attributions match across four sources.",
-        "fixed": false
-      },
-      {
-        "id": "ins-064",
-        "type": "insight",
+        "layer": "Insights, sourced",
         "verdict": "minor",
-        "pages_checked": [
-          "src-09 p.6",
-          "src-02 p.12",
-          "src-02 p.13",
-          "src-02 p.15",
-          "src-01 p.9",
-          "src-06 p.12",
-          "src-06 p.13",
-          "src-06 p.14"
-        ],
-        "note": "Every figure matches. IDC's 40% is a tie for first rather than a clear lead, the AIM sample is providers rather than buyers, and one remark needed an extra page reference. All three corrected.",
-        "fixed": true
+        "note": "Three findings were overstated and have been corrected: Stanford's 26% came from one Copilot study; a16z, not its CIOs, linked coding to Anthropic's gains; and the hundredfold rise covered one job-posting skill label."
       },
       {
-        "id": "ins-065",
+        "id": "ins-044",
         "type": "insight",
+        "layer": "Insights, sourced",
         "verdict": "minor",
-        "pages_checked": [
-          "src-03 p.15",
-          "src-03 p.16",
-          "src-03 p.17",
-          "src-03 p.22",
-          "src-09 p.5",
-          "src-09 p.6",
-          "src-01 p.10",
-          "src-07 url"
-        ],
-        "note": "Every figure matches. Only Menlo names Jevons' paradox; McKinsey describes the same effect without naming it. Reworded.",
-        "fixed": true
+        "note": "The summary said almost every large enterprise pays for Microsoft 365 Copilot. It now gives the figure, 94%, names the sample as a16z's survey of 100 Global 2000 firms, and gives 65% for incumbent preference."
       },
       {
-        "id": "ins-080",
+        "id": "ins-045",
         "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "mismatch",
+        "note": "The text said both surveys showed falling open-weight share, widespread multi-model use and a shift away from fine-tuning. Only Menlo reports the first and only a16z the others, so each finding is now credited to its own source."
+      },
+      {
+        "id": "ins-046",
+        "type": "insight",
+        "layer": "Insights, sourced",
         "verdict": "minor",
-        "pages_checked": [
-          "src-11 p.219",
-          "src-11 p.220",
-          "src-11 p.221"
-        ],
-        "note": "Every study figure matches. The J-curve is an explanation the Index relays rather than its own framing, a later failed replication of the 19% slowdown was omitted, and the national evidence is early rather than small. All three reworded.",
-        "fixed": true
+        "note": "The text treated an expected shift to packaged applications as already under way and credited providers with a finding from AIM's own analysis. It also overstated two other points. Each was reworded to match the sources."
+      },
+      {
+        "id": "ins-047",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "mismatch",
+        "note": "The text said healthcare's $1.5B exceeded the next four verticals combined, but the chart puts those four at $1.54B, so it now says the next three ($1.36B). A vendor count was restated as our own tally, 24 of 28."
+      },
+      {
+        "id": "ins-048",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text described a16z's sample as largely US and UK, which the source did not support. It now lists the wider regions. The Deloitte population was clarified, and the record was relabelled as single-source."
+      },
+      {
+        "id": "ins-049",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary presented the 80% figure as Deloitte's own forecast rather than respondents' expectation, and called installations shipments. The text also overstated the cost and manufacturing points; manufacturing is now given as about 10% of agent-using firms and 17% of agents."
+      },
+      {
+        "id": "ins-050",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "mismatch",
+        "note": "The summary gave a low of 7%, which no cited source reports, and the text paired McKinsey's enterprise-wide figure of about 20% with its per-function figure for large firms. It now gives the per-function figures: 22% for smaller firms and 40% for larger ones."
+      },
+      {
+        "id": "ins-051",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The title said one in four had moved most experiments to production, but the threshold is 40% or more. The text also treated MIT NANDA's 40% as a share of firms that investigated; it is a share of all organisations."
+      },
+      {
+        "id": "ins-052",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The text called AIM's pilot failure figure independent, although AIM names no source for it, and said the MIT figure started bubble fears rather than amplifying them. The success definition was widened to include productivity effects."
+      },
+      {
+        "id": "ins-053",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The title implied that daily use stayed flat, when the unchanged figure was the share of people with access who use AI daily. The summary also said four sources, but six are cited."
+      },
+      {
+        "id": "ins-054",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary attributed the productivity view to people in general rather than to McKinsey respondents who use AI at work. The text also credited BCG's finding to CEOs alone, counted four surveys instead of five and simplified the high-performer definition."
+      },
+      {
+        "id": "ins-055",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The summary grouped AIM with IDC as findings about buying companies, but AIM's point concerns vendors of AI services. The text now notes that most of the scaling gain comes above $1B and that NANDA counts firms above $100M in revenue as enterprises."
+      },
+      {
+        "id": "ins-056",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The page reference for AIM was corrected from 7 to 6, and wording that echoed AIM's own text was rewritten. A broad claim that startups lead was narrowed to context engineering and tool calling, at 13% and 12% against 6%."
+      },
+      {
+        "id": "ins-057",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary did not say that Deloitte's 23% and 74% figures both count at least moderate use of agentic AI. The summary now says so, and the text gives the survey's fieldwork dates, August to September 2025."
+      },
+      {
+        "id": "ins-059",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said at least 18 of 28 providers had a named orchestration platform, with a page reference covering one profile. It now says more than half name their own platform for building or orchestrating agents, citing all profiles."
+      },
+      {
+        "id": "ins-060",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text credited BCG's autonomy forecast to CEOs; it came from a joint BCG and MIT Sloan study of 2,102 respondents. McKinsey's 33% covered non-high performers only, and KPMG's 52% was a planned control. All corrected."
+      },
+      {
+        "id": "ins-061",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said Deloitte's interviewees in general expected more monitoring work, and that providers treated human review as the standard reliability control. It now attributes the view to one interviewee and presents human review among several controls."
+      },
+      {
+        "id": "ins-062",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text credited Menlo with a point about software development that Menlo never makes; it now cites a16z. The 32% now refers to respondents at organisations using AI regularly, and an unsupported claim that McKinsey measured this first was dropped."
       },
       {
         "id": "ins-063",
         "type": "insight",
+        "layer": "Insights, sourced",
         "verdict": "mismatch",
-        "pages_checked": [
-          "src-11 p.204",
-          "src-11 p.205",
-          "src-11 p.207",
-          "src-11 p.208",
-          "src-01 p.5",
-          "src-01 p.10",
-          "src-09 p.6"
-        ],
-        "note": "The agentic posting figures match. The title and summary said demand for chat-tool skills fell; the source shows their share of AI postings fell while absolute counts rose. Retitled and reworded, a decade-versus-year growth distinction added, a page reference corrected, and the evidence level lowered to single-source because the posting figures come from Stanford alone.",
-        "fixed": true
+        "note": "The text said demand for chat-tool skills fell, though posting numbers rose and only their share of AI postings dropped. It was reworded, one-year and decade growth were separated, a page reference corrected and the evidence level lowered."
+      },
+      {
+        "id": "ins-064",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The heading and text treated a provider assessment as a buyer survey, and NANDA's barrier figures were described as outright rejection. Both were corrected, with about 66% and 63% now given as barriers to core-workflow use."
+      },
+      {
+        "id": "ins-065",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "An earlier round found the text implied more than one source named Jevons' paradox. Only Menlo uses the term, while McKinsey describes the same effect without naming it, so the wording was corrected."
+      },
+      {
+        "id": "ins-066",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text described leaders' view of heavy AI users, but KPMG asked about employees who use AI well (47%). It also overstated McKinsey's high performers, only a minority of whom measure impact with defined processes (about 40% against 20%)."
+      },
+      {
+        "id": "ins-067",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The heading said privacy and security top every concern list, but McKinsey counts risks being mitigated, where inaccuracy leads outside high performers (53%). The claim now covers BCG, Deloitte and KPMG, and McKinsey's figures were added."
+      },
+      {
+        "id": "ins-068",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said 33% had no formal override criteria and implied many firms lacked a model inventory. It now says 33% decide overrides case by case, and the missing inventory is attributed to one leader."
+      },
+      {
+        "id": "ins-069",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text gave a two-to-one US public split on job losses, which is the experts' figure; the public's is 64% against 5%. Great Britain was wrongly ranked among the most nervous, and an unsupported executive comparison was replaced."
+      },
+      {
+        "id": "ins-070",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text treated KPMG's 67% as the same measure as BCG's, though KPMG asked senior leaders whether their CEO owns AI. McKinsey's values from an unlabelled chart were marked approximate, and KPMG's accountability split was spelled out."
+      },
+      {
+        "id": "ins-071",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text read an AIM judgement on some providers as a general provider view and a Frontier comparison as an impact result. Both were reworded, citing a separate Microsoft study for the impact link, and the finding was marked single-source."
+      },
+      {
+        "id": "ins-072",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text called Deloitte's respondents large companies, but the survey set no size threshold, and the 16% counted firms that flattened structures to a great extent. The survey dates and the BCG figures (58% against 30%) were made precise."
+      },
+      {
+        "id": "ins-073",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said 31% of executives reported a negative effect, but McKinsey's comparison group was executives and senior managers combined. The text was corrected to name both groups."
+      },
+      {
+        "id": "ins-074",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The title called expected cuts about double those reported, though 32% against 14% was more than twice. The text implied the same firms were tracked and misdescribed MIT NANDA's layoff findings; both were corrected, and the finding was marked single-source."
+      },
+      {
+        "id": "ins-075",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text credited the 1.3 million AI-related roles to Lightcast, but Microsoft attributed them to LinkedIn labour-market data covering two years. The text was corrected, and the studies described as controlled were redescribed as studies of individual workers."
+      },
+      {
+        "id": "ins-076",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text grouped Japanese CEOs with the least pressured, gave public optimism as 85% in China to 42% in the US rather than about 87% to 40% in Canada, and overstated agreement across sources. A page reference was corrected."
+      },
+      {
+        "id": "ins-077",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "mismatch",
+        "note": "The text said Deloitte's 34% reflected ambition, but respondents described their current transformation approach, and it named McKinsey's 6% as the low extreme when IDC's 1% was lower. Both were corrected, and the McKinsey and IDC definitions were completed."
+      },
+      {
+        "id": "ins-078",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text treated McKinsey's per-function likelihood of scaling agents as a count of functions and gave BCG's multiples loosely; the title called AIM's provider assessment a survey. All were corrected, and the IDC and AIM descriptions were made precise."
+      },
+      {
+        "id": "ins-079",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text said outcome-linked pricing stayed rare because results were hard to prove, a cause AIM did not give. It was reworded to say such pricing was confined to a few providers and established deployments with clear targets, though growing."
+      },
+      {
+        "id": "ins-080",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text called the productivity studies controlled, which the source did not, and described the slower developers as working on familiar codebases, which it did not mention. Both were corrected, and the 19% slowdown was stated."
+      },
+      {
+        "id": "ins-081",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The title claimed faster adoption than any prior technology, but the source compared only the PC and internet. The sample age range (18 to 64) was added, the diffusion rates were relabelled population-level, and Germany was corrected to 29%."
+      },
+      {
+        "id": "ins-082",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The text did not make clear that the $143B sat within the $345B of private investment, and it paired OpenAI's 2025 compute spend with what was an early-2026 revenue run rate. Both were clarified."
+      },
+      {
+        "id": "ins-084",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "mismatch",
+        "note": "The summary counted three consultancies, not four, and omitted IDC, covering only eight of ten sources; it now covers all ten. KPMG's fieldwork dates, BCG's timing, the IDC description and a page reference were also corrected."
+      },
+      {
+        "id": "ins-085",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text credited two BCG figures to CEOs alone, though they cover all 2,360 executives, and gave McKinsey 61% instead of 60%. KPMG's dates were corrected and its $88M baseline added, and a16z's 65% forecast is separated from BCG's doubling."
+      },
+      {
+        "id": "ins-086",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary said the architectural and stage-based measures barely moved in the first half of 2026, but no cited source tracks that period. It now cites McKinsey's year-on-year figure for smaller firms, which went from 21% to 22%."
+      },
+      {
+        "id": "ins-087",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text counted IDC's 20% leading group as evidence, though IDC fixes that share by its own cut-off, and read a widening gap into one survey wave. Microsoft's 16% and 19% measures were separated and page references completed."
+      },
+      {
+        "id": "ins-088",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary called EBIT and revenue impact rare and flat, but 37% of McKinsey respondents reported EBIT impact and Deloitte's 20% had no earlier figure. The text called aggregate gains negligible, but estimates range up to 1.1% to 1.3%."
+      },
+      {
+        "id": "ins-089",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text used the Jevons label, which neither Menlo nor McKinsey uses, claimed IDC showed cost concern rising from a single survey, and tied cost controls to AIM's Leaders group. Each point was reworded to match the sources."
+      },
+      {
+        "id": "ins-090",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The summary said coding agents displaced a third of software purchases; McKinsey's 32% is the share of organisations that skipped at least one purchase. It overlooked Menlo's 63% startup share and wrongly counted AIM and Deloitte as favouring buying."
+      },
+      {
+        "id": "ins-091",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The text treated McKinsey's 32% and 14% as sizes of cuts rather than shares of respondents, called all respondents executives, and said Lightcast showed hiring for oversight roles. These points and the Deloitte and BCG horizons were corrected."
+      },
+      {
+        "id": "ins-092",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "minor",
+        "note": "The summary placed a16z's sample in the US and UK and said privacy topped every concern list; the text gave 81% hosting where a16z says about 80%, and misdescribed KPMG, McKinsey and BCG figures. All were corrected."
+      },
+      {
+        "id": "ins-093",
+        "type": "insight",
+        "layer": "Insights, sourced",
+        "verdict": "mismatch",
+        "note": "The text said logistics service robots were growing, but the chart shows installations falling from about 113,000 to 103,000. The summary wrongly called installations shipments; it now gives the 0.2% rise. Deloitte's 18% now reads as moderate or greater use."
+      },
+      {
+        "id": "ins-094",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The text treated Deloitte's job automation figures as headcount cuts, loosely described NANDA's success test and the spend disagreement, and missed a page reference. Each was corrected, with McKinsey's 39% headcount expectation now shown separately."
+      },
+      {
+        "id": "ins-095",
+        "type": "insight",
+        "layer": "Insights, our analysis",
+        "verdict": "minor",
+        "note": "The text presented McKinsey's 33% as an overall figure, but it excluded high performers, who stood at 45%, and described figures unchanged between two surveys as flat for two years. Both were corrected."
+      },
+      {
+        "id": "agilisium",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The strengths list said the firm's solutions were built for FDA, EMA and HIPAA rules, and it added our own explanation of the Part 11 rule. The source claims only alignment with these rules, so both points were corrected."
+      },
+      {
+        "id": "aspire-systems",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "Retail was listed among the industries the firm serves, but the source names only three: manufacturing, education, and engineering and construction. Retail is mentioned only where the firm's services are described, so it was removed."
+      },
+      {
+        "id": "blend360",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The profile called the framework's targets non-technical barriers, though they include data foundations, implied top-tier status with all platform partners and quoted the pricing. It now lists the readiness gaps, limits top tier to AWS and calls the pricing emerging."
+      },
+      {
+        "id": "chetu",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The head office was given as Sunrise, Florida, but the source names only Sunrise in the United States and gives no state, so the state was removed."
+      },
+      {
+        "id": "evalueserve",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The platform list omitted two of eight named products, IntelliLens.AI and HybridX, which were added. A 30 to 40% efficiency gain was credited to internal agents; it comes from production agents the firm uses to deliver managed services."
+      },
+      {
+        "id": "fractal-analytics",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The final entry in the industries list was shortened to Industrial. The source's label also includes engineering and technology, so the full label was restored."
+      },
+      {
+        "id": "infocepts",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The strengths list said the firm's accelerators shorten deal conversion. The source says they speed up time-to-value through fast setup and early checks, which helps win deals, and the wording was corrected to match."
+      },
+      {
+        "id": "latentview-analytics",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The profile showed a 100% figure for GenAI revenue from repeat clients, but the source states no percentage. The value now says the source reports in words that all such revenue comes from returning clients."
+      },
+      {
+        "id": "neoware-technology-solutions",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The profile left Configure out of the DGCUT acronym and dropped a condition on shorter strategy work. Both were fixed: the cut from six to eight weeks to three or four applies only in industries the firm knows."
+      },
+      {
+        "id": "simform",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The profile listed healthcare and retail as industries served, but the source names only three sectors. Those two were removed from the list and now appear in the focus text as sectors where the firm offers some specialised solutions."
+      },
+      {
+        "id": "straive",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The profile gave about three additional use cases within 12 months, which read as a rough total. The source gives this as a per-client mean of three following the first engagement, and the label now says so."
+      },
+      {
+        "id": "tiger-analytics",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The text presented the widest geographic reach as a study finding, though it was our own count of seven regions; it now says so. Workshops were called executive sessions for hundreds; they drew between 500 and 1,000 attendees in all."
+      },
+      {
+        "id": "useready",
+        "type": "vendor",
+        "layer": "Vendor profiles",
+        "verdict": "minor",
+        "note": "The text implied that 13 of the platform's agents and use cases were listed on AWS Marketplace. The source counts 13 solutions listed there, and the wording was corrected to match."
+      },
+      {
+        "id": "s1-01",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference was completed. The cited page gives only the vendor count, so the methodology page, which describes taking part as voluntary and free of charge, was added."
+      },
+      {
+        "id": "s1-09",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference was completed. The cited page carries just the table of scores, so the methodology page explaining that scores are scaled from 0 to 1 was added."
+      },
+      {
+        "id": "s1-10",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference was completed. The cited page holds only the scores themselves, so the methodology page that explains the 0 to 1 scaling behind them was added."
+      },
+      {
+        "id": "s1-16",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note said Neoware cut strategy work from about two months to one and left out a condition. It now gives six to eight weeks cut to three or four in familiar industries, and a USEReady page reference was added."
+      },
+      {
+        "id": "s2-22",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave a single figure of 623 respondents. The source gives between 602 and 623 depending on the question, so the description now shows that range and the size of each of the four maturity tiers."
+      },
+      {
+        "id": "s3-01",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "The note said about 44% of the whole sample were C-level, but the source gives role counts only for AI users. It now says 654 of the 1,490 AI users who answered (about 44%) were C-level."
+      },
+      {
+        "id": "s3-02",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note did not say that the 2017 point has no label in the source. It now explains that this value, about 20%, was read from the chart."
+      },
+      {
+        "id": "s3-05",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The chart showed 33% for companies with under $1B revenue without saying that the source only describes this share as roughly one third. A note now says that 33 is our rounding."
+      },
+      {
+        "id": "s3-07",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave the full survey of 1,719, but this question went only to regular AI users. It now gives 595 respondents at firms with $1B or more in revenue and 1,035 at smaller ones, rebased to the full sample."
+      },
+      {
+        "id": "s3-16",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference left out page 18, where the count of 92 high performers first appears. Page 18 was added alongside pages 3 and 17."
+      },
+      {
+        "id": "s3-19",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave the full survey of 1,719, but only respondents whose organisations regularly use AI were asked. It now says so and gives industry samples ranging from 42 (insurance) to 220 (professional services)."
+      },
+      {
+        "id": "s3-21",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave the full survey of 1,719, but the question went only to respondents whose organisations use AI in at least one function. The description now states that narrower base."
+      },
+      {
+        "id": "s3-24",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note did not say that the 73% and 25% figures were our readings of unlabelled dots on a chart. It now says so and adds that the text itself only says nearly three quarters and about one quarter."
+      },
+      {
+        "id": "s3-25",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "The figure for high performers that set rules for human review was 36%, but the chart puts it at about 40%. We changed the value to 40%."
+      },
+      {
+        "id": "s3-27",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note left out three functions shown in the same chart. It now adds risk (15% vs 4%), manufacturing (7% vs 3%) and supply chain management (4% vs 5%), the only function where other firms lead high performers."
+      },
+      {
+        "id": "s3-29",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note did not make clear that the high-performer figure is an estimate, because the source says only nearly half. We reworded it and noted that the 31% for other firms is exact."
+      },
+      {
+        "id": "s3-32",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note described the gap as the size of job cuts, but it compares shares of respondents. The note now says 14% reported an AI-driven fall in headcount, less than half the 32% who expected one a year earlier."
+      },
+      {
+        "id": "s3-33",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave 1,719 respondents from the 2026 survey only. The chart covers respondents whose organisations regularly use AI (1,753), and its 2025 expectations come from the mid-2025 survey. We corrected the description."
+      },
+      {
+        "id": "s4-03",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note presented the rise from under 40% to about 60% as exact figures. It now says the report gives only rough bounds, with a slightly lower upper figure on page 8, and cites both pages."
+      },
+      {
+        "id": "s4-05",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note said the pattern was unchanged from the prior year, but the source only says it was largely unchanged. We changed the wording to broadly the same."
+      },
+      {
+        "id": "s4-27",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note suggested that 18% of all respondents make moderate or greater use of physical AI. The source counts only companies already using it, so the note now gives 18% as a share of those users."
+      },
+      {
+        "id": "s4-30",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description called the caption a misprint and gave an Americas base of about 1,590 as if the source stated it. It now says the caption shows 3,235, the full sample, and marks 1,590 as our own estimate."
+      },
+      {
+        "id": "s5-02",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave only the 2026 base, but the earlier bars come from earlier surveys. We added the 2025 base (1,803) and the 2024 base (1,406), and the note now says BCG marks all three values as approximate."
+      },
+      {
+        "id": "s5-04",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The label did not say that the 2026 values are planned investment, and the sample description gave the full 2,360 executives. We relabelled the chart as expected investment and changed the base to 2,308, which leaves out don't-know and blank answers."
+      },
+      {
+        "id": "s5-07",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave 2,360 executives including 640 CEOs, but this chart's base was 2,286 executives once don't-know answers were excluded. That was corrected, and the label for the 9% threat group now refers to agentic AI."
+      },
+      {
+        "id": "s5-22",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference cited only page 22, which shows the three approximate shares. It was completed to add page 21, where a footnote explains the clustering method behind the groups."
+      },
+      {
+        "id": "s5-30",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "The values for two groups were swapped: Followers showed 27% and Pragmatists 24%. The source gives Pragmatists 27% and Followers 24%, and the figures were corrected to match."
+      },
+      {
+        "id": "s6-01",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The text called the sample a convenience sample, but the report names no sampling method. The text now says the sample was non-random and that participants may have been self-selected."
+      },
+      {
+        "id": "s6-03",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description wrongly listed the conference survey as an index input, and the text ranked technology alone as the top sector. It now pairs technology with media and telecom, and the page reference covers pages 4 to 6."
+      },
+      {
+        "id": "s6-04",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The text attached a six-month timing to the definition of success, but that timing belonged to the separate return-on-investment measurement. The two were separated, and the page reference was extended to pages 7 and 24."
+      },
+      {
+        "id": "s6-05",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The text contrasted the chart with a zero-return reading without noting that the report's own summary states the result that way. The text now says so, and the page reference adds page 3."
+      },
+      {
+        "id": "s6-24",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The label presented the 5 to 20% job cuts as workforce-wide, but they applied only to customer support and administrative processing. The text also wrongly said cuts were confined to those areas and now includes standardised development work."
+      },
+      {
+        "id": "s8-02",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "Several bars were misread from misaligned tick labels. Remeasured against the gridlines, OpenAI's 63 and 67% became 65 and 69%, Google's 6, 24 and 32% became 12, 29 and 37%, and Anthropic's 13% became 19%."
+      },
+      {
+        "id": "s8-06",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The label did not say that the share counted model families used in testing as well as in production. It was corrected to cover both, as the source does."
+      },
+      {
+        "id": "s8-10",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The label attributed the 54% to chief information officers, but the respondents were senior IT leaders at VP and C-level in general. The label was corrected to describe that wider group."
+      },
+      {
+        "id": "s8-11",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "Three May 2025 bar readings were each one point too high: legal showed 69% rather than 68%, knowledge management 51% rather than 50%, and outbound sales 62% rather than 61%. All three were corrected."
+      },
+      {
+        "id": "s8-12",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The chart gave 9 for the share evaluating GitHub Copilot. A closer measurement of the source chart puts that segment at nearly 10 points, so the value was raised to 10."
+      },
+      {
+        "id": "s8-17",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note said roughly half of respondents leaned towards open models in March 2024, but the source chart shows about 46%. The note now gives that figure and the 70 respondents, and marks both values as chart readings."
+      },
+      {
+        "id": "s9-01",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description said each quarter was a separate sample, which the report does not state. It now says the report does not make clear whether the same firms answer each quarter."
+      },
+      {
+        "id": "s9-12",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description applied the 204-leader Q2 2026 sample to both quarters shown. It now makes clear that the Q1 value comes from the earlier wave, whose sample this report does not give."
+      },
+      {
+        "id": "s9-22",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference cited only page 7, where the 41% figure appears. It was completed to add page 2, which carries the warning against ranking usage measures above business outcomes."
+      },
+      {
+        "id": "s10-02",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description counted 105,000 conversations. The source counts 105,000 sampled interactions from North American commercial customers, with education excluded, and the description was corrected to match."
+      },
+      {
+        "id": "s10-23",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note called the 2025 starting point small, but the source gives no size for it, only growth multiples. The note now says the base is undisclosed and its size unknown."
+      },
+      {
+        "id": "s10-24",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "Several chart readings were slightly off: retail firms 16% became 15%, education firms 15% became 14%, media agents 8% became 7%, health firms 7.5% became 7%. The sample description now adds the March 2025 to March 2026 period."
+      },
+      {
+        "id": "s10-27",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description said the extra markets had smaller samples, which the source never states. It now says the 10 core markets had 2,000 users each and that the extra markets, surveyed until May 2026, have no reported sample size."
+      },
+      {
+        "id": "s10-29",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description gave 20,000 knowledge workers across 10 markets, but five markets in this series came from separate surveys with no reported sample size. It now describes both groups and their survey dates."
+      },
+      {
+        "id": "s10-31",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The label said users were rewarded for reinvention whatever the results, but the question was about results that do not come right away. The sample description also left out the 17 extra markets. Both were corrected."
+      },
+      {
+        "id": "s11-07",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference was completed. It gave only one page, but the Europe total and the caveat on government guidance funds appear on the next two pages, which are now cited."
+      },
+      {
+        "id": "s11-17",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference was completed. The 70% figure for generative AI comes from the chapter highlights on an earlier page, which is now cited alongside the page whose text and chart give 79%."
+      },
+      {
+        "id": "s11-22",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note said the source gave no not-using share for the $5B+ band. The chart shows a thin unlabelled sliver of about 1% there, and the note was reworded to say so."
+      },
+      {
+        "id": "s11-24",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "Several readings from unlabelled chart segments were wrong: risk was about 5% not 2%, software engineering 6% not 7%, and HR, supply chain and manufacturing were each one point too high. The values and order were corrected, with a note that totals are approximate."
+      },
+      {
+        "id": "s11-26",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "The label suggested every value was measured three years after launch, but only the 53% for generative AI was. The other values were relabelled with their real time spans and data sources, and a note now gives the three-year comparison."
+      },
+      {
+        "id": "s11-27",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The label called the measure a working-age share of people using AI tools, but the source defines no working-age base. The label, source name and note were reworded, and the page reference was completed."
+      },
+      {
+        "id": "s11-33",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The sample description called the seven studies peer-reviewed or working papers, which the source does not say. It now calls them micro-level studies, and the page reference was completed to include the page with the supporting text."
+      },
+      {
+        "id": "s11-38",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference was completed. The 35% and 30% figures are stated in the text on the page before the chart, which is now cited as well."
+      },
+      {
+        "id": "s11-41",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The page reference was completed. The country growth rates in the note come from a chart on the following page, which is now cited alongside the original page."
+      },
+      {
+        "id": "s11-44",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "The country chart had wrong 2025 values for six countries: China 85 (now 87), Malaysia and Mexico 73 (now 70), Great Britain 46 (now 43), France 45 (now 41), Belgium 38 (now 41). The page reference was also corrected."
+      },
+      {
+        "id": "s11-48",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The label dated the survey to 2026, but the views it reports are from 2025, and only the source credit carries the 2026 date. The label now says 2025."
+      },
+      {
+        "id": "s11-57",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "minor",
+        "note": "The note said every state showed the pattern, but the chart covers 39 states and the source says nearly every state. The note now refers only to states with reported data."
+      },
+      {
+        "id": "s12-03",
+        "type": "stat",
+        "layer": "Statistics",
+        "verdict": "mismatch",
+        "note": "The note compared this figure with leading-group estimates from BCG, Solace and Deloitte, but this source contains none of them. The comparison was removed, and the note now points to the separate leading-group comparison in the insights."
+      },
+      {
+        "id": "digital-twin",
+        "type": "glossary",
+        "layer": "Glossary terms",
+        "verdict": "minor",
+        "note": "The definition called it a simulation model of a business process, while the sources also cover replicas of physical assets and sites. The definition was widened, and a page reference on agent testing was swapped for the relevant page."
+      },
+      {
+        "id": "financial-spreading",
+        "type": "glossary",
+        "layer": "Glossary terms",
+        "verdict": "minor",
+        "note": "The text called this a common production use case in banking, which no page states. It now says several providers report production deployments for banks, and the page reference was extended to the pages that show this."
+      },
+      {
+        "id": "micro-poc",
+        "type": "glossary",
+        "layer": "Glossary terms",
+        "verdict": "minor",
+        "note": "The definition presented the term as a generic fixed-price proof of concept. It is USEReady's own name, and the source lists the two-to-four-week format and fixed pricing as separate features; the text now says so."
+      },
+      {
+        "id": "mlops",
+        "type": "glossary",
+        "layer": "Glossary terms",
+        "verdict": "minor",
+        "note": "The page reference was completed. The AgentOps part of the definition is supported on an earlier page than the one cited, so page 13 was added alongside page 23."
+      },
+      {
+        "id": "productivity-j-curve",
+        "type": "glossary",
+        "layer": "Glossary terms",
+        "verdict": "minor",
+        "note": "The definition said the AI Index itself applies the J-curve to explain strong firm-level gains. The Index only reports one economist's reading of 2025 US productivity data this way, and the text now says so."
+      },
+      {
+        "id": "sovereign-ai",
+        "type": "glossary",
+        "layer": "Glossary terms",
+        "verdict": "minor",
+        "note": "The definition said most large companies planned around data residency and vendor origin. The survey covered 3,235 leaders at AI-adopting organisations of any size: 83% rated residency at least moderately important to planning, and 77% weighed vendor origin in selection."
       }
     ],
-    "findings": [
-      "We checked twenty records and found problems in eight of them. Twelve were exactly right. Six were right in substance but loose in a detail: a figure attributed to CEOs that came from a wider executive sample, a first place that was really a tie, a named theory that only one of two cited sources actually names. Two were wrong. One gave a per-company spending figure in billions where the source says millions, a slip of three orders of magnitude. The other said demand for chat-tool skills had fallen when the source shows only their share of job postings fell while the actual counts still rose.",
-      "The pattern is worth knowing. Every number that had been read from a chart or a table was correct. The failures were in the prose the agent wrote around the numbers: units, attributions and the difference between a share falling and a count falling. That is where a reader should be most careful with any AI-written synthesis, and it is why we publish the record-level results rather than a pass rate.",
-      "All eight were corrected in the data before this page went live, and one insight was downgraded from multi-source to single-source because its central figures come from one report. One record keeps three figures that were read from charts we no longer have; we say so rather than quietly leave them."
-    ]
+    "run": {
+      "checker_model": "Claude Opus 5",
+      "author_model": "Claude Fable 5.1",
+      "checker_agents": 59,
+      "checker_tool_calls": 1695,
+      "checking_minutes": 47,
+      "fixer_agents": 14,
+      "note_agents": 14,
+      "agents_total": 87,
+      "tokens_millions": 6.9
+    }
   }
 }

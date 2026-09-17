@@ -654,6 +654,17 @@ a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
 .prose .kpi-row { margin-top: var(--space-4); }
 .prose h4 { margin: var(--space-4) 0 var(--space-2); font-size: 1rem; }
 .q-table { margin-top: var(--space-4); }
+.q-layers { margin-top: var(--space-4); }
+.q-table .pill { white-space: nowrap; }
+@media (max-width: 640px) {
+  #q-accuracy-table thead { display: none; }
+  #q-accuracy-table table, #q-accuracy-table tbody, #q-accuracy-table tr { display: block; }
+  #q-accuracy-table tr { padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+  #q-accuracy-table td { display: inline-block; border: 0; padding: 0 var(--space-2) 0 0; vertical-align: middle; }
+  #q-accuracy-table td:last-child { display: block; padding: var(--space-2) 0 0; }
+  .q-layers th:nth-child(3), .q-layers td:nth-child(3) { display: none; }
+  .q-layers th, .q-layers td { padding: var(--space-2) var(--space-1); font-size: 0.85rem; }
+}
 .q-table summary { cursor: pointer; color: var(--link); font-weight: 600; font-size: 0.9rem; }
 .q-table[open] summary { margin-bottom: var(--space-3); }
 

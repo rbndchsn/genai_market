@@ -18,7 +18,7 @@
       "id": "ins-001",
       "title": "The question has moved from what GenAI can do to who can run it in production",
       "summary": "Buyers no longer ask what is possible. They ask which providers can turn pilots into governed systems inside core workflows, and why their last pilots did not get there.",
-      "detail": "The AIM vendor study frames the 2026 market around a single buyer question: which providers can take a pilot all the way to a governed production system that lives inside day-to-day business processes. IDC's buyer survey shows the same shift from the demand side, describing agentic AI as an operational dependency rather than an experiment. When pilots fail, the cause is rarely the model. It is the data, operations, governance or organisation around it. Deloitte's 2026 report reaches the same conclusion from a 3,235-leader survey, and BCG shows the question now has an owner: 72% of CEOs call themselves the main AI decision-maker.",
+      "detail": "The AIM vendor study frames the 2026 market around a single buyer question: which providers can take a pilot all the way to a governed production system that lives inside day-to-day business processes. IDC's buyer survey shows the same shift from the demand side, describing agentic AI as an operational dependency rather than an experiment. AIM adds that when pilots stall, the model is seldom the culprit, and in most cases the blocker is the data, operations, governance or organisation around it. Deloitte's 2026 report, based on a survey of 3,235 leaders, likewise finds that pilots stall mainly on the extra work production demands, such as integration, security review, compliance and monitoring, though it notes that a model that did well in testing can still fall short at scale. BCG shows the question now has an owner: 72% of CEOs call themselves the main AI decision-maker.",
       "theme": "market",
       "kind": "finding",
       "evidence": "multi-source",
@@ -40,6 +40,7 @@
         {
           "source": "src-04",
           "pages": [
+            7,
             8,
             9
           ]
@@ -66,7 +67,7 @@
       "id": "ins-002",
       "title": "Agentic AI is mainstream in intent but not yet in scaled production",
       "summary": "Four in five enterprises are investing in or have deployed agentic AI, yet only a minority run several agents in production, and vendors confirm scaled agentic work is still a small share of engagements.",
-      "detail": "IDC finds 80 percent of large enterprises investing in or already deploying agentic AI. But the share with several agents in production ranges from 20 percent among the least mature to 59 percent among Leaders, and roughly half of the two lower tiers are still in the investing stage. AIM's vendor view agrees: agentic AI has become an active delivery priority and multi-agent platforms are launching, but agentic work that has actually reached scaled production is still a thin slice of what vendors deliver, and many of the agent references are aspirations rather than live systems. Later sources confirm the gap between intent and scaled production: Deloitte's respondents expected agent use to triple in two years, McKinsey found about one in five scaling agents in mid-2026, and Menlo and a16z found true agentic architectures in production at 13% to 16%.",
+      "detail": "IDC finds 80 percent of large enterprises investing in or already deploying agentic AI. But the share with several agents in production ranges from 20 percent among the least mature to 59 percent among Leaders, and roughly half of the two lower tiers are still in the investing stage. AIM's vendor view agrees: agentic AI has become an active delivery priority and multi-agent platforms are launching, but agentic work that has actually reached scaled production is still a thin slice of what vendors deliver, and many of the agent references are aspirations rather than live systems. Other sources confirm the gap between intent and scaled production. Deloitte's respondents expect the share of companies using agentic AI at least moderately to rise from 23% to 74% within two years, and McKinsey found about one in five scaling agents in mid-2026. Menlo classes 16% of enterprise deployments as true agents, and a16z finds 13% of its respondents running agentic workflow automation in production.",
       "theme": "agentic",
       "kind": "finding",
       "evidence": "multi-source",
@@ -95,7 +96,8 @@
         {
           "source": "src-03",
           "pages": [
-            6
+            6,
+            7
           ]
         },
         {
@@ -135,7 +137,8 @@
         {
           "source": "src-02",
           "pages": [
-            6
+            6,
+            27
           ]
         }
       ],
@@ -176,7 +179,7 @@
       "id": "ins-005",
       "title": "Most pilots fail and most vendors convert fewer than half",
       "summary": "Industry pilot failure is reported above 70 percent, and most service providers convert only 25 to 45 percent of proofs of concept into production.",
-      "detail": "AIM describes the POC-to-production gap as the market's defining fault line and the primary delivery bottleneck. The small set of providers that beat the typical range share three traits: methods aimed at the human reasons projects stall (trust, skills, resistance to new ways of working); development steered by continuous evaluation, with automated quality gates throughout the build; and named production systems with quantified outcomes. Higher performers also front-load value-case validation and structured discovery, surfacing data, governance and organisational constraints before build begins. MIT NANDA's interview sample reports about 5% of custom task-specific tools reaching sustained impact within six months, and Deloitte finds only a quarter of firms with 40% or more of experiments in production. The failure rate depends on what is counted, but every source that measures it finds most pilots do not make it.",
+      "detail": "AIM describes the POC-to-production gap as the market's defining fault line and the primary delivery bottleneck. The small set of providers that have reorganised delivery around this gap share three traits: methods aimed at the human reasons projects stall (trust, skills, resistance to new ways of working); development steered by continuous evaluation, with automated quality gates throughout the build; and named production systems with quantified outcomes. Higher performers also front-load value-case validation and structured discovery, surfacing data, governance and organisational constraints before build begins. MIT NANDA's interview sample reports about 5% of custom task-specific tools reaching sustained impact within six months, and Deloitte finds only a quarter of firms with 40% or more of experiments in production. The failure rate depends on what is counted, but every source that measures it finds most pilots do not make it.",
       "theme": "adoption",
       "kind": "finding",
       "evidence": "multi-source",
@@ -193,7 +196,8 @@
           "source": "src-06",
           "pages": [
             6,
-            7
+            7,
+            24
           ]
         },
         {
@@ -221,8 +225,8 @@
     {
       "id": "ins-006",
       "title": "Data quality is the number one problem from both the buyer and the vendor side",
-      "summary": "Two independent methods converge: IDC's buyers rank data quality and consistency as their top technical challenge, and AIM's vendors call data readiness the most cited challenge and the root cause of most production failures.",
-      "detail": "In the IDC survey, 46 percent cite data quality and consistency as a top technical challenge for the next 12 to 18 months, and it leads even among the most mature organisations. AIM finds that enterprise data is scattered across systems, formatted every which way, thinly documented and missing the context a language model needs, and that these problems surface only when moving from sanitised pilot samples to real production data. The gap between data that exists and data that is RAG-ready is the single largest technical friction point. Effective providers front-load data readiness assessment and treat the data groundwork as something to finish first, not something to run alongside the build. KPMG's large US firms rank data readiness the top agent barrier at 58%, and NANDA's users describe the same problem as tools that require too much context and do not learn.",
+      "summary": "Two independent methods converge: IDC's buyers rank data quality and consistency as their top technical challenge for real-time data initiatives, and AIM's vendors call data readiness the most cited challenge and the root cause of most production failures.",
+      "detail": "In the IDC survey, 46 percent cite data quality and consistency as a top technical challenge for their real-time data initiatives over the next 12 to 18 months, and it leads even among the most mature organisations. AIM finds that enterprise data is scattered across systems, formatted every which way, thinly documented and missing the context a language model needs, and that these problems surface only when moving from sanitised pilot samples to real production data. AIM sees the distance between having data and having it ready for retrieval as the biggest technical obstacle of all. Effective providers front-load data readiness assessment and treat the data groundwork as something to finish first, not something to run alongside the build. KPMG's large US firms rank data readiness the top agent barrier at 58%. MIT NANDA offers a contrasting reading: its interviewees put tools that do not learn or fit into workflows ahead of data as the main brake on adoption.",
       "theme": "data",
       "kind": "finding",
       "evidence": "multi-source",
@@ -301,11 +305,11 @@
     {
       "id": "ins-008",
       "title": "The production gap is organisational more than technical",
-      "summary": "Loss of executive sponsorship, legal intervention, late compliance objections and user resistance cause more project failures than model performance.",
-      "detail": "AIM ranks the POC-to-production gap as the highest-impact challenge because it gates all downstream value, and states that the primary barrier is organisational readiness rather than technical capability: governance gaps, talent shortages, change-management failure and late-stage compliance objections. IDC's barrier list points the same way, with framework management, monitoring, team coordination and human oversight all ranking above building the agent itself. Vendors reporting better conversion embed production planning from engagement start instead of leaving it to the deployment stage. Deloitte's diagnosis of the pilot trap lists integration, security review, compliance and monitoring as the production requirements pilots avoid, and Microsoft's factor analysis attributes twice as much reported AI impact to organisational conditions as to individual ones.",
+      "summary": "AIM finds that lost executive sponsorship, legal intervention and user resistance sink more projects than model performance, with late compliance objections among the wider organisational barriers.",
+      "detail": "AIM ranks the POC-to-production gap as the highest-impact challenge because it gates all downstream value, and states that the primary barrier is organisational readiness rather than technical capability: governance gaps, talent shortages, change-management failure and late-stage compliance objections. IDC's barrier list shows a related pattern, that running agents worries firms more than building them: connecting agents to data, managing them across frameworks, monitoring them, getting them to work together and human oversight all rank above the ease of building an agent (26%). Vendors reporting better conversion embed production planning from engagement start instead of leaving it to the deployment stage. Deloitte's diagnosis of the pilot trap lists integration, security review, compliance and monitoring as the production requirements pilots avoid. Microsoft's driver analysis finds organisational conditions about twice as strongly associated with workers' self-reported AI impact as individual ones (67% vs 32%), an association rather than a proven cause.",
       "theme": "adoption",
       "kind": "finding",
-      "evidence": "multi-source",
+      "evidence": "single-source",
       "refs": [
         {
           "source": "src-01",
@@ -328,7 +332,8 @@
         {
           "source": "src-10",
           "pages": [
-            16
+            16,
+            17
           ]
         }
       ],
@@ -349,7 +354,7 @@
       "id": "ins-009",
       "title": "Hallucination erodes trust most, and it gets worse in production",
       "summary": "Edge cases and domain nuance expose model weaknesses that controlled pilots mask. Responses converge on RAG-first design, citation enforcement, confidence scoring and human review.",
-      "detail": "AIM names hallucination and output reliability as the problem that does the most damage to buyer confidence and keeps GenAI out of regulated processes. Vendor responses converge on retrieval-grounded architectures, mandatory citations, confidence scores that route low-confidence answers to people, and a person checking the answer before it is used. A smaller group has gone further with continuous evaluation against ground-truth benchmarks as a standing production safeguard rather than one-time testing. Several vendors add critic or validator agents and deterministic rule layers on top of LLM reasoning for audit-sensitive workflows.",
+      "detail": "AIM names hallucination and output reliability as the problem that does the most damage to buyer confidence and keeps GenAI out of regulated processes. Vendor responses converge on retrieval-grounded architectures, mandatory citations, confidence scores that route low-confidence answers to people, and a person checking the answer before it is used. A smaller group has gone further with continuous evaluation against ground-truth benchmarks as a standing production safeguard rather than one-time testing. Some vendors add critic or validator agents, or deterministic rule layers, on top of LLM reasoning for audit-sensitive workflows.",
       "theme": "governance",
       "kind": "finding",
       "evidence": "single-source",
@@ -359,7 +364,10 @@
           "pages": [
             9,
             12,
-            42
+            33,
+            34,
+            42,
+            56
           ]
         }
       ],
@@ -380,7 +388,7 @@
       "id": "ins-010",
       "title": "Adoption, not technology, is the primary ROI risk and it is under-invested",
       "summary": "Organisations spend heavily on AI technology and little on how people interact with and trust it. Vendors that treat adoption failure as the main risk produce more durable deployments.",
-      "detail": "AIM finds change management and adoption design broadly under-invested across the market. Too few vendors recognise that a system that works and a system people actually use are two different achievements. Effective responses put GenAI inside the tools and processes people already use instead of standing up a separate system, train each role for its own tasks, and introduce human oversight in stages so that trust grows with experience. One vendor in the study reports that redesigning outputs and interaction around behavioural insight raised adoption by 70 to 80 percent in an insurance deployment whose model was already technically sound. Three later sources agree: Deloitte finds daily use flat despite wider access and skills the top barrier, Microsoft finds organisational culture the strongest predictor of AI impact, and BCG's Trailblazer CEOs devote about 60% of AI budget to upskilling.",
+      "detail": "AIM finds change management and adoption design broadly under-invested across the market. Too few vendors recognise that a system that works and a system people actually use are two different achievements. Effective responses put GenAI inside the tools and processes people already use instead of standing up a separate system, train each role for its own tasks, and introduce human oversight in stages so that trust grows with experience. One vendor in the study reports that redesigning outputs and interaction around behavioural insight raised adoption by 70 to 80 percent in an insurance deployment whose model was already technically sound. Three other 2026 sources point the same way: Deloitte finds daily use flat despite wider access and skills the top barrier, Microsoft finds organisational culture the strongest predictor of AI impact, and BCG's Trailblazer CEOs devote about 60% of AI budget to upskilling.",
       "theme": "talent",
       "kind": "finding",
       "evidence": "multi-source",
@@ -432,8 +440,8 @@
     {
       "id": "ins-011",
       "title": "Costs escalate sharply from pilot to production, though buyers rank cost below other barriers",
-      "summary": "Pilot token costs in the hundreds of dollars can become tens of thousands at production volume. Vendors treat cost as a design-time architectural decision; buyers rank LLM cost sixth of seven agent-scaling barriers.",
-      "detail": "AIM places cost management and economic viability among the top five delivery challenges and lists the standard mitigations: sending each request to the cheapest model that can handle it, caching, shortening prompts and watching spend as it happens, all settled at design time rather than after deployment. Several providers now productise cost control as gateways, FinOps dashboards or tiered model architectures that send high-volume tasks to small models. On the buyer side, IDC finds LLM cost concern cited by 28 percent as a top barrier, well behind data connectivity. A plausible reading is that vendors feel the cost pressure first, or that many buyers have not yet reached production-scale token bills. By mid-2026 the cost pressure had become measurable: McKinsey finds 20% of organisations limiting AI use on operating cost and KPMG finds only 26% with full cost visibility.",
+      "summary": "Pilot token costs in the hundreds of dollars can become tens of thousands at production volume. The most mature vendors treat cost as a design-time architectural decision; buyers rank LLM cost sixth of seven agent-scaling barriers.",
+      "detail": "AIM places cost management and economic viability among the top five delivery challenges and lists the standard mitigations: sending each request to the cheapest model that can handle it, caching, shortening prompts and watching spend as it happens, all settled at design time rather than after deployment. Several providers now productise cost control as gateways, FinOps dashboards or tiered model architectures that send high-volume tasks to small models. On the buyer side, IDC finds LLM cost concern cited by 28 percent as a top barrier, well behind data connectivity. A plausible reading is that vendors feel the cost pressure first, or that many buyers have not yet reached production-scale token bills. By mid-2026 the cost pressure had become measurable: McKinsey finds 20% of respondents at AI-using organisations saying operating costs have led them to limit AI use, and KPMG finds only 26% with full cost visibility.",
       "theme": "cost",
       "kind": "finding",
       "evidence": "multi-source",
@@ -443,7 +451,10 @@
           "pages": [
             10,
             20,
-            50
+            50,
+            53,
+            59,
+            83
           ]
         },
         {
@@ -491,7 +502,7 @@
       "id": "ins-012",
       "title": "GenAI, agents and classical ML are converging into integrated operational systems",
       "summary": "Early GenAI was additive: RAG on data platforms, chatbots on portals. The emerging pattern is agents using LLMs as reasoning engines over tools, data and traditional models, with multi-agent orchestration as the design pattern for complex automation.",
-      "detail": "AIM calls this convergence the most consequential architectural shift in the market. Agents break a task into steps, call tools, check their own results and set off follow-on actions in other enterprise systems. For complex workflow automation the pattern gaining ground is several specialised agents coordinated together, though production examples are still a minority. Some providers explicitly fuse language models with statistical models, using the LLM as a reasoning and orchestration layer over forecasting or optimisation models to gain adaptability and explainability.",
+      "detail": "AIM calls this convergence the most consequential architectural shift in the market. Agents break a task into steps, call tools, check their own results and set off follow-on actions in other enterprise systems. For complex workflow automation the pattern gaining ground is several specialised agents coordinated together, though production examples are still a minority. At least one provider explicitly fuses language models with classical ML, using the LLM as a reasoning and orchestration layer over its statistical models to gain adaptability and explainability.",
       "theme": "agentic",
       "kind": "finding",
       "evidence": "single-source",
@@ -518,7 +529,7 @@
       "id": "ins-013",
       "title": "RAG is table stakes; the edge is in retrieval quality, knowledge graphs and agentic RAG",
       "summary": "Basic retrieval-augmented generation no longer differentiates. Differences show up in how documents are split for a given domain, whether retrieval quality is measured at scale, whether a knowledge graph backs the retrieval, and whether agents can drive it.",
-      "detail": "AIM finds that every vendor offers RAG and that enterprise knowledge retrieval is the dominant workload today. The strongest implementations span dozens of catalogues, hundreds of schemas and multiple languages within a unified reasoning platform, and they measure retrieval quality continuously. Knowledge graphs, ontology layers and semantic context layers appear across many vendor profiles as the means to ground agents and reduce hallucination. The next step is retrieval run by agents, which decide on the fly what to look up, how to reason over it and what to do next. Menlo's production data confirm it: prompt design and RAG account for over 70% of enterprise customisation approaches, with fine-tuning at 12% and tool calling at 6%.",
+      "detail": "AIM treats RAG as a baseline capability and finds enterprise knowledge retrieval the dominant workload today. The strongest implementations span dozens of catalogues, hundreds of schemas and multiple languages within a unified reasoning platform, and measuring retrieval quality at scale is one of the things that set vendors apart. Knowledge graphs, ontology layers and semantic context layers appear across many vendor profiles as the means to ground agents and reduce hallucination. The next step is retrieval run by agents, which decide on the fly what to look up, how to reason over it and what to do next. Menlo's production data show how common basic RAG is: prompt design and RAG together make up over 70% of enterprise customisation approaches, against 12% for fine-tuning and 6% for tool calling.",
       "theme": "data",
       "kind": "finding",
       "evidence": "multi-source",
@@ -528,7 +539,12 @@
           "pages": [
             6,
             12,
-            15
+            15,
+            37,
+            38,
+            53,
+            61,
+            62
           ]
         },
         {
@@ -555,7 +571,7 @@
     },
     {
       "id": "ins-014",
-      "title": "Knowledge retrieval dominates, content generation is shrinking, autonomous execution is growing fastest",
+      "title": "Knowledge retrieval dominates, content generation's share is falling, autonomous execution is growing fastest",
       "summary": "The mix of GenAI work is shifting from generate-text use cases toward data-grounded retrieval and multi-step agents.",
       "detail": "AIM groups vendor work into five workloads. Enterprise knowledge retrieval over internal documents and data is where most production deployments sit and the pattern enterprises adopt first. Content generation, where most organisations started, is a declining share as novelty fades. The fastest growth is in agents that carry out multi-step tasks on their own, and vendors with their own agent platforms report it approaching or exceeding half their portfolio, though the label is applied loosely by some. Domain model adaptation and multimodal processing remain selective, used where accuracy or cross-format reasoning is critical.",
       "theme": "market",
@@ -605,7 +621,7 @@
     {
       "id": "ins-016",
       "title": "Accelerator counts are high, but integrated platforms are still early",
-      "summary": "Every vendor discloses five to ten proprietary accelerators. Most are point solutions, and full platform adoption is a small share of engagements even at the strongest vendors.",
+      "summary": "Every vendor discloses several proprietary accelerators, commonly between five and ten. Most are point solutions, and full platform adoption is a small share of engagements across the market; even one Leader puts it at only 10 to 15 percent.",
       "detail": "AIM notes that vendors list many accelerators, but few have yet pulled them together into a platform that clients adopt whole. Platform adoption rates sit in the early percentages of total engagements and multi-cloud support for flagship platforms is often still on the roadmap. One Leader reports component-level adoption in 70 to 80 percent of engagements but full platform deployment in only 10 to 15 percent. Buyers are advised to ask which accelerators have run in production for clients versus internal tools repackaged as client-ready.",
       "theme": "vendors",
       "kind": "finding",
@@ -615,6 +631,7 @@
           "source": "src-01",
           "pages": [
             5,
+            28,
             54
           ]
         }
@@ -632,9 +649,9 @@
     },
     {
       "id": "ins-017",
-      "title": "LLMOps and governance are where production viability is decided",
+      "title": "Operations and governance decide whether GenAI holds up in production",
       "summary": "Vendors that treat operations as a managed discipline with reliability engineering and cost controls, and buyers that treat governance as an accelerator, are the ones getting to scale.",
-      "detail": "AIM identifies LLMOps and governance as the operational layer that determines whether systems survive contact with production, and finds the strongest vendors run it with SRE discipline and FinOps controls rather than as a tooling exercise. IDC's recommendations to buyers include reframing governance as an accelerator rather than a brake, noting it is already a top investment priority; security and AI trust requirements are the second-ranked driver of real-time data demand. Six practice areas recur across vendors: cost and compute, token efficiency, monitoring, governance and risk, security and compliance, and value tracking. Deloitte and KPMG add the agent-era version: one in five has mature agent governance and half rely on output-level rather than action-level human review.",
+      "detail": "AIM treats LLMOps and governance as the layer that settles whether a system survives once it is live, and finds that the strongest vendors run it as an ongoing operation, with site-reliability practices and spend controls, instead of treating it as a choice of tools. IDC's recommendations to buyers include reframing governance as an accelerator rather than a brake, noting it is already a top investment priority; security and AI trust requirements are the second-ranked driver of real-time data demand. Six practice areas recur across vendors: cost and compute, token efficiency, monitoring, governance and risk, security and compliance, and value tracking. Deloitte and KPMG add the agent-era version: one in five has mature agent governance, and 52 percent name human checks on outputs, rather than oversight of each agent action, as their main way to manage agent risk over the next 6 to 12 months.",
       "theme": "operations",
       "kind": "finding",
       "evidence": "multi-source",
@@ -687,11 +704,11 @@
     {
       "id": "ins-018",
       "title": "Leaders differ from the rest in execution, not belief",
-      "summary": "Three quarters or more of every maturity tier agree agents need live data, yet only Leaders have actually deployed real-time data across workflows and consolidated their platforms.",
-      "detail": "Across IDC's charts, belief statements score 75 percent or higher in every tier. Execution measures diverge sharply: real-time data across all workflows rises from 7 percent among Emerging organisations to 76 percent among Leaders, a single unified platform from 8 to 71 percent, and automating half or more of real-time processes from 23 to 91 percent. IDC summarises it as belief being universal while execution is not. McKinsey's high performers and Microsoft's Frontier Professionals show the same pattern: the gap to everyone else is in practices such as workflow redesign, quality standards and impact measurement, not in belief.",
+      "summary": "Three quarters or more of every maturity tier agree agents need live data, yet Leaders are far ahead in execution: about three quarters have real-time data across all workflows and seven in ten run a single unified platform, against fewer than one in ten Emerging organisations.",
+      "detail": "Across IDC's tiers, agreement with its three statements about what agents need runs from 69 to 93 percent and rises with maturity; even the least mature tier agrees at 75 percent that agents need up-to-date data. Execution measures diverge sharply: real-time data across all workflows rises from 7 percent among Emerging organisations to 76 percent among Leaders, a single unified platform from 8 to 71 percent, and automating half or more of real-time processes from 23 to 91 percent. IDC summarises it as belief being universal while execution is not. McKinsey's high performers and Microsoft's Frontier Professionals also stand apart on practices such as workflow redesign, quality standards and impact measurement; neither source compares beliefs, and McKinsey's widest gap is in ambition, with high performers far more likely to expect transformative change.",
       "theme": "adoption",
       "kind": "finding",
-      "evidence": "multi-source",
+      "evidence": "single-source",
       "refs": [
         {
           "source": "src-02",
@@ -734,8 +751,8 @@
     {
       "id": "ins-019",
       "title": "A unified data platform is the clearest marker of a leader; tool sprawl is the enemy",
-      "summary": "Seven in ten Leaders run a single unified real-time data platform versus fewer than one in ten Emerging organisations. Even so, only a third of Leaders report their technologies fully integrated.",
-      "detail": "IDC calls the dividing line architectural. Leaders consolidate onto unified, integrated platforms while the majority juggle many loosely connected tools they acknowledge need fixing. Tool sprawl and platform complexity is a top-five technical challenge at 37 percent, alongside legacy systems and technical debt at 38. Full integration remains rare everywhere: 36 percent of Leaders and 10 percent of Emerging organisations. Consolidation is IDC's second of five recommendations.",
+      "summary": "Seven in ten Leaders run a single unified real-time data platform versus fewer than one in ten Emerging organisations. Even so, only about a third of Leaders (36 percent) report their technologies fully integrated.",
+      "detail": "IDC calls the dividing line architectural. Leaders have moved onto one integrated platform, whereas most organisations still run a patchwork of weakly linked tools that they themselves say needs repair. Tool sprawl and platform complexity is a top-five technical challenge at 37 percent, alongside legacy systems and technical debt at 38. Full integration remains rare everywhere: 36 percent of Leaders and 10 percent of Emerging organisations. Consolidation is IDC's second of five recommendations.",
       "theme": "data",
       "kind": "finding",
       "evidence": "single-source",
@@ -763,7 +780,7 @@
     },
     {
       "id": "ins-020",
-      "title": "Maturity pays: Leaders deliver outcomes on more than three times as many AI projects",
+      "title": "Maturity pays: Leaders are more than three times as likely to deliver outcomes on most of their AI projects",
       "summary": "89 percent of Leaders deliver measurable outcomes on at least half their AI projects, against 26 percent of Emerging organisations. Agentic success rates roughly double across the tiers.",
       "detail": "IDC's outcome measures climb steadily with maturity. The share delivering measurable outcomes on half or more of AI projects runs 26, 53, 64 and 89 percent across the four tiers. The average share of agentic projects with outcomes runs 34, 45, 54 and 67 percent, moving in step with the share of organisations running several agents in production. Reading the tiers as road-map stages, deployment and success rise together. Because the maturity score itself includes outcomes as an input, part of this relationship is definitional.",
       "theme": "outlook",
@@ -773,6 +790,9 @@
         {
           "source": "src-02",
           "pages": [
+            3,
+            7,
+            8,
             17,
             18
           ]
@@ -793,10 +813,10 @@
       "id": "ins-021",
       "title": "Neither company size nor industry buys maturity",
       "summary": "Real-time data maturity and AI success are flat from 500-employee firms to those with 10,000 or more, and industry gaps are modest compared with the gaps between maturity tiers.",
-      "detail": "IDC's maturity scores sit between 50 and 53 across all company-size bands and AI success between 46 and 51 percent. By industry, healthcare, education and software lead modestly on both measures while retail trails, but the spread is far smaller than the tier spread. IDC's conclusion is that maturity is earned through operating practices, not headcount. AIM independently notes that delivery challenges are remarkably uniform across vendor size, domain and maturity, suggesting they are industry-wide problems.",
+      "detail": "IDC's maturity scores sit between 50 and 53 across all company-size bands and AI success between 46 and 51 percent. By industry, healthcare, education and software lead modestly on both measures. Retail has the lowest maturity score at 48 and ties with manufacturing and financial services for the lowest AI success rate, at 47 percent. Even so, the industry spread is far smaller than the tier spread. IDC's conclusion is that maturity is earned through operating practices, not headcount. On the supply side, AIM finds that vendors of every size, specialism and stage of maturity describe much the same delivery problems, which points to difficulties shared across the market.",
       "theme": "adoption",
       "kind": "finding",
-      "evidence": "multi-source",
+      "evidence": "single-source",
       "refs": [
         {
           "source": "src-02",
@@ -824,8 +844,8 @@
     },
     {
       "id": "ins-022",
-      "title": "As organisations mature, AI and data talent moves into the business",
-      "summary": "Leaders are more likely to embed real-time data talent in the business teams that use it, and service providers are adding forward-deployed engineers and domain expert benches for the same reason.",
+      "title": "As organisations mature, real-time data talent moves into the business",
+      "summary": "Leaders are more likely to embed real-time data talent in the business teams that use it, and service providers' delivery teams include forward-deployed engineers and domain expert benches that also bring technical skill close to the business.",
       "detail": "IDC finds talent embedded in business teams rising from 21 percent of Emerging organisations to 34 percent of Leaders, while distributed and loosely coordinated talent falls from 60 to 37 percent. On the supply side, AIM describes forward-deployed or embedded AI engineers who work inside client environments to bridge business and technical teams and improve conversion, and two models for domain expertise: SMEs drawn from a shared pool as needed, or a large standing bench of specialists who validate outputs and run quality checks. Even among Leaders, embedded talent is still only about one in three.",
       "theme": "talent",
       "kind": "finding",
@@ -861,7 +881,7 @@
       "id": "ins-023",
       "title": "Optimism and hype fatigue coexist",
       "summary": "Four in five enterprise leaders say agentic AI is changing how they work, and seven in ten say it is overhyped. Vendors list unrealistic expectations as a recurring delivery problem.",
-      "detail": "IDC's respondents agree at 80 percent that agentic AI is changing the way they work and at 79 percent that it is making the world better, while 71 percent agree it is overhyped. The two views are held simultaneously. AIM's vendor study lists hype-inflated expectations from stakeholders among the challenges vendors most often report. The practical implication is that expectation-setting and value-case discipline are part of delivery, not just sales. Public opinion mirrors it: global optimism rose to 59% in 2025 while 52% remain nervous, and BCG's CEOs report easing concerns alongside rising investment.",
+      "detail": "IDC's respondents agree at 80 percent that agentic AI is changing the way they work and at 79 percent that it is making the world better, while 71 percent agree it is overhyped. The two views are held simultaneously. AIM's vendor study includes hype-inflated expectations from stakeholders in a wider set of challenges that several vendors mention, without ranking them by frequency. The practical implication is that expectation-setting and value-case discipline are part of delivery, not just sales. Public opinion mirrors it: global optimism rose to 59% in 2025, while nervousness also rose, to 52%. BCG's executive respondents name the top three AI risks less often than a year earlier, even as they expect AI spending to roughly double as a share of revenue in 2026.",
       "theme": "market",
       "kind": "finding",
       "evidence": "multi-source",
@@ -887,6 +907,7 @@
         {
           "source": "src-05",
           "pages": [
+            6,
             8
           ]
         }
@@ -928,8 +949,8 @@
     {
       "id": "ins-025",
       "title": "The near-term agenda: data quality first, then GenAI and agentic support",
-      "summary": "Improving data and analytics quality is the top strategic objective for the next 12 to 18 months, followed closely by supporting GenAI and agentic use cases.",
-      "detail": "IDC's respondents rank improving data and analytics quality first at 33 percent. Supporting GenAI and agentic AI use cases and improving analytics efficiency tie at 27 percent, with process automation, app-to-app integration and reducing time from data to decision at 26 percent each. The ordering matches the challenge data: fix the data, then build on it.",
+      "summary": "For real-time data over the next 12 to 18 months, improving data and analytics quality is the top strategic objective, with support for GenAI and agentic use cases tied for second alongside analytics efficiency.",
+      "detail": "IDC's respondents rank improving data and analytics quality first at 33 percent. Supporting GenAI and agentic AI use cases and improving analytics efficiency tie at 27 percent, with process automation, app-to-app integration and reducing time from data to decision at 26 percent each. The ordering matches the challenge data, where data quality and consistency is the top technical barrier for real-time data at 46 percent: fix the data, then build on it.",
       "theme": "outlook",
       "kind": "finding",
       "evidence": "single-source",
@@ -937,6 +958,7 @@
         {
           "source": "src-02",
           "pages": [
+            13,
             21
           ]
         }
@@ -953,7 +975,7 @@
       "id": "ins-026",
       "title": "What GenAI engagements cost, by stage",
       "summary": "Pilots typically run 40 to 80 thousand dollars, single-business-unit production 150 to 300 thousand, and enterprise-wide programmes 500 thousand to more than a million, with the largest reaching 2 to 4 million or more.",
-      "detail": "AIM's pricing benchmarks give a range and a typical cluster for each stage. Proofs of concept and pilots range from about 25 to 100 thousand dollars, with some leaders above 150 thousand. Production for a single business unit ranges 100 to 500 thousand depending on integrations and scope. Scaled, enterprise-wide programmes range from 300 thousand to more than 2 million, typically 500 thousand to a million or more. These are services fees, not platform or token costs.",
+      "detail": "AIM's pricing benchmarks give a range and a typical cluster for each stage. Proofs of concept and pilots range from about 25 to 100 thousand dollars, with some leaders above 150 thousand. Production for a single business unit ranges 100 to 500 thousand depending on integrations and scope. Scaled, enterprise-wide programmes range from 300 thousand to more than 2 million, typically 500 thousand to a million or more. AIM presents these as project price ranges and does not say whether platform licences or model usage are included.",
       "theme": "commercial",
       "kind": "finding",
       "evidence": "single-source",
@@ -977,8 +999,8 @@
     {
       "id": "ins-027",
       "title": "Managed services are the fastest-growing engagement model; outcome-linked pricing is rising but rare",
-      "summary": "Project-based work remains the entry point, run-and-operate contracts are growing fastest as production deployments increase, and only a few vendors tie fees to outcomes.",
-      "detail": "AIM maps six engagement models. Fixed-scope or time-and-materials projects dominate pilots and early production. Capacity-led pods are widely used as programmes expand. Run-and-operate managed services are growing fastest. Outcome-linked pricing is selective but rising in mature, KPI-driven deployments, and platform subscriptions are emerging among IP-led vendors. In the vendor profiles, only a handful describe outcome- or value-linked constructs, and a couple deliver only on fixed-scope or outcome-based terms. Vendors mature enough to align fees with results are positioned for a market moving toward accountability.",
+      "summary": "Project-based work remains the entry point, run-and-operate contracts are growing fastest as production deployments increase, and only a few vendors tie part of their fees to outcomes.",
+      "detail": "AIM maps six engagement models. Fixed-scope or time-and-materials projects dominate pilots and early production. Capacity-led pods are widely used as programmes expand. Run-and-operate managed services are growing fastest. Outcome-linked pricing is selective but rising in mature, KPI-driven deployments, and platform subscriptions are emerging among IP-led vendors. In the vendor profiles, only a handful describe outcome- or value-linked constructs, and one, Neoware, works only on fixed-scope or outcome-based terms. Vendors mature enough to align fees with results are positioned for a market moving toward accountability.",
       "theme": "commercial",
       "kind": "finding",
       "evidence": "single-source",
@@ -1011,7 +1033,7 @@
       "id": "ins-028",
       "title": "GenAI delivery teams cluster around six to eight roles, with agentic specialists emerging",
       "summary": "Data scientists and LLM engineers are the largest group, supported by data engineers, LLMOps engineers, architects, domain translators, embedded engineers, application developers and delivery governance. A distinct agentic AI architect role is appearing.",
-      "detail": "AIM finds team structures converge on six to eight recurring role types despite differing names. Model and application engineers consistently form the largest share, sometimes split between model-performance scientists and application-layer LLM engineers. Data engineers own pipelines, vector stores and RAG foundations. LLMOps engineers own CI/CD, serving, monitoring and cost. Domain consultants and business translators handle value mapping and adoption. Some vendors now count agentic AI architects as a separate headcount category for orchestration and tool-calling frameworks; most still fold this into the general pool.",
+      "detail": "AIM finds team structures converge on six to eight recurring role types despite differing names. Data scientists, ML engineers and LLM engineers consistently form the largest share, sometimes split between model-performance scientists and application-layer LLM engineers. Data engineers own pipelines, vector stores and RAG foundations. LLMOps engineers own CI/CD, serving, monitoring and cost. Domain consultants and business translators handle value mapping and adoption. Some vendors now count agentic AI architects as a separate headcount category for orchestration and tool-calling frameworks; most still fold this into the general pool.",
       "theme": "talent",
       "kind": "finding",
       "evidence": "single-source",
@@ -1038,7 +1060,7 @@
       "id": "ins-029",
       "title": "Domain specialisation concentrates in BFSI, healthcare and life sciences, retail and supply chain",
       "summary": "Most vendors run a hybrid strategy of reusable horizontal capabilities plus a few deep verticals, and the deepest verticals are regulated or data-rich industries.",
-      "detail": "AIM finds hybrid strategies are the norm and that deep specialisation is most evident in banking and financial services, healthcare, retail and supply chain, the sectors where GenAI now sits inside core operations. Our count of the 28 vendor profiles supports this: financial services appears in more than 20 industry lists and healthcare or life sciences in more than 15. AIM's industry use-case matrix shows regulated industries with the longest lists of agentic use cases, such as underwriting, claims audit, regulatory dossier automation and compliance review.",
+      "detail": "AIM finds hybrid strategies are the norm and that deep specialisation is most evident in banking and financial services, healthcare, retail and supply chain, the sectors where GenAI now sits inside core operations. Our count of the 28 vendor profiles supports this: financial services appears in more than 20 industry lists and healthcare or life sciences in more than 15. AIM's industry use-case matrix gives financial services, with eight entries, and healthcare and life sciences the longest lists of agentic use cases, such as underwriting, claims audit, regulatory dossier automation and medical, legal and regulatory review in pharma.",
       "theme": "vendors",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1068,8 +1090,8 @@
     {
       "id": "ins-030",
       "title": "Pairing large domain expert benches with agents is a Leader strategy",
-      "summary": "Three of the ten Leaders run thousands of domain analysts alongside AI agents in the same workflows, using maker-checker controls and full traceability to satisfy regulated buyers.",
-      "detail": "Two vendors report benches of more than 6,000 domain specialists who co-execute tasks with agents, check results and apply quality controls as the work happens, and a third describes its delivery as pairing domain SMEs with AI tooling in every workflow. All three sit in the Leaders quadrant. This is the standing-bench model AIM describes, more common at vendors with managed-services or knowledge-process-outsourcing roots, and it gives them a compliance story that technology-only providers could match only by hiring comparable teams. Platform access is sometimes priced as an uplift on existing analyst fees.",
+      "summary": "Three of the ten Leaders build domain-expert teams into their AI delivery. Two report benches of at least 6,000 specialists, and one pairs analysts and agents under maker-checker controls with full source traceability to reassure regulated buyers.",
+      "detail": "Two vendors report benches of at least 6,000 domain specialists. At one, analysts and agents carry out tasks together on a shared platform, and at the other, specialists review what the models produce and keep quality under watch while work is under way. A third describes its delivery as pairing domain SMEs with AI tooling in selected workflows such as financial spreading and credit decisioning. All three sit in the Leaders quadrant. This is the standing-bench model AIM describes, more common at vendors with managed-services or knowledge-process-outsourcing roots, and AIM notes in one of these profiles that it gives a compliance story that technology-only providers could match only by hiring comparable teams. Platform access is sometimes priced as an uplift on existing analyst fees.",
       "theme": "vendors",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1101,9 +1123,9 @@
     },
     {
       "id": "ins-031",
-      "title": "Hyperscaler and lakehouse partnerships are universal; partner tier is the differentiator",
-      "summary": "Nearly every vendor lists AWS, Azure, Google Cloud, Databricks and Snowflake. Vendors distinguish themselves by premier or select partner status and early access to new platform capabilities.",
-      "detail": "Across the 28 profiles the same five platforms appear in almost every partner list, so listing them conveys little. The differentiators cited are tier and depth: top-percentile partner status, generative AI competencies, select cohorts limited to a few dozen partners globally, gold-level data-platform status with certified staff, and pre-launch access to agentic and model services that lets a vendor experiment ahead of the market. Partnerships also feed pipeline through co-sell motions.",
+      "title": "Hyperscaler and lakehouse partnerships are common; partner tier is the differentiator",
+      "summary": "Most vendors list the same few platforms: Databricks in 25 of 28 profiles, AWS and Microsoft Azure in 23 each, Google Cloud in 18 and Snowflake in 17. Vendors distinguish themselves by premier or select partner status and early access to new platform capabilities.",
+      "detail": "Across the 28 profiles the same handful of platforms recurs, and 12 vendors list all five of Databricks, AWS, Azure, Google Cloud and Snowflake, so listing them conveys little. The differentiators cited are tier and depth: top-percentile partner status, generative AI competencies, select cohorts limited to a few dozen partners globally, gold-level data-platform status with certified staff, and pre-launch access to agentic and model services that lets a vendor experiment ahead of the market. Some vendors also run joint go-to-market and co-sell programmes with these platforms.",
       "theme": "vendors",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1133,7 +1155,7 @@
       "id": "ins-032",
       "title": "Synthetic personas and audiences are an emerging product category",
       "summary": "At least two Leaders sell simulation platforms that test products, messaging or pricing against AI-generated customer segments before real-market research.",
-      "detail": "One vendor reports a persona simulation platform with a stated correlation above 95 percent to real behaviour, used for product testing, pricing and UX validation. Another reports synthetic customer cohorts for concept and message testing deployed in production for consumer goods and technology clients, with one launch cycle cut from nine months to two or three. AIM's service taxonomy lists synthetic audiences and virtual personas under application development, indicating the category has become a recognised offering.",
+      "detail": "One vendor reports a persona simulation platform with a stated correlation of 95 percent or more with real behaviour, used for product testing, pricing and UX validation. Another reports synthetic customer cohorts for concept and message testing deployed in production for consumer goods and technology clients, with one launch cycle cut from nine months to two or three. AIM's service taxonomy lists synthetic audiences and virtual personas under application development, indicating the category has become a recognised offering.",
       "theme": "market",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1161,8 +1183,8 @@
     {
       "id": "ins-033",
       "title": "Disclosed conversion rates are selectively reported",
-      "summary": "The few vendors that publish a pilot-to-production figure report 60 percent or more, well above the 25 to 45 percent AIM says is typical. Read undisclosed as probably typical.",
-      "detail": "Three vendors state a conversion rate: 60 percent or more, 70 percent, and 80 percent or more. Many others describe their rate as high or above industry average without a number. Since AIM characterises most vendors as converting 25 to 45 percent, the disclosed figures are best read as the top of the distribution rather than representative. All are vendor-claimed and unaudited by the publisher. Buyers can treat a vendor's willingness to state and evidence a number as a signal in itself.",
+      "summary": "The few vendors that publish a pilot-to-production figure report rates above 60 percent, well above the 25 to 45 percent AIM says is typical. Read undisclosed as probably typical.",
+      "detail": "Three vendors state a conversion rate: more than 60 percent, 70 percent, and 80 percent or more. At least five others describe their rate as high or above industry average without a number. Since AIM characterises most vendors as converting 25 to 45 percent, the disclosed figures are best read as the top of the distribution rather than representative. All are vendor-claimed and unaudited by the publisher. Buyers can treat a vendor's willingness to state and evidence a number as a signal in itself.",
       "theme": "method",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1171,8 +1193,13 @@
           "source": "src-01",
           "pages": [
             5,
+            32,
+            36,
             44,
             52,
+            60,
+            64,
+            76,
             84,
             89
           ]
@@ -1204,6 +1231,7 @@
           "source": "src-01",
           "pages": [
             5,
+            26,
             28,
             29
           ]
@@ -1255,7 +1283,7 @@
     },
     {
       "id": "ins-036",
-      "title": "How to test a GenAI service provider: ask what they have operated, not what they can build",
+      "title": "How to test a GenAI service provider: look for a production track record, not a capability list",
       "summary": "Probe which accelerators run in production for clients, ask for named deployments with quantified outcomes, and ask how agent behaviour is evaluated and governed.",
       "detail": "Drawing on AIM's analyst guidance across the report, three tests recur. On accelerators, ask which have been deployed in production client engagements versus internal tools repackaged as client-ready. On agentic claims, the credible vendors can explain how their agents are actually built, point to live production deployments and say how agent behaviour is tested and controlled; others label any multi-step flow as agentic. On challenges, the gap is widening between vendors that have engineered solutions to the known problems and those that merely name them, and buyers are learning to test for it earlier in procurement. AIM also reminds readers its report is one input and not a recommendation.",
       "theme": "vendors",
@@ -1266,6 +1294,7 @@
           "source": "src-01",
           "pages": [
             5,
+            6,
             11,
             15,
             89
@@ -1282,7 +1311,7 @@
     },
     {
       "id": "ins-037",
-      "title": "Outlook: the next phase rewards proven, repeated, scaled operation",
+      "title": "Outlook: spending keeps rising, and the constraint is operational",
       "summary": "The vendors that last will be those with proven production deployments, real platforms, industry specialisation and the operating machinery to run AI at scale. Investment is set to keep rising on both the real-time data and agentic fronts.",
       "detail": "AIM expects the market's next phase to reward proof over promise: not the fullest description of the lifecycle, but repeated evidence of having run it at scale. IDC finds near-universal intent to increase spending on real-time data and agentic AI, with the two rising together, while the near-term agenda puts data quality first. Taken together, the sources point to a market where the constraint is operational: data foundations, governance, adoption and cost discipline determine who converts intent into outcomes.",
       "theme": "outlook",
@@ -1353,8 +1382,8 @@
     {
       "id": "ins-039",
       "title": "Six practice areas for running GenAI at scale",
-      "summary": "Vendors converge on cost and compute optimisation, token efficiency, monitoring and LLMOps, governance and risk, security and compliance, and value tracking.",
-      "detail": "From vendor responses on how they manage large-scale implementations, AIM derives six practice areas. Cost: right-sized model selection, multi-model routing, RAG-first design, compression, caching and batching. Performance: context pruning, hybrid retrieval, structured prompts, parallel agent workflows. Monitoring: live dashboards for token use, spend, response time and accuracy, plus drift and hallucination detection, controlled releases, end-to-end observability. Governance: responsible-AI guardrails, human review for critical decisions, version control, audit trails. Security: access control, PII masking, private deployment, compliance standards. Value: KPI tracking, reusable assets, continuous optimisation.",
+      "summary": "Vendors converge on six areas of practice: holding down cost and compute, using tokens efficiently, watching live systems, governing risk, securing data and meeting compliance, and tracking the value delivered.",
+      "detail": "AIM sorts the practices vendors describe for large deployments into six areas. On cost, vendors match model size to the task, route work across several models, design around retrieval first, and compress, cache and batch requests. On performance, they trim context, combine retrieval methods, give prompts a fixed structure and run agent steps in parallel. On monitoring, they track tokens, spend, latency and accuracy as they happen, watch for drift and hallucination, roll out changes in stages and trace pipelines end to end. On governance, they apply responsible-AI controls, keep people involved in high-stakes decisions, keep version control and maintain audit trails. On security, they restrict access, mask personal data, deploy privately and align with compliance standards. On value, they measure against KPIs, reuse assets and keep refining over time.",
       "theme": "operations",
       "kind": "finding",
       "evidence": "single-source",
@@ -1381,7 +1410,7 @@
       "id": "ins-040",
       "title": "Security and trust are the second-biggest driver of real-time data demand",
       "summary": "Security and AI trust requirements rank second among drivers of real-time data need and governance is a top-five technical challenge, which is why IDC tells buyers to treat governance as an accelerator.",
-      "detail": "In the IDC survey, 40 percent cite security and AI trust requirements as a driver of increased need for real-time data, just behind agentic AI at 43. Governance, security and permissions is a top technical challenge at 39 percent. IDC's advice is to reframe governance from a brake to an accelerator, noting it is already a leading investment priority. AIM's vendor data agrees from the delivery side: guardrails, audit trails, access control and compliance alignment appear in almost every vendor profile as baseline requirements for production. BCG and Deloitte confirm privacy and security as the top concern in CEO and enterprise surveys, and BCG finds more leaders now treat agents as a security opportunity than as a threat.",
+      "detail": "In the IDC survey, 40 percent cite security and AI trust requirements as a driver of increased need for real-time data, just behind agentic AI at 43. Governance, security and permissions is a top technical challenge at 39 percent. IDC's advice is to reframe governance from a brake to an accelerator, noting it is already a leading investment priority. AIM's synthesis of vendor responses agrees from the delivery side, listing guardrails, audit trails, role-based access and compliance with recognised standards among the practices vendors use to run GenAI at scale. BCG's survey of executives and Deloitte's enterprise survey both rank privacy and security as the top AI concern, with 53% of BCG respondents naming it. In BCG's data, 32% of executives see cybersecurity as the biggest opportunity from agentic AI and 9% as the biggest threat, while 59% see it as both.",
       "theme": "governance",
       "kind": "finding",
       "evidence": "multi-source",
@@ -1403,6 +1432,7 @@
         {
           "source": "src-05",
           "pages": [
+            2,
             8,
             9
           ]
@@ -1432,10 +1462,10 @@
       "id": "ins-041",
       "title": "Enterprise spend on generative AI reached about $37 billion in 2025, more than tripling",
       "summary": "Menlo Ventures sizes 2025 enterprise generative AI spend at about $37B, up 3.2x, split almost evenly between infrastructure and applications. Per-company budgets and capital-market data point the same way.",
-      "detail": "Menlo's bottom-up model excludes chips, inference hosting and AI features bundled into existing software, so it understates total AI outlay. Within its scope, model APIs took $12.5B and applications $19B, with horizontal copilots the largest single line. a16z's Global 2000 CIOs report average LLM spend of about $7M per firm in 2025, up from $2.5M actually spent in 2024 (the prose cites a $4.5M baseline that was a forecast), and average application spend of about $5.8M per firm against a planned $3.9M. Stanford's compilation of Quid data shows private AI investment of about $345B in the same year, an order of magnitude larger because it measures capital into AI companies rather than enterprise purchases. All three lenses more than doubled in 2025.",
+      "detail": "Menlo's bottom-up model excludes chips, inference hosting and AI features bundled into existing software, so it understates total AI outlay. Within its scope, model APIs took $12.5B and applications $19B, where horizontal AI ($8.4B, mostly copilots at $7.2B) was the biggest segment and coding ($4.0B) the biggest single use case. a16z's Global 2000 CIOs report average LLM spend of about $7M per firm in 2025, up from $2.5M actually spent in 2024 (the prose cites a $4.5M baseline that was a forecast), and average application spend of about $5.8M per firm against a planned $3.9M. Stanford's compilation of Quid data shows private AI investment of about $345B in the same year, an order of magnitude larger because it measures capital into AI companies rather than enterprise purchases. All three lenses more than doubled in 2025.",
       "theme": "market",
       "kind": "finding",
-      "evidence": "multi-source",
+      "evidence": "single-source",
       "refs": [
         {
           "source": "src-07",
@@ -1470,8 +1500,8 @@
     {
       "id": "ins-042",
       "title": "AI budgets are still rising in 2026, but expectations for the pace moderated during the year",
-      "summary": "Early-2026 surveys expected AI spend to double; mid-2026 surveys show continued growth at a lower rate. Growth is not in doubt, the rate is.",
-      "detail": "BCG's CEOs in January 2026 expected AI investment to rise from 0.8% to 1.7% of revenue during the year, and a16z's CIOs projected 65% growth in LLM spend. By May and June, McKinsey found 61% expecting to increase AI investment but only 8% by 30% or more, and KPMG's large US firms reported projected 12-month spend flat quarter on quarter at about $200M after doubling over the prior year. Every source still shows growth, and BCG found 94% would keep investing even if 2026 returns disappointed. The time ordering matters: the two surveys fielded latest show the softest profile. Our reading is a market moving from step change to steady growth, which the 2027 editions will confirm or refute.",
+      "summary": "Early-2026 surveys expected AI spend to rise steeply, roughly doubling in BCG's data and growing about 65% in a16z's; mid-2026 surveys show continued growth at a lower rate. Growth is not in doubt, the rate is.",
+      "detail": "In BCG's AI Radar, published in January 2026, the 2,360 executives surveyed, 640 of them CEOs, expected AI investment to rise from 0.8% to 1.7% of revenue during the year, and a16z's CIOs projected 65% growth in LLM spend. In surveys fielded between late April and June, McKinsey found 60% of respondents at organisations using AI expecting to increase AI investment but only 8% by 30% or more, and KPMG's large US firms put projected 12-month AI spend at $202M, close to the $207M of the quarter before and more than double the $88M of a year earlier. Every source still shows growth, and BCG found 94% would keep investing even if 2026 returns disappointed. The time ordering matters: the two surveys fielded latest show the softest profile. Our reading is a market moving from step change to steady growth, which the 2027 editions will confirm or refute.",
       "theme": "market",
       "kind": "finding",
       "evidence": "multi-source",
@@ -1479,6 +1509,7 @@
         {
           "source": "src-05",
           "pages": [
+            2,
             5,
             6
           ]
@@ -1517,7 +1548,7 @@
       "id": "ins-043",
       "title": "Coding is generative AI's first killer use case",
       "summary": "Software development is where spend, measured productivity, vendor competition and scaled agent use all concentrate. Coding tools were about $4B in 2025, five times the prior year.",
-      "detail": "Menlo puts coding at more than half of departmental AI spend, with code agents growing from near zero to $1.1B and half of developers using AI coding tools daily. Stanford's compilation of controlled studies records a 26% rise in pull requests for developers using an AI assistant, with juniors gaining most. McKinsey finds about a fifth of organisations scaling coding agents in mid-2026, rising to 31% at large firms, and a third have declined to buy software because coding agents let them build it. a16z's CIOs say model leadership in coding is what shifted their vendor mix, and Lightcast data in the AI Index show agentic-skill mentions in job postings rising more than a hundredfold. The pattern is consistent: verifiable, structured work with a paying developer audience adopts first.",
+      "detail": "Menlo puts coding at more than half of departmental AI spend, with code agents growing from near zero to $1.1B and half of developers using AI coding tools daily. Stanford's table of micro-level productivity studies, whose methods vary, includes one study in which developers using GitHub Copilot completed 26% more pull requests, with junior and less experienced developers gaining most. McKinsey finds about a fifth of organisations scaling coding agents in mid-2026, rising to 31% at large firms, and a third have declined to buy software because coding agents let them build it. a16z finds Anthropic leading in software development, where CIOs credit rapid capability gains for adoption, and its own analysis attributes much of Anthropic's gain in wallet share to token-heavy coding work. Lightcast data in the AI Index show US AI job postings naming the Agentic AI skill rising from 151 in 2024 to 16,541 in 2025, more than a hundredfold. The pattern is consistent: verifiable, structured work with a paying developer audience adopts first.",
       "theme": "market",
       "kind": "finding",
       "evidence": "multi-source",
@@ -1529,8 +1560,9 @@
         {
           "source": "src-11",
           "pages": [
-            220,
-            208
+            208,
+            219,
+            220
           ]
         },
         {
@@ -1565,7 +1597,7 @@
     {
       "id": "ins-044",
       "title": "Startups are winning AI applications while incumbents hold infrastructure and the enterprise seat",
-      "summary": "AI-native startups took about 63% of application revenue in 2025, yet almost every large enterprise pays for Microsoft 365 Copilot and two thirds prefer an incumbent when one exists.",
+      "summary": "AI-native startups took about 63% of application revenue in 2025, yet 94% of the 100 Global 2000 firms in a16z's survey pay for Microsoft 365 Copilot and 65% prefer an incumbent when one exists.",
       "detail": "Menlo's revenue data show startups ahead in departmental (60%), vertical (88%) and horizontal (57%) applications but behind in infrastructure (44%), where application builders stay on established data platforms. a16z's Global 2000 survey shows the other side: 94% pay for Microsoft 365 Copilot, 74% for GitHub Copilot, and 65% prefer incumbents, citing trust, integration and easier procurement. Startups are chosen for faster innovation and deeper AI focus. MIT NANDA's interviews add that a trusted vendor is the top selection criterion and that many procurement leaders wait for an incumbent's AI feature rather than evaluate startups. The two pictures fit a market where incumbents own the broad seat licence and startups own the high-value, high-token workloads.",
       "theme": "vendors",
       "kind": "finding",
@@ -1607,8 +1639,8 @@
     {
       "id": "ins-045",
       "title": "Who leads enterprise LLMs depends on who is counting, but the direction of travel is shared",
-      "summary": "Menlo ranks Anthropic first by API usage; a16z ranks OpenAI first by production footprint among Global 2000 firms. Each firm invests in the vendor it places first. Both agree Anthropic is gaining fastest, Google is rising, open-weight models are losing share and multi-model use is the norm.",
-      "detail": "Menlo estimates Anthropic at 40% of enterprise LLM API usage in 2025, OpenAI 27% and Google 21%, from a US sample of 495 that includes AI-native builders and weights by application scale. a16z finds 78% of Global 2000 respondents using OpenAI in production and a 56% average wallet share, with Anthropic at 44% production use and 17% wallet share, from 100 large firms with coding startups excluded. Read together, OpenAI has the widest footprint in large incumbents' estates and Anthropic has the larger share of token-intensive coding work and the fastest growth. Both surveys show open-weight models at about a tenth of enterprise usage and falling, four in five enterprises running three or more model families, and fine-tuning giving way to prompting and routing. The site presents both estimates with their samples and conflicts of interest and does not declare a single leader.",
+      "summary": "Menlo ranks Anthropic first by API usage; a16z ranks OpenAI first by production footprint among Global 2000 firms. Each firm invests in the vendor it places first. Both agree Anthropic is gaining fastest and Google is rising, while falling open-weight share is Menlo's finding alone and widespread multi-model use is a16z's.",
+      "detail": "Menlo estimates Anthropic at 40% of enterprise LLM API usage in 2025, OpenAI 27% and Google 21%, from a US sample of 495 that includes AI-native builders and weights by application scale. a16z finds 78% of Global 2000 respondents using OpenAI in production and a 56% average wallet share, with Anthropic at 44% production use and 17% wallet share, from 100 large firms with coding startups excluded. Read together, OpenAI has the widest footprint in large incumbents' estates and Anthropic has the larger share of token-intensive coding work and the fastest growth. Menlo puts open-source models at 11% of enterprise usage, down from 19%, while a16z reports a growing preference for closed models. a16z finds 81% of large enterprises using three or more model families and a move away from fine-tuning toward prompting and routing, while Menlo's single snapshot finds prompt design dominant and fine-tuning rare. The site presents both estimates with their samples and conflicts of interest and does not declare a single leader.",
       "theme": "vendors",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1643,8 +1675,8 @@
     {
       "id": "ins-046",
       "title": "Buying beats building, in five sources, with one new counter-current from coding agents",
-      "summary": "Purchased AI use cases rose from 53% to 76% in a year, bought solutions reach production about twice as often as internal builds, and enterprises are migrating from DIY model builds to packaged applications. McKinsey adds that a third have declined a software purchase because coding agents let them build it.",
-      "detail": "Menlo's survey shows the purchase share jumping to 76% and bought AI converting to production at 47% against 25% for conventional software. MIT NANDA's interviews find externally sourced tools reaching deployment about 66% of the time versus 33% for internal builds, with roughly double the employee usage. a16z's CIOs report a shift toward third-party applications in every tracked use case, and AIM's providers report buyers demanding production evidence rather than bespoke builds. Deloitte's pilot-trap diagnosis explains why: production needs integration, security, compliance and monitoring that internal pilots skip. McKinsey's mid-2026 finding that 32% have forgone a purchase in favour of building with coding agents, rising to about half of high performers, is not a contradiction: enterprises buy applications and platforms and build the long tail of features they once bought. It is the first survey evidence that agentic coding is changing software budgets.",
+      "summary": "Purchased AI use cases rose from 53% to 76% in a year, bought solutions reach production about twice as often as internal builds, and third-party applications are gaining share, with many enterprises expecting to move from in-house model builds to packaged applications over time. McKinsey adds that a third have declined a software purchase because coding agents let them build it.",
+      "detail": "Menlo's survey shows the purchase share jumping to 76% and bought AI converting to production at 47% against 25% for conventional software. MIT NANDA's interviews find externally sourced tools reaching deployment about 66% of the time versus 33% for internal builds, with roughly double the employee usage. a16z's chart shows the third-party application share rising in all five use cases it tracks, and AIM's own market analysis finds buyers now judging providers on what they have run in production rather than on what they say they can build. Deloitte's pilot-trap diagnosis explains why: production needs infrastructure, integration, security review, compliance checks and monitoring that a small, isolated pilot can do without. McKinsey's mid-2026 finding that 32% have forgone a purchase in favour of building with coding agents, rising to about half of high performers, is not a contradiction: enterprises buy applications and platforms and build the long tail of features they once bought. It is early survey evidence that agentic coding is changing software budgets.",
       "theme": "commercial",
       "kind": "finding",
       "evidence": "multi-source",
@@ -1704,8 +1736,8 @@
     {
       "id": "ins-047",
       "title": "Healthcare buys packaged vertical AI; regulated finance buys services instead",
-      "summary": "Healthcare took about 43% of vertical AI software spend in 2025, led by ambient scribes, while finance and insurance software markets stayed tiny even though financial services is the deepest specialisation among AI service providers.",
-      "detail": "Menlo's vertical spend data put healthcare at $1.5B, more than the next four verticals combined, with finance at $120M and insurance under $100M. AIM's vendor study finds BFSI in the industry lists of more than 20 of 28 providers and the deepest vertical solutions in banking, insurance and healthcare. The reconciliation is that regulated financial institutions buy custom, services-led delivery with compliance blueprints rather than packaged products, which is exactly the market AIM's providers serve, while healthcare found a packaged product (clinical documentation) with immediate, measurable relief from administrative burden. NANDA's disruption index supports the distinction: healthcare is buying AI without its clinical models being restructured yet.",
+      "summary": "Healthcare took about 43% of vertical AI software spend in 2025, led by ambient scribes, while finance and insurance software markets stayed tiny even though financial services is one of the deepest specialisations among AI service providers.",
+      "detail": "Menlo's vertical spend data put healthcare at $1.5B, more than the next three verticals combined (legal, creator tools and government, $1.36B; Menlo's text says the next four, but its chart puts those four at $1.54B), with finance at $120M and insurance under $100M. By our count, 24 of AIM's 28 vendor profiles list a financial-services industry, and AIM sees provider specialisation running deepest in healthcare, BFSI, retail and supply chain. The reconciliation is that regulated financial institutions buy custom, services-led delivery with compliance blueprints rather than packaged products, which is exactly the market AIM's providers serve, while healthcare found a packaged product (clinical documentation) with immediate, measurable relief from administrative burden. NANDA's disruption index does not separate the two sectors, since it scores healthcare and financial services equally at 0.5, but its notes fit the picture: healthcare activity is documentation pilots with clinical models unchanged, while finance activity is backend automation with customer relationships stable.",
       "theme": "vendors",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1741,11 +1773,11 @@
     {
       "id": "ins-048",
       "title": "Where AI is built now matters as much as what it does: sovereignty has become a planning input",
-      "summary": "More than four in five large companies treat data residency and local compute as at least moderately important, three quarters weigh a vendor's country of origin, and publics trust the EU more than the US or China to regulate AI.",
-      "detail": "Deloitte's late-2025 survey found 83% rating data-residency and in-country compute at least moderately important to strategic planning, 66% at least moderately concerned about reliance on foreign-owned AI, 77% factoring country of origin into vendor selection and 58% building their stacks mainly with local vendors. The pressure is regional: 11% of Americas firms source most of their stack abroad against 32% in EMEA. Stanford's compilation adds the demand-side signal that a 25-country median of 53% trusts the EU to regulate AI versus 37% for the US and 27% for China, and that US trust in its own regulator is the lowest surveyed at 31%. a16z's largely US and UK sample shows the opposite motion, with four in five hosting models directly with frontier labs, which suggests geography rather than a single global trend. No other source in this project measures sovereignty directly, so the Deloitte figures stand alone on the enterprise side.",
+      "summary": "More than four in five surveyed AI-adopting companies treat data residency and local compute as at least moderately important, three quarters weigh a vendor's country of origin, and publics trust the EU more than the US or China to regulate AI.",
+      "detail": "Deloitte's survey of leaders at organisations with working AI, fielded August to September 2025, found 83% rating data-residency and in-country compute at least moderately important to strategic planning, 66% at least moderately concerned about reliance on foreign-owned AI, 77% factoring country of origin into vendor selection and 58% building their stacks mainly with local vendors. The pressure is regional: 11% of Americas firms source most of their stack abroad against 32% in EMEA. Stanford's compilation adds the demand-side signal that, in Pew's 25-country survey, a median of 53% trusts the EU to regulate AI versus 37% for the US and 27% for China, and that in a separate Ipsos survey of 30 countries US respondents show the least trust in their own government to regulate AI, at 31%. a16z's sample of 100 Global 2000 firms operating across North America, the UK, the EU, Asia and Australia, with no regional split published, shows the opposite motion, with four in five hosting models directly with frontier labs, so differences in sample make-up may explain part of the gap. No other source in this project measures sovereignty directly, so the Deloitte figures stand alone on the enterprise side.",
       "theme": "governance",
       "kind": "finding",
-      "evidence": "multi-source",
+      "evidence": "single-source",
       "refs": [
         {
           "source": "src-04",
@@ -1753,7 +1785,8 @@
             5,
             15,
             16,
-            33
+            33,
+            40
           ]
         },
         {
@@ -1789,8 +1822,8 @@
     {
       "id": "ins-049",
       "title": "Physical AI is in most adopters’ operations, led by Asia Pacific, but robot installations were flat in 2024",
-      "summary": "Deloitte finds 58% of AI-using companies already use robotics, drones or automated machinery to some extent and expects 80% within two years. Robot shipment data temper the pace: global installations were flat in 2024 and US installations fell.",
-      "detail": "In Deloitte's survey, Asia Pacific leads with 71% reporting at least minimal physical AI use against 56% in the Americas and EMEA, and expected use reaches 90% in Asia Pacific. Intelligent monitoring, collaborative robots and digital twins are the types expected to matter most, and cost is the top barrier because facility retrofits, integration and maintenance dwarf the AI software. The International Federation of Robotics data compiled by Stanford show 542,000 industrial robots installed in 2024, up 0.2%, with China at 54% of the world and the US down 9%; collaborative robots reached 13.6% of installations. Microsoft's telemetry adds that manufacturing firms are few in number among agent adopters but run the deepest agent estates. Physical AI is real and concentrated in Asia and in controlled environments; the two-year jump to 80% is an expectation, not a trend.",
+      "summary": "Deloitte finds 58% of AI-using companies already use robotics, drones or automated machinery to some extent, and respondents expect 80% to do so within two years. Robot installation data temper the pace: global installations were flat in 2024 and US installations fell.",
+      "detail": "In Deloitte's survey, Asia Pacific leads with 71% reporting at least minimal physical AI use against 56% in the Americas and EMEA, and expected use reaches 90% in Asia Pacific. Intelligent monitoring, collaborative robots and digital twins are the types expected to matter most, and cost is the barrier cited most often, while Deloitte separately notes that facility retrofits, hardware, integration and maintenance can far exceed the spend on AI models and software. The International Federation of Robotics data compiled by Stanford show 542,000 industrial robots installed in 2024, up 0.2%, with China at 54% of the world and the US down 9%; collaborative robots reached 13.6% of installations. Microsoft's agent telemetry shows manufacturing and resources at about a tenth of agent-using firms but about 17% of agents, a sign of deployment at scale within each firm. Physical AI is real and concentrated in Asia and in controlled environments; the two-year jump to 80% is an expectation, not a trend.",
       "theme": "adoption",
       "kind": "finding",
       "evidence": "multi-source",
@@ -1840,8 +1873,8 @@
     {
       "id": "ins-050",
       "title": "Agent adoption figures range from single digits to more than half, and the definition explains the spread",
-      "summary": "Sources report agent use anywhere from 7% to 59% because they measure different things: any use, self-reported moderate use, deployment, scaling, or an architectural test of what counts as an agent.",
-      "detail": "On the most inclusive measure, McKinsey's surveys compiled by Stanford put organisational AI use at 88% to 89%. Self-reported agent use follows: KPMG finds 53% of large US firms with agents deployed, IDC 20% to 59% by maturity tier with several agents in production, Deloitte 23% using agentic AI at least moderately. Stage-based measures fall further: McKinsey finds about 20% scaling agents overall and 40% at $1B-plus firms, while its 2025 data put scaled agent use in single digits per function. The strictest measures are architectural: Menlo classifies 16% of enterprise deployments as true agents that plan, act, observe and adapt, and a16z finds agentic workflow automation in production at 13%. The ladder from any use to scaled, governed agents is the finding. The site places each source on it rather than quoting one number.",
+      "summary": "Sources report agent use anywhere from low single digits to 59% because they measure different things: any use, self-reported moderate use, deployment, scaling, or an architectural test of what counts as an agent.",
+      "detail": "On the most inclusive measure, McKinsey puts organisational AI use at 88% for 2025, as compiled by Stanford, and at 89% in its own 2026 survey. Self-reported agent use follows: KPMG finds 53% of large US firms with agents deployed, IDC 20% to 59% by maturity tier with several agents in production, Deloitte 23% using agentic AI at least moderately. Stage-based measures fall further: McKinsey finds 22% of firms under $1B and 40% of $1B-plus firms scaling agents in at least one function, while its 2025 data put scaled agent use in single digits for nearly all functions. The strictest measures are architectural: Menlo classifies 16% of enterprise deployments as true agents that plan, act, observe and adapt, and a16z finds agentic workflow automation in production at 13%. The ladder from any use to scaled, governed agents is the finding. The site places each source on it rather than quoting one number.",
       "theme": "agentic",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -1875,6 +1908,7 @@
           "source": "src-03",
           "pages": [
             3,
+            5,
             6
           ]
         },
@@ -1906,9 +1940,9 @@
     },
     {
       "id": "ins-051",
-      "title": "One in four has moved most experiments to production; what you buy converts better than what you build",
+      "title": "One in four has 40% or more of experiments in production; what you buy converts better than what you build",
       "summary": "A quarter of Deloitte's respondents have 40% or more of AI experiments in production. Across sources, bought general tools and packaged applications convert best, vendor-run pilots sit in the middle, and bespoke internal builds convert worst.",
-      "detail": "Deloitte finds 25% at the 40%-in-production threshold, with 54% expecting to reach it within six months. Menlo's funnel shows purchased AI reaching production 47% of the time. AIM's providers convert 25% to 45% of proofs of concept. MIT NANDA's interview sample shows general-purpose tools implemented by 40% of organisations that investigated them, while custom or task-specific tools reached sustained impact in about 5% of cases, and external partnerships succeeded twice as often as internal builds. The ranking is consistent once the denominators are lined up, and it explains why the same market can show high failure rates and fast-growing spend at the same time.",
+      "detail": "Deloitte finds 25% at the 40%-in-production threshold, with 54% expecting to reach it within six months. Menlo's funnel shows purchased AI reaching production 47% of the time. Most of the providers AIM assessed convert 25% to 45% of proofs of concept. MIT NANDA's interview sample shows 40% of all organisations successfully implementing general-purpose tools (80% had investigated them), while only 5% reached sustained impact with custom or task-specific tools (60% had investigated them), and external partnerships succeeded twice as often as internal builds. The ranking is consistent once the denominators are lined up, and it explains why the same market can show high failure rates and fast-growing spend at the same time.",
       "theme": "adoption",
       "kind": "finding",
       "evidence": "multi-source",
@@ -1957,8 +1991,8 @@
     {
       "id": "ins-052",
       "title": "What the '95% of pilots fail' figure actually measures, and why it coexists with tripling spend",
-      "summary": "MIT NANDA's headline is the share of custom, task-specific GenAI tools reported as reaching sustained P&L impact within about six months in a 52-organisation interview sample. It is not a market-wide failure rate, and it does not contradict spend growth.",
-      "detail": "NANDA's funnel shows 60% of organisations investigating embedded or task-specific tools, 20% piloting and 5% reporting marked, sustained impact, judged roughly six months after the pilot; the authors call the figures directional and note that success definitions vary by organisation. The report's executive summary restates this as 95% of organisations getting zero return, which changes the unit from tools to organisations. Menlo cites the figure as the trigger of mid-2025 bubble fears and answers with $37B of enterprise spend growing 3.2x. AIM independently reports pilot failure above 70% alongside a growing services market. High per-pilot failure and rising aggregate spend are different measures and both can be true. NANDA's own general-purpose funnel converts 40 of 80, and its build-versus-buy gap of 33% against 66% is the same finding from another angle. The site quotes the 95% only with its definition and sample.",
+      "summary": "MIT NANDA's headline is the share of custom, task-specific GenAI tools reported as having a marked, sustained productivity or P&L effect about six months after the pilot, in a 52-organisation interview sample. It is not a market-wide failure rate, and it does not contradict spend growth.",
+      "detail": "NANDA's funnel shows 60% of organisations investigating embedded or task-specific tools, 20% piloting and 5% reporting marked, sustained impact, judged roughly six months after the pilot; the authors call the figures directional and note that success definitions vary by organisation. The report moves between tools and organisations as its unit, and its executive summary restates the 5% success rate as 95% of organisations getting zero return. Menlo says the figure unsettled markets in summer 2025 and amplified existing bubble talk, and answers with $37B of enterprise spend growing 3.2x. AIM also cites industry pilot failure above 70%, without naming its source. High per-pilot failure and rising aggregate spend are different measures and both can be true. NANDA's own general-purpose funnel converts 40 of 80, and its build-versus-buy gap of 33% against 66% is the same finding from another angle. The site quotes the 95% only with its definition and sample.",
       "theme": "method",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -2001,8 +2035,8 @@
     },
     {
       "id": "ins-053",
-      "title": "Access to AI tools grew by half in a year; daily use did not move",
-      "summary": "Sanctioned access rose from under 40% to about 60% of workers, but fewer than 60% of those with access use AI daily, a ratio unchanged from the prior year. Four sources describe this activation gap from different angles.",
+      "title": "Access to AI tools grew by half in a year; the share of those with access who use it daily did not move",
+      "summary": "Sanctioned access rose from under 40% to about 60% of workers, but fewer than 60% of those with access use AI daily, a ratio unchanged from the prior year. Six sources describe this activation gap from different angles.",
       "detail": "Deloitte names activation rather than availability as the primary barrier to value. KPMG's mid-2026 pulse shows employee adoption of agents falling from 55% to 43% in a quarter. Microsoft's survey of 20,000 AI users finds one in ten skilled but blocked by an unready organisation and only 13% rewarded for reinvention when results do not follow. MIT NANDA and Menlo show why official tools are judged harshly: workers at more than 90% of companies use personal AI tools regularly while 40% of companies have an official subscription, and employee-paid tools push product-led spend toward 40% of application spend. Employees have a private benchmark for what good AI feels like, and enterprise deployments are measured against it. a16z's finding that Copilot's net promoter score among developers fell 48 points after they tried Cursor makes the same point.",
       "theme": "adoption",
       "kind": "finding",
@@ -2065,8 +2099,8 @@
     {
       "id": "ins-054",
       "title": "Individual productivity gains are broad; enterprise financial impact is concentrated and flat",
-      "summary": "Eight in ten people say AI improves their own productivity, but only 37% of organisations attribute any EBIT impact to it and 6% qualify as high performers, both unchanged year on year. Efficiency is delivered; revenue is still an aspiration.",
-      "detail": "McKinsey's 2026 survey quantifies the gap in one sample: 80% report personal productivity gains, 37% attribute EBIT impact, 6% attribute 5% or more of EBIT. Deloitte finds efficiency and productivity achieved by 66% but revenue growth by 20%, with 74% still hoping for it. a16z's CIOs report ROI on LLM spend at break-even or worse in half of cases and 44% do not measure it precisely. Stanford's compilation of McKinsey's 2025 data shows the same ordering of outcomes: innovation improved for 64%, cost for 38%, revenue growth for 33%, market share for 25%. BCG's CEOs invest regardless. Four surveys with four fieldwork windows agree that spending follows productivity belief while enterprise-level financial proof remains rare.",
+      "summary": "Eight in ten McKinsey respondents who use AI at work say it improves their own productivity, but only 37% of organisations attribute any EBIT impact to it and 6% qualify as high performers, both unchanged year on year. Efficiency is delivered; revenue is still an aspiration.",
+      "detail": "McKinsey's 2026 survey quantifies the gap in one sample: 80% report personal productivity gains, 37% attribute EBIT impact, 6% qualify as high performers, attributing 5% or more of EBIT to AI and reporting significant value. Deloitte finds efficiency and productivity achieved by 66% but revenue growth by 20%, with 74% still hoping for it. a16z's CIOs report ROI on LLM spend at break-even or worse in half of cases and 44% do not measure it precisely. Stanford's compilation of McKinsey's 2025 data shows the same ordering of outcomes: innovation improved for 64%, cost for 38%, revenue growth for 33%, market share for 25%. BCG's executives invest regardless, with 94% of its 2,360 AI Radar respondents planning to keep investing. Five surveys with different fieldwork windows agree that spending follows productivity belief while enterprise-level financial proof remains rare.",
       "theme": "market",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2123,8 +2157,8 @@
     {
       "id": "ins-055",
       "title": "Company size buys breadth of deployment, not maturity of practice",
-      "summary": "McKinsey finds large enterprises far ahead on scaling AI and agents; IDC and AIM find maturity and delivery challenges flat across company size. The measures differ and both hold.",
-      "detail": "In McKinsey's 2026 survey, 54% of respondents at $1B-plus firms report enterprise-wide scaling against 33% at smaller firms, and agent scaling reached 40% at large firms versus 22% below. Stanford's compilation of the 2025 edition shows scaled or fully scaled deployment rising from 30% in the smallest revenue band to 49% in the largest. IDC's real-time data maturity score and AI success rate barely move from 500 to 10,000-plus employees, and AIM finds the same delivery challenges at vendors of every size. Large firms have the budget and IT capacity to run more programmes further, but scaling more programmes does not raise the outcome rate per project. MIT NANDA's interviews add that top mid-market firms move from pilot to full implementation in about 90 days against nine months or more for enterprises.",
+      "summary": "McKinsey finds large enterprises far ahead on scaling AI and agents; IDC finds maturity and AI success flat across buyer company size, and AIM finds the same delivery challenges at service vendors of every size. The measures differ and both hold.",
+      "detail": "In McKinsey's 2026 survey, 54% of respondents at $1B-plus firms report enterprise-wide scaling against 33% at smaller firms, and agent scaling reached 40% at large firms versus 22% below. Stanford's compilation of the 2025 edition shows scaled or fully scaled deployment at 30% in the smallest revenue band and 49% in the largest, with most of the gain coming above $1B. IDC's real-time data maturity score and AI success rate barely move from 500 to 10,000-plus employees, and AIM finds the same delivery challenges at vendors of every size. Large firms have the budget and IT capacity to run more programmes further, but scaling more programmes does not raise the outcome rate per project. MIT NANDA's interviews add that top mid-market firms move from pilot to full implementation in about 90 days against nine months or more for enterprises, which NANDA defines as firms above $100M in revenue.",
       "theme": "adoption",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -2177,7 +2211,7 @@
       "id": "ins-056",
       "title": "Reasoning models sped up adoption, and prompting plus retrieval remains the production norm",
       "summary": "More than half of large-enterprise CIOs say reasoning models accelerated LLM adoption. In production, prompt design and RAG dominate; fine-tuning, tool calling and context engineering are still niche.",
-      "detail": "a16z's respondents credit reasoning models with faster time to value, less prompt engineering, better integration and higher trust from explainability, and say they have moved away from fine-tuning toward routing across models. Menlo's architecture data show prompt design at 38% and RAG at 34% of enterprise customisation approaches, with fine-tuning at 12%, tool calling and context engineering at 6% each. AIM's vendor study reached the same conclusion from the supply side: RAG is table stakes and differentiation sits in retrieval quality. Startups lead on the newer techniques, which suggests enterprises will follow as tool-calling patterns mature.",
+      "detail": "a16z's respondents credit reasoning models with faster time to value, less prompt engineering, better integration and higher trust from explainability, and say they have moved away from fine-tuning toward routing across models. Menlo's architecture data show prompt design at 38% and RAG at 34% of enterprise customisation approaches, with fine-tuning at 12%, tool calling and context engineering at 6% each. AIM's vendor study reached the same conclusion from the supply side: RAG is now a baseline expectation, and vendors compete on the quality of their retrieval. Startups use context engineering and tool calling about twice as often as enterprises (13% and 12% against 6% each), which suggests enterprises will follow as tool-calling patterns mature.",
       "theme": "operations",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2193,7 +2227,7 @@
         {
           "source": "src-01",
           "pages": [
-            7
+            6
           ]
         }
       ],
@@ -2213,8 +2247,8 @@
     {
       "id": "ins-057",
       "title": "Executives expect agents to become a majority practice within two years; mid-2026 data show a pause",
-      "summary": "Deloitte's respondents expected agentic AI use to rise from 23% to 74% within two years, and IDC predicts half of enterprises using agents by 2027. KPMG's quarterly data in mid-2026 show deployment flat at about half of large US firms.",
-      "detail": "Deloitte's late-2025 survey projected at-least-moderate agent use climbing from 23% to 74%, with extensive use from 2% to 23%. BCG's CEOs committed more than 30% of 2026 AI budgets to agents and about 90% expected agents to deliver measurable ROI during the year. McKinsey's mid-2026 survey found agent scaling jumping from 27% to 40% at large firms but flat at 22% below $1B. KPMG's Q2 2026 pulse shows deployment at 53% versus 55% a quarter earlier, with the mix shifting from scaling across functions toward orchestrating across workflows. IDC's forecast of half of enterprises by 2027 sits inside the range the self-reports already claim. The expected surge is plausible on the self-reported measures and unproven on stage-based and architectural ones.",
+      "summary": "Deloitte's respondents expected at-least-moderate use of agentic AI to rise from 23% to 74% within two years, and IDC predicts half of enterprises using agents by 2027. KPMG's quarterly data in mid-2026 show deployment flat at about half of large US firms.",
+      "detail": "Deloitte's survey, fielded in August and September 2025, projected at-least-moderate agent use climbing from 23% to 74%, with extensive use from 2% to 23%. BCG's CEOs committed more than 30% of 2026 AI budgets to agents and about 90% expected agents to deliver measurable ROI during the year. McKinsey's mid-2026 survey found agent scaling jumping from 27% to 40% at large firms but flat at 22% below $1B. KPMG's Q2 2026 pulse shows deployment at 53% versus 55% a quarter earlier, with the mix shifting from scaling across functions toward orchestrating across workflows. IDC's forecast of half of enterprises by 2027 sits inside the range the self-reports already claim. The expected surge is plausible on the self-reported measures and unproven on stage-based and architectural ones.",
       "theme": "agentic",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2306,8 +2340,8 @@
     {
       "id": "ins-059",
       "title": "Orchestration across workflows is the layer buyers and vendors are converging on",
-      "summary": "The share of large US firms orchestrating multiple agents across workflows doubled in one quarter, most leading service providers now sell an orchestration platform, and managing agents across frameworks is a top buyer barrier.",
-      "detail": "KPMG's pulse shows orchestration rising from 9% to 18% of large US firms between Q1 and Q2 2026 while scaling across functions slipped and piloting grew. AIM's vendor profiles show at least 18 of 28 providers with a named multi-agent orchestration platform. IDC's buyers rank managing agents across different frameworks joint top among scaling barriers at 40%, ahead of building agents, which ranks last. Demand and supply are moving to the same layer, and interoperability protocols such as MCP and A2A are the emerging plumbing that MIT NANDA also points to.",
+      "summary": "The share of large US firms orchestrating multiple agents across workflows doubled in one quarter, most leading service providers now name their own platform for building or orchestrating agents, and managing agents across frameworks is a top buyer barrier.",
+      "detail": "KPMG's pulse shows orchestration rising from 9% to 18% of large US firms between Q1 and Q2 2026 while scaling across functions slipped and piloting grew. AIM's vendor profiles show more than half of the 28 providers naming their own platform for building or orchestrating agents. IDC's buyers rank managing agents across different frameworks joint top among scaling barriers at 40%, ahead of building agents, which ranks last. Demand and supply are moving to the same layer, and interoperability protocols such as MCP and A2A are the emerging plumbing that MIT NANDA also points to.",
       "theme": "agentic",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2322,7 +2356,61 @@
           "source": "src-01",
           "pages": [
             31,
-            32
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86
           ]
         },
         {
@@ -2354,8 +2442,8 @@
     {
       "id": "ins-060",
       "title": "Agent governance lags agent deployment everywhere except among the leaders",
-      "summary": "One in five companies has a mature governance model for autonomous agents, half rely on output-level rather than action-level human review, and a third are mitigating unauthorised agent actions. Autonomy is expected to roughly triple within three years.",
-      "detail": "Deloitte finds 21% with mature agent governance while 74% plan at least moderate agent use within two years. KPMG's preferred control, named by 52% for the second quarter running, is a person validating outputs without supervising each agent action. McKinsey provides the first direct measure of agent-action risk: 33% mitigate unauthorised or unintended action, rising to 45% among high performers. BCG's CEOs expect systems that work independently to rise from 14% to 39% and systems with decision authority from 10% to 35% within three years. Deloitte's prescription of explicit autonomy boundaries, real-time monitoring and full audit trails, and Microsoft's advice to treat agents as managed identities with permissions and lifecycle, describe the same gap. It is being closed by the leading minority first.",
+      "summary": "One in five companies has a mature governance model for autonomous agents, and half name output-level rather than action-level human review as their main planned agent control for the next 6 to 12 months. Outside the leading group, a third are mitigating unauthorised or unintended AI actions. Autonomy is expected to roughly triple within three years.",
+      "detail": "Deloitte finds 21% with mature agent governance while 74% plan at least moderate agent use within two years. KPMG's preferred control, named by 52% for the second quarter running, is a person validating outputs without supervising each agent action. McKinsey provides the first direct measure of the risk of unauthorised action: 45% of high performers are working to mitigate unauthorised or unintended AI actions, against 33% of other respondents. In the BCG and MIT Sloan Management Review study that BCG reproduces (2,102 respondents), the share saying AI systems work independently is expected to rise from 14% to 39% within three years, and the share saying AI has decision authority from 10% to 35%. Deloitte's prescription of explicit autonomy boundaries, real-time monitoring and full audit trails, and Microsoft's advice to treat agents as managed identities with permissions and lifecycle, describe the same gap. It is being closed by the leading minority first.",
       "theme": "governance",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2412,7 +2500,7 @@
       "id": "ins-061",
       "title": "Agents raise the demand for human judgment before they lower headcount",
       "summary": "Half of AI users say quality control of AI output is the skill gaining most importance, 86% keep responsibility for the thinking, and buyers name human-oversight skills the second-biggest barrier to deploying agents.",
-      "detail": "Microsoft's survey of 20,000 AI users puts quality control of AI output (50%) and critical thinking (46%) at the top of rising skills. KPMG's buyers rank human oversight skills such as human-in-the-loop judgment and escalation at 43%, behind only data readiness. Deloitte's interviewees expect staff to spend more time watching agent volume and quality metrics and handling human-in-the-loop gates before any headcount effect. AIM's providers list human-in-the-loop patterns as the standard reliability control. Human evaluation capacity is the shared bottleneck, and it is the workforce implication executives' automation forecasts tend to skip.",
+      "detail": "Microsoft's survey of 20,000 AI users puts quality control of AI output (50%) and critical thinking (46%) at the top of rising skills. KPMG's buyers rank human oversight skills such as human-in-the-loop judgment and escalation at 43%, behind only data readiness. One Deloitte interviewee, a former observability VP at a large telecom company, expects staff at first to spend more time monitoring agent volume and quality metrics and handling human-in-the-loop gates, before any effect on headcount. AIM's providers use human-in-the-loop validation as one of several common reliability controls, alongside retrieval-first design, citation checks and confidence scoring. Human evaluation capacity is the shared bottleneck, and it is the workforce implication executives' automation forecasts tend to skip.",
       "theme": "talent",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2457,8 +2545,8 @@
     {
       "id": "ins-062",
       "title": "Coding agents are starting to displace software purchases",
-      "summary": "A third of organisations have declined to buy at least one software product or feature because coding agents let them build it in-house, rising to about half of AI high performers.",
-      "detail": "McKinsey's mid-2026 survey is the first to measure this. The decline-to-buy share is highest in technology (41%), healthcare (39%), professional services and energy (38%) and lowest in insurance (19%) and the public sector (17%). High performers also hit token-cost limits on coding agents three times as often as others, which shows the build option is not free. Menlo had already noted that the race between deep third-party applications and improving model capability is most intense in software development. This is a single-source measurement and an early signal; the site presents it as a trend to watch rather than an established shift.",
+      "summary": "About a third (32%) of respondents at organisations that use AI regularly say they have declined to buy at least one software product or feature because coding agents let them build it in-house, rising to about half of AI high performers.",
+      "detail": "McKinsey's survey, fielded in May and June 2026, is the only source in this project that measures this. The decline-to-buy share is highest in technology (41%), healthcare (39%), professional services and energy (38%) and lowest in insurance (19%) and the public sector (17%). High performers also hit token-cost limits on coding agents three times as often as others, which shows the build option is not free. a16z's CIO survey notes that the contest between third-party apps building deep workflows and fast-improving models has sharpened, above all in software development. This is a single-source measurement and an early signal; the site presents it as a trend to watch rather than an established shift.",
       "theme": "market",
       "kind": "finding",
       "evidence": "single-source",
@@ -2472,8 +2560,8 @@
           ]
         },
         {
-          "source": "src-07",
-          "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/"
+          "source": "src-08",
+          "url": "https://a16z.com/leaders-gainers-and-unexpected-winners-in-the-enterprise-ai-arms-race/"
         }
       ],
       "related_stats": [
@@ -2509,7 +2597,8 @@
         {
           "source": "src-01",
           "pages": [
-            5, 10
+            5,
+            10
           ]
         },
         {
@@ -2535,9 +2624,9 @@
     },
     {
       "id": "ins-064",
-      "title": "Data readiness tops agent barriers in two buyer surveys and a provider survey",
+      "title": "Data readiness is the top agent barrier in two buyer surveys and the top delivery problem for providers",
       "summary": "Data readiness and access lead KPMG's agent barriers at 58%, connecting agents to enterprise data ties for first in IDC's at 40%, and AIM calls the gap between data that exists and data that is RAG-ready the largest technical friction. MIT NANDA's users describe the same problem as tools that do not learn or retain context.",
-      "detail": "Three surveys from different populations and continents agree on the top barrier. KPMG's large US firms put data readiness far ahead of skills and complexity. IDC's eight-country sample ranks connecting agents to real-time data joint first at 40%, level with managing agents across frameworks, and data quality first among technical challenges at 46%. AIM's providers name data readiness the technical root cause of most production failures. NANDA adds the user's view: about two thirds reject generic tools for core workflows because they do not learn from feedback or require too much manual context each time, and 66% of executives want systems that learn. Memory, context and data readiness are one problem seen from the user, the buyer and the vendor, and the data-platform work IDC associates with leaders is its remedy.",
+      "detail": "Two buyer surveys from different populations agree on the top barrier, and AIM's provider assessment points the same way. KPMG's large US firms put data readiness far ahead of skills and complexity. IDC's eight-country sample ranks connecting agents to real-time data joint first at 40%, level with managing agents across frameworks, and data quality first among technical challenges at 46%. AIM's providers name data readiness the technical root cause of most production failures. NANDA adds the user's view: about two thirds cite tools that do not learn from feedback, and about 63% cite having to supply context every time, as barriers to using them in core workflows, and 66% of executives want systems that learn. Memory, context and data readiness are one problem seen from the user, the buyer and the vendor, and the data-platform work IDC associates with leaders is its remedy.",
       "theme": "data",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2552,7 +2641,8 @@
           "source": "src-02",
           "pages": [
             12,
-            13, 15
+            13,
+            15
           ]
         },
         {
@@ -2640,8 +2730,8 @@
     {
       "id": "ins-066",
       "title": "Usage incentives such as token-maxxing risk rewarding the wrong behaviour",
-      "summary": "Two in five large US firms would consider rewarding employees for consuming as many tokens as possible, often via leaderboards, while fewer than half of leaders agree that heavy AI users are outperforming others.",
-      "detail": "KPMG's Q2 2026 pulse records 41% open to token-maxxing incentives at the same time as only 47% agree that strong AI users outperform and employee resistance driven by workload is rising. KPMG's own summary warns that metrics based on usage rather than outcomes reinforce the wrong habits. Microsoft's finding that only 13% of AI users are rewarded for reinvention when results do not follow shows the opposite failure: incentives that never reward experimentation. The organisations in McKinsey's high-performer group tie AI use to performance management and measure impact with defined processes, which is the middle path the two extremes miss.",
+      "summary": "Two in five large US firms would consider rewarding employees for consuming as many tokens as possible, often via leaderboards, while fewer than half of leaders (47%) agree that employees who use AI well are outperforming others.",
+      "detail": "KPMG's Q2 2026 pulse records 41% open to token-maxxing incentives at the same time as only 47% agree that strong AI users outperform and employee resistance driven by workload is rising. KPMG's own summary warns that metrics based on usage rather than outcomes reinforce the wrong habits. Microsoft's finding that only 13% of AI users are rewarded for reinvention when results do not follow shows the opposite failure: incentives that never reward experimentation. McKinsey's high performers are more likely than other firms to factor AI use into performance management and about twice as likely to measure impact with defined processes (about 40% against 20%), even though only a minority of them do each so far, which points to the middle path the two extremes miss.",
       "theme": "cost",
       "kind": "finding",
       "evidence": "single-source",
@@ -2681,9 +2771,9 @@
     },
     {
       "id": "ins-067",
-      "title": "Data privacy and security top every concern list, and the concern is turning into an investment area",
-      "summary": "Privacy and security is the leading AI concern in the BCG, Deloitte and KPMG surveys and among the risks McKinsey's respondents most often mitigate, but it is easing in BCG's executive survey and more leaders now see agents as a security opportunity than as a threat.",
-      "detail": "BCG's executives (2,360 respondents, 27% of them CEOs) rank data privacy and cybersecurity first at 53%, down 12 points from 2025, and 32% call cybersecurity the biggest opportunity of agentic AI against 9% who call it the biggest threat. Deloitte's respondents put data privacy and security at 73%, followed by compliance at 50% and governance capability and model quality at 46% each. Data security, privacy and risk is the top factor shaping strategy for 92% of KPMG's large US firms, and cybersecurity is their most common mid-size investment line at 55%. McKinsey's most-mitigated risks are inaccuracy, cyber exploitation and social engineering. IDC's buyers rank security and AI trust the second driver of real-time data demand. The concern is not going away; it has become a budget line.",
+      "title": "Privacy and security lead the concern lists in three major surveys and are becoming an investment area",
+      "summary": "Privacy and security is the leading AI concern in the BCG, Deloitte and KPMG surveys, and cyber threats rank among the risks McKinsey's respondents most often mitigate. The concern is easing in BCG's executive survey, and more leaders now see agents as a security opportunity than as a threat.",
+      "detail": "BCG's executives (2,360 respondents, 27% of them CEOs) rank data privacy and cybersecurity first at 53%, down 12 points from 2025, and 32% call cybersecurity the biggest opportunity of agentic AI against 9% who call it the biggest threat. Deloitte's respondents put data privacy and security at 73%, followed by compliance at 50% and governance capability and model quality at 46% each. Data security, privacy and risk is the top factor shaping strategy for 92% of KPMG's large US firms, and cybersecurity is their most common mid-size investment line at 55%. Among McKinsey respondents outside the high-performer group, the risks most often being mitigated are inaccuracy (53%), AI-driven exploitation of technical vulnerabilities (46%) and AI-driven social engineering (43%); high performers put vulnerability exploitation first at 56%. IDC's buyers rank security and AI trust the second driver of real-time data demand. The concern is not going away; it has become a budget line.",
       "theme": "governance",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2739,7 +2829,7 @@
       "id": "ins-068",
       "title": "Override rules and accountability for AI decisions are still informal at many large firms",
       "summary": "A third of large US firms override AI outputs case by case without formal criteria, and accountability for AI-informed decisions is split between named executives and the CEO or executive committee, with governance committees rarely in charge.",
-      "detail": "KPMG finds the most common override triggers are a conflict with regulatory or legal requirements (47%) and confidence or quality scores below limits (43%), but 33% have no formal criteria and only 29% use predefined risk thresholds. Accountability sits with a named C-suite executive such as the CIO, CAIO or COO at 34%, the CEO or executive committee at 32%, a business unit leader at 14% and a central AI governance committee at 10%. Deloitte's interviews surfaced organisations with no inventory of the models running in production. The picture is of governance that exists as principle and dashboard but not yet as rule. It is a single-source measurement on the override question.",
+      "detail": "KPMG finds the most common override triggers are a conflict with regulatory or legal requirements (47%) and confidence or quality scores below limits (43%), but 33% say overrides are decided case by case without formal criteria and only 29% use predefined risk thresholds. Accountability sits with a named C-suite executive such as the CIO, CAIO or COO at 34%, the CEO or executive committee at 32%, a business unit leader at 14% and a central AI governance committee at 10%. In Deloitte's interviews, some leaders found models that had gone live without formal oversight, and one found no clear inventory of the AI tools and models in use. The picture is of governance that exists as principle and dashboard but not yet as rule. It is a single-source measurement on the override question.",
       "theme": "governance",
       "kind": "finding",
       "evidence": "single-source",
@@ -2771,9 +2861,9 @@
     },
     {
       "id": "ins-069",
-      "title": "Publics are more nervous than executives, and trust in regulators is lowest in the United States",
-      "summary": "Global optimism about AI rose to 59% in 2025 while about half stay nervous. The US public expects AI to eliminate jobs by two to one, only 31% trust the US government to regulate AI, and every US state has more people wanting stronger federal rules than weaker ones.",
-      "detail": "Stanford's compilation of Ipsos, Pew and CHIP50 data is the only public-opinion evidence in this project. Sentiment is most positive in China, Indonesia, Thailand and Malaysia and most nervous in Australia, the US, India and Great Britain. US experts and the public diverge sharply: 73% of experts but 23% of the public expect AI to improve how people do their jobs. A 25-country median trusts the EU (53%) more than the US (37%) or China (27%) to regulate AI. Executive surveys in this project are most confident in exactly the markets where publics are most optimistic, which suggests public sentiment is a real constraint on adoption in the West that CEO and CIO surveys do not capture.",
+      "title": "Publics remain nervous about AI, and trust in regulators is lowest in the United States",
+      "summary": "Global optimism about AI rose to 59% in 2025 while about half stay nervous. Nearly two thirds of US adults expect AI to mean fewer jobs over 20 years against 5% who expect more, only 31% trust the US government to regulate AI, and every US state with reported data has more people wanting stronger federal rules than weaker ones.",
+      "detail": "Stanford's compilation of Ipsos, Pew and CHIP50 data is the only public-opinion evidence in this project. Sentiment is most positive in China, Indonesia, Thailand and Malaysia and most nervous in Australia (67%), India and Hungary (65%) and the US, Canada and Ireland (64%). US experts and the public diverge sharply: 73% of experts but 23% of the public expect AI to improve how people do their jobs. A 25-country median trusts the EU (53%) more than the US (37%) or China (27%) to regulate AI. The executive surveys in this project do not measure public sentiment, so they may miss the public caution that could slow adoption in markets such as the US, Canada and Australia.",
       "theme": "governance",
       "kind": "finding",
       "evidence": "single-source",
@@ -2788,6 +2878,7 @@
             374,
             380,
             381,
+            382,
             383
           ]
         }
@@ -2812,7 +2903,7 @@
       "id": "ins-070",
       "title": "AI has become a CEO-owned agenda",
       "summary": "Nearly three quarters of CEOs call themselves the main AI decision-maker, double the prior year, and two thirds of large US firms say their CEO actively owns AI with clear accountability. Visible senior ownership is a top high-performer practice.",
-      "detail": "BCG's 640 CEOs put themselves in charge at 72%, and half tie their own job stability to getting AI right by 2026. KPMG's leaders corroborate it at 67%. McKinsey finds senior leaders visibly owning AI initiatives at 65% of high performers against 31% of others, one of the widest practice gaps in its survey. Ownership and accountability are not the same thing, though: KPMG shows accountability for individual AI-informed decisions split between named executives and the CEO. AIM's observation that buyers now ask why their last pilots failed has an owner.",
+      "detail": "BCG's 640 CEOs put themselves in charge at 72%, and half tie their own job stability to getting AI right by 2026. In KPMG's survey of senior US leaders, 67% agree their CEO actively owns AI with clear accountability for outcomes. McKinsey finds senior leaders visibly owning AI initiatives at roughly 65% of high performers against roughly 31% of others (read from an unlabelled chart), one of the widest practice gaps in its survey. Ownership and accountability are not the same thing, though: KPMG shows accountability for AI-informed decisions split: 34% name a C-suite executive, 32% the CEO or executive committee, and the rest a business unit leader or a governance committee. AIM's observation that buyers now ask why their last pilots failed has an owner.",
       "theme": "talent",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2861,10 +2952,10 @@
       "id": "ins-071",
       "title": "Organisational conditions explain twice as much AI impact as individual effort; demographics almost none",
       "summary": "Across 29 factors in a survey of 20,000 AI users, organisational AI culture, talent practices and manager support outrank every individual factor, and age, job level, function, industry and company size explain almost nothing.",
-      "detail": "Microsoft's random-forest analysis attributes 67% of explained variation in reported AI impact to organisational factors and 32% to individual ones, with organisational culture at the top and the strongest individual factor (AI mindset) less than half as important. Microsoft states the results are associations, not causes, and the sample excludes non-users. The finding is nonetheless the workforce-side mirror of what buyer and vendor surveys say: AIM's providers call adoption failure the main ROI risk, Deloitte finds skills the top integration barrier and 84% of firms without job redesign, and BCG's Trailblazer CEOs put about 60% of AI budget into upskilling. Manager behaviour moves the numbers: employees whose managers openly use AI, set quality standards and make room to experiment report far higher impact.",
+      "detail": "Microsoft's random-forest analysis attributes 67% of explained variation in reported AI impact to organisational factors and 32% to individual ones, with organisational culture at the top and the strongest individual factor (AI mindset) less than half as important. Microsoft states the results are associations, not causes, and the sample excludes non-users. The finding is nonetheless the workforce-side mirror of what buyer and vendor surveys say: AIM judges that providers who see weak adoption rather than technical faults as the chief threat to ROI deliver longer-lasting deployments, Deloitte finds skills the top integration barrier and 84% of firms without job redesign, and BCG's Trailblazer CEOs put about 60% of AI budget into upskilling. Manager behaviour is linked to results: Frontier Professionals are far more likely than others to have managers who openly use AI, set quality standards and make room to experiment, and a separate Microsoft study of 1,800 workers found 17 points more reported AI value where managers modelled AI use.",
       "theme": "talent",
       "kind": "finding",
-      "evidence": "multi-source",
+      "evidence": "single-source",
       "refs": [
         {
           "source": "src-10",
@@ -2914,8 +3005,8 @@
     {
       "id": "ins-072",
       "title": "Work has not been redesigned around AI, and redesign is the strongest single marker of leaders",
-      "summary": "84% of large companies have not redesigned jobs around AI and only 16% have adopted flatter structures, yet about three quarters of McKinsey's high performers have fundamentally redesigned workflows against a quarter of others.",
-      "detail": "Deloitte's late-2025 survey finds most talent responses stop at education and fluency: 53% educate the workforce, 33% redesign career paths, 30% reorganise around new work patterns. McKinsey's high performers redesign workflows at about 73%, up from 55% a year earlier, versus about 25% of others, and are 3.3 times more likely to intend fundamental transformation within three years. BCG's Trailblazers are far more likely to see end-to-end transformation as their greatest agent opportunity, and IDC's Leaders have real-time data across all workflows at 76% against 7% for its Emerging tier. Microsoft's data say the same from the employee side: Frontier Professionals redesign workflows routinely and their teams discuss quality standards and share what works. The leading group is defined by operating-model change rather than tools or budget.",
+      "summary": "84% of companies in Deloitte's survey have not redesigned jobs around AI and only 16% have moved to flatter, pod-style structures to a great extent, yet about three quarters of McKinsey's high performers have fundamentally redesigned workflows against a quarter of others.",
+      "detail": "Deloitte's survey from August and September 2025 finds most talent responses stop at education and fluency: 53% educate the workforce, 33% redesign career paths, 30% reorganise around new work patterns. McKinsey's high performers redesign workflows at about 73%, up from 55% a year earlier, versus about 25% of others, and are 3.3 times more likely to intend fundamental transformation within three years. BCG's Trailblazer CEOs are about twice as likely as Followers (58% against 30%) to count end-to-end transformation among their biggest agent opportunities for the next 12 months, and IDC's Leaders have real-time data across all workflows at 76% against 7% for its Emerging tier. Microsoft's data say the same from the employee side: Frontier Professionals redesign workflows routinely and their teams discuss quality standards and share what works. The leading group is defined by operating-model change rather than tools or budget.",
       "theme": "talent",
       "kind": "finding",
       "evidence": "multi-source",
@@ -2976,7 +3067,7 @@
       "id": "ins-073",
       "title": "Employee resistance is rising, and its cause is shifting from fear to workload",
       "summary": "Employee adoption of agents at large US firms fell from 55% to 43% in one quarter while resistance rose from 5% to 20%. Concerns about skills and job security eased; resistance because AI makes work feel harder nearly doubled.",
-      "detail": "KPMG's Q2 2026 pulse attributes 51% of resistance to added workload or complexity, up from 28%, while concern about skills gaps fell from 76% to 57% and about job security from 67% to 55%. McKinsey finds the strain concentrated below executive level: 47% of midlevel managers and individual contributors report at least one negative effect such as pressure to take on more work or weaker critical thinking, versus 31% of executives. Microsoft's AI users say it feels safer to focus on current goals than to redesign work (45%) even though 65% fear falling behind. Executives who answer these surveys experience AI differently from the people expected to adopt it, which helps explain the flat daily-use rate Deloitte reports.",
+      "detail": "KPMG's Q2 2026 pulse attributes 51% of resistance to added workload or complexity, up from 28%, while concern about skills gaps fell from 76% to 57% and about job security from 67% to 55%. McKinsey finds the strain concentrated below executive level: 47% of midlevel managers and individual contributors report at least one negative effect such as pressure to take on more work or weaker critical thinking, versus 31% of executives and senior managers. Microsoft's AI users say it feels safer to focus on current goals than to redesign work (45%) even though 65% fear falling behind. Executives who answer these surveys experience AI differently from the people expected to adopt it, which helps explain the flat daily-use rate Deloitte reports.",
       "theme": "talent",
       "kind": "finding",
       "evidence": "multi-source",
@@ -3024,12 +3115,12 @@
     },
     {
       "id": "ins-074",
-      "title": "Workforce cuts expected from AI run about double the cuts actually reported",
-      "summary": "Organisations that expected AI-driven headcount reductions in 2025 (32%) reported them a year later at 14%, then raised their expectation for the next year to 39%. Other executive surveys show even larger expectations; the one study of realised effects shows limited, selective cuts.",
-      "detail": "McKinsey's 2026 survey provides the only before-and-after check in this project, and the pattern held among the 552 respondents who answered in both years. Deloitte's respondents expect at least 10% of jobs fully automated within a year (36%) and within three years (82%), and BCG's CEOs expect more than half of roles gone or transformed by 2030 (60%). MIT NANDA's mid-2025 interviews found layoffs limited and confined to already-disrupted sectors, with reductions of 5% to 20% in customer support and administrative processing at advanced adopters, mostly in previously outsourced roles. Service operations and supply chain lead both expectations and realised cuts in McKinsey's data. The evidence supports discounting stated automation expectations heavily while watching the functions where cuts have begun.",
+      "title": "Workforce cuts expected from AI ran more than twice the cuts later reported",
+      "summary": "In McKinsey's 2025 survey 32% of respondents expected AI-driven headcount cuts over the next year; in the 2026 survey 14% reported such cuts, and 39% now expect cuts over the coming year. Other executive surveys show even larger expectations, and MIT NANDA's interviews find the cuts made so far limited and selective.",
+      "detail": "McKinsey's 2026 survey provides the only before-and-after check in this project, and the pattern held among the 552 respondents who answered in both years. Deloitte's respondents expect at least 10% of jobs fully automated within a year (36%) and within three years (82%), and BCG's CEOs expect more than half of roles gone or transformed by 2030 (60%). MIT NANDA's mid-2025 interviews found no broad layoffs, with reductions of 5% to 20% in customer support and administrative processing at advanced adopters, mostly in previously outsourced roles, while reduced hiring was expected mainly in tech and media. Service operations and supply chain lead both expectations and realised cuts in McKinsey's data. The evidence supports discounting stated automation expectations heavily while watching the functions where cuts have begun.",
       "theme": "talent",
       "kind": "finding",
-      "evidence": "multi-source",
+      "evidence": "single-source",
       "refs": [
         {
           "source": "src-03",
@@ -3076,8 +3167,8 @@
     {
       "id": "ins-075",
       "title": "Entry-level workers bear the early labour cost even though they gain most in productivity studies",
-      "summary": "Employment of US software developers aged 22 to 25 fell close to 20% from its 2022 peak while older cohorts grew, and the same age band declined about 16% in the most AI-exposed occupations relative to the least. In controlled studies, the least experienced workers gain the most from AI.",
-      "detail": "Stanford's compilation of Brynjolfsson and colleagues' payroll analysis shows the decline widening from mid-2024 and holding after firm-level controls, with a matching pattern for customer service agents. The same chapter reports productivity gains of 30% to 35% for the least experienced support agents and the largest Copilot gains for junior developers. Deloitte's interviewees worry that automating data entry, reconciliation and first-line support removes the first rung of careers, and Lightcast data show employers creating at least 1.3 million AI-related roles while junior hiring falls. The productivity dividend and the hiring cut fall on the same group from different directions, which makes career pathways a design problem rather than a side effect.",
+      "summary": "Employment of US software developers aged 22 to 25 fell close to 20% from its 2022 peak while older cohorts grew, and the same age band declined about 16% in the most AI-exposed occupations relative to the least. In studies of individual workers, the least experienced gain the most from AI.",
+      "detail": "Stanford's compilation of Brynjolfsson and colleagues' payroll analysis shows the decline widening from mid-2024 and holding after firm-level controls, with a matching pattern for customer service agents. The same chapter reports productivity gains of 30% to 35% for the least experienced support agents and the largest Copilot gains for junior developers. Deloitte's interviewees worry that automating data entry, reconciliation and first-line support removes the first rung of careers, and Microsoft, citing LinkedIn labour-market data, reports at least 1.3 million AI-related job opportunities created over two years, even as junior employment in exposed roles shrinks. The productivity dividend and the hiring cut fall on the same group from different directions, which makes career pathways a design problem rather than a side effect.",
       "theme": "talent",
       "kind": "finding",
       "evidence": "multi-source",
@@ -3116,9 +3207,9 @@
     },
     {
       "id": "ins-076",
-      "title": "Emerging Asia and the Gulf lead on AI confidence and practice; Japan and Western Europe trail",
-      "summary": "CEO confidence runs from 76% in India to 44% in the UK, the share of Frontier Professionals from 39% in Vietnam to 8% in France, and public optimism from 85% in China to 42% in the US. The ranking repeats across four independent sources.",
-      "detail": "BCG finds CEOs in India, Greater China and Japan most confident that AI will pay off and least pressured to act, while UK and US CEOs are the reverse. Microsoft's survey of AI users finds the largest shares of advanced practitioners and the strongest leadership alignment in Vietnam, Indonesia, India and Thailand, and the lowest in France, the Netherlands, Italy and Japan. Deloitte shows Asia Pacific leading physical AI adoption, and Stanford's compilation shows the UAE and Singapore leading population diffusion, the US 24th, and publics in China and Southeast Asia far more optimistic than in the US, Canada or Western Europe. Japan is the exception worth stating: confident at CEO level in BCG, weak on workforce practice and leadership alignment in Microsoft.",
+      "title": "Emerging Asia and the Gulf lead on AI confidence and practice; Western Europe trails and Japan is split",
+      "summary": "CEO confidence runs from 76% in India to 44% in the UK, the share of Frontier Professionals from 39% in Vietnam to 8% in France, and public optimism from about 87% in China to about 40% in Canada. CEO confidence, advanced practice and public optimism point the same way, while population diffusion is led by the UAE and Singapore and otherwise tracks national income.",
+      "detail": "BCG finds CEOs in India, Greater China and Japan the most confident that AI will pay off (76%, 73% and 70%), with India and Greater China also the least pressured to act (3% and 8%), while UK and US CEOs are the least confident and the most pressured. Microsoft's worker survey finds the largest shares of advanced practitioners and the strongest leadership alignment in Vietnam, Indonesia, India and Thailand, the lowest Frontier shares in France, the Netherlands and Italy (8% to 10%), and the weakest leadership alignment in Japan, South Korea, Sweden and Taiwan (14% to 17%). Deloitte shows Asia Pacific leading physical AI adoption, and Stanford's compilation shows the UAE and Singapore leading population diffusion, with several Western European countries also in the top ten and the US 24th, and publics in China and Southeast Asia far more optimistic than in the US, Canada or Western Europe. The diffusion ranking comes from Microsoft telemetry, so it is not independent of Microsoft's own survey. Japan is the exception worth stating: confident at CEO level in BCG, weak on workforce practice and leadership alignment in Microsoft.",
       "theme": "market",
       "kind": "finding",
       "evidence": "multi-source",
@@ -3147,7 +3238,7 @@
           "source": "src-11",
           "pages": [
             201,
-            365
+            364
           ]
         }
       ],
@@ -3170,8 +3261,8 @@
     {
       "id": "ins-077",
       "title": "How big the leading group is depends entirely on where the bar is set",
-      "summary": "Sources put the share of organisations that are ahead at 1%, 6%, 15%, 16% to 19%, 20% and 34%. Practice-based definitions cluster at 15% to 20%; the extremes come from an EBIT test and from self-described ambition.",
-      "detail": "IDC's maturity benchmark counts 1% as optimised AI-fuelled enterprises with no method given. McKinsey's high performers, who attribute 5% or more of EBIT to AI, are 6%. BCG's Trailblazer CEOs are about 15%. Microsoft's Frontier Professionals are 16% of AI users and its Frontier zone 19%. IDC's real-time data Leaders are the top 20%. Deloitte's deep transformers are 34% because the question asks about ambition rather than practice. The consistent message is that the leading group is small and is defined by execution and operating-model change, not by size or budget. The site presents the range with each definition rather than one number.",
+      "summary": "Sources put the share of organisations that are ahead at 1%, 6%, 15%, 16% to 19%, 20% and 34%. Practice-based definitions cluster at 15% to 19%; the extremes come from IDC's undocumented maturity benchmark (1%) and Deloitte's self-described transformation approach (34%), with McKinsey's EBIT test next lowest at 6%.",
+      "detail": "IDC's maturity benchmark counts 1% as optimised AI-fuelled enterprises with no method given. McKinsey's high performers, who attribute 5% or more of EBIT to AI and report significant value from it, are 6%. BCG's Trailblazer CEOs are about 15%. Microsoft's Frontier Professionals are 16% of AI users and its Frontier zone 19%. IDC's real-time data Leaders are the top 20% by construction, since IDC defines them as the top fifth of its maturity scores. Deloitte's deep transformers are 34% because respondents pick their own current transformation approach from three broad options, a self-assessment rather than a measured practice. The consistent message is that the leading group is small and is defined by execution and operating-model change, not by size or budget. The site presents the range with each definition rather than one number.",
       "theme": "method",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -3231,9 +3322,9 @@
     },
     {
       "id": "ins-078",
-      "title": "What the leaders do differently, across five surveys",
+      "title": "What the leaders do differently, across four surveys and a provider assessment",
       "summary": "The leading minority invests more of its budget in people, redesigns workflows end to end, has visible senior ownership, measures impact, manages cost, sets human-in-the-loop rules and runs a unified data platform. Every survey that profiles leaders finds a version of this list.",
-      "detail": "BCG's Trailblazers put about 60% of AI budget into upskilling and about 60% into agentic AI, invest more than $50M and upskill more than half the workforce at two to three times the rate of others. McKinsey's high performers lead on transformative ambition (62% vs 17%), workflow redesign (73% vs 25%), senior leaders visibly owning AI (65% vs 31%), defined impact measurement (40% vs 20%), active cost management (41% vs 25%) and a semantic layer (35% vs 13%), and they scale agents in three times as many functions. IDC's Leaders run a single unified data platform at 71% against 8% for its Emerging tier and embed talent in the business. Microsoft's Frontier Professionals have managers who set quality standards for AI work and teams that share what works. AIM's strongest providers show the same traits from the vendor side: production evidence, evaluation-driven development and named operational practices.",
+      "detail": "BCG's Trailblazers put about 60% of AI budget into upskilling and about 60% into agentic AI. They are also more likely to invest more than $50M (87%) and to upskill more than half the workforce (92%), at 2.8 and 2.7 times the Follower rates and about twice the Pragmatist rates. McKinsey's high performers lead on transformative ambition (62% vs 17%), workflow redesign (73% vs 25%), senior leaders visibly owning AI (65% vs 31%), defined impact measurement (40% vs 20%), active cost management (41% vs 25%) and a semantic layer (35% vs 13%), and in most functions they are more than three times as likely as others to be scaling agents. IDC's Leaders run a single unified real-time data platform at 71% against 8% for its Emerging tier, and are more likely to embed real-time data talent in business teams (34% vs 21%). Microsoft's Frontier Professionals have managers who set quality standards for AI work and teams that share what works. AIM's strongest providers show the same traits from the vendor side: frameworks for the organisational reasons projects fail, evaluation built into development, and live systems named alongside measured business results.",
       "theme": "adoption",
       "kind": "finding",
       "evidence": "multi-source",
@@ -3303,7 +3394,7 @@
       "id": "ins-079",
       "title": "ROI is measured loosely and reported as modest",
       "summary": "Large enterprises measure AI return mostly as productivity (72%) and cost savings (53%); 44% believe it is positive without measuring it precisely; half report break-even or worse on LLM spend. Documented hard returns come from replacing external spend, not from revenue.",
-      "detail": "a16z's January 2026 survey gives the distribution: 19% below break-even, 31% at 1x, 29% at 1.5x, 12% at 2x and 9% at 3x or more. Revenue increase is the least-used ROI measure at 26%. McKinsey finds 37% attributing any EBIT impact and Deloitte 20% achieving revenue growth. MIT NANDA's case examples of $2M to $10M a year from eliminating BPO contracts and 30% lower agency spend came without material internal headcount cuts. AIM's providers confirm from the supply side that outcome-linked pricing stays rare because outcomes are hard to evidence. Enterprises are investing on productivity belief while the measurement discipline catches up.",
+      "detail": "a16z's January 2026 survey gives the distribution: 19% below break-even, 31% at 1x, 29% at 1.5x, 12% at 2x and 9% at 3x or more. Revenue increase is the least-used ROI measure at 26%. McKinsey finds 37% attributing any EBIT impact and Deloitte 20% achieving revenue growth. MIT NANDA's case examples of $2M to $10M a year from eliminating BPO contracts and 30% lower agency spend came without material internal headcount cuts. AIM's providers confirm from the supply side that outcome-linked pricing is still limited to a few vendors and to established deployments with clear KPIs, though its use is rising. Enterprises are investing on productivity belief while the measurement discipline catches up.",
       "theme": "commercial",
       "kind": "finding",
       "evidence": "multi-source",
@@ -3356,8 +3447,8 @@
     {
       "id": "ins-080",
       "title": "Productivity gains are large on structured work, near zero on judgment work, small in aggregate so far",
-      "summary": "Controlled studies show gains of 14% to 55% for support agents, developers, marketers and accountants, but no gain for engineers learning new tools and a 19% slowdown for experienced open-source developers that a later replication did not reproduce. Firm-level effects are small so far and the national evidence is early and inconclusive.",
-      "detail": "Stanford's compilation lists the studies: support agents resolved 14% to 15% more issues per hour, developers with Copilot raised pull requests 26%, marketing teams produced 50% more, accountants 55% more, while experienced developers on familiar codebases were slower and perceived more help than they got. At the macro level, 12,000 European firms show a 4% productivity gain from adoption, a 6,000-executive survey finds minimal realised productivity, and the OECD projects 0.2 to 1.3 points of annual productivity growth over ten years. The Index relays Brynjolfsson's J-curve explanation: firms absorb adoption costs before the larger gains show, and it notes that training strengthens the firm-level gain. That fits the pilot-to-production gap and the workflow-redesign findings elsewhere in this project and gives the site a defensible range to quote.",
+      "summary": "Studies of individual workers show gains of 14% to 55% for support agents, developers, marketers and accountants, but no gain for engineers learning new tools and a 19% slowdown for experienced open-source developers that a later replication did not reproduce. Firm-level effects are small so far and the national evidence is early and inconclusive.",
+      "detail": "Stanford's compilation lists the studies: support agents resolved 14% to 15% more issues per hour, developers with Copilot raised pull requests 26%, marketing teams produced 50% more, accountants 55% more, while experienced open-source developers were 19% slower and believed the tools helped more than they did. At the macro level, 12,000 European firms show a 4% productivity gain from adoption, a 6,000-executive survey finds minimal realised productivity, and the OECD projects 0.2 to 1.3 points of annual productivity growth over ten years. The Index relays Brynjolfsson's J-curve explanation: firms absorb adoption costs before the larger gains show, and it notes that training strengthens the firm-level gain. That fits the pilot-to-production gap and the workflow-redesign findings elsewhere in this project and gives the site a defensible range to quote.",
       "theme": "outlook",
       "kind": "finding",
       "evidence": "single-source",
@@ -3382,9 +3473,9 @@
     },
     {
       "id": "ins-081",
-      "title": "Consumers adopted generative AI faster than any prior technology and capture more value than producers earn",
-      "summary": "Generative AI reached about 53% of US adults within three years, against 69% for the PC after two decades, and US consumer surplus is estimated at $172B a year. Diffusion tracks national income, with the UAE and Singapore ahead of their income and the US 24th.",
-      "detail": "Stanford's compilation of Bick and colleagues' adoption tracker and Brynjolfsson's choice experiments shows users rising from 95 million to 115 million US adults and surplus per user from $98 to $125 in a year, with usage frequency the strongest predictor. Microsoft's telemetry, compiled in the Index, puts working-age diffusion at 64% in the UAE, 61% in Singapore, 44% in France, 39% in the UK and 28% in the US and Germany. The consumer numbers are the backdrop to the enterprise activation gap: people already use these tools heavily in private, which is why sanctioned tools are judged against them.",
+      "title": "Consumers adopted generative AI faster than the PC or the internet and capture more value than producers earn",
+      "summary": "Generative AI reached about 53% of US adults aged 18 to 64 within three years, against 69% for the PC after two decades, and US consumer surplus is estimated at $172B a year. Diffusion tracks national income, with the UAE and Singapore ahead of their income and the US 24th.",
+      "detail": "Stanford's compilation of Bick and colleagues' adoption tracker and Brynjolfsson's choice experiments shows users rising from 95 million to 115 million US adults and surplus per user from $98 to $125 in a year, with usage frequency the strongest predictor. Microsoft's telemetry, compiled in the Index, puts population-level diffusion at 64% in the UAE, 61% in Singapore, 44% in France, 39% in the UK, 29% in Germany and 28% in the US. The consumer numbers are the backdrop to the enterprise activation gap: people already use these tools heavily in private, which is why sanctioned tools are judged against them.",
       "theme": "market",
       "kind": "finding",
       "evidence": "single-source",
@@ -3415,7 +3506,7 @@
       "id": "ins-082",
       "title": "Capital into AI companies runs an order of magnitude ahead of enterprise spend on AI, most of all in agents",
       "summary": "Corporate investment into AI companies reached about $582B in 2025 against about $37B of enterprise generative AI purchases. Investors put about $8B into agent-focused companies while agent platforms earned about $750M from enterprises.",
-      "detail": "Quid data compiled by Stanford show private AI investment of $345B and total corporate investment of $582B in 2025, with $143B in infrastructure, models and research alone. Menlo's enterprise spend of $37B is a different measure, purchases rather than capital, but the ratio shows how far ahead of demand the supply side is being funded. In agents the gap is widest: $8.0B invested versus $750M of enterprise agent-platform spend, a ratio above ten to one, while copilots earned $7.2B. Frontier labs illustrate the same pattern: OpenAI's compute spend reached an estimated $16.3B in 2025 against annualised revenue near $25B. The comparison does not show a bubble by itself, but it locates where one would appear first.",
+      "detail": "Quid data compiled by Stanford show total corporate investment of $582B in 2025, including $345B of private investment, of which $143B went to AI infrastructure, models, research and governance. Menlo's enterprise spend of $37B is a different measure, purchases rather than capital, but the ratio shows how far ahead of demand the supply side is being funded. In agents the gap is widest: $8.0B invested versus $750M of enterprise agent-platform spend, a ratio above ten to one, while copilots earned $7.2B. Frontier labs illustrate the same pattern: OpenAI's compute spend reached an estimated $16.3B in 2025, while its annualised revenue run rate reached about $25B by early 2026. The comparison does not show a bubble by itself, but it locates where one would appear first.",
       "theme": "market",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -3486,8 +3577,8 @@
     {
       "id": "ins-084",
       "title": "How to read the ten web-era sources: dates, samples and sponsors",
-      "summary": "The new sources span July 2025 to August 2026, from 100 to 20,000 respondents, and include two venture firms with stakes in the model vendors they rank, three consultancies that sell AI transformation, one software vendor, one MIT research project and one academic compilation.",
-      "detail": "Fieldwork order matters when sources disagree: NANDA (Jan to Jun 2025), Deloitte (Aug to Sep 2025), Menlo (Nov 2025), BCG (late 2025, published Jan 2026), a16z (Jan 2026), Microsoft (Feb to Apr 2026), KPMG and McKinsey (May to Jun 2026). Samples range from a16z's 100 Global 2000 executives and KPMG's 204 US leaders to Deloitte's 3,235, BCG's 2,360 and Microsoft's 20,000 AI users, and only McKinsey has a large sub-$1B, GDP-weighted global sample. Deloitte, Microsoft and Menlo survey only organisations or people already using AI, which raises every adoption figure. Menlo invests in Anthropic and a16z in OpenAI; BCG, Deloitte, KPMG and McKinsey sell AI consulting; Microsoft sells Copilot; NANDA promotes its own agent protocols; Stanford compiles others' data with a year's lag. IDC's FutureScape page is forecasts only. The site labels each finding's source and population so readers can weigh it.",
+      "summary": "The new sources span July 2025 to August 2026, from 100 to 20,000 respondents, and include two venture firms with stakes in the model vendors they rank, four consultancies that sell AI transformation, one software vendor, one market-research firm's forecast page, one MIT research project and one academic compilation.",
+      "detail": "Fieldwork order matters when sources disagree: NANDA (Jan to Jun 2025), Deloitte (Aug to Sep 2025), Menlo (Nov 2025), BCG (published Jan 2026, fieldwork dates not given), a16z (Jan 2026), Microsoft (Feb to Apr 2026), KPMG (late Apr to late May 2026) and McKinsey (May to Jun 2026). Samples range from a16z's 100 Global 2000 executives and KPMG's 204 US leaders to Deloitte's 3,235, BCG's 2,360 and Microsoft's 20,000 AI users, and only McKinsey has a large sub-$1B, GDP-weighted global sample. Deloitte, Microsoft and Menlo survey only organisations or people already using AI, which raises every adoption figure. Menlo invests in Anthropic and a16z in OpenAI; BCG, Deloitte, KPMG and McKinsey sell AI consulting; Microsoft sells Copilot; NANDA promotes its own agent protocols; Stanford compiles others' data with a year's lag. IDC's FutureScape page is mostly forecasts, plus one benchmark figure with no stated method. The site labels each finding's source and population so readers can weigh it.",
       "theme": "method",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -3496,6 +3587,8 @@
           "source": "src-06",
           "pages": [
             2,
+            18,
+            23,
             24
           ]
         },
@@ -3569,8 +3662,8 @@
     {
       "id": "ins-085",
       "title": "Outlook: spending keeps growing through 2026, at a slower rate than the January surveys expected",
-      "summary": "Where sources agree: every one of them shows AI budgets rising and no source shows retreat. Where they differ: early-2026 surveys expected a doubling; mid-2026 surveys show steady growth with most increases under 30%.",
-      "detail": "BCG's CEOs expected AI investment to double as a share of revenue in 2026 and 94% would keep investing even without a 2026 payoff. a16z's CIOs projected 65% growth in LLM spend after actual 2025 spend beat their own forecast by more than half. Menlo measured 3.2x market growth in 2025. The two surveys fielded in May and June 2026 are softer: McKinsey finds 61% increasing but only 8% by 30% or more, and KPMG's projected 12-month spend is flat at about $200M after doubling over the prior year. The difference is timing, not contradiction. Our expectation for the next twelve months is continued growth in the 10% to 30% band for most organisations, with the doubling concentrated in the leading minority, and with 2027 editions of BCG and a16z the test.",
+      "summary": "Where sources agree: every one of them shows AI budgets rising and no source shows retreat. Where they differ: early-2026 surveys expected LLM spend to rise 65% or AI investment to double as a share of revenue; mid-2026 surveys show steady growth with most increases under 30%.",
+      "detail": "BCG's surveyed executives expected AI investment to double as a share of revenue in 2026, and 94% of their organisations would keep investing even without a 2026 payoff. a16z's CIOs projected 65% growth in LLM spend after actual 2025 spend beat their own forecast by more than half. Menlo measured 3.2x market growth in 2025. The two surveys fielded between late April and early June 2026 are softer: McKinsey finds 60% expecting an increase but only 8% by 30% or more, and KPMG's projected 12-month spend holds at about $200M after more than doubling from $88M a year earlier. The difference is timing, not contradiction. Our expectation for the next twelve months is continued growth in the 10% to 30% band for most organisations, with the doubling concentrated in the leading minority, and with 2027 editions of BCG and a16z the test.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -3620,7 +3713,7 @@
     {
       "id": "ins-086",
       "title": "Outlook: agents become a majority practice on paper by 2027, while governed agentic systems stay a minority",
-      "summary": "Where sources agree: every survey expects agent use to rise sharply and orchestration is where budgets and vendors are moving. Where they differ: self-reported adoption already reaches half; architectural and stage-based measures sit at 13% to 22% and moved little in the first half of 2026.",
+      "summary": "Where sources agree: every survey expects agent use to rise sharply and orchestration is where budgets and vendors are moving. Where they differ: self-reported adoption already reaches half; architectural and stage-based measures sit at 13% to 22%, and McKinsey's figure for smaller firms barely moved over the past year (21% to 22%).",
       "detail": "Deloitte's respondents expect at-least-moderate agent use to reach 74% within two years and IDC forecasts half of enterprises by 2027, which the self-reports from KPMG (53% deployed) already claim. Menlo's 16% true agents, a16z's 13% agentic workflow automation, McKinsey's 22% scaling below $1B revenue and Microsoft's 25% to 29% of advanced users with documented agent workflows describe the real base. Expect the self-reported numbers to cross a majority by 2027 as vendors relabel workflows as agents, while the share of organisations running governed, repeatable, multi-step agent processes climbs more slowly from roughly one in five, led by large firms where McKinsey already finds 40%. KPMG's doubling of orchestration in one quarter is the leading indicator to watch, together with agent-action risk controls in McKinsey's next edition.",
       "theme": "outlook",
       "kind": "observation",
@@ -3684,8 +3777,8 @@
     {
       "id": "ins-087",
       "title": "Outlook: the binding constraint has moved from technology to the organisation; the leading group stays small",
-      "summary": "Where sources agree: skills, workflow redesign, manager practice and incentives explain who captures value; the practice-defined leading group is 15% to 20% in every source that measures it. Where they differ: only on how the bar is set, from 6% to 34%.",
-      "detail": "AIM's providers, Deloitte's leaders, Microsoft's AI users, BCG's CEOs and McKinsey's high performers all locate the constraint in adoption, redesign and organisational conditions rather than in models or tools. Microsoft's factor analysis attributes twice as much reported impact to organisational conditions as to individual effort; McKinsey's high performers redesign workflows at three times the rate of others; Deloitte finds 84% have not redesigned jobs. The leading share clusters at 15% (BCG), 16% to 19% (Microsoft) and 20% (IDC) when defined by practice. Our expectation is that this share grows slowly, because the practices involved (workflow redesign, decision rights, incentive changes) take years, and that the gap between leaders and the rest widens in outcomes before it narrows in adoption, which is what IDC's tier data already show.",
+      "summary": "Where sources agree: skills, workflow redesign, manager practice and incentives explain who captures value; the leading group is 15% to 16% in the two sources that define it by practice, and 19% on Microsoft's readiness measure. Where they differ: only on how the bar is set, from 6% to 34%.",
+      "detail": "AIM's analysts, Deloitte's leaders, Microsoft's AI users and McKinsey's high performers all locate the constraint in adoption, redesign and organisational conditions rather than in models or tools, though AIM also ranks data readiness as the most frequent obstacle. BCG's Trailblazer CEOs put about 60% of their AI budget into upskilling, against about a quarter for the other groups. In Microsoft's driver analysis, which shows association rather than cause, organisational conditions carry about twice the weight of individual mindset and behaviour (67% against 32%) in explaining reported AI impact; McKinsey's high performers redesign workflows at three times the rate of others; Deloitte finds 84% have not redesigned jobs. The leading share is 15% for BCG and 16% for Microsoft's Frontier Professionals when defined by practice, with Microsoft's readiness-based Frontier zone at 19%; IDC's Leaders are the top fifth of its maturity scores by construction, so their 20% share adds no evidence on size. Our expectation is that this share grows slowly, because the practices involved (workflow redesign, decision rights, incentive changes) take years, and that the gap between leaders and the rest widens in outcomes before it narrows in adoption. IDC's single-wave tier data already show a wide outcome gap at one point in time, with 89% of Leaders against 26% of the Emerging tier delivering outcomes on half or more of their projects.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -3700,6 +3793,7 @@
         {
           "source": "src-04",
           "pages": [
+            11,
             13,
             14
           ]
@@ -3707,8 +3801,11 @@
         {
           "source": "src-10",
           "pages": [
+            8,
+            12,
             16,
-            17
+            17,
+            23
           ]
         },
         {
@@ -3721,6 +3818,8 @@
         {
           "source": "src-03",
           "pages": [
+            3,
+            17,
             18,
             19
           ]
@@ -3752,8 +3851,8 @@
     {
       "id": "ins-088",
       "title": "Outlook: enterprise financial proof arrives later than the productivity gains, if the J-curve holds",
-      "summary": "Where sources agree: personal productivity gains are broad and efficiency is largely captured; attributable EBIT and revenue impact is rare and flat. Where they differ: executives expect ROI in 2026; measured evidence suggests a lag of years at the organisation level.",
-      "detail": "McKinsey's 80% personal productivity against 37% EBIT attribution and 6% high performers, Deloitte's 66% efficiency against 20% revenue, and a16z's half at break-even or worse describe the same state from three angles. BCG's CEOs expect agents to unlock measurable ROI during 2026. The AI Index's evidence table supplies the reason for caution: micro gains of 14% to 55% on structured work coexist with a 4% firm-level effect in Europe and negligible aggregate productivity contribution so far. The productivity J-curve frames the expectation: returns follow complementary investment in workflows, data and skills, which the leading minority is making now. The indicators to watch are EBIT attribution and ROI multiples in the 2027 editions of McKinsey and a16z, and whether Deloitte's revenue-achieved share moves off 20%.",
+      "summary": "Where sources agree: personal productivity gains are broad and efficiency is largely captured; attributable EBIT impact is flat year on year at 37% of McKinsey respondents with only 6% at high-performer level, and only 20% of Deloitte's firms report revenue gains. Where they differ: executives expect ROI in 2026; measured evidence suggests a lag of years at the organisation level.",
+      "detail": "McKinsey's 80% personal productivity against 37% EBIT attribution and 6% high performers, Deloitte's 66% efficiency against 20% revenue, and a16z's half at break-even or worse describe the same state from three angles. BCG's CEOs expect agents to unlock measurable ROI during 2026. The AI Index's evidence table supplies the reason for caution: micro-level studies mostly find gains of 14% to 55% on structured work, alongside null and negative results in some studies, and there is a 4% firm-level effect in Europe. Aggregate estimates are inconclusive, running from a negligible contribution to total factor productivity in Penn Wharton's estimate to 1.1% to 1.3% for labour productivity in the St. Louis Fed's. The productivity J-curve frames the expectation: returns follow complementary investment in workflows, data and skills, which the leading minority is making now. The indicators to watch are EBIT attribution and ROI multiples in the 2027 editions of McKinsey and a16z, and whether Deloitte's revenue-achieved share moves off 20%.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -3810,7 +3909,7 @@
       "id": "ins-089",
       "title": "Outlook: cost discipline becomes a standard practice as usage volume outruns falling unit prices",
       "summary": "Where sources agree: token and operating costs are now a constraint for a fifth of organisations, visibility is poor, and volume growth outpaces price declines. No source disagrees; the buyer surveys differ only in how much weight cost gets relative to data and skills.",
-      "detail": "McKinsey's 20% limiting AI use on cost and 18% of high performers constrained on coding agents, KPMG's 26% with full cost visibility and 36% with token budgets, AIM's warning about costs scaling from proof of concept to production, and the Jevons framing in Menlo and McKinsey all point the same way. IDC's buyers rank LLM cost only sixth of seven barriers, which shows cost is not yet the top concern but is rising as agents scale. Our expectation is that token budgets, cost review at approval, routing to cheaper models and cost literacy become table stakes within a year, as FinOps did for cloud, and that usage-based incentives such as token-maxxing fade in favour of outcome measures. Vendors that sell cost controls, which AIM already finds among its Leaders, benefit.",
+      "detail": "McKinsey's 20% limiting AI use on cost and 18% of high performers constrained on coding agents, KPMG's 26% with full cost visibility and 36% with token budgets, AIM's warning about costs scaling from proof of concept to production, and the observation in Menlo and McKinsey that usage volume is growing faster than unit prices are falling all point the same way. IDC's buyers rank LLM cost sixth of seven barriers at 28%, so cost is not yet the leading concern. Our expectation is that token budgets, cost review at approval, routing to cheaper models and cost literacy become table stakes within a year, as FinOps did for cloud, and that usage-based incentives such as token-maxxing fade in favour of outcome measures. Vendors that build cost controls into their delivery, which AIM treats as a mark of its most mature providers, benefit.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -3867,8 +3966,8 @@
     {
       "id": "ins-090",
       "title": "Outlook: buy the applications and platforms, build the long tail with coding agents",
-      "summary": "Where sources agree: packaged applications and trusted incumbents win the enterprise seat, and bought solutions reach production faster than internal builds. Where they differ: McKinsey's mid-2026 data show coding agents already displacing a third of organisations' software purchases.",
-      "detail": "Menlo, a16z, NANDA, AIM and Deloitte converge on buying over building for applications, with trust and integration favouring incumbents and speed favouring AI-native startups. McKinsey's 32% declining a purchase in favour of building with coding agents, rising to about half of high performers, points to a bifurcation rather than a reversal: enterprises buy horizontal copilots, agent platforms and vertical products, and build the features, integrations and internal tools they once bought as add-ons. Our expectation is a vendor landscape with incumbents holding the broad licence, a smaller set of AI-native specialists owning high-token workloads such as coding and clinical documentation, and a thinning long tail of point solutions. For the services market AIM describes, this raises the premium on production evidence and orchestration platforms and lowers it on bespoke builds.",
+      "summary": "Where sources agree: enterprises mostly buy packaged applications rather than build them, and bought solutions reach production faster than internal builds. Where they differ: 65% of a16z's large enterprises prefer incumbents, while Menlo finds AI-native startups taking 63% of application revenue. In McKinsey's mid-2026 survey, 32% of organisations have already skipped at least one software purchase because coding agents let them build it in-house.",
+      "detail": "Menlo, a16z and NANDA converge on buying over building for applications, with trust and integration favouring incumbents and speed favouring AI-native startups. McKinsey's 32% declining a purchase in favour of building with coding agents, rising to about half of high performers, points to a bifurcation rather than a reversal: enterprises buy horizontal copilots, agent platforms and vertical products, and build the features, integrations and internal tools they once bought as add-ons. Our expectation is a vendor landscape with incumbents holding the broad licence, a smaller set of AI-native specialists owning high-token workloads such as coding and clinical documentation, and a thinning long tail of point solutions. For the services market AIM describes, this raises the premium on production evidence and orchestration platforms and lowers it on bespoke builds.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -3893,12 +3992,6 @@
           "pages": [
             6,
             8
-          ]
-        },
-        {
-          "source": "src-04",
-          "pages": [
-            9
           ]
         },
         {
@@ -3928,9 +4021,9 @@
     },
     {
       "id": "ins-091",
-      "title": "Outlook: workforce effects arrive at about half the pace executives expect, and hit entry-level roles first",
-      "summary": "Where sources agree: cuts are expected to concentrate in service operations, supply chain and administrative work, and human oversight demand rises before headcount falls. Where they differ: executive expectations (a third to 82% of firms) far exceed realised effects (14% reported cuts; limited layoffs in NANDA's sample).",
-      "detail": "McKinsey's before-and-after check shows expected cuts of 32% against 14% reported, with expectations rising to 39% anyway. Deloitte and BCG expect far more automation than that, while NANDA documents limited, selective cuts in already-disrupted sectors and mostly outsourced roles. The AI Index shows where the cost is landing first: employment of 22-to-25-year-olds fell close to 20% in software development and about 16% relative in the most exposed occupations. KPMG's rising workload-driven resistance and McKinsey's strain below executive level show the pressure inside firms. Our expectation for the next two years is realised headcount effects at roughly half of stated expectations, concentrated in support, admin and junior technical roles, with the offset in oversight, evaluation and agent-operations roles that Lightcast data already show employers hiring for.",
+      "title": "Outlook: workforce effects arrive at about half the pace organisations expect, and hit entry-level roles first",
+      "summary": "Where sources agree: cuts are expected to concentrate in service operations, supply chain and administrative work, and human oversight demand rises before headcount falls. Where they differ: expectations far exceed realised effects, since 36% of Deloitte's companies expect at least 10% of jobs to be automated within a year and 82% within three years, while only 14% of McKinsey's respondents report declines and NANDA finds limited layoffs.",
+      "detail": "McKinsey's before-and-after check shows 14% of respondents reporting AI-related workforce declines, less than half the 32% who expected them a year earlier, yet the share expecting declines has risen to 39%. Deloitte's companies expect far more automation than that, and 60% of BCG's CEOs expect more than half of roles to be gone or transformed by 2030, while NANDA documents limited, selective cuts in already-disrupted sectors and mostly outsourced roles. The AI Index shows where the cost is landing first: employment of 22-to-25-year-olds fell close to 20% in software development and about 16% relative in the most exposed occupations. KPMG's rising workload-driven resistance and McKinsey's strain below executive level show the pressure inside firms. Our expectation for the next two years is realised headcount effects at roughly half of stated expectations, concentrated in support, admin and junior technical roles, with the offset in oversight and evaluation roles and in agent-building and agent-operations work, where Lightcast shows US AI job postings asking for agentic AI skills rising steeply in 2025.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -3997,8 +4090,8 @@
     {
       "id": "ins-092",
       "title": "Outlook: governance closes the gap at the leaders first, while sovereignty and public trust shape the rest",
-      "summary": "Where sources agree: agent governance lags deployment, privacy and security top every concern list, and human-in-the-loop is the default control. Where they differ: a16z's US and UK enterprises are moving toward direct hosting with frontier labs while Deloitte's global sample is moving toward local vendors and data residency.",
-      "detail": "Deloitte's 21% with mature agent governance, KPMG's output-level human review at 52%, McKinsey's 33% mitigating unauthorised agent action (45% among high performers) and BCG's expectation that agent autonomy triples describe a gap that the leading minority is closing first. Sovereignty pulls in a different direction by geography: 83% of Deloitte's respondents treat data residency as important and 77% weigh country of origin, while 81% of a16z's Global 2000 firms host directly with a lab. The AI Index adds that publics trust the EU more than the US or China to regulate AI and that US trust in its own regulator is lowest. Our expectation is regulation-driven divergence: audit trails, decision rights and agent identity become standard at large firms within two years; European and Gulf buyers favour local hosting and sovereign stacks; US buyers consolidate on frontier labs; and public trust remains a brake on consumer-facing deployment in the West.",
+      "summary": "Where sources agree: agent governance lags deployment, privacy and security top the concern lists in Deloitte and BCG, and human-in-the-loop is the preferred control. Where they differ: a16z's Global 2000 enterprises are moving toward direct hosting with frontier labs while Deloitte's global sample is moving toward local vendors and data residency.",
+      "detail": "Deloitte's 21% with mature agent governance, the 52% of KPMG's US leaders who name output-level human review as their main planned agent safeguard for the next 6 to 12 months, and McKinsey's 45% of high performers, against 33% of other respondents, working to mitigate unauthorised or unintended AI actions describe a gap that the leading minority is closing first. The pressure will grow: in a BCG and MIT Sloan Management Review survey cited by BCG, respondents expect AI systems working independently to rise from 14% to 39% within three years. Sovereignty pulls in a different direction by geography: 83% of Deloitte's respondents treat data residency as important and 77% weigh country of origin, while about 80% of a16z's Global 2000 firms now host models directly with a frontier lab, up from about 40% in March 2024. The AI Index adds that publics trust the EU more than the US or China to regulate AI and that US trust in its own regulator is lowest. Our expectation is regulation-driven divergence: audit trails, decision rights and agent identity become standard at large firms within two years; European and Gulf buyers favour local hosting and sovereign stacks; US buyers consolidate on frontier labs; and public trust remains a brake on consumer-facing deployment in the West.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -4008,7 +4101,8 @@
           "pages": [
             15,
             16,
-            20
+            20,
+            21
           ]
         },
         {
@@ -4026,6 +4120,7 @@
         {
           "source": "src-05",
           "pages": [
+            8,
             18
           ]
         },
@@ -4063,8 +4158,8 @@
     {
       "id": "ins-093",
       "title": "Outlook: physical AI grows in controlled environments and in Asia; the two-year jump to 80% is an expectation",
-      "summary": "Where sources agree: physical AI is already present at most adopters, Asia leads, and factories and warehouses move first. Where they differ: Deloitte's respondents expect 80% adoption within two years, while robot shipment data were flat in 2024 with US installations down 9%.",
-      "detail": "Deloitte finds 58% of AI-using companies with at least limited physical AI use and 18% at a moderate level, with cost the top barrier because retrofits, integration and maintenance dwarf the software. The IFR data compiled by Stanford show 542,000 industrial robots installed in 2024, up 0.2%, with China at 54% of the world, collaborative robots at 13.6% of installations, and service robots for logistics growing. Microsoft's telemetry shows manufacturing running the deepest agent estates among few adopting firms, which suggests in-house builds on platforms rather than bought vertical products, consistent with Menlo's tiny manufacturing vertical market. Our expectation is steady expansion of intelligent monitoring, cobots and digital twins in controlled settings, led by Asia Pacific, and slower progress in open environments where safety regulation and liability apply.",
+      "summary": "Where sources agree: physical AI is already present at most adopters, Asia leads, and factories and warehouses move first. Where they differ: Deloitte's respondents expect 80% adoption within two years, while global industrial robot installations rose only 0.2% in 2024 and US installations fell 9%.",
+      "detail": "Deloitte finds 58% of AI-using companies with at least limited physical AI use, of which 18% use it to a moderate or greater extent, with cost the top barrier because retrofits, integration and maintenance dwarf the software. The IFR data compiled by Stanford show 542,000 industrial robots installed in 2024, up 0.2%, with China at 54% of the world, collaborative robots at 13.6% of installations, and transport and logistics the largest service-robot category at about 103,000 installations in 2024, although the chart shows a dip from about 113,000 in 2023 even as the Index text describes growth. Microsoft's telemetry shows manufacturing running the deepest agent estates among few adopting firms, which suggests in-house builds on platforms rather than bought vertical products, consistent with Menlo's tiny manufacturing vertical market. Our expectation is steady expansion of intelligent monitoring, cobots and digital twins in controlled settings, led by Asia Pacific, and slower progress in open environments where safety regulation and liability apply.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "multi-source",
@@ -4119,7 +4214,7 @@
       "id": "ins-094",
       "title": "Outlook: where the sources disagree, and why",
       "summary": "Five disagreements run through the twelve sources: which model vendor leads, whether company size matters, how many pilots fail, how fast spend grows, and how many jobs go. In each case the sources measure different things or different populations, and the notes record the reconciliation.",
-      "detail": "Vendor leadership: Menlo (Anthropic, API usage, broad US sample, Anthropic investor) versus a16z (OpenAI, production footprint and wallet share among Global 2000 firms, OpenAI investor); both agree on direction. Size: McKinsey and the AI Index show large firms far ahead on deployment stage; IDC and AIM show maturity and delivery challenges flat by size; breadth of deployment is not maturity of practice. Failure: NANDA's 5% success is custom tools judged on sustained P&L within six months; AIM's 25% to 45% is vendor POCs; Menlo's 47% is bought solutions; Deloitte's 25% is firms past a production threshold. Spend: January surveys expected doubling, May and June surveys show moderation. Jobs: expectations of a third to four fifths of firms against 14% reported cuts and NANDA's limited layoffs. The site presents each pair with its definitions rather than picking a side, because the disagreement itself is the finding readers need.",
+      "detail": "Vendor leadership: Menlo (Anthropic, API usage, broad US sample, Anthropic investor) versus a16z (OpenAI, production footprint and wallet share among Global 2000 firms, OpenAI investor); both agree on direction. Size: McKinsey and the AI Index show large firms far ahead on deployment stage; IDC and AIM show maturity and delivery challenges flat by size; breadth of deployment is not maturity of practice. Failure: NANDA's 5% success is custom tools that showed a marked, sustained productivity or P&L effect when measured six months after the pilot; AIM's 25% to 45% is vendor POCs; Menlo's 47% is bought solutions; Deloitte's 25% is firms past a production threshold. Spend: January surveys expected steep growth, with BCG seeing investment as a share of revenue roughly double and a16z seeing average LLM spend rise about 65%, while KPMG's late April to May pulse shows planned investment holding steady. Jobs: 39% of McKinsey respondents expect headcount to fall and Deloitte firms expect at least a tenth of jobs to be fully automated (36% within a year, 82% within three years), which measures automation rather than headcount, against 14% of McKinsey respondents reporting actual cuts and NANDA's limited layoffs. The site presents each pair with its definitions rather than picking a side, because the disagreement itself is the finding readers need.",
       "theme": "outlook",
       "kind": "observation",
       "evidence": "agent-analysis",
@@ -4162,6 +4257,7 @@
           "source": "src-06",
           "pages": [
             6,
+            7,
             24
           ]
         },
@@ -4208,7 +4304,7 @@
       "id": "ins-095",
       "title": "Outlook: eight indicators to watch in the 2027 editions",
       "summary": "The next round of these reports will show whether the 2026 expectations held. The notes name the specific numbers to compare.",
-      "detail": "One: Deloitte's share of firms with 40% or more of experiments in production, expected to rise from 25% to 54%. Two: McKinsey's EBIT attribution (37%) and high-performer share (6%), both flat for two years. Three: a16z's ROI distribution, currently half at break-even or worse, and its wallet-share trend for Anthropic, Google and OpenAI. Four: KPMG's agent deployment rate (53%) and orchestration share (18%), the earliest read on whether the plateau persists. Five: McKinsey's reported versus expected headcount change, currently 14% against 39%. Six: the share of organisations with mature agent governance (Deloitte 21%) and mitigating unauthorised agent action (McKinsey 33%). Seven: BCG's investment as a share of revenue, expected to reach 1.7%. Eight: Menlo's agent-platform spend against copilots, currently $750M against $7.2B, and Quid's agent investment against it. Movement on these eight will tell readers whether 2026 was the year agents moved from pilots to production or the year expectations were reset.",
+      "detail": "One: Deloitte's share of firms with 40% or more of experiments in production, expected to rise from 25% to 54%. Two: McKinsey's EBIT attribution (37%) and high-performer share (6%), both unchanged between the 2025 and 2026 surveys. Three: a16z's ROI distribution, currently half at break-even or worse, and its wallet-share trend for Anthropic, Google and OpenAI. Four: KPMG's agent deployment rate (53%) and orchestration share (18%), the earliest read on whether the plateau persists. Five: McKinsey's reported versus expected headcount change, currently 14% against 39%. Six: the share of organisations with mature agent governance (Deloitte 21%) and mitigating unauthorised agent action (McKinsey 33% outside the high-performer group, 45% among high performers). Seven: BCG's investment as a share of revenue, expected to reach 1.7%. Eight: Menlo's agent-platform spend against copilots, currently $750M against $7.2B, and Quid's agent investment against it. Movement on these eight will tell readers whether 2026 was the year agents moved from pilots to production or the year expectations were reset.",
       "theme": "outlook",
       "kind": "recommendation",
       "evidence": "agent-analysis",

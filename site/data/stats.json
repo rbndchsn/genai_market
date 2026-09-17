@@ -15,7 +15,8 @@
         {
           "source": "src-01",
           "pages": [
-            5
+            5,
+            26
           ]
         }
       ]
@@ -310,6 +311,7 @@
         {
           "source": "src-01",
           "pages": [
+            26,
             29
           ]
         }
@@ -443,6 +445,7 @@
         {
           "source": "src-01",
           "pages": [
+            26,
             29
           ]
         }
@@ -619,7 +622,7 @@
       "series_label": null,
       "chart": "table",
       "n": null,
-      "note": "Straive: proof of concept in 7 to 14 days and deployment in 8 to 10 weeks, with 296 internal accelerators. USEReady: a 2 to 4 week Micro POC and about 30 prebuilt agents. Tiger Analytics: accelerators arrive 60 to 80 percent complete. Neoware: strategy engagements shortened from roughly two months to about one. All vendor-claimed.",
+      "note": "Straive: proof of concept in 7 to 14 days and deployment in 8 to 10 weeks, with 296 internal accelerators. USEReady: a 2 to 4 week Micro POC and about 30 prebuilt agents. Tiger Analytics: accelerators arrive 60 to 80 percent complete. Neoware: strategy work shortened by about half, from six to eight weeks down to three or four, in industries it already knows. All vendor-claimed.",
       "theme": "vendors",
       "refs": [
         {
@@ -628,7 +631,8 @@
             70,
             75,
             82,
-            83
+            83,
+            84
           ]
         }
       ]
@@ -1395,7 +1399,7 @@
       ],
       "series_label": "Maturity tier",
       "chart": "bar",
-      "n": "623",
+      "n": "602 to 623 by item (tiers: Emerging 188, Developing 155, Advanced 117, Leaders 123), IDC Real-Time Data Study, June 2026",
       "note": null,
       "theme": "talent",
       "refs": [
@@ -1660,8 +1664,8 @@
       ],
       "series_label": "Year",
       "chart": "bar",
-      "n": "2,360 executives incl. 640 CEOs, 16 markets, BCG AI Radar 2026",
-      "note": "Investment includes technology, data, talent and external partners. Average revenue base roughly constant across editions.",
+      "n": "2026: 2,360 executives including 640 CEOs in 16 markets; 2025 edition 1,803; 2024 edition 1,406 (BCG AI Radar)",
+      "note": "Investment includes technology, data, talent and external partners. Average revenue base roughly constant across editions. BCG labels all three values as approximate.",
       "theme": "market",
       "refs": [
         {
@@ -1707,7 +1711,7 @@
     },
     {
       "id": "s5-04",
-      "label": "AI investment as a share of revenue by industry, 2025 vs 2026",
+      "label": "AI investment as a share of revenue by industry, 2025 vs 2026 expected",
       "unit": "%",
       "value": null,
       "series": [
@@ -1794,7 +1798,7 @@
       ],
       "series_label": "Industry and year",
       "chart": "grouped-bar",
-      "n": "2,360 executives incl. 640 CEOs, 16 markets, BCG AI Radar 2026",
+      "n": "2,308 executives answering (BCG AI Radar 2026, excluding don't-know and blank answers)",
       "note": null,
       "theme": "market",
       "refs": [
@@ -1866,13 +1870,13 @@
           "value": 32
         },
         {
-          "label": "Biggest threat",
+          "label": "Biggest threat from agentic AI",
           "value": 9
         }
       ],
       "series_label": "View",
       "chart": "donut",
-      "n": "2,360 executives incl. 640 CEOs, 16 markets, BCG AI Radar 2026",
+      "n": "2,286 executives answering (BCG AI Radar 2026, excluding don't-know answers)",
       "note": null,
       "theme": "governance",
       "refs": [
@@ -2347,6 +2351,7 @@
         {
           "source": "src-05",
           "pages": [
+            21,
             22
           ]
         }
@@ -2591,11 +2596,11 @@
       "series": [
         {
           "label": "Followers",
-          "value": 27
+          "value": 24
         },
         {
           "label": "Pragmatists",
-          "value": 24
+          "value": 27
         },
         {
           "label": "Trailblazers",
@@ -2684,7 +2689,7 @@
       "series_label": "Year",
       "chart": "bar",
       "n": "3,235 leaders, 24 countries, Deloitte State of AI in the Enterprise, fielded Aug to Sep 2025",
-      "note": "Stated as under 40% rising to about 60%; a 50% increase in one year.",
+      "note": "The report gives rough bounds rather than exact values: under 40% the year before, rising to about 60% (p.4) or just under 60% (p.8), which it calls a 50% increase in one year.",
       "theme": "adoption",
       "refs": [
         {
@@ -2705,7 +2710,7 @@
       "series_label": null,
       "chart": "none",
       "n": "3,235 leaders, 24 countries, Deloitte State of AI in the Enterprise, fielded Aug to Sep 2025",
-      "note": "Unchanged from the prior year despite wider access.",
+      "note": "Broadly the same as the prior year, even though access widened.",
       "theme": "adoption",
       "refs": [
         {
@@ -3378,7 +3383,7 @@
       "series_label": "Horizon",
       "chart": "bar",
       "n": "3,235 leaders, 24 countries, Deloitte State of AI in the Enterprise, fielded Aug to Sep 2025",
-      "note": "Physical AI: robotics, drones, automated machinery, digital twins. 18% use it at a moderate or greater level today.",
+      "note": "Physical AI covers robotics, drones, automated machinery and digital twins. Of the companies using it today, 18% do so at a moderate or greater level.",
       "theme": "adoption",
       "refs": [
         {
@@ -3423,7 +3428,7 @@
       ],
       "series_label": "Region and horizon",
       "chart": "grouped-bar",
-      "n": "EMEA 1,170; Asia Pacific 475; Americas about 1,590 (source caption misprints the total sample)",
+      "n": "EMEA 1,170; Asia Pacific 475; the caption gives the Americas base as 3,235, which is the full sample, so the Americas base is probably the remaining 1,590 or so (our estimate)",
       "note": null,
       "theme": "adoption",
       "refs": [
@@ -3635,7 +3640,7 @@
       "series_label": null,
       "chart": "none",
       "n": null,
-      "note": "US C-suite and business leaders at organisations with $1B+ revenue. Each quarter is a separate sample.",
+      "note": "US C-suite and business leaders at organisations with $1B+ revenue. The report does not say whether the same firms answer each quarter.",
       "theme": "method",
       "refs": [
         {
@@ -3973,7 +3978,7 @@
       ],
       "series_label": "Quarter",
       "chart": "bar",
-      "n": "204 US C-suite and business leaders at $1B+ firms, KPMG AI Quarterly Pulse Q2 2026, fielded 28 Apr to 25 May 2026",
+      "n": "Q2 2026: 204 US C-suite and business leaders at $1B+ firms, KPMG AI Quarterly Pulse, fielded 28 Apr to 25 May 2026; the Q1 value comes from the prior wave, whose sample this report does not state",
       "note": null,
       "theme": "agentic",
       "refs": [
@@ -4324,6 +4329,7 @@
         {
           "source": "src-09",
           "pages": [
+            2,
             7
           ]
         }
@@ -5317,11 +5323,11 @@
       "series": [
         {
           "label": "OpenAI, Mar 2024",
-          "value": 63
+          "value": 65
         },
         {
           "label": "OpenAI, May 2025",
-          "value": 67
+          "value": 69
         },
         {
           "label": "OpenAI, Jan 2026",
@@ -5329,15 +5335,15 @@
         },
         {
           "label": "Google, Mar 2024",
-          "value": 6
+          "value": 12
         },
         {
           "label": "Google, May 2025",
-          "value": 24
+          "value": 29
         },
         {
           "label": "Google, Jan 2026",
-          "value": 32
+          "value": 37
         },
         {
           "label": "Anthropic, Mar 2024",
@@ -5345,7 +5351,7 @@
         },
         {
           "label": "Anthropic, May 2025",
-          "value": 13
+          "value": 19
         },
         {
           "label": "Anthropic, Jan 2026",
@@ -5355,7 +5361,7 @@
       "series_label": "Vendor and wave",
       "chart": "grouped-bar",
       "n": "100 Global 2000 VPs and C-level, a16z CIO survey, Jan 2026 (expert-network sample, not random)",
-      "note": "Jan 2026 OpenAI and Anthropic values from the prose; others read from unlabelled bars, approximate. a16z is an OpenAI investor. Compare with Menlo (s7-26).",
+      "note": "Jan 2026 OpenAI and Anthropic values are from the prose. The others are approximate readings of unlabelled bars, measured from the baseline and the 50% and 100% gridlines because the chart's tick labels sit out of line with them; measured that way, the bars reproduce the prose values. a16z is an OpenAI investor. Compare with Menlo (s7-26).",
       "theme": "vendors",
       "refs": [
         {
@@ -5445,7 +5451,7 @@
     },
     {
       "id": "s8-06",
-      "label": "Enterprises using three or more model families",
+      "label": "Enterprises using three or more model families in testing or production",
       "unit": "%",
       "value": null,
       "series": [
@@ -5558,7 +5564,7 @@
     },
     {
       "id": "s8-10",
-      "label": "CIOs who say reasoning models accelerated LLM adoption",
+      "label": "Senior IT leaders (VP and C-level) who say reasoning models accelerated LLM adoption",
       "unit": "%",
       "value": 54,
       "series": null,
@@ -5590,7 +5596,7 @@
         },
         {
           "label": "Legal, May 2025",
-          "value": 69
+          "value": 68
         },
         {
           "label": "Legal, Jan 2026",
@@ -5598,7 +5604,7 @@
         },
         {
           "label": "Knowledge management, May 2025",
-          "value": 51
+          "value": 50
         },
         {
           "label": "Knowledge management, Jan 2026",
@@ -5614,7 +5620,7 @@
         },
         {
           "label": "Outbound sales, May 2025",
-          "value": 62
+          "value": 61
         },
         {
           "label": "Outbound sales, Jan 2026",
@@ -5653,7 +5659,7 @@
         },
         {
           "label": "GitHub Copilot, evaluating",
-          "value": 9
+          "value": 10
         },
         {
           "label": "Salesforce Agentforce, paid",
@@ -5818,7 +5824,7 @@
       "series_label": "Preference",
       "chart": "donut",
       "n": "100 Global 2000 VPs and C-level, a16z CIO survey, Jan 2026 (expert-network sample, not random)",
-      "note": "In March 2024 roughly half leaned open and about 14% leaned closed (approximate).",
+      "note": "In March 2024 (70 respondents) about 46% leaned open and about 14% leaned closed (approximate chart readings).",
       "theme": "vendors",
       "refs": [
         {
@@ -6047,7 +6053,7 @@
       "series_label": null,
       "chart": "none",
       "n": "IDC AI Maturity Model Benchmark, method not given",
-      "note": "Over half remain in early stages. Compare leading-group estimates of 15% (BCG), 20% (IDC and Solace) and 34% (Deloitte), which use different definitions.",
+      "note": "Over half remain in early stages. Other sources size their leading groups very differently because their definitions differ; see the leading-group comparison in the insights.",
       "theme": "outlook",
       "refs": [
         {
@@ -6102,7 +6108,7 @@
       ],
       "series_label": "Category",
       "chart": "donut",
-      "n": "105,000 Copilot Chat conversations, one week in Feb 2026, North America; Microsoft 365 telemetry; Microsoft products only",
+      "n": "105,000 sampled Microsoft 365 Copilot Chat interactions from one week in Feb 2026, North American commercial customers (education excluded); Microsoft products only",
       "note": "Shares of classified intents, not time.",
       "theme": "adoption",
       "refs": [
@@ -6580,7 +6586,7 @@
       "series_label": "Segment",
       "chart": "bar",
       "n": "Microsoft 365 telemetry; Microsoft products only",
-      "note": "Unique active agents in a rolling 28-day window. Base counts not disclosed; growth from a small 2025 base.",
+      "note": "Unique active agents in a rolling 28-day window. Base counts are not disclosed, so the size of the starting point is unknown.",
       "theme": "agentic",
       "refs": [
         {
@@ -6624,7 +6630,7 @@
         },
         {
           "label": "Retail, firms",
-          "value": 16
+          "value": 15
         },
         {
           "label": "Retail, agents",
@@ -6632,7 +6638,7 @@
         },
         {
           "label": "Education, firms",
-          "value": 15
+          "value": 14
         },
         {
           "label": "Education, agents",
@@ -6644,11 +6650,11 @@
         },
         {
           "label": "Media and communications, agents",
-          "value": 8
+          "value": 7
         },
         {
           "label": "Health, firms",
-          "value": 7.5
+          "value": 7
         },
         {
           "label": "Health, agents",
@@ -6657,7 +6663,7 @@
       ],
       "series_label": "Industry and measure",
       "chart": "grouped-bar",
-      "n": "Microsoft 365 telemetry; Microsoft products only",
+      "n": "Microsoft 365 Copilot agent telemetry, March 2025 to March 2026; shares only, Microsoft products only",
       "note": "Read from a bubble chart; approximate. Prompts per user are similar across industries (about 58 to 66 per 28 days).",
       "theme": "agentic",
       "refs": [
@@ -6754,7 +6760,7 @@
       ],
       "series_label": "Market",
       "chart": "bar",
-      "n": "2,000 AI users per core market; smaller samples in appendix markets; 20,000 knowledge workers who already use GenAI at work, 10 markets, Microsoft Work Trend Index, Feb to Apr 2026",
+      "n": "AI users in each market: 2,000 per market in the 10 core markets (Feb to Apr 2026); additional markets fielded Feb to May 2026 with sample sizes not reported; Microsoft Work Trend Index 2026",
       "note": "Selected markets from a list of 29.",
       "theme": "talent",
       "refs": [
@@ -6827,7 +6833,7 @@
       ],
       "series_label": "Market",
       "chart": "bar",
-      "n": "20,000 knowledge workers who already use GenAI at work, 10 markets, Microsoft Work Trend Index, Feb to Apr 2026",
+      "n": "AI users in each market: 2,000 per market in the 10 core markets (Feb to Apr 2026); additional markets fielded Feb to May 2026 with sample sizes not reported; Microsoft Work Trend Index 2026",
       "note": "Selected markets.",
       "theme": "talent",
       "refs": [
@@ -6841,7 +6847,7 @@
     },
     {
       "id": "s10-31",
-      "label": "AI users rewarded for reinvention regardless of results, by market",
+      "label": "AI users who say they are rewarded for reinvention even when results are not immediate, by market",
       "unit": "%",
       "value": null,
       "series": [
@@ -6896,7 +6902,7 @@
       ],
       "series_label": "Market",
       "chart": "bar",
-      "n": "20,000 knowledge workers who already use GenAI at work, 10 markets, Microsoft Work Trend Index, Feb to Apr 2026",
+      "n": "Knowledge workers who use AI at work, Microsoft Work Trend Index 2026: 20,000 across 10 core markets (18 Feb to 7 Apr 2026) plus 17 additional markets (18 Feb to 1 May 2026)",
       "note": "Selected markets.",
       "theme": "talent",
       "refs": [
@@ -6918,7 +6924,7 @@
       "series_label": null,
       "chart": "none",
       "n": null,
-      "note": "52 organisations interviewed plus 153 conference survey responses and a review of 300+ public AI initiatives, January to June 2025. Preliminary findings; convenience sample.",
+      "note": "Preliminary findings; non-random sample, and the authors warn that participants may be self-selected.",
       "theme": "method",
       "refs": [
         {
@@ -6987,14 +6993,16 @@
       ],
       "series_label": "Sector",
       "chart": "bar",
-      "n": "52 organisations interviewed and 153 conference survey responses, MIT NANDA, Jan to Jun 2025; non-random sample",
-      "note": "Composite of five public and interview signals. Technology is described as the highest-scoring sector but is not plotted.",
+      "n": "Public indicators plus interviews with 52 organisations, MIT NANDA, Jan to Jun 2025; non-random sample",
+      "note": "Composite of five indicators drawn from public data and interviews. The text names technology, with media and telecom, as the top-ranked sectors, but the chart gives no score for technology.",
       "theme": "market",
       "refs": [
         {
           "source": "src-06",
           "pages": [
-            5
+            4,
+            5,
+            6
           ]
         }
       ]
@@ -7021,13 +7029,15 @@
       "series_label": "Stage",
       "chart": "bar",
       "n": "52 organisations interviewed and 153 conference survey responses, MIT NANDA, Jan to Jun 2025; non-random sample",
-      "note": "Success means users or executives report a marked, sustained productivity or P&L effect, judged about six months after the pilot. Directional, interview-based.",
+      "note": "For task-specific tools the report counts an implementation as successful when users or executives report a marked, lasting productivity or P&L effect; separately, it judged ROI about six months after the pilot. Directional, interview-based.",
       "theme": "adoption",
       "refs": [
         {
           "source": "src-06",
           "pages": [
-            6
+            6,
+            7,
+            24
           ]
         }
       ]
@@ -7054,12 +7064,13 @@
       "series_label": "Stage",
       "chart": "bar",
       "n": "52 organisations interviewed and 153 conference survey responses, MIT NANDA, Jan to Jun 2025; non-random sample",
-      "note": "This is the source of the widely quoted '95% of pilots fail'. It measures custom or task-specific tools reaching sustained impact within about six months in a 52-organisation interview sample, not organisations getting zero return.",
+      "note": "This chart is where the widely quoted '95% of pilots fail' comes from. The report's summary presents it as 95% of organisations getting zero return. What the chart measures is whether custom or task-specific tools reached a marked, sustained productivity or P&L impact, judged about six months after the pilot, in interviews with 52 organisations.",
       "theme": "adoption",
       "refs": [
         {
           "source": "src-06",
           "pages": [
+            3,
             6,
             7,
             24
@@ -7437,14 +7448,14 @@
     },
     {
       "id": "s6-24",
-      "label": "Workforce reductions attributed to GenAI at affected companies",
+      "label": "GenAI-linked job cuts in customer support and administrative processing at affected companies",
       "unit": "%",
       "value": "5 to 20",
       "series": null,
       "series_label": null,
       "chart": "none",
       "n": "52 organisations interviewed and 153 conference survey responses, MIT NANDA, Jan to Jun 2025; non-random sample",
-      "note": "Confined to customer support and administrative processing, mostly previously outsourced or standardised roles.",
+      "note": "Executives estimated the range and were reluctant to give detail. The cuts cluster in non-core functions such as customer support, administrative processing and standardised development work, mostly roles that were already outsourced or standardised.",
       "theme": "talent",
       "refs": [
         {
@@ -7484,7 +7495,7 @@
       "series_label": null,
       "chart": "none",
       "n": null,
-      "note": "97 countries, weighted by national GDP; 36% at organisations above $1B revenue; about 44% C-level. Fieldwork 4 May to 8 June 2026.",
+      "note": "97 countries, weighted by national GDP; 36% at organisations above $1B revenue. Among AI users who answered the role question, 654 of 1,490 (about 44%) were C-level. Fieldwork 4 May to 8 June 2026.",
       "theme": "method",
       "refs": [
         {
@@ -7550,7 +7561,7 @@
       "series_label": "Year",
       "chart": "bar",
       "n": "McKinsey Global Surveys 2017 to 2026",
-      "note": "Definition of AI use changed in 2017, 2018 to 2019, 2020 and 2025, so the series is not strictly comparable.",
+      "note": "Definition of AI use changed in 2017, 2018 to 2019, 2020 and 2025, so the series is not strictly comparable. The 2017 point is unlabelled in the source and read from the chart as about 20%.",
       "theme": "adoption",
       "refs": [
         {
@@ -7624,7 +7635,7 @@
       "series_label": "Company size",
       "chart": "bar",
       "n": "1,719 respondents in 97 countries, GDP-weighted, McKinsey Global Survey, 4 May to 8 Jun 2026",
-      "note": null,
+      "note": "The source gives the smaller-company share as about one third; 33 is our rounding.",
       "theme": "adoption",
       "refs": [
         {
@@ -7769,7 +7780,7 @@
       ],
       "series_label": "Tool and size",
       "chart": "grouped-bar",
-      "n": "1,719 respondents in 97 countries, GDP-weighted, McKinsey Global Survey, 4 May to 8 Jun 2026",
+      "n": "595 respondents at organisations with $1B+ revenue and 1,035 at smaller ones, asked of regular AI users and rebased to the full sample; McKinsey Global Survey of 1,719 in 97 countries, GDP-weighted, 4 May to 8 Jun 2026",
       "note": "Chatbots are scaled by 47% of all respondents.",
       "theme": "agentic",
       "refs": [
@@ -8066,7 +8077,8 @@
           "source": "src-03",
           "pages": [
             3,
-            17
+            17,
+            18
           ]
         }
       ]
@@ -8250,7 +8262,7 @@
       ],
       "series_label": "Industry",
       "chart": "bar",
-      "n": "1,719 respondents in 97 countries, GDP-weighted, McKinsey Global Survey, 4 May to 8 Jun 2026",
+      "n": "Respondents whose organisations regularly use AI in at least one function; industry samples range from 42 (insurance) to 220 (professional services); drawn from 1,719 respondents in 97 countries, GDP-weighted, McKinsey Global Survey, 4 May to 8 Jun 2026",
       "note": null,
       "theme": "cost",
       "refs": [
@@ -8304,7 +8316,7 @@
       ],
       "series_label": "Change",
       "chart": "bar",
-      "n": "1,719 respondents in 97 countries, GDP-weighted, McKinsey Global Survey, 4 May to 8 Jun 2026",
+      "n": "Respondents whose organisations use AI in at least one function, from 1,719 surveyed in 97 countries (GDP-weighted), McKinsey Global Survey, 4 May to 8 Jun 2026",
       "note": "61% expect an increase (prose says 60%).",
       "theme": "market",
       "refs": [
@@ -8379,7 +8391,7 @@
       "series_label": "Group",
       "chart": "bar",
       "n": "92 AI high performers vs 1,429 others; McKinsey 2026",
-      "note": "High performers were at 55% a year earlier.",
+      "note": "High performers were at 55% a year earlier. The 73% and 25% are approximate readings of an unlabelled dot plot; the text says nearly three quarters and about one quarter.",
       "theme": "adoption",
       "refs": [
         {
@@ -8467,7 +8479,7 @@
         },
         {
           "label": "Human-in-the-loop rules set, high performers",
-          "value": 36
+          "value": 40
         },
         {
           "label": "AI use in performance management, others",
@@ -8574,7 +8586,7 @@
       "series_label": "Function and group",
       "chart": "grouped-bar",
       "n": "92 AI high performers vs 1,429 others; McKinsey 2026",
-      "note": null,
+      "note": "Selected functions. The exhibit also shows risk (15% vs 4%), manufacturing (7% vs 3%) and supply chain management (4% vs 5%), the only function where others are ahead.",
       "theme": "agentic",
       "refs": [
         {
@@ -8664,7 +8676,7 @@
       "series_label": "Group",
       "chart": "bar",
       "n": "92 AI high performers vs 1,429 others; McKinsey 2026",
-      "note": "High performer value stated as nearly half.",
+      "note": "The high-performer value is approximate: the source says nearly half without an exact figure. The 31% for others is exact.",
       "theme": "market",
       "refs": [
         {
@@ -8883,7 +8895,7 @@
       "series_label": "Direction and wave",
       "chart": "grouped-bar",
       "n": "1,753 AI users in 2025, 1,521 in 2026; pattern held among 552 who answered both years",
-      "note": "The only before-and-after check of workforce expectations in this project: realised cuts were about half of what was expected.",
+      "note": "The only before-and-after check of workforce expectations in this project: the share reporting an AI-driven headcount decline (14%) was less than half the share that had expected one a year earlier (32%).",
       "theme": "talent",
       "refs": [
         {
@@ -8999,7 +9011,7 @@
       ],
       "series_label": "Function and wave",
       "chart": "grouped-bar",
-      "n": "1,719 respondents in 97 countries, GDP-weighted, McKinsey Global Survey, 4 May to 8 Jun 2026",
+      "n": "Respondents whose organisations regularly use AI in at least one function (exhibit footnotes give n = 1,753); McKinsey Global Surveys, 2025 wave 25 Jun to 29 Jul 2025 and 2026 wave 4 May to 8 Jun 2026, GDP-weighted",
       "note": null,
       "theme": "talent",
       "refs": [
@@ -9172,7 +9184,9 @@
         {
           "source": "src-11",
           "pages": [
-            182
+            182,
+            183,
+            184
           ]
         }
       ]
@@ -9386,6 +9400,7 @@
         {
           "source": "src-11",
           "pages": [
+            173,
             193
           ]
         }
@@ -9631,7 +9646,7 @@
       "series_label": "Revenue band and stage",
       "chart": "grouped-bar",
       "n": "McKinsey State of AI 2025 survey, compiled by the Stanford AI Index 2026 (earlier edition than src-03)",
-      "note": "Not-using shares of 5% to 9% omitted; the $5B+ band omits it in the source and sums to 97%.",
+      "note": "Not-using shares (5% to 9% where labelled) are omitted. For the $5B+ band the not-using share is an unlabelled sliver of about 1%, and the four labelled stages add up to 97%.",
       "theme": "adoption",
       "refs": [
         {
@@ -9665,38 +9680,38 @@
           "value": 7
         },
         {
-          "label": "Software engineering",
-          "value": 7
-        },
-        {
           "label": "Product development",
           "value": 6
         },
         {
-          "label": "HR",
-          "value": 4
+          "label": "Software engineering",
+          "value": 6
+        },
+        {
+          "label": "Risk",
+          "value": 5
         },
         {
           "label": "Strategy and finance",
           "value": 4
         },
         {
-          "label": "Supply chain",
+          "label": "HR",
           "value": 3
         },
         {
-          "label": "Risk",
+          "label": "Supply chain",
           "value": 2
         },
         {
           "label": "Manufacturing",
-          "value": 2
+          "value": 1
         }
       ],
       "series_label": "Function",
       "chart": "bar",
       "n": "McKinsey State of AI 2025 survey, compiled by the Stanford AI Index 2026 (earlier edition than src-03)",
-      "note": "Share not using agents at all ranges from 66% (knowledge management) to 91% (manufacturing). Technology-sector peaks: software engineering 24%, IT 22%.",
+      "note": "Scaling plus fully scaled. The fully scaled segments and some scaling segments carry no labels, so the totals are approximate readings. Share not using agents at all ranges from 66% (knowledge management) to 91% (manufacturing). Technology-sector peaks: software engineering 24%, IT 22%.",
       "theme": "agentic",
       "refs": [
         {
@@ -9709,31 +9724,31 @@
     },
     {
       "id": "s11-26",
-      "label": "Population adoption three years after launch: generative AI vs earlier technologies",
+      "label": "Adoption reached: generative AI after three years against the latest values for earlier technologies",
       "unit": "%",
       "value": null,
       "series": [
         {
-          "label": "Generative AI (3 years)",
+          "label": "Generative AI (after 3 years)",
           "value": 53
         },
         {
-          "label": "Personal computer (20+ years)",
+          "label": "Personal computer (after about 22 years)",
           "value": 69
         },
         {
-          "label": "Internet (low estimate)",
+          "label": "Internet, CPS survey (after about 14 years)",
           "value": 76
         },
         {
-          "label": "Internet (high estimate)",
+          "label": "Internet, ITU data (after about 25 years)",
           "value": 91
         }
       ],
       "series_label": "Technology",
       "chart": "bar",
       "n": "Harvard Project on Workforce; Bick et al.; Compiled by the Stanford AI Index 2026",
-      "note": null,
+      "note": "At the three-year mark, computers were near 20% and the internet near 30% (approximate chart readings), against 53% for generative AI. The CPS figures cover adults aged 18 to 64; the ITU figures cover all ages.",
       "theme": "adoption",
       "refs": [
         {
@@ -9746,7 +9761,7 @@
     },
     {
       "id": "s11-27",
-      "label": "Share of working-age population using AI tools, second half of 2025 (Microsoft telemetry via the Index)",
+      "label": "AI diffusion (population-level AI use), second half of 2025 (Microsoft AI Economy Institute via the Index)",
       "unit": "%",
       "value": null,
       "series": [
@@ -9826,12 +9841,13 @@
       "series_label": "Country",
       "chart": "bar",
       "n": "Microsoft AI Economy Institute telemetry; Compiled by the Stanford AI Index 2026",
-      "note": "Vendor telemetry of Microsoft's own products; the US ranks 24th. Diffusion correlates with GDP per capita.",
+      "note": "Based on Microsoft usage telemetry; the US ranks 24th. The Index reports a strong positive link between diffusion and GDP per capita.",
       "theme": "adoption",
       "refs": [
         {
           "source": "src-11",
           "pages": [
+            200,
             201
           ]
         }
@@ -10188,13 +10204,14 @@
       ],
       "series_label": "Study population",
       "chart": "bar",
-      "n": "Seven peer-reviewed or working-paper studies 2025 to 2026; Compiled by the Stanford AI Index 2026",
+      "n": "Seven micro-level studies (2025 to 2026) summarised by the Stanford AI Index 2026",
       "note": "Support figure is the low end of 14% to 15%; least-experienced agents gained 30% to 35%. Gains are largest where work is structured and easy to monitor; the -19% result (METR 2025) was not replicated later.",
       "theme": "outlook",
       "refs": [
         {
           "source": "src-11",
           "pages": [
+            219,
             220
           ]
         }
@@ -10301,6 +10318,7 @@
         {
           "source": "src-11",
           "pages": [
+            224,
             225
           ]
         }
@@ -10416,7 +10434,8 @@
         {
           "source": "src-11",
           "pages": [
-            229
+            229,
+            230
           ]
         }
       ]
@@ -10482,7 +10501,7 @@
       "series": [
         {
           "label": "China",
-          "value": 85
+          "value": 87
         },
         {
           "label": "Indonesia",
@@ -10493,63 +10512,63 @@
           "value": 78
         },
         {
-          "label": "Malaysia",
-          "value": 73
-        },
-        {
-          "label": "Mexico",
-          "value": 73
-        },
-        {
           "label": "Singapore",
           "value": 73
         },
         {
+          "label": "Malaysia",
+          "value": 70
+        },
+        {
+          "label": "Mexico",
+          "value": 70
+        },
+        {
           "label": "India",
-          "value": 66
+          "value": 67
         },
         {
           "label": "Germany",
-          "value": 48
+          "value": 49
         },
         {
           "label": "Great Britain",
-          "value": 46
-        },
-        {
-          "label": "France",
-          "value": 45
+          "value": 43
         },
         {
           "label": "United States",
           "value": 42
         },
         {
-          "label": "Canada",
-          "value": 40
+          "label": "France",
+          "value": 41
         },
         {
           "label": "Belgium",
-          "value": 38
+          "value": 41
+        },
+        {
+          "label": "Canada",
+          "value": 40
         }
       ],
       "series_label": "Country",
       "chart": "bar",
       "n": "Ipsos AI Monitor 2025; Compiled by the Stanford AI Index 2026",
-      "note": null,
+      "note": "Values read from the 2025 dots of an unlabelled dot plot, accurate to about one point. The Index text gives the 2022 to 2025 changes for Germany (+12), France (+10), China (+9) and Great Britain (+5).",
       "theme": "outlook",
       "refs": [
         {
           "source": "src-11",
           "pages": [
-            365
+            364
           ]
         }
       ]
     },
     {
       "id": "s11-48",
-      "label": "Will AI create or eliminate jobs, by country, 2026 (Ipsos and Google)",
+      "label": "Will AI create or eliminate jobs, by country, 2025 (Ipsos and Google)",
       "unit": "%",
       "value": null,
       "series": [
