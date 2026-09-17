@@ -561,9 +561,6 @@ table.compact { font-size: 0.9rem; }
 .prose li { margin-bottom: var(--space-2); }
 .prose p:last-child { margin-bottom: 0; }
 .prose pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--surface-2); padding: var(--space-3) var(--space-4); border-radius: var(--radius); font-size: 0.85rem; }
-.data-files { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
-.data-files li { padding: var(--space-3) var(--space-4); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
-.data-files code { font-weight: 600; }
 @media (max-width: 640px) {
   .source-fields { grid-template-columns: 1fr; gap: var(--space-1); }
   .source-fields dd { margin-bottom: var(--space-2); }

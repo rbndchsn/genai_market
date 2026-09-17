@@ -1,17 +1,8 @@
-/* GenAI Market — sources page: bibliography with usage counts, evidence-level counts, citation example, data files. */
+/* GenAI Market — sources page: bibliography with usage counts, evidence-level counts, citation example. */
 (function () {
   "use strict";
   var GM = window.GM;
   var TYPE = { report: "Report", survey: "Survey", web: "Web article" };
-  var FILES = [
-    { name: "sources", what: "every source with its method, sample, licence and bias notes" },
-    { name: "insights", what: "findings by theme with evidence level, references and cross-links" },
-    { name: "stats", what: "every statistic with its series, unit, sample note, caveats and references" },
-    { name: "vendors", what: "28 service providers with scores, quadrant, focus, platforms and claimed metrics" },
-    { name: "glossary", what: "terms with definitions, tags, related terms and references" },
-    { name: "taxonomy", what: "service categories, workloads, industry use cases, engagement models, maturity tiers" },
-    { name: "chunks", what: "generated search units built from the files above" }
-  ];
 
   function monthYear(d) {
     var m = /^(\d{4})-(\d{2})/.exec(String(d || ""));
@@ -82,10 +73,6 @@
       "Sustainable IQ (" + new Date().getFullYear() + "). \"" + example.title + "\" (" + example.id + "). GenAI Market. " + base + "insights.html#" + example.id;
     document.getElementById("cite-year").textContent = new Date().getFullYear();
     document.getElementById("cite-url").textContent = base;
-
-    document.getElementById("data-files").innerHTML = FILES.map(function (f) {
-      return '<li><a href="data/' + f.name + '.json"><code>' + f.name + ".json</code></a> <span class=\"muted\">" + GM.escapeHTML(f.what) + "</span></li>";
-    }).join("");
   }
 
   function openHash() {
