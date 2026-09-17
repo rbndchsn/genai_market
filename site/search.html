@@ -13,6 +13,7 @@
 </script>
 </head>
 <body data-page="search">
+<script src="js/shell.js"></script>
 <main id="main" class="container">
 <h1>Search</h1>
 <p class="lead">Search every insight, statistic, vendor profile, glossary term, taxonomy entry and source on the site. Results link straight to the record.</p>
@@ -38,12 +39,11 @@
   <input id="q" name="q" type="search" placeholder="Try: agent governance, token costs, POC to production" autocomplete="off" autofocus>
   <button type="submit" class="button-primary">Search</button>
 </form>
-<div id="type-filter" class="pills type-filter" aria-label="Filter by record type"></div>
+<div id="type-filter" class="pills type-filter" role="group" aria-label="Filter by record type"></div>
 <p id="count" class="muted count-line" aria-live="polite"></p>
 <div id="results" class="stack"></div>
 <div id="starters"></div>
 </main>
-<script src="js/shell.js"></script>
 <script src="js/search.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
 </script>
 </head>
 <body data-page="method">
+<script src="js/shell.js"></script>
 <main id="main" class="container">
 <h1>How it was built</h1>
 <p class="lead">This site was made by one person directing one AI coding agent over about two days. This page explains how, so that you can do the same, whether you are writing your first script or running an engineering team.</p>
@@ -53,8 +54,8 @@
     <p>An AI agent starts every session with an empty memory. Without a plan, each session begins by guessing what the last one did, and the guesses drift. With a plan, the session reads a status block and continues from the exact step, in the same style, under the same rules. The plan also turned out to be the best place to think. Writing a step down before doing it exposed vague steps, and the decisions log kept the same question from being reopened three times.</p>
     <p>The plan was also where scope was defended. When the agent noticed something that should be done later, the rule was to add it to the plan as a new step, not to do it now. That one rule prevented most of the sprawl that makes agent projects hard to review.</p>
     <div class="takeaways">
-      <div class="takeaway"><h4>If you are starting out</h4><p>Make two files before your first prompt: one that tells the agent how to work, one that lists the steps. Ask for one step at a time. Look at the result before asking for the next.</p></div>
-      <div class="takeaway"><h4>If you run teams</h4><p>Treat the plan as the state machine and the agent as a stateless worker. Everything a human reviewer needs, including the reason for each decision, has to be in the file, because the chat is gone tomorrow.</p></div>
+      <div class="takeaway"><h3>If you are starting out</h3><p>Make two files before your first prompt: one that tells the agent how to work, one that lists the steps. Ask for one step at a time. Look at the result before asking for the next.</p></div>
+      <div class="takeaway"><h3>If you run teams</h3><p>Treat the plan as the state machine and the agent as a stateless worker. Everything a human reviewer needs, including the reason for each decision, has to be in the file, because the chat is gone tomorrow.</p></div>
     </div>
   </div>
 </section>
@@ -83,8 +84,8 @@
     <p>Two things were changed on purpose partway through. For the research phase, the rule was one source at a time with a report after each, because the human needed to see the note quality before trusting the process. Once it was trusted, the remaining sources and the whole website phase were run without checkpoints, each step committed as it landed. Knowing when to remove the checkpoints was a human call, made on evidence.</p>
     <p>The agent also kept a review harness for its own use: a script that starts a local server, renders a page in a headless browser, saves a desktop screenshot and a phone-width screenshot, and prints the size of the rendered page so that an empty page is caught immediately. A second script checks every internal link and anchor on every page and reports console errors. Both were written by the agent for the agent, and both ran before every tick.</p>
     <div class="takeaways">
-      <div class="takeaway"><h4>If you are starting out</h4><p>Ask the agent to show you what it built, not to tell you. A screenshot it has read itself is worth more than a paragraph saying the page works.</p></div>
-      <div class="takeaway"><h4>If you run teams</h4><p>Give the agent a deterministic review harness early and make it part of the definition of done. Checkpoints are a dial: tighten them while trust is low, loosen them when the output has earned it, and write the change down.</p></div>
+      <div class="takeaway"><h3>If you are starting out</h3><p>Ask the agent to show you what it built, not to tell you. A screenshot it has read itself is worth more than a paragraph saying the page works.</p></div>
+      <div class="takeaway"><h3>If you run teams</h3><p>Give the agent a deterministic review harness early and make it part of the definition of done. Checkpoints are a dial: tighten them while trust is low, loosen them when the output has earned it, and write the change down.</p></div>
     </div>
   </div>
 </section>
@@ -227,7 +228,6 @@
   </div>
 </section>
 </main>
-<script src="js/shell.js"></script>
 <script src="js/method.js"></script>
 </body>
 </html>

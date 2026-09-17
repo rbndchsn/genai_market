@@ -85,7 +85,8 @@
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 72px; }
+/* scrollbar-gutter keeps the page from sliding sideways when loaded data makes it scroll. */
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 72px; scrollbar-gutter: stable; }
 @media (max-width: 640px) { html { scroll-padding-top: 112px; } }
 
 body {
@@ -183,6 +184,8 @@ img, svg { max-width: 100%; height: auto; }
 
 /* ---------- Main and footer ---------- */
 main { flex: 1; padding-top: var(--space-6); padding-bottom: var(--space-8); }
+/* Data pages start nearly empty; keep the footer below the fold so it is not pushed down in view. */
+body:not([data-page=""]) > main { min-height: 100vh; }
 
 .site-footer {
   border-top: 1px solid var(--border);
@@ -637,7 +640,7 @@ a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tag-sphere { background: linear-gradient(135deg, #14504f 0%, #163f52 55%, #122b40 100%); } }
 .tag-sphere .tag {
   position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); will-change: transform, font-size, opacity;
-  background: none; border: 0; padding: 2px 5px; margin: 0; border-radius: 4px;
+  background: none; border: 0; padding: 2px 5px; margin: 0; border-radius: 4px; min-height: 24px; min-width: 24px;
   color: #ffffff; font: inherit; font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
@@ -648,7 +651,7 @@ a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
 /* How it was built */
 .takeaways { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); margin-top: var(--space-4); }
 .takeaway { background: var(--surface-2); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: var(--space-3) var(--space-4); }
-.takeaway h4 { margin: 0 0 var(--space-1); font-size: 0.95rem; }
+.takeaway h3 { margin: 0 0 var(--space-1); font-size: 0.95rem; }
 .takeaway p { margin: 0; }
 .prose .phases li { margin-bottom: var(--space-3); }
 .prose .kpi-row { margin-top: var(--space-4); }
@@ -684,3 +687,36 @@ a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
 :root[data-theme="dark"] .hero { background: linear-gradient(135deg, #14504f 0%, #163f52 55%, #122b40 100%); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { background: linear-gradient(135deg, #14504f 0%, #163f52 55%, #122b40 100%); } }
 @media (max-width: 760px) { .hero { padding: var(--space-5) var(--space-4); } }
+
+/* ---------- Reserved space while data loads ----------
+   Page scripts fill these containers after the JSON arrives. Reserving their rendered height while they are
+   still :empty stops the content below from jumping (layout shift); once filled, each takes its natural
+   height, so a different width never leaves a gap. Heights measured at 412px and 1350px (Lighthouse). */
+.count-line:empty, #bib-count:empty { min-height: 25px; }
+body[data-page="search"] .count-line:empty { min-height: 0; }
+/* Long lists only need to push what follows them below the fold. */
+#bibliography-list:empty, #top-insights:empty { min-height: 100vh; }
+@media (max-width: 480px) {
+  #hero:empty { min-height: 214px; }
+  #kpis:empty { min-height: 1474px; }
+  #counts:empty { min-height: 74px; }
+  body[data-page="insights"] #filters:empty, body[data-page="stats"] #filters:empty, body[data-page="vendors"] #filters:empty { min-height: 385px; }
+  body[data-page="glossary"] #filters:empty { min-height: 231px; }
+  #letters:empty { min-height: 94px; }
+  #method:empty { min-height: 565px; }
+  #quadrant:empty { min-height: 331px; }
+  #quad-legend:empty { min-height: 251px; }
+  #quad-ref:empty { min-height: 63px; }
+}
+@media (min-width: 900px) {
+  #hero:empty { min-height: 224px; }
+  #kpis:empty { min-height: 419px; }
+  #counts:empty { min-height: 25px; }
+  #filters:empty { min-height: 99px; }
+  #letters:empty { min-height: 30px; }
+  #method:empty { min-height: 213px; }
+  #quadrant:empty { min-height: 560px; }
+  #quad-legend:empty { min-height: 95px; }
+  #quad-ref:empty { min-height: 21px; }
+  #method-kpis:empty { min-height: 242px; }
+}

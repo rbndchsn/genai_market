@@ -95,12 +95,18 @@
     );
   }
 
+  /* shell.js is the first element in <body>, so the header is in place before the first paint and does
+     not push the page down (layout shift). The footer waits for the rest of the body. */
   function mountShell() {
     var page = document.body.getAttribute("data-page") || "";
     var skip = el('<a class="skip-link" href="#main">Skip to content</a>');
     document.body.insertBefore(skip, document.body.firstChild);
     document.body.insertBefore(renderHeader(page), skip.nextSibling);
-    document.body.appendChild(renderFooter());
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () { document.body.appendChild(renderFooter()); });
+    } else {
+      document.body.appendChild(renderFooter());
+    }
     var btn = document.querySelector(".theme-toggle");
     btn.addEventListener("click", function () {
       var next = currentTheme() === "dark" ? "light" : "dark";
@@ -177,6 +183,6 @@
     currentTheme: currentTheme
   };
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mountShell);
-  else mountShell();
+  if (document.body) mountShell();
+  else document.addEventListener("DOMContentLoaded", mountShell);
 })();

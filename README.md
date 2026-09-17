@@ -22,12 +22,16 @@ Source PDFs, raw extractions and working synthesis notes are kept outside the re
 
 ## Run locally
 
+Requirements: Python 3.11+ for the scripts, and Chrome or Edge for the review and check scripts. The site itself needs nothing but a static file server; it will not work from `file://` because pages fetch their data.
+
 ```
 cd site
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000.
+Then open http://localhost:8000. The site uses relative paths only, so it runs the same at the server root and under `/genai_market/` on GitHub Pages.
+
+Extraction needs PyMuPDF (PDFs) and trafilatura (web pages); the validation, build and check scripts use the standard library only.
 
 ## Validate and rebuild data
 
@@ -43,7 +47,7 @@ python scripts/build_search_index.py
 
 ```
 python scripts/review_shots.py index.html
-python scripts/review_shots.py "insights.html?theme=agentic#ins-045" --dark
+python scripts/review_shots.py "insights.html?theme=agentic#ins-045" --theme dark
 ```
 
 Starts a local server and writes desktop (1280px) and phone (390px, via an iframe harness) screenshots with headless Chrome or Edge. `--theme light|dark` forces the site theme; `--iframe` renders the desktop view in an iframe too (needed when a modal dialog is open). Every page is reviewed this way before its step is marked done.
@@ -53,6 +57,19 @@ python scripts/check_site.py
 ```
 
 Renders every page headlessly and checks console errors, internal links, hash anchors and absolute paths.
+
+## Add a new source
+
+Sources move through the same pipeline as the first twelve. Steps 2 to 4 happen in folders that `.gitignore` keeps out of the repository.
+
+1. **Get the document.** Save a PDF to `sourcedoc/`, or save a web page as `content/raw/src-NN/page.html`. Take the next free id (`src-13` after `src-12`); ids are never reused. If a report sits behind a sign-in form, download it yourself; do not script around the form.
+2. **Register it.** Add a record to `site/data/sources.json` (fields in `content/schemas.md`: type, publisher, date, page count or URL and accessed date, sponsor, method, sample, licence note, bias note, how we use it). Add a short publisher name to `SHORT` in `site/js/shell.js`.
+3. **Extract.** Add the file to `SOURCES` in `scripts/extract_pdf.py` (optionally with page ranges) or the URL to `WEB_SOURCES` in `scripts/extract_web.py`, then run the script with the source id. Output lands in `content/raw/src-NN/`: `text.md` with page markers, `tables.md`, `page_map.json` and a PNG render of every page. Tables and charts scramble in the text, so the renders are the reference for any number.
+4. **Synthesise.** Read the whole extraction and write structured notes: document facts with a bias note, numbered findings with page references, cross-source observations, new glossary terms, and a table of every chartable number. Check every chart value against the page render (or the chart image for web sources, read in a temporary folder and not kept).
+5. **Merge into the data.** Edit `site/data/{glossary,insights,stats,vendors,taxonomy}.json` per `content/schemas.md`. Stat ids follow the source number (`s13-01`). Add the new source to existing insights it supports, and raise an insight to `multi-source` only when the new source independently supports its central figure. Write everything in your own words and keep each figure's population, unit and year as the page gives them.
+6. **Rebuild and check.** Run `validate_data.py`, `build_chunks.py`, `build_search_index.py`, `originality_check.py` and `check_site.py`, then check the affected records against their cited pages as described in `scripts/eval/README.md`.
+7. **Update fixed wording.** The source count is typed as the word "twelve" in the `site/sources.html` meta description, the ins-094 summary in `insights.json` and the opening paragraph of this README; update those. The method page's "read twelve reports" describes the original build and stays. Counts shown on the home and Sources pages are computed from the data.
+8. **Publish.** Confirm that nothing from `sourcedoc/`, `content/raw/`, `content/synth/` or `content/originality-check-*.md` is staged, then commit and push; the Pages workflow redeploys.
 
 ## Check quality
 
