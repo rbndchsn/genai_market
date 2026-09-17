@@ -22,3 +22,6 @@ desktop.ini
 
 # Local environment
 .env
+
+# Reference screenshots from other tools, dropped in by the user; not part of the site.
+/assets/

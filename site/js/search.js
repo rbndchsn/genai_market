@@ -91,6 +91,113 @@
     history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
   }
 
+
+  /* ---------- Tag sphere (starting points) ----------
+     Curated queries from data/search-tags.json laid out on a slowly turning globe. Each tag is a
+     button that runs the search. Front tags are larger and brighter; the pointer steers the spin,
+     hovering a tag pauses it, and reduced-motion users get a still layout. */
+  var sphere = null;
+
+  function buildSphere(container, tagList) {
+    var items = [];
+    tagList.forEach(function (q) {
+      var n = search(q).length;
+      if (n >= 3) items.push({ q: q, n: n });
+    });
+    if (!items.length) return null;
+    var narrow = container.clientWidth < 560;
+    if (narrow && items.length > 32) {
+      var keep = items.slice().sort(function (a, b) { return b.n - a.n; }).slice(0, 32);
+      items = items.filter(function (it) { return keep.indexOf(it) >= 0; }); // original order, strongest 32
+    }
+    var maxLog = Math.log(1 + Math.max.apply(null, items.map(function (t) { return t.n; })));
+    var N = items.length, golden = Math.PI * (3 - Math.sqrt(5));
+    var fontBase = narrow ? 10 : 11, fontRange = narrow ? 6 : 9;
+    items.forEach(function (it, i) {
+      var y = N > 1 ? 1 - (i / (N - 1)) * 2 : 0, r = Math.sqrt(Math.max(0, 1 - y * y)), phi = i * golden;
+      it.x = Math.cos(phi) * r; it.y = y; it.z = Math.sin(phi) * r;
+      it.w = 0.9 + 0.35 * (Math.log(1 + it.n) / maxLog);
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "tag"; b.textContent = it.q;
+      b.title = it.q + " (" + it.n + " record" + (it.n === 1 ? "" : "s") + ")";
+      b.setAttribute("data-q", it.q);
+      it.el = b; container.appendChild(b);
+    });
+
+    var margin = 40;
+    items.forEach(function (it) {
+      it.el.style.fontSize = ((fontBase + fontRange) * it.w).toFixed(1) + "px"; // widest this label can get
+      margin = Math.max(margin, it.el.offsetWidth / 2 + 6);
+    });
+
+    var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var W = 0, H = 0, RX = 0, RY = 0, cx = 0, cy = 0;
+    var velX = 0, velY = 0.0035, tgtX = 0, tgtY = 0.0035, paused = false, raf = 0, stopped = false;
+
+    function measure() {
+      W = container.clientWidth; H = container.clientHeight;
+      cx = W / 2; cy = H / 2;
+      RX = Math.max(50, W / 2 - margin);
+      RY = Math.max(50, H / 2 - (fontBase + fontRange));
+    }
+    function rotate(ax, ay) {
+      var cX = Math.cos(ax), sX = Math.sin(ax), cY = Math.cos(ay), sY = Math.sin(ay);
+      items.forEach(function (it) {
+        var y1 = it.y * cX - it.z * sX, z1 = it.y * sX + it.z * cX;      // around X
+        var x2 = it.x * cY + z1 * sY, z2 = -it.x * sY + z1 * cY;         // around Y
+        it.y = y1; it.x = x2; it.z = z2;
+      });
+    }
+    function draw() {
+      items.forEach(function (it) {
+        var depth = (it.z + 1) / 2;                       // 0 = back, 1 = front
+        var size = (fontBase + fontRange * depth) * it.w;
+        it.el.style.left = (cx + it.x * RX).toFixed(1) + "px";
+        it.el.style.top = (cy + it.y * RY).toFixed(1) + "px";
+        it.el.style.fontSize = size.toFixed(1) + "px";
+        it.el.style.opacity = (0.22 + 0.78 * depth).toFixed(2);
+        it.el.style.zIndex = Math.round(depth * 100);
+      });
+    }
+    function frame() {
+      if (stopped) return;
+      if (!paused) {
+        velX += (tgtX - velX) * 0.06; velY += (tgtY - velY) * 0.06;
+        rotate(velX, velY);
+      }
+      draw();
+      raf = requestAnimationFrame(frame);
+    }
+
+    measure();
+    rotate(-0.35, 0.6); // initial tilt so the first frame is not a flat ring
+    draw();
+    if (!reduced) {
+      container.addEventListener("pointermove", function (e) {
+        var rect = container.getBoundingClientRect();
+        var dx = (e.clientX - rect.left - cx) / (W / 2), dy = (e.clientY - rect.top - cy) / (H / 2);
+        tgtY = Math.max(-1, Math.min(1, dx)) * 0.018;
+        tgtX = -Math.max(-1, Math.min(1, dy)) * 0.012;
+      });
+      container.addEventListener("pointerleave", function () { tgtY = 0.0035; tgtX = 0; });
+      container.addEventListener("mouseover", function (e) { if (e.target.classList.contains("tag")) paused = true; });
+      container.addEventListener("mouseout", function (e) { if (e.target.classList.contains("tag")) paused = false; });
+      container.addEventListener("focusin", function () { paused = true; });
+      container.addEventListener("focusout", function () { paused = false; });
+      window.addEventListener("resize", measure);
+      raf = requestAnimationFrame(frame);
+    }
+    container.addEventListener("click", function (e) {
+      var q = e.target.getAttribute && e.target.getAttribute("data-q");
+      if (!q) return;
+      var input = document.getElementById("q");
+      input.value = q; state.q = q; state.type = "";
+      render();
+      window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+    });
+    return { stop: function () { stopped = true; if (raf) cancelAnimationFrame(raf); window.removeEventListener("resize", measure); } };
+  }
+
   function render() {
     writeURL();
     document.title = (state.q ? state.q + " — Search — " : "Search — ") + GM.siteName;
@@ -131,16 +238,22 @@
       resultsEl.innerHTML = list;
       countEl.textContent = shown.length + " result" + (shown.length === 1 ? "" : "s") + (shown.length > MAX_RESULTS ? ", showing the first " + MAX_RESULTS : "");
     }
-    document.getElementById("starters").innerHTML = state.q ? "" :
-      '<h2>Starting points</h2><div class="pills">' + ["agent governance", "pilot to production", "token cost", "sovereign AI", "high performers", "buy versus build", "PeMa quadrant", "workforce", "real-time data", "ROI"].map(function (s) {
-        return '<a class="pill" href="?q=' + encodeURIComponent(s) + '">' + GM.escapeHTML(s) + "</a>";
-      }).join("") + "</div>" +
-      '<p class="muted">Or browse by section: <a href="insights.html">Insights</a>, <a href="stats.html">Statistics</a>, <a href="vendors.html">Vendors</a>, <a href="glossary.html">Glossary</a>, <a href="sources.html">Sources</a>.</p>';
+    if (sphere) { sphere.stop(); sphere = null; }
+    var starters = document.getElementById("starters");
+    if (state.q) { starters.innerHTML = ""; }
+    else {
+      starters.innerHTML = '<h2>Starting points</h2>' +
+        '<p class="muted">Each tag is a ready-made search. Larger tags reach more records; move the pointer to turn the sphere, or use Tab to walk through the tags.</p>' +
+        '<div id="tag-sphere" class="tag-sphere" aria-label="Topic tags; each opens a search"></div>' +
+        '<p class="muted">Or browse by section: <a href="insights.html">Insights</a>, <a href="stats.html">Statistics</a>, <a href="vendors.html">Vendors</a>, <a href="glossary.html">Glossary</a>, <a href="sources.html">Sources</a>.</p>';
+      sphere = buildSphere(document.getElementById("tag-sphere"), idx.tags || []);
+    }
   }
 
-  Promise.all([GM.loadJSON("search-index"), GM.loadJSON("sources")])
+  Promise.all([GM.loadJSON("search-index"), GM.loadJSON("sources"), GM.loadJSON("search-tags")])
     .then(function (r) {
       idx = r[0];
+      idx.tags = r[2].tags;
       idx.srcById = {};
       r[1].sources.forEach(function (s) { idx.srcById[s.id] = s; });
       keys = Object.keys(idx.index).sort();
