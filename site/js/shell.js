@@ -79,7 +79,6 @@
   }
 
   function renderFooter() {
-    var year = new Date().getFullYear();
     return el(
       '<footer class="site-footer">' +
         '<div class="container">' +
@@ -87,7 +86,7 @@
           '<nav aria-label="Footer">' +
             '<a href="sources.html">Sources and method</a>' +
           "</nav>" +
-          "<p>&copy; " + year + " Sustainable IQ. No source text, charts or images are reproduced.</p>" +
+          '<p>This online tool was created by: <a href="https://www.linkedin.com/in/robin-duchesneau" rel="noopener">https://www.linkedin.com/in/robin-duchesneau</a></p>' +
         "</div>" +
       "</footer>"
     );
