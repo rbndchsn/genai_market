@@ -627,14 +627,14 @@ a.pill-theme:hover { border-color: var(--tc, var(--accent)); }
 
 /* Search page tag sphere: curated queries on a turning globe (see search.js) */
 .tag-sphere {
-  position: relative; height: 480px; overflow: hidden; margin: var(--space-3) 0 var(--space-4);
+  position: relative; height: 600px; overflow: hidden; margin: var(--space-3) 0 var(--space-4);
   border-radius: var(--radius-lg); box-shadow: var(--shadow); touch-action: none; user-select: none;
   background: linear-gradient(135deg, #1d6b6b 0%, #1f5f7a 55%, #1b3f5e 100%);
 }
 :root[data-theme="dark"] .tag-sphere { background: linear-gradient(135deg, #14504f 0%, #163f52 55%, #122b40 100%); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tag-sphere { background: linear-gradient(135deg, #14504f 0%, #163f52 55%, #122b40 100%); } }
 .tag-sphere .tag {
-  position: absolute; left: 0; top: 0; transform: translate(-50%, -50%);
+  position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); will-change: transform, font-size, opacity;
   background: none; border: 0; padding: 2px 5px; margin: 0; border-radius: 4px;
   color: #ffffff; font: inherit; font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);

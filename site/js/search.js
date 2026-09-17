@@ -93,9 +93,12 @@
 
 
   /* ---------- Tag sphere (starting points) ----------
-     Curated queries from data/search-tags.json laid out on a slowly turning globe. Each tag is a
-     button that runs the search. Front tags are larger and brighter; the pointer steers the spin,
-     hovering a tag pauses it, and reduced-motion users get a still layout. */
+     Curated queries from data/search-tags.json on a slowly tumbling globe. Points live on a unit
+     sphere; each frame they rotate a little about a tilted axis and are projected with perspective,
+     so front tags are large, bright and spread outward while back tags are small, faint and pulled
+     toward the centre. Rim tags sit at the circle's edge. Each tag is a button that runs the search.
+     The pointer steers the spin, hovering or focusing a tag eases it to a stop, and reduced-motion
+     users get a still layout. */
   var sphere = null;
 
   function buildSphere(container, tagList) {
@@ -106,13 +109,14 @@
     });
     if (!items.length) return null;
     var narrow = container.clientWidth < 560;
-    if (narrow && items.length > 32) {
-      var keep = items.slice().sort(function (a, b) { return b.n - a.n; }).slice(0, 32);
-      items = items.filter(function (it) { return keep.indexOf(it) >= 0; }); // original order, strongest 32
+    var limit = narrow ? 26 : 60;
+    if (items.length > limit) {
+      var keep = items.slice().sort(function (a, b) { return b.n - a.n; }).slice(0, limit);
+      items = items.filter(function (it) { return keep.indexOf(it) >= 0; }); // original order, strongest first
     }
     var maxLog = Math.log(1 + Math.max.apply(null, items.map(function (t) { return t.n; })));
     var N = items.length, golden = Math.PI * (3 - Math.sqrt(5));
-    var fontBase = narrow ? 10 : 11, fontRange = narrow ? 6 : 9;
+    var fontBase = narrow ? 9 : 10, fontRange = narrow ? 7 : 10;
     items.forEach(function (it, i) {
       var y = N > 1 ? 1 - (i / (N - 1)) * 2 : 0, r = Math.sqrt(Math.max(0, 1 - y * y)), phi = i * golden;
       it.x = Math.cos(phi) * r; it.y = y; it.z = Math.sin(phi) * r;
@@ -124,21 +128,24 @@
       it.el = b; container.appendChild(b);
     });
 
-    var margin = 40;
+    // Rim tags (depth 0.5) are the ones that reach the edge; front tags sit near the centre.
+    var margin = 24;
     items.forEach(function (it) {
-      it.el.style.fontSize = ((fontBase + fontRange) * it.w).toFixed(1) + "px"; // widest this label can get
-      margin = Math.max(margin, it.el.offsetWidth / 2 + 6);
+      it.el.style.fontSize = ((fontBase + fontRange * 0.5) * it.w).toFixed(1) + "px";
+      margin = Math.max(margin, it.el.offsetWidth * 0.5 + 4);
     });
 
     var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var W = 0, H = 0, RX = 0, RY = 0, cx = 0, cy = 0;
-    var velX = 0, velY = 0.0035, tgtX = 0, tgtY = 0.0035, paused = false, raf = 0, stopped = false;
+    var W = 0, H = 0, R = 0, cx = 0, cy = 0;
+    var BASE_Y = 0.0032, BASE_X = 0.0009;                  // idle tumble: mostly around Y, a little around X
+    var velX = BASE_X, velY = BASE_Y, tgtX = BASE_X, tgtY = BASE_Y;
+    var speed = 1, tgtSpeed = 1, raf = 0, stopped = false;
 
     function measure() {
       W = container.clientWidth; H = container.clientHeight;
       cx = W / 2; cy = H / 2;
-      RX = Math.max(50, W / 2 - margin);
-      RY = Math.max(50, H / 2 - (fontBase + fontRange));
+      // A circle. With the perspective factor below, no point projects further than 1.03 R from the centre.
+      R = Math.max(50, Math.min((W / 2 - margin) / 1.03, (H / 2 - fontBase - fontRange) / 1.03));
     }
     function rotate(ax, ay) {
       var cX = Math.cos(ax), sX = Math.sin(ax), cY = Math.cos(ay), sY = Math.sin(ay);
@@ -151,39 +158,40 @@
     function draw() {
       items.forEach(function (it) {
         var depth = (it.z + 1) / 2;                       // 0 = back, 1 = front
+        var p = 1 + 0.25 * it.z;                          // perspective: front spreads out, back pulls in
         var size = (fontBase + fontRange * depth) * it.w;
-        it.el.style.left = (cx + it.x * RX).toFixed(1) + "px";
-        it.el.style.top = (cy + it.y * RY).toFixed(1) + "px";
-        it.el.style.fontSize = size.toFixed(1) + "px";
-        it.el.style.opacity = (0.22 + 0.78 * depth).toFixed(2);
+        var x = cx + it.x * R * p, y = cy + it.y * R * p;
+        it.el.style.transform = "translate(-50%, -50%) translate(" + x.toFixed(1) + "px, " + y.toFixed(1) + "px)";
+        it.el.style.fontSize = (Math.round(size * 2) / 2).toFixed(1) + "px";
+        it.el.style.opacity = (0.18 + 0.82 * depth).toFixed(2);
         it.el.style.zIndex = Math.round(depth * 100);
       });
     }
     function frame() {
       if (stopped) return;
-      if (!paused) {
-        velX += (tgtX - velX) * 0.06; velY += (tgtY - velY) * 0.06;
-        rotate(velX, velY);
-      }
+      speed += (tgtSpeed - speed) * 0.08;               // eases to a stop on hover instead of snapping
+      velX += (tgtX - velX) * 0.05; velY += (tgtY - velY) * 0.05;
+      if (speed > 0.002) rotate(velX * speed, velY * speed);
       draw();
       raf = requestAnimationFrame(frame);
     }
 
     measure();
-    rotate(-0.35, 0.6); // initial tilt so the first frame is not a flat ring
+    rotate(-0.45, 0.8); // initial tilt so the first frame already shows depth
     draw();
     if (!reduced) {
       container.addEventListener("pointermove", function (e) {
         var rect = container.getBoundingClientRect();
         var dx = (e.clientX - rect.left - cx) / (W / 2), dy = (e.clientY - rect.top - cy) / (H / 2);
-        tgtY = Math.max(-1, Math.min(1, dx)) * 0.018;
-        tgtX = -Math.max(-1, Math.min(1, dy)) * 0.012;
+        dx = Math.max(-1, Math.min(1, dx)); dy = Math.max(-1, Math.min(1, dy));
+        tgtY = BASE_Y + dx * 0.014;                      // pointer right: spin faster to the right
+        tgtX = BASE_X - dy * 0.010;                      // pointer up: tumble upward
       });
-      container.addEventListener("pointerleave", function () { tgtY = 0.0035; tgtX = 0; });
-      container.addEventListener("mouseover", function (e) { if (e.target.classList.contains("tag")) paused = true; });
-      container.addEventListener("mouseout", function (e) { if (e.target.classList.contains("tag")) paused = false; });
-      container.addEventListener("focusin", function () { paused = true; });
-      container.addEventListener("focusout", function () { paused = false; });
+      container.addEventListener("pointerleave", function () { tgtY = BASE_Y; tgtX = BASE_X; });
+      container.addEventListener("mouseover", function (e) { if (e.target.classList.contains("tag")) tgtSpeed = 0; });
+      container.addEventListener("mouseout", function (e) { if (e.target.classList.contains("tag")) tgtSpeed = 1; });
+      container.addEventListener("focusin", function () { tgtSpeed = 0; });
+      container.addEventListener("focusout", function () { tgtSpeed = 1; });
       window.addEventListener("resize", measure);
       raf = requestAnimationFrame(frame);
     }
