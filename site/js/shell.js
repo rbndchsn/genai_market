@@ -5,7 +5,6 @@
 
   var SITE_NAME = "GenAI Market";
   var TAGLINE = "A Meta-Analysis of the State of Enterprise AI";
-  var REPO_URL = "https://github.com/rbndchsn/genai_market";
 
   var NAV = [
     { key: "home", href: "index.html", label: "Overview" },
@@ -87,7 +86,6 @@
           "<p><strong>" + SITE_NAME + "</strong> is a meta-analysis of the state of enterprise AI. Findings are written in our own words and every statistic, insight and vendor fact carries a reference.</p>" +
           '<nav aria-label="Footer">' +
             '<a href="sources.html">Sources and method</a>' +
-            '<a href="' + REPO_URL + '" rel="noopener">Repository</a>' +
           "</nav>" +
           "<p>&copy; " + year + " Sustainable IQ. No source text, charts or images are reproduced.</p>" +
         "</div>" +
