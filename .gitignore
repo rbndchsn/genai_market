@@ -25,3 +25,6 @@ desktop.ini
 
 # Reference screenshots from other tools, dropped in by the user; not part of the site.
 /assets/
+
+# Accuracy-evaluation working files (batches, verdicts, edit lists); they quote source findings.
+scripts/eval/work/

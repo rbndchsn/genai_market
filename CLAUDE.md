@@ -14,6 +14,8 @@ for what we are building, why, and which step comes next.
 - Read the **Current Status** block at the top of `plan.md`.
 - Find the first step that is not marked `[x]` in **Implementation Steps**.
 - If the user's message is ambiguous about which step to work on, ask before starting.
+- If the status block says a discussion with the user is pending, summarise the options it lists and wait for the user's choice before doing any work.
+- Decisions go in the Decisions Log table (section 6) and dated changes in the Change History table (section 8). Check which table a row belongs to before inserting it.
 
 ## 3. Keep plan.md current
 
@@ -76,3 +78,26 @@ This site is a meta-analysis. We publish our own research findings with referenc
 - Data changes (Phase 3 output onward): edit `site/data/*.json` per `content/schemas.md`, then run `scripts/validate_data.py`, `scripts/build_chunks.py` and `scripts/build_search_index.py`. Never hand-edit `chunks.json` or `search-index.json`.
 - Site pages (Phase 5): build per the routine in `plan.md`, review with `scripts/review_shots.py`, record the step in `plan.md`.
 - Originality (Phase 7.1): `python scripts/originality_check.py` writes `content/originality-check-<date>.md` (local only). Every SRC-01 hit must be rewritten.
+- Accuracy evaluation (Phase 7.2 onward): follow `scripts/eval/README.md`. Checkers run as a different model from the author model, every "wrong" verdict is confirmed against the page before data changes, and results go into `site/data/quality.json`.
+
+## Accuracy rules (learned in 7.2b, 2026-09-16)
+
+The full evaluation found 33 of 402 evidence records wrong and 133 loose. Most errors were true figures put in the wrong place during multi-source synthesis. So, for any new or edited insight, statistic, vendor fact or definition:
+- Check each claim against its cited page (render for charts and tables) while writing it, not against the synthesis notes.
+- Keep the population, unit, year and source of every figure exactly as the page gives them. A share is not a count, a forecast is not an actual, a tie is not a lead.
+- Mark an insight multi-source only when two independent sources support its central figure.
+- Treat values read from unlabelled chart marks as approximate and say so; calibrate them against any values the source prints.
+- After a data change, update the matching row in `quality.json` if the change affects evaluated records, and re-run the originality check: corrected text can reintroduce source wording.
+
+## Publishing rules (user decisions, 2026-09-16)
+
+- The site is show-only: no data-file downloads, no "How to cite" section, no public corrections channel. The repository link and the "How it was built" page are published on purpose; keep them. Repo issues, wiki and projects are switched off.
+- The user approves pushes with a one-word "push". For large steps they may say to run to the end without asking at each fork; still stop before committing.
+- Commit messages end with the attribution line the harness provides.
+- After a deploy, browsers keep `js/` and `css/` for ten minutes; tell the user to press Ctrl+F5 if a change does not show.
+
+## Windows pitfalls
+
+- Long Bash heredocs with mixed quotes can fail to parse; write the script to a file in the scratchpad and run it.
+- Workflow scripts must use LF line endings.
+- Set `PYTHONIOENCODING=utf-8` when printing source text; data files use CRLF, so rewrite them with the original newline.

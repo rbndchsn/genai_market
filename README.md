@@ -4,7 +4,7 @@ A Meta-Analysis of the State of Enterprise AI, published as a static website. We
 
 **Live site: https://rbndchsn.github.io/genai_market/**
 
-Status: the MVP is live (Phase 5 complete). Every push to `main` republishes `site/` through `.github/workflows/pages.yml`. Next is the QA phase (originality review, accuracy pass, technical QA). The ask-the-report chat (Phase 6) is paused so the release has no backend. See `plan.md` for the full plan, decisions and current status.
+Status: the site is live and in the QA phase. The originality review and a full accuracy evaluation (402 records checked against their cited pages, 166 corrected) are done and published on the site's "How it was built" page. Every push to `main` republishes `site/` through `.github/workflows/pages.yml`. The ask-the-report chat (Phase 6) is paused so the release has no backend. See `plan.md` for the full plan, decisions, current status and next steps.
 
 ## Layout
 
@@ -13,6 +13,7 @@ Status: the MVP is live (Phase 5 complete). Every push to `main` republishes `si
   - `js/shell.js` — header, navigation, footer, theme toggle and shared helpers (`window.GM`).
   - `js/<page>.js` — one script per page.
 - `scripts/` — extraction, validation, build and review scripts (Python 3.11+).
+  - `scripts/eval/` — the accuracy-evaluation toolkit: Claude Code workflows for checking, fixing and noting records, plus merge, apply and review helpers. See its README.
 - `content/schemas.md` — record shapes for the JSON data files.
 - `plan.md` — the living project plan. Every agent and contributor reads it first; its "Phase 5 build and review routine" section is the handoff for anyone continuing the site build.
 - `CLAUDE.md` — working rules for AI agents in this repository.
@@ -52,6 +53,14 @@ python scripts/check_site.py
 ```
 
 Renders every page headlessly and checks console errors, internal links, hash anchors and absolute paths.
+
+## Check quality
+
+Three layers, with results in `site/data/quality.json` and on the method page:
+
+- Validation: `validate_data.py` and `check_site.py`, on every change.
+- Originality: `python scripts/originality_check.py` writes a local report; any hit against the licensed source must be rewritten.
+- Accuracy evaluation: records checked against their cited pages by a different model from the author, following `scripts/eval/README.md`.
 
 ## Working with the plan
 

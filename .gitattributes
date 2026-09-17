@@ -1,3 +1,5 @@
 * text=auto
 *.png binary
 *.pdf binary
+# Workflow scripts must keep LF endings; the Workflow tool rejects carriage returns.
+scripts/eval/*.js text eol=lf
