@@ -160,6 +160,7 @@
         <li>Keep secrets, licensed material and raw downloads out of version control from day one. Ask the agent to add the exclusion before the first commit.</li>
         <li>When something looks wrong, say what you see in plain words. The agent can usually find the cause from a good description.</li>
         <li>Read what the agent writes into the plan. That is where you learn what it actually did.</li>
+        <li>Ask the agent to check its own work against the source, not against its memory. Pick a handful of numbers at random, have it open the cited page and compare. Ours got every chart number right and slipped in the sentences around them.</li>
       </ul>
     </div>
     <div class="card prose">
@@ -172,6 +173,7 @@
         <li>Parallelise where the work is separable and the outputs do not overlap, for example one forked session per source, each writing only its own file. Merge sequentially.</li>
         <li>Checkpoints are a dial tied to evidence. Record in the decisions log when you loosened them and why.</li>
         <li>Give the agent taste through examples, not adjectives: one finished page or one finished note becomes the model for the rest.</li>
+        <li>Separate validation from evaluation and budget for both. Validation is automated and cheap: schemas, references that resolve, links, console errors, run on every change. Evaluation is sampled and judged: draw records with a fixed seed, check each against its cited page with a fresh agent, record the verdict, correct the data, publish the results. A pass rate hides where the failures cluster; a record-level table shows it. Re-run with a new seed after every content change.</li>
       </ul>
     </div>
   </div>
