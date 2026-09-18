@@ -591,11 +591,9 @@ table.compact { font-size: 0.9rem; }
 }
 
 /* ---------- Search ---------- */
-.header-search { flex: none; }
-.header-search input { min-height: 36px; width: 150px; padding: 4px 10px; font-size: 0.9rem; }
-@media (max-width: 900px) { .header-search { display: none; } }
-/* Above 900px the header search box is present, so the Search nav item is redundant except on the Search page itself. */
-@media (min-width: 901px) { body:not([data-page="search"]) .site-nav a[data-key="search"] { display: none; } }
+/* There is no search box in the header. The Search nav item is the single route to the page, which
+   carries its own field, the tag sphere and the browse view. A box in the header only reached the
+   page once a query was typed, and it crowded the nav item off the row on desktop. */
 .search-form { display: flex; gap: var(--space-2); margin: 0 0 var(--space-4); }
 .search-form input { flex: 1 1 auto; min-width: 0; font-size: 1.05rem; min-height: 46px; }
 .search-form button { min-height: 46px; }

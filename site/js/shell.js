@@ -67,11 +67,6 @@
         '<div class="container">' +
           '<a class="brand" href="index.html">' + MARK + '<span class="brand-name">' + SITE_NAME + "</span></a>" +
           '<nav class="site-nav" aria-label="Site"><ul>' + items + "</ul></nav>" +
-          (page === "search" ? "" :
-            '<form class="header-search" role="search" action="search.html" method="get">' +
-              '<label for="header-q" class="visually-hidden">Search the site</label>' +
-              '<input id="header-q" name="q" type="search" placeholder="Search" autocomplete="off">' +
-            "</form>") +
           '<button class="theme-toggle" type="button"></button>' +
         "</div>" +
       "</header>"
