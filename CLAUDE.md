@@ -93,9 +93,19 @@ The full evaluation found 33 of 402 evidence records wrong and 133 loose. Most e
 
 - The method page teaches the workflow and names the three checking layers, but publishes no evaluation figures: no pass rates, no counts of corrected or wrong records, no per-record corrections table. That account lives in `content/quality.json` and `plan.md`. Do not move it back onto the site.
 - The site is show-only: no data-file downloads, no "How to cite" section, no public corrections channel. The repository link and the "How it was built" page are published on purpose; keep them. Repo issues, wiki and projects are switched off.
+- Show-only means no data-file downloads, no "How to cite" section, no corrections form and no issue tracker. It does not forbid the call to action added on 2026-09-17: the site may invite interest in the work, it just does not invite correction of it. Do not remove the call to action or the value proposition as off-brand.
 - The user approves pushes with a one-word "push". For large steps they may say to run to the end without asking at each fork; still stop before committing.
 - Commit messages end with the attribution line the harness provides.
 - After a deploy, browsers keep `js/` and `css/` for ten minutes; tell the user to press Ctrl+F5 if a change does not show.
+
+## Site voice and positioning (user decisions, 2026-09-17 and 2026-09-18)
+
+- "We" is defined once, in the home hero: "Human-led, with AI agents in the loop, not the other way round." Every later "we" on every page inherits that meaning. Keep the definition; do not reintroduce an unexplained "we", and do not repeat the definition on other pages.
+- Two pieces of marketing are deliberate and load-bearing. Home page, last section, "How this scales": what the agentic AI application does, why on-demand research matters, and the reflexive proof line. Method page, last section, "Where this could go next": the same offer with the contact ask. Both sit last on their page on purpose, so the reader meets the evidence before the offer. Keep that order.
+- The agentic AI framing is the positioning term and is used on purpose. It is a description, not a slogan: the division of labour it claims is the one the method page documents, so keep it accurate if the working method changes.
+- The three quality-control terms must read the same on both pages: validation, originality check, accuracy evaluation. A prospect who clicks through from the home page must find the same words explained in depth.
+- Claims about the application are framed as intent, not delivery ("could", "what comes next"), because it is not built. Do not upgrade them to present tense.
+- No em-dashes in site copy. Use a colon, a comma or a new sentence.
 
 ## Windows pitfalls
 
