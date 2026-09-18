@@ -210,6 +210,21 @@ body:not([data-page=""]) > main { min-height: 100vh; }
 }
 .stack > * + * { margin-top: var(--space-4); }
 
+/* Value proposition block (home). Own voice, not a quotation: styled <p>s, no blockquote. */
+.valueprop {
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-5) var(--space-5) var(--space-5) var(--space-6);
+}
+.valueprop > p { margin: 0; }
+.valueprop > p + p { margin-top: var(--space-4); }
+.valueprop .vp-open { font-size: 1.125rem; }
+.valueprop .vp-why { color: var(--muted); }
+@media (max-width: 600px) {
+  .valueprop { padding: var(--space-4); padding-left: var(--space-4); }
+}
+
 a.card { display: block; color: inherit; text-decoration: none; }
 a.card:hover { border-color: var(--accent); }
 a.card h3 { color: var(--link); margin-top: 0; }
