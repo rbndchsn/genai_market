@@ -16,7 +16,7 @@
 <script src="js/shell.js"></script>
 <main id="main" class="container">
 <h1>How it was built</h1>
-<p class="lead">This site was made by one person directing one AI coding agent over about two days. This page explains how, so that you can do the same, whether you are writing your first script or running an engineering team.</p>
+<p class="lead">This site was made by one person directing one AI coding agent over about two days. This page explains how, so that you can do the same, whether you are writing your first script or running an engineering team. The method is not specific to enterprise AI, and the last section sets out where it could go next.</p>
 
 <nav class="toc" aria-label="On this page">
   <a href="#setup">The setup</a>
@@ -29,6 +29,7 @@
   <a href="#debugging">Four bugs, and what they teach</a>
   <a href="#takeaways">Takeaways</a>
   <a href="#repo">See for yourself</a>
+  <a href="#next">Where this could go next</a>
 </nav>
 
 <section id="setup" aria-labelledby="setup-heading">
@@ -211,6 +212,15 @@
     <p>The repository is public and contains the plan file, the agent instructions, the scripts, the data schema and every commit. This page is the high-level account; the plan file is the full one. It carries a status block, every step ticked with its date and a note on what was verified and what was fixed, a decisions log giving the reason behind each call, and a change history. It is a working document, not a polished write-up, which is what makes its decisions log and change history the most honest record of how the project actually went, including the steps that were reworked.</p>
     <p><a href="https://github.com/rbndchsn/genai_market" rel="noopener">github.com/rbndchsn/genai_market</a> · <a href="https://github.com/rbndchsn/genai_market/blob/main/plan.md" rel="noopener">the plan file</a> · <a href="https://github.com/rbndchsn/genai_market/blob/main/CLAUDE.md" rel="noopener">the agent instructions</a></p>
     <p class="muted">This page was drafted by the agent from the plan's own record and edited by the author. Credit where due: Claude Fable 5.1 did the reading, the code and most of the debugging. The direction, the source choices, the taste and the responsibility for what is published are the author's.</p>
+  </div>
+</section>
+
+<section id="next" aria-labelledby="next-heading">
+  <h2 id="next-heading">Where this could go next</h2>
+  <div class="card prose">
+    <p>Nothing in this pipeline is specific to enterprise AI. The sources and the twelve themes are the input. What carries over is the method: a plan the agent works from, data with a schema and stable ids, three layers of checking, and a review harness that runs before any step is called done. Point the same pipeline at another subject and it produces the same kind of result, a referenced and checked meta-analysis of whatever body of evidence you name.</p>
+    <p>The obvious next step is to make that self-serve. You name the subject area and the sources; the pipeline does the reading, the synthesis and the checking, with a reference and a verdict behind every figure, exactly as on this site.</p>
+    <p>If that is something you would use, or would want pointed at a market you work in, I would like to hear from you. Interest is what decides whether it gets built, so a short message is worth more than it sounds. <a href="https://www.linkedin.com/in/robin-duchesneau" rel="noopener">Robin Duchesneau on LinkedIn</a>.</p>
   </div>
 </section>
 </main>

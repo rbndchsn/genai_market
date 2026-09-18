@@ -90,7 +90,7 @@
             '<a href="sources.html#licensing">Licence and reuse</a>' +
             '<a href="https://github.com/rbndchsn/genai_market" rel="noopener">Repository</a>' +
           "</nav>" +
-          '<p>This online tool was created by: <a href="https://www.linkedin.com/in/robin-duchesneau" rel="noopener">https://www.linkedin.com/in/robin-duchesneau</a></p>' +
+          '<p>Created by <a href="https://www.linkedin.com/in/robin-duchesneau" rel="noopener">Robin Duchesneau</a>.</p>' +
         "</div>" +
       "</footer>"
     );
