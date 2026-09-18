@@ -107,6 +107,12 @@ The full evaluation found 33 of 402 evidence records wrong and 133 loose. Most e
 - Claims about the application are framed as intent, not delivery ("could", "what comes next"), because it is not built. Do not upgrade them to present tense.
 - No em-dashes in site copy. Use a colon, a comma or a new sentence.
 
+## Layout decisions that look like defects (2026-09-18)
+
+- There is no search box in the site header, on purpose. One was removed because it only reached the Search page once a query was typed, and a CSS rule hid the Search nav item as redundant against it, leaving the page, its tag sphere and its browse view with no route on desktop. The Search nav item is the single affordance and is shown at every width. Do not add a header search box back.
+- Nav order is deliberate: Overview, Insights, Vendors, Statistics, Glossary, How it was built, Sources, Search. Sources and Search are back matter and sit at the end; "How it was built" is meant to be read, so it sits with the content. Glossary stays beside the pages whose terms it defines.
+- The vendors quadrant labels every shown vendor, not only the Leaders. The collision pass in `vendors.js` places them and uses a leader line where a label had to move. If the chart looks crowded, narrow the set with a filter rather than cutting the label set; under 560px the chart is dots only and the table carries the names.
+
 ## Windows pitfalls
 
 - Long Bash heredocs with mixed quotes can fail to parse; write the script to a file in the scratchpad and run it.
