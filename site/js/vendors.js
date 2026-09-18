@@ -197,10 +197,10 @@
     var yl = svgEl("text", { x: 14, y: sy(0.5), "text-anchor": "middle", transform: "rotate(-90 14 " + sy(0.5) + ")", class: "viz-axis-label" });
     yl.textContent = "Maturity index (Ma)"; svg.appendChild(yl);
 
-    // Which points get a direct label: the shown set if small, otherwise the shown Leaders.
+    // Every shown vendor gets a direct label; the collision pass below places them.
     var labelSet = {};
     // On narrow screens there is no room for labels unless a filter has cut the set down; the table carries names.
-    var labelCandidates = shown.length <= 12 ? shown : shown.filter(function (v) { return v.quadrant === "leaders"; });
+    var labelCandidates = shown;
     if (narrow && shown.length > 6) labelCandidates = [];
     labelCandidates.forEach(function (v) { labelSet[v.id] = true; });
 
