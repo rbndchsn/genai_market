@@ -120,7 +120,9 @@ the pages it draws on.
 
 ## quality.json
 
-Results of the three checking layers, shown on `method.html`. Updated by hand after each run.
+Results of the three checking layers. Lives in `content/`, not in `site/data/`: it is the project's
+evaluation record, not site content, and is deliberately not served or shown on the site. The method
+page describes the layers and the procedure in prose, without figures. Updated by hand after each run.
 
 ```
 { "validation":  { "last_run": "YYYY-MM-DD", "pages": 9, "links_checked": 1370, "console_errors": 0, "data_errors": 0, "data_warnings": 0 },

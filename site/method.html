@@ -25,7 +25,6 @@
   <a href="#rhythm">The working rhythm</a>
   <a href="#rules">Rules that kept it honest</a>
   <a href="#eval">Evaluating AI-written research</a>
-  <a href="#quality">Validation and evaluation</a>
   <a href="#engineering">Engineering choices</a>
   <a href="#debugging">Four bugs, and what they teach</a>
   <a href="#takeaways">Takeaways</a>
@@ -110,59 +109,46 @@
   <h2 id="eval-heading">Evaluating AI-written research</h2>
   <div class="card prose">
     <p>The most important work on this site happened after it launched. An AI agent can write fluent, well-referenced prose at a speed no person can match, and every number it writes looks plausible. That is exactly why the output has to be evaluated: fluency is not accuracy, and a validator that checks structure cannot tell whether a sentence says what its source says. The only way to know is to go back to the page and compare, record by record.</p>
-    <h3>Why a sample was not enough</h3>
-    <p>We started with the usual shortcut: twenty records drawn at random and checked against their pages. Eight needed a fix and two were plainly wrong. With a sample that small, the honest estimate of how many insights were wrong ran anywhere from about one in fourteen to more than half. A range that wide cannot be published as reassurance, so we checked everything that carries evidence: every insight, vendor profile and statistic, plus a sample of glossary terms.</p>
-    <h3>Why the first draft was wrong so often</h3>
-    <p>Every record existed and pointed to real pages, but about one in twelve said something its source does not, and about a third were loose in a detail. The causes were mostly in how the work was done, not in the model that did it. Insights squeezed three to six sources into one paragraph, and that compression is where figures slid to the wrong survey, the wrong population, or a claim that two sources agree when only one does. Each fact was rewritten several times on its way from source to notes to site, and each paraphrase moved its meaning a little. Charts were read by eye with nothing to test the readings against. The agent checked its work against its own notes rather than the pages, and our early checks tested only the structure of the data, not whether it was true. Our own rules asked for agreement across sources, which invited overclaiming. And roughly 380 evidence records were written in about a day, with no accuracy step until after launch. The lesson we took is structural: check each claim against its source page while it is being written, and have a second model do the checking.</p>
+    <h3>Three layers of checking</h3>
+    <p>Three layers, with different names because they answer different questions. The first two are automated and run on every change. The third is a judgement, and it is the one that cannot be automated.</p>
+    <p><strong>Validation: is the data well formed?</strong> A validator parses the six curated files and refuses duplicate ids, references that do not resolve to a registered source and page range, cross-links to records that do not exist, quadrant positions that disagree with their scores, multi-source insights that cite fewer than two sources, and unknown units or chart types. A site checker then renders every page in a headless browser and reports console errors, internal links that do not resolve and anchors that no page renders.</p>
+    <p><strong>Originality: is the text ours?</strong> Every insight, definition, statistic note and vendor description is split into eight-word runs and compared with every source extraction. A hit means eight consecutive words also appear in a source. Every hit against the licensed report was rewritten. Hits against public sources were reviewed; what remains is chart labels and survey question wording, which are facts rather than prose.</p>
+    <p><strong>Accuracy: are the figures right?</strong> Every record that carries evidence is read against the page it cites, by a model that is not the one that wrote it. This is the layer the rest of this section describes, because it is the one that found the most.</p>
+    <h3>A sample was not enough</h3>
+    <p>We started with the usual shortcut: a random sample of records, checked against the pages they cite. Enough of them needed correcting that the sample could tell us nothing reliable about the rest, because a small sample can only bound an error rate when it comes back nearly clean. So we stopped sampling and checked the whole evidence layer: every insight, every vendor profile and every statistic, against the page it cites.</p>
+    <h3>Where AI-written research goes wrong</h3>
+    <p>Every record existed and pointed at a real page. The errors were subtler than invention, and they clustered in places worth knowing about before you start.</p>
+    <ul>
+      <li><strong>Compression.</strong> An insight drawing on five sources has to compress them into one paragraph, and compression is where a figure slides to the wrong survey, the wrong population, or a claim that sources agree when only one of them does.</li>
+      <li><strong>Paraphrase drift.</strong> Each fact is rewritten on its way from source to notes to site, and every rewrite moves the meaning a little.</li>
+      <li><strong>Charts read by eye.</strong> Values taken from unlabelled marks drift, and nothing tests the reading.</li>
+      <li><strong>Checking against notes rather than pages.</strong> An agent that verifies its work against its own synthesis can only confirm what it already believed.</li>
+      <li><strong>Rules that invite overclaiming.</strong> Asking for agreement across sources makes agreement easier to see than it should be.</li>
+      <li><strong>No accuracy step until late.</strong> Structure was validated from the first day. Truth was not.</li>
+    </ul>
+    <p>The lesson we took is structural rather than a fault of the model: check each claim against its source page while it is being written, and have a second model do the checking.</p>
     <h3>The procedure in a nutshell</h3>
     <ol class="phases">
       <li><strong>Define the verdicts before checking.</strong> Match, minor fix or wrong, with a written rubric for each kind of record: what counts as a wrong population, a wrong unit, an unsupported attribution, a page reference that points to the wrong page.</li>
       <li><strong>Use a different model as the checker.</strong> The content was written by Claude Fable 5.1; the checkers ran on Claude Opus 5. A second model is less likely to share the first one's blind spots.</li>
-      <li><strong>Calibrate the checker on known errors.</strong> Before the full run, the checkers were given the eight records whose errors we already knew. They found every one, and three more that the first round had missed. Only then was the full run trusted.</li>
-      <li><strong>Fan out, with structured answers.</strong> Records were split into batches of seven to ten, one checker per batch, each returning a fixed-format verdict with the page it read, what the page shows and a proposed fix. Checkers opened the page image for every chart and table, not just the extracted text.</li>
+      <li><strong>Calibrate the checker on known errors.</strong> Before the full run, the checkers were given a set of records whose errors we already knew. They found all of them, and more besides. Only then was the full run trusted.</li>
+      <li><strong>Fan out, with structured answers.</strong> Records were split into small batches, one checker per batch, each returning a fixed-format verdict with the page it read, what the page shows and a proposed fix. Checkers opened the page image for every chart and table, not just the extracted text.</li>
       <li><strong>Read the prose twice.</strong> Every insight and vendor profile went to a second checker told to look for what a careful first reader misses: units, populations, forecasts written as actuals, shares written as counts.</li>
-      <li><strong>Escalate on failure.</strong> Statistics started as a sample of forty. One wrong value was enough to trigger a check of all the rest.</li>
-      <li><strong>Check the checkers.</strong> No verdict of wrong changed the data until the main agent had confirmed it against the page. Two were downgraded, and one correction stood for a different reason than the checker gave.</li>
+      <li><strong>Escalate on failure.</strong> Statistics started as a sample. A single wrong value was enough to trigger a check of all the rest.</li>
+      <li><strong>Check the checkers.</strong> No verdict of wrong changed the data until the main agent had confirmed it against the page. Some verdicts were downgraded on review, and a correction sometimes stood for a different reason than the checker gave.</li>
       <li><strong>Fix, then review every change.</strong> Precise corrections were applied by script. Wider prose fixes were drafted by agents from the checkers' evidence, and every change was read before it was accepted.</li>
-      <li><strong>Re-run the automated checks.</strong> Schema validation, the search rebuild, the site checker and the originality scan, which caught three new passages that the corrections themselves had brought too close to the licensed source.</li>
-      <li><strong>Publish the results.</strong> Coverage by layer, what was found, and a plain note for every corrected record, in the next section.</li>
+      <li><strong>Re-run the automated checks.</strong> Schema validation, the search rebuild, the site checker and the originality scan, which caught new passages that the corrections themselves had brought too close to the licensed source.</li>
+      <li><strong>Write the outcome down.</strong> Every verdict, correction and reason goes into the project's working record, which is public. The plan file is where that account lives.</li>
     </ol>
-    <h3>The run in numbers</h3>
-    <div class="kpi-row" id="eval-run"></div>
     <h3>What it taught us</h3>
     <ul>
-      <li><strong>Errors cluster where the agent synthesises.</strong> Statistics copied from one page were mostly right. Insights written across several sources were mostly not, and the typical slip was a true number put in the wrong place rather than an invented one.</li>
-      <li><strong>A second read is worth its cost.</strong> It found problems in about one record in eight that the first read had passed.</li>
+      <li><strong>Errors cluster where the agent synthesises.</strong> Statistics copied straight from one page held up well. Insights written across several sources were where the problems were, and the typical slip was a true number put in the wrong place rather than an invented one.</li>
+      <li><strong>A second read is worth its cost.</strong> It caught real problems that the first read had passed, usually in the sentence around the number rather than in the number itself.</li>
       <li><strong>Checkers need checking.</strong> A verdict is a claim like any other. Confirming it against the source prevented wrong corrections.</li>
       <li><strong>Charts need calibration.</strong> Values read by eye from unlabelled marks drift. Where a chart prints a few values, use them to test every value you read from it.</li>
       <li><strong>Fixes create new risks.</strong> Corrected text is new text. It has to go back through every automated check, including originality.</li>
-      <li><strong>Publish record-level results.</strong> A pass rate would have hidden where the problems were. A list of corrections shows readers exactly what changed and lets them judge the rest.</li>
+      <li><strong>Keep a record-level account.</strong> A pass rate hides where problems cluster; a per-record log shows it, and that is what lets you fix causes instead of symptoms.</li>
     </ul>
-  </div>
-</section>
-
-<section id="quality" aria-labelledby="quality-heading">
-  <h2 id="quality-heading">Validation and evaluation</h2>
-  <div class="card prose">
-    <p>Three layers of checking, with different names because they answer different questions. The numbers are read from the quality file in the site's data folder, which is updated each time a check runs.</p>
-    <h3>Validation: is the data well formed?</h3>
-    <p>Automated, run on every data change. A validator parses the six curated files and refuses duplicate ids, references that do not resolve to a registered source and page range, cross-links to records that do not exist, quadrant positions that disagree with their scores, multi-source insights that cite fewer than two sources, and unknown units or chart types. A site checker then renders every page in a headless browser and reports console errors, internal links that do not resolve and anchors that no page renders.</p>
-    <div class="kpi-row" id="q-validation"></div>
-    <h3>Originality check: is the text ours?</h3>
-    <p>Automated scan, human-reviewed. Every insight, definition, statistic note and vendor description is split into eight-word runs and compared with every source extraction. A hit means eight consecutive words also appear in a source. Every hit against the licensed report was rewritten. Hits against public sources were reviewed; the remainder are chart labels and survey question wording, which are facts rather than prose.</p>
-    <div class="kpi-row" id="q-originality"></div>
-    <h3>Accuracy evaluation: are the figures right?</h3>
-    <p id="q-accuracy-method"></p>
-    <h4>What the evaluation found</h4>
-    <div id="q-accuracy-findings"></div>
-    <div class="kpi-row" id="q-accuracy"></div>
-    <div class="table-wrap q-layers" id="q-accuracy-layers"></div>
-    <details class="q-table">
-      <summary>Every correction, record by record</summary>
-      <p class="muted" id="q-accuracy-count"></p>
-      <div class="table-wrap" id="q-accuracy-table"></div>
-    </details>
-    <p class="muted" id="q-accuracy-note"></p>
   </div>
 </section>
 
@@ -213,7 +199,7 @@
         <li>Parallelise where the work is separable and the outputs do not overlap, for example one forked session per source, each writing only its own file. Merge sequentially.</li>
         <li>Checkpoints are a dial tied to evidence. Record in the decisions log when you loosened them and why.</li>
         <li>Give the agent taste through examples, not adjectives: one finished page or one finished note becomes the model for the rest.</li>
-        <li>Separate validation from evaluation and budget for both. Validation is automated and cheap: schemas, references that resolve, links, console errors, run on every change. Evaluation is sampled and judged: draw records with a fixed seed, check each against its cited page with a fresh agent, record the verdict, correct the data, publish the results. A pass rate hides where the failures cluster; a record-level table shows it. Treat a bad sample as a reason to check everything, use a different model as the checker, and confirm every verdict of wrong against the source before changing data. Re-run with a new seed after every content change.</li>
+        <li>Separate validation from evaluation and budget for both. Validation is automated and cheap: schemas, references that resolve, links, console errors, run on every change. Evaluation is sampled and judged: draw records with a fixed seed, check each against its cited page with a fresh agent, record the verdict, correct the data, and write the outcome down. A pass rate hides where the failures cluster; a record-level table shows it. Treat a bad sample as a reason to check everything, use a different model as the checker, and confirm every verdict of wrong against the source before changing data. Re-run with a new seed after every content change.</li>
       </ul>
     </div>
   </div>
@@ -222,7 +208,7 @@
 <section id="repo" aria-labelledby="repo-heading">
   <h2 id="repo-heading">See for yourself</h2>
   <div class="card prose">
-    <p>The repository is public and contains the plan file, the agent instructions, the scripts, the data schema and every commit. The plan is a working document, not a polished write-up. Its decisions log and change history are the most honest record of how the project actually went, including the steps that were reworked.</p>
+    <p>The repository is public and contains the plan file, the agent instructions, the scripts, the data schema and every commit. This page is the high-level account; the plan file is the full one. It carries a status block, every step ticked with its date and a note on what was verified and what was fixed, a decisions log giving the reason behind each call, and a change history. It is a working document, not a polished write-up, which is what makes its decisions log and change history the most honest record of how the project actually went, including the steps that were reworked.</p>
     <p><a href="https://github.com/rbndchsn/genai_market" rel="noopener">github.com/rbndchsn/genai_market</a> · <a href="https://github.com/rbndchsn/genai_market/blob/main/plan.md" rel="noopener">the plan file</a> · <a href="https://github.com/rbndchsn/genai_market/blob/main/CLAUDE.md" rel="noopener">the agent instructions</a></p>
     <p class="muted">This page was drafted by the agent from the plan's own record and edited by the author. Credit where due: Claude Fable 5.1 did the reading, the code and most of the debugging. The direction, the source choices, the taste and the responsibility for what is published are the author's.</p>
   </div>

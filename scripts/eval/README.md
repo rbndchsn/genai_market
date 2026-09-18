@@ -1,6 +1,6 @@
 # Accuracy evaluation toolkit
 
-How the site's records were checked against their sources in steps 7.2 and 7.2b (see `plan.md`), kept here so the next run (for example 7.2c, the 144 unchecked glossary terms) does not start from scratch. The published results live in `site/data/quality.json` and are shown on `site/method.html`.
+How the site's records were checked against their sources in steps 7.2 and 7.2b (see `plan.md`), kept here so the next run (for example 7.2c, the 144 unchecked glossary terms) does not start from scratch. Results are recorded in `content/quality.json`. They are deliberately not served or shown on the site: `site/method.html` explains the checking layers and this procedure in prose, without figures (decision 2026-09-17, see `plan.md`).
 
 Run everything from a Claude Code session in the project root. Keep working files in a scratch folder or in `scripts/eval/work/` (git-ignored): batches, verdicts and edit lists describe source content and must never be committed.
 
@@ -25,7 +25,7 @@ Run everything from a Claude Code session in the project root. Keep working file
 6. **Queue exact edits** in `edits.json`. Operations: replace (`field`, `old`, `new`), `set` (`path`, `value`), `set_ref_pages`, `drop_ref`, `swap_ref`, `set_series_values`, `rename_series`, `insert_platforms`, `set_metric_value`, `replace_metric`. Each carries `severity` and `why`. Then `python scripts/eval/apply_edits.py . <work_dir> --dry-run`, and again without `--dry-run`.
 7. **Draft wider prose fixes** with `apply-eval-fixes.js` (inputs: each record's current text and issues), review with `python scripts/eval/review_fixes.py <journal.jsonl> . --save revisions.json`, and apply only what you accept.
 8. **Re-run every check.** `python scripts/validate_data.py`, `build_chunks.py`, `build_search_index.py`, `originality_check.py` (zero hits against src-01 is mandatory; corrections can introduce new ones), `check_site.py`.
-9. **Publish.** Update `site/data/quality.json` (`accuracy.layers`, `rounds`, `run`, `findings`, `results` with a note per corrected record; schema in `content/schemas.md`), using `write-correction-notes.js` for the notes and reading every note before use. Review `method.html` with `review_shots.py`, record the step in `plan.md`, and commit only when the user says so.
+9. **Record.** Update `content/quality.json` (`accuracy.layers`, `rounds`, `run`, `findings`, `results` with a note per corrected record; schema in `content/schemas.md`), using `write-correction-notes.js` for the notes and reading every note before use. Review `method.html` with `review_shots.py`, record the step in `plan.md`, and commit only when the user says so.
 
 ## Pitfalls met on Windows
 

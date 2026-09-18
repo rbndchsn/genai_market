@@ -73,7 +73,9 @@ Sources move through the same pipeline as the first twelve. Steps 2 to 4 happen 
 
 ## Check quality
 
-Three layers, with results in `site/data/quality.json` and on the method page:
+Three layers. The method page explains what each one does and how the accuracy evaluation is run; it
+deliberately carries no figures. Per-run results are recorded in `content/quality.json`, which is kept in
+the repository but is not part of the published site.
 
 - Validation: `validate_data.py` and `check_site.py`, on every change.
 - Originality: `python scripts/originality_check.py` writes a local report; any hit against the licensed source must be rewritten.
