@@ -12,8 +12,8 @@
     { key: "vendors", href: "vendors.html", label: "Vendors" },
     { key: "stats", href: "stats.html", label: "Statistics" },
     { key: "glossary", href: "glossary.html", label: "Glossary" },
-    { key: "sources", href: "sources.html", label: "Sources" },
     { key: "method", href: "method.html", label: "How it was built" },
+    { key: "sources", href: "sources.html", label: "Sources" },
     { key: "search", href: "search.html", label: "Search" }
   ];
 
